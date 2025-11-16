@@ -7,7 +7,7 @@ function createHolidayCountdown()
   console.log("Trip Name = "+title);
   const tripDate = document.getElementById("trip-date").valueAsDate;
   let today = new Date();
-  let secondsBetween = trip-date - today;
+  let secondsBetween = tripDate - today;
   let daysBetween = Math.floor(secondsBetween / (1000 * 60 * 60 *24));
   console.log("Days until the trip "+daysBetween);
   //USe this for colour blocks ▢
