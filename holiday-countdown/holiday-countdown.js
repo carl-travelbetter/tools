@@ -1,7 +1,7 @@
 console.log("Holiday Countdown");
 
 const STORAGE_KEY = "holiday_countdown_tb";
-let state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {countdown: []};
+let state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {countdownList: []};
 
 function loadHolidayCountdowns()
 {
@@ -23,10 +23,24 @@ function createHolidayCountdown()
   let today = new Date();
   let secondsBetween = tripDate - today;
   let daysBetween = Math.floor(secondsBetween / (1000 * 60 * 60 *24));
-  console.log("Days until the trip "+daysBetween);
-  //USe this for colour blocks ▢
-  
-  
+  if (daysBetween < 1)
+  {
+    alert("No time for a countdown - you go tomorrow or in the past!");
+    return;
+  }
+  else
+  {
+    console.log("Days until the trip "+daysBetween);
+    const countdown = {title:title, tdate:tripDate};
+    state.countdownList.push(countdown);
+    saveCountdowns();
+  }
+  //USe this for colour blocks  
+}
+
+function saveCountdowns() {
+  console.log("Saving countdowns...");
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
 }
   
 function oldCode()  
