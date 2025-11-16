@@ -113,3 +113,28 @@ tb-navbar ul li a:hover {
 .control-btn:hover {
   background-color: #0066cc;
 }
+
+.display-card {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;  
+  background-color: #c6cef7; 
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  box-sizing: border-box;  
+  text-align: left;
+  width: 90%vw;
+  max-width:800px;
+  padding:10px;
+}
+
+.display-card:hover {
+  transform: translateY(-3px);
+}
+
+.display-card h3 {
+  margin-top: 0;
+  color: #0170b9;
+}
+
