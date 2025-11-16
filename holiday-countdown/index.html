@@ -9,14 +9,14 @@
 </head>
 <body>
   <div id="menu">
-    <button onclick="loadHolidayCountdowns()">Load Saved Holiday Countdowns</button>
-    <button onclick="loadCreateOptions()">Create New Holiday Countdown</button>
+    <button class="control-btn" onclick="loadHolidayCountdowns()">Load Saved Holiday Countdowns</button>
+    <button class="control-btn" onclick="loadCreateOptions()">Create New Holiday Countdown</button>
   <div id="create-countdown" hidden>
     <label for="trip-name">Name Your Trip (Optional)</label>
     <input type="text" name="tripName" id="trip-name" />
     <label for="trip-date">Select your trip date</label>
     <input type="date" name="tripDate" id="trip-date" />
-    <button onclick="createHolidayCountdown()">Create Holiday Countdown</button>
+    <button class="control-btn" onclick="createHolidayCountdown()">Create Holiday Countdown</button>
   </div>
   <div id="countdown-timer"></div>
   <div id="countdown-days"></div>
