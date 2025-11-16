@@ -18,7 +18,7 @@ function createHolidayCountdown()
 {
   console.log("Creating Holiday Countdown Timer");
   const title = document.getElementById("trip-name").value;
-  if (title == null)
+  if (title === "")
   {
     title = "No Title";
   }
