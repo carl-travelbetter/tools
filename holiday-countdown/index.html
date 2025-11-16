@@ -8,5 +8,13 @@
   <script src="holiday-countdown.js" defer></script>
 </head>
 <body>
+  <div id="get-details">
+    <label for="tripName">Name Your Trip (Optional)</label>
+    <input type="text" name="tripName" id="trip-name" />
+    <label for="tripDate">Select your trip date</label>
+    <input type="date" name="tripDate" id="trip-date" />
+    <button onclick="getTimer()">Create Holiday Countdown</button>
+  </div>
+  <div id="countdown-timer"></div>
 </body>
 </html>
