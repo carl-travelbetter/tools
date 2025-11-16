@@ -3,9 +3,15 @@ console.log("Holiday Countdown");
 const STORAGE_KEY = "holiday_countdown_tb";
 let state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {countdown: []};
 
-function loadHolidayCountdown()
+function loadHolidayCountdowns()
 {
   console.log("Load Holiday Countdown");
+}
+
+function loadCreateOptions()
+{
+  console.log("Load Create Options");
+  document.getElementById("create-countdown").hidden = false;
 }
 
 function createHolidayCountdown()
@@ -19,7 +25,7 @@ function createHolidayCountdown()
   let daysBetween = Math.floor(secondsBetween / (1000 * 60 * 60 *24));
   console.log("Days until the trip "+daysBetween);
   //USe this for colour blocks ▢
-
+  
   
 }
   
