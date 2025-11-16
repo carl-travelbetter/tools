@@ -1,5 +1,13 @@
 console.log("Holiday Countdown");
 
+const STORAGE_KEY = "holiday_countdown_tb";
+let state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {countdown: []};
+
+function loadHolidayCountdown()
+{
+  console.log("Load Holiday Countdown");
+}
+
 function createHolidayCountdown()
 {
   console.log("Creating Holiday Countdown Timer");
