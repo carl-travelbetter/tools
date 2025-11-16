@@ -39,6 +39,11 @@ function createHolidayCountdown()
     state.countdownList.push(countdown);
     saveCountdowns();
   }
+
+  const dayOutput = document.getElementById("countdown-days");
+  const daysCount = document.createElement("p");
+  daysCount.textContent = daysBetween+" Days Until Your Trip";
+  dayOutput.appendChild(daysCount);
   //USe this for colour blocks  
 }
 
