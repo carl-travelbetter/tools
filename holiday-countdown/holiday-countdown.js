@@ -10,6 +10,9 @@ function createHolidayCountdown()
   let secondsBetween = trip-date - today;
   let daysBetween = Math.floor(secondsBetween / (1000 * 60 * 60 *24));
   console.log("Days until the trip "+daysBetween);
+  //USe this for colour blocks ▢
+
+  
 }
   
 function oldCode()  
