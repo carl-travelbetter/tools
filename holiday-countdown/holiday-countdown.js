@@ -5,7 +5,7 @@ function createHolidayCountdown()
   console.log("Creating Holiday Countdown Timer");
   const title = document.getElementById("trip-name").value;
   console.log("Trip Name = "+title);
-  const trip-date = document.getElementById("trip-date").valueAsDate;
+  const tripDate = document.getElementById("trip-date").valueAsDate;
   let today = new Date();
   let secondsBetween = trip-date - today;
   let daysBetween = Math.floor(secondsBetween / (1000 * 60 * 60 *24));
