@@ -58,7 +58,8 @@ function displayCountdowns()
 
   //grab the countdown list area
   const countdownList = document.getElementById("countdown-list");
-  
+  //Clear the current displayed countdowns
+  countdownList.innerHTML = "";
   state.countdownList.forEach(countdown => {
     console.log("Title "+countdown.title);
     const secondsBetween = countdown.tdate - today;
