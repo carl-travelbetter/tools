@@ -63,14 +63,16 @@ function displayCountdowns()
   state.countdownList.forEach(countdown => {
     console.log("Title "+countdown.title);
     const secondsBetween = countdown.tdate - today;
-    const daysBetween = Math.floor(secondsBetween / (1000 * 60 * 60 *24));
+    const days = Math.floor(secondsBetween / (1000 * 60 * 60 *24));
+    const hours = Math.floor((millSecToGo % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((millSecToGo % (1000 * 60 * 60)) / (1000 * 60));
     const countdownCard = document.createElement("div");
     countdownCard.className = "card";
     const countdownTitle = document.createElement("p");
     countdownTitle.textContent = countdown.title;
     countdownCard.appendChild(countdownTitle);
     const countdownDays = document.createElement("p");
-    countdownDays.textContent = "Days to go "+daysBetween;
+    countdownDays.textContent = days+"days:"+hours+"hrs:"+minutes+"minutes"+ " to go"+;
     countdownCard.appendChild(countdownDays);
     countdownList.appendChild(countdownCard);
   });
