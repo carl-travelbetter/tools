@@ -61,7 +61,7 @@ function displayCountdowns()
   
   state.countdownList.forEach(countdown => {
     console.log("Title "+countdown.title);
-    const secondsBetween = tdate - today;
+    const secondsBetween = countdown.tdate - today;
     const daysBetween = Math.floor(secondsBetween / (1000 * 60 * 60 *24));
     const countdownCard = document.createElement("div");
     countdownCard.className = "card";
