@@ -64,8 +64,8 @@ function displayCountdowns()
     console.log("Title "+countdown.title);
     const secondsBetween = countdown.tdate - today;
     const days = Math.floor(secondsBetween / (1000 * 60 * 60 *24));
-    const hours = Math.floor((millSecToGo % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((millSecToGo % (1000 * 60 * 60)) / (1000 * 60));
+    const hours = Math.floor((secondsBetween / (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((secondsBetween / (1000 * 60 * 60)) / (1000 * 60));
     const countdownCard = document.createElement("div");
     countdownCard.className = "card";
     const countdownTitle = document.createElement("p");
