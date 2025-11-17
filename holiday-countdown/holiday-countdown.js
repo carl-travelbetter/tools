@@ -6,6 +6,7 @@ let state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {countdownList: []}
 function loadHolidayCountdowns()
 {
   console.log("Load Holiday Countdown");
+  displayCountdowns();
 }
 
 function loadCreateOptions()
@@ -40,16 +41,40 @@ function createHolidayCountdown()
     saveCountdowns();
   }
 
-  const dayOutput = document.getElementById("countdown-days");
-  const daysCount = document.createElement("p");
-  daysCount.textContent = daysBetween+" Days Until Your Trip";
-  dayOutput.appendChild(daysCount);
+  displayCountdowns();  
   //USe this for colour blocks  
 }
 
 function saveCountdowns() {
   console.log("Saving countdowns...");
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+}
+
+function displayCountdowns()
+{
+  //Loop through the stored countdowns and display each one in a results card with some options.
+  //Show the trip name, title and countdown clock, then days count down. 
+  let today = new Date();
+
+  //grab the countdown list area
+  const countdownList = document.getElementById("countdown-list");
+  
+  state.countdownList.forEach(countdown => {
+    console.log("Title "+countdown.title);
+    const secondsBetween = tdate - today;
+    const daysBetween = Math.floor(secondsBetween / (1000 * 60 * 60 *24));
+    const countdownCard = document.createElement("div");
+    countdownCard.className = "card";
+    const countdownTitle = document.createElement("p");
+    countdownTitle.textContent = countdown.title;
+    countdownCard.appendChild(countdownTitle);
+    const countdownDays = document.createElement("p");
+    countdownDays.textContent = "Days to go "+daysBetween;
+    countdownCard.appendChild(countdownDays);
+    countdownList.appendChild(counddownCard);
+  });
+
+  
 }
   
 function oldCode()  
