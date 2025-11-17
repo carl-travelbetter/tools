@@ -31,7 +31,7 @@ h3, h4, h5 {
     margin-top: 1.25rem;
 }
 
-.mva-navbar ul {
+.tb-navbar ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -39,7 +39,7 @@ h3, h4, h5 {
   display: flex;
 }
 
-.mva-navbar ul li a {
+.tb-navbar ul li a {
   display: block;
   color: white;
   padding: 14px 16px;
