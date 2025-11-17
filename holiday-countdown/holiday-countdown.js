@@ -71,7 +71,7 @@ function displayCountdowns()
     const countdownDays = document.createElement("p");
     countdownDays.textContent = "Days to go "+daysBetween;
     countdownCard.appendChild(countdownDays);
-    countdownList.appendChild(counddownCard);
+    countdownList.appendChild(coundownCard);
   });
 
   
