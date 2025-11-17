@@ -72,7 +72,7 @@ function displayCountdowns()
     countdownTitle.textContent = countdown.title;
     countdownCard.appendChild(countdownTitle);
     const countdownDays = document.createElement("p");
-    countdownDays.textContent = days+"days:"+hours+"hrs:"+minutes+"minutes"+ " to go"+;
+    countdownDays.textContent = days+"days:"+hours+"hrs:"+minutes+"minutes"+ " to go";
     countdownCard.appendChild(countdownDays);
     countdownList.appendChild(countdownCard);
   });
