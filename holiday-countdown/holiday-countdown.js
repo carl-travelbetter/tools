@@ -61,7 +61,7 @@ function displayCountdowns()
   //Clear the current displayed countdowns
   countdownList.innerHTML = "";
   state.countdownList.forEach(countdown => {
-    storedDate = new Date(countdown.tdate);
+   date = new Date(countdown.tdate);
       
      //Work out how many years to go (for mutiplication factor of months) then add the difference in the month values;
     //e.g. (2027 - 2025) * 12 = 24 months, June - December, 5 - 11 = -6, therefore 24 - 6 = 18 months
