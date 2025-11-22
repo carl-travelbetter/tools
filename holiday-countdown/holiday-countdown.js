@@ -66,6 +66,7 @@ function displayCountdowns()
     storedDate = new Date(countdown.tdate);
     console.log("Stored Date "+storedDate);
     const secondsBetween = storedDate - today;
+    console.log("Seconds Between "+secondsBetween);
     const days = Math.floor(secondsBetween / (1000 * 60 * 60 *24));
     const hours = Math.floor((secondsBetween / (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((secondsBetween / (1000 * 60 * 60)) / (1000 * 60));
@@ -76,6 +77,7 @@ function displayCountdowns()
     countdownCard.appendChild(countdownTitle);
     const countdownDays = document.createElement("p");
     countdownDays.textContent = days+"days:"+hours+"hrs:"+minutes+"minutes"+ " to go";
+    console.log(days + hours + minutes);
     countdownCard.appendChild(countdownDays);
     countdownList.appendChild(countdownCard);
   });
