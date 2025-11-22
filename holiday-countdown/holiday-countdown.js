@@ -62,6 +62,9 @@ function displayCountdowns()
   countdownList.innerHTML = "";
   state.countdownList.forEach(countdown => {
     console.log("Title "+countdown.title);
+    console.log("tdate "+countdown.tdate);
+    storedDate = new Date(countdown.tdate);
+    console.log("Stored Date "+storedDate);
     const secondsBetween = countdown.tdate - today;
     const days = Math.floor(secondsBetween / (1000 * 60 * 60 *24));
     const hours = Math.floor((secondsBetween / (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
