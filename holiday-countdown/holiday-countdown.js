@@ -64,20 +64,32 @@ function displayCountdowns()
     console.log("Title "+countdown.title);
     console.log("tdate "+countdown.tdate);
     storedDate = new Date(countdown.tdate);
-    console.log("Stored Date "+storedDate);
-    const secondsBetween = storedDate - today;
-    console.log("Seconds Between "+secondsBetween);
-    const days = Math.floor(secondsBetween / (1000 * 60 * 60 *24));
-    const hours = Math.floor(secondsBetween / (1000 * 60 * 60));
-    const minutes = Math.floor(secondsBetween / (1000 * 60));
+      
+     //Get today 
+    let today = new Date();
+    //Calculate the seconds between the date selected and today
+    let totalSecondsBetween = Math.floor((storedDate - today) / 1000);
+    //Calculate (rounding down) full days in those seconds 
+    let days = Math.floor(totalSecondsBetween / 86400);
+    //Calculate the days remaining in the total seconds (will be a real/float)
+    let daysRemaining = totalSecondsBetween % 86400;
+    //Calculate the full hours in the days remaining
+    let hours = Math.floor(daysRemaining / 3600);
+    //Calculate the hours remaining
+    let hoursRemaining = daysRemaining % 3600;
+    //Calculate the full minutes 
+    let minutes = Math.floor(hoursRemaining / 60);
+    //Calculate the remaining minutes which is in seconds
+    let seconds = hoursRemaining % 60;
+
+    //Output the countdown
     const countdownCard = document.createElement("div");
     countdownCard.className = "card";
     const countdownTitle = document.createElement("p");
     countdownTitle.textContent = countdown.title;
     countdownCard.appendChild(countdownTitle);
     const countdownDays = document.createElement("p");
-    countdownDays.textContent = days+"days:"+hours+"hrs:"+minutes+"minutes"+ " to go";
-    console.log(days + hours + minutes);
+    countdownDays.textContent = days+"days:"+hours+"hrs:"+minutes+"minutes:"+seconds+"seconds: to go.";
     countdownCard.appendChild(countdownDays);
     countdownList.appendChild(countdownCard);
   });
