@@ -68,8 +68,8 @@ function displayCountdowns()
     const secondsBetween = storedDate - today;
     console.log("Seconds Between "+secondsBetween);
     const days = Math.floor(secondsBetween / (1000 * 60 * 60 *24));
-    const hours = Math.floor((secondsBetween / (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((secondsBetween / (1000 * 60 * 60)) / (1000 * 60));
+    const hours = Math.floor(secondsBetween / (1000 * 60 * 60));
+    const minutes = Math.floor(secondsBetween / (1000 * 60));
     const countdownCard = document.createElement("div");
     countdownCard.className = "card";
     const countdownTitle = document.createElement("p");
