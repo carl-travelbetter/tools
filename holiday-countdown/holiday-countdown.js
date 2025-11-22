@@ -65,7 +65,7 @@ function displayCountdowns()
     console.log("tdate "+countdown.tdate);
     storedDate = new Date(countdown.tdate);
     console.log("Stored Date "+storedDate);
-    const secondsBetween = countdown.tdate - today;
+    const secondsBetween = storedDate - today;
     const days = Math.floor(secondsBetween / (1000 * 60 * 60 *24));
     const hours = Math.floor((secondsBetween / (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((secondsBetween / (1000 * 60 * 60)) / (1000 * 60));
