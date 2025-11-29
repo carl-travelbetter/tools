@@ -18,10 +18,10 @@ function loadCreateOptions()
 function createHolidayCountdown()
 {
   console.log("Creating Holiday Countdown Timer");
-  const title = document.getElementById("trip-name").value;
+  let title = document.getElementById("trip-name").value;
   if (title === "")
   {
-    title = "No Title";
+    title = "No Trip Title";
   }
   console.log("Trip Name = "+title);
   const tripDate = document.getElementById("trip-date").valueAsDate;
