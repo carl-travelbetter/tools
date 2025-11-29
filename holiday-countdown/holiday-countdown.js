@@ -62,7 +62,7 @@ function displayCountdowns()
   countdownList.innerHTML = "";
   state.countdownList.forEach(countdown => {
    date = new Date(countdown.tdate);
-      
+    let tripDetails = getTripDate(date);  
      //Work out how many years to go (for mutiplication factor of months) then add the difference in the month values;
     //e.g. (2027 - 2025) * 12 = 24 months, June - December, 5 - 11 = -6, therefore 24 - 6 = 18 months
     let monthsDiff = ((date.getYear() - today.getYear()) * 12) + (date.getMonth() - today.getMonth());
@@ -105,12 +105,23 @@ function displayCountdowns()
     travelDate.textContent = "Trip Date: "+date.getDate()+" "+date.getMonth()+" "+date.getYear();
     countdownCard.appendChild(travelDate);
     const countdownDays = document.createElement("p");
-    countdownDays.textContent = "Countdown: "+monthsDiff+" Months "+weeks+" Weeks "+days+" Days to go.";
+    countdownDays.textContent = "Countdown: "+tripDetails+" Days to go.";
     countdownCard.appendChild(countdownDays);
     countdownList.appendChild(countdownCard);
   });
 
   
+}
+
+function getTripDate(date)
+{
+  let day = date.getDay();
+  let monthPos = date.getMonth();
+  let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  let month = months[monthPos];
+  let year = date.getYear();
+  let tripDate = day+" "+month+" "+year;
+  return tripDate;
 }
   
 function oldCode()  
