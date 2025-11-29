@@ -121,7 +121,7 @@ function getTripDate(date)
   let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   let month = months[date.getMonth()];
   let year = date.getYear();
-  let tripDate = day+" "+month+" "+year;
+  let tripDate = day+" "+date.getDate()+" "+month+" "+year;
   return tripDate;
 }
   
