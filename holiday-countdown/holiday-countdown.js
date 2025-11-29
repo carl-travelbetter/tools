@@ -24,8 +24,20 @@ function createHolidayCountdown()
     title = "No Trip Title";
   }
   console.log("Trip Name = "+title);
+  //Get the trip date the user entered
   const tripDate = document.getElementById("trip-date").valueAsDate;
+  if (!tripDate)  
+  {
+    alert("Please choose a trip date.");
+    return;
+  }
+  
   let today = new Date();
+
+  // strip time (set to midnight)
+  today.setHours(0, 0, 0, 0);
+  tripDate.setHours(0, 0, 0, 0);
+  
   let secondsBetween = tripDate - today;
   let daysBetween = Math.floor(secondsBetween / (1000 * 60 * 60 *24));
   if (daysBetween < 1)
@@ -55,13 +67,14 @@ function displayCountdowns()
   //Loop through the stored countdowns and display each one in a results card with some options.
   //Show the trip name, title and countdown clock, then days count down. 
   let today = new Date();
-
+  // strip time (set to midnight)
+  today.setHours(0, 0, 0, 0);
   //grab the countdown list area
   const countdownList = document.getElementById("countdown-list");
   //Clear the current displayed countdowns
   countdownList.innerHTML = "";
   state.countdownList.forEach(countdown => {
-   date = new Date(countdown.tdate);
+    const date = new Date(countdown.tdate);
     let tripDetails = getTripDate(date);  
      //Work out how many years to go (for mutiplication factor of months) then add the difference in the month values;
     //e.g. (2027 - 2025) * 12 = 24 months, June - December, 5 - 11 = -6, therefore 24 - 6 = 18 months
@@ -80,10 +93,10 @@ function displayCountdowns()
     }
     
     //set a ms convert value
-    msPerDay = 1000 * 60 * 60 * 24;
+    const msPerDay = 1000 * 60 * 60 * 24;
   
     //Move on today by the months to go so only days left.
-    let tempDate = new Date();
+    let tempDate = new Date(today);
     tempDate.setMonth(today.getMonth()+monthsDiff);
     
     //calculate the total days remaining
@@ -98,7 +111,7 @@ function displayCountdowns()
     //Output the countdown
     const countdownCard = document.createElement("div");
     countdownCard.className = "card";
-    const countdownTitle = document.createElement("p");
+    const countdownTitle = document.createElement("h3");
     countdownTitle.textContent = countdown.title;
     countdownCard.appendChild(countdownTitle);
     const travelDate = document.createElement("p");
@@ -116,9 +129,9 @@ function displayCountdowns()
 function getTripDate(date)
 {
   console.log("Get Trip Date String");
-  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   let day = days[date.getDay()];
-  let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   let month = months[date.getMonth()];
   let year = date.getFullYear();
   let suffix = getOrdinalSuffix(date.getDate());
