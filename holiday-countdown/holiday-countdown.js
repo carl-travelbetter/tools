@@ -121,9 +121,22 @@ function getTripDate(date)
   let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   let month = months[date.getMonth()];
   let year = date.getYear();
-  let tripDate = day+" "+date.getDate()+" "+month+" "+year;
+  let suffix = getOrdinalSuffix(date.getDate());
+  let tripDate = day+" "+date.getDate()+suffix+" "+month+" "+year;
   return tripDate;
 }
+
+function getOrdinalSuffix(n) {
+  const lastDigit = n % 10;
+  const lastTwo = n % 100;
+
+  if (lastTwo >= 11 && lastTwo <= 13) return "th";
+  if (lastDigit === 1) return "st";
+  if (lastDigit === 2) return "nd";
+  if (lastDigit === 3) return "rd";
+  return "th";
+}
+
   
 function oldCode()  
 {
