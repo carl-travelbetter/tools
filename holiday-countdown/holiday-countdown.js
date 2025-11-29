@@ -103,6 +103,7 @@ function displayCountdowns()
     countdownCard.appendChild(countdownTitle);
     const travelDate = document.createElement("p");
     travelDate.textContent = "Trip Date: "+date.getDate()+" "+date.getMonth()+" "+date.getYear();
+    countdownCard.appendChild(travelDate);
     const countdownDays = document.createElement("p");
     countdownDays.textContent = "Countdown: "+monthsDiff+" Months "+weeks+" Weeks "+days+" Days to go.";
     countdownCard.appendChild(countdownDays);
