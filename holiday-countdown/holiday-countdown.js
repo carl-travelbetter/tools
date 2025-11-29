@@ -101,8 +101,10 @@ function displayCountdowns()
     const countdownTitle = document.createElement("p");
     countdownTitle.textContent = countdown.title;
     countdownCard.appendChild(countdownTitle);
+    const travelDate = document.createElement("p");
+    travelDate.textContent = "Trip Date: "+date.getDate()+" "+date.getMonth()+" "+date.getYear();
     const countdownDays = document.createElement("p");
-    countdownDays.textContent = monthsDiff+" Months "+weeks+" Weeks "+days+" Days to go.";
+    countdownDays.textContent = "Countdown: "+monthsDiff+" Months "+weeks+" Weeks "+days+" Days to go.";
     countdownCard.appendChild(countdownDays);
     countdownList.appendChild(countdownCard);
   });
