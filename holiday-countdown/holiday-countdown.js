@@ -120,7 +120,7 @@ function getTripDate(date)
   let day = days[date.getDay()];
   let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   let month = months[date.getMonth()];
-  let year = date.getYear();
+  let year = date.getFullYear();
   let suffix = getOrdinalSuffix(date.getDate());
   let tripDate = day+" "+date.getDate()+suffix+" "+month+" "+year;
   return tripDate;
