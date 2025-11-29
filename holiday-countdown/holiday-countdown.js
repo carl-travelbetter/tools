@@ -115,10 +115,11 @@ function displayCountdowns()
 
 function getTripDate(date)
 {
-  let day = date.getDay();
-  let monthPos = date.getMonth();
+  console.log("Get Trip Date String");
+  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  let day = days[date.getDay()];
   let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-  let month = months[monthPos];
+  let month = months[date.getMonth()];
   let year = date.getYear();
   let tripDate = day+" "+month+" "+year;
   return tripDate;
