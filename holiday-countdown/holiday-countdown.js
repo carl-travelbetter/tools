@@ -120,6 +120,15 @@ function displayCountdowns()
     const countdownDays = document.createElement("p");
     countdownDays.textContent = "Countdown: "+monthsDiff+" Months "+weeks+" Weeks "+days+" Days to go.";
     countdownCard.appendChild(countdownDays);
+    //create a trash can button for delete
+    const trashButton = document.createElement("button");
+    trashButton.textContent = "🗑️";
+    trashButton.addEventListener("click", () => {
+      
+      console.log("Trash Button Clicked");
+      
+      });
+    coundownCard.appendChild(trashButton);
     countdownList.appendChild(countdownCard);
   });
 
