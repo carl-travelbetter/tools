@@ -128,9 +128,20 @@ function displayCountdowns()
     trashButton.addEventListener("click", () => {
       
       console.log("Trash Button Clicked");
-      
+      trashButton.setAttribute("data-label", countdown.id);
+      state.countdownList.splice(trashButton.dataset.label, 1); 
+      deleteCountdown();
       });
     countdownCard.appendChild(trashButton);
+    const editButton = document.createElement("button");
+    editButton.className = "control-btn";
+    editButton.textContent = "🖊";
+    editButton.addEventListener("click", () => {
+
+      console.log("Edit Button Clicked");
+
+    });
+    countdownCard.appendChild(editButton);
     countdownList.appendChild(countdownCard);
   });
 
@@ -148,6 +159,12 @@ function getTripDate(date)
   let suffix = getOrdinalSuffix(date.getDate());
   let tripDate = day+" "+date.getDate()+suffix+" "+month+" "+year;
   return tripDate;
+}
+
+function deleteCountdown()
+{
+  console.log("Delete Countdown");
+  displayCountdowns();
 }
 
 function getOrdinalSuffix(n) {
