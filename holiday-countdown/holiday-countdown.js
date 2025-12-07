@@ -48,7 +48,8 @@ function createHolidayCountdown()
   else
   {
     console.log("Days until the trip "+daysBetween);
-    const countdown = {title:title, tdate:tripDate};
+    let id = state.countdownList.length+1;
+    const countdown = {id:id, title:title, tdate:tripDate};
     state.countdownList.push(countdown);
     saveCountdowns();
   }
