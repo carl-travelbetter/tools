@@ -165,6 +165,7 @@ function getTripDate(date)
 function deleteCountdown()
 {
   console.log("Delete Countdown");
+  saveCountdowns();
   displayCountdowns();
 }
 
