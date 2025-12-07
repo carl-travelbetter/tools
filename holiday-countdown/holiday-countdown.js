@@ -129,7 +129,7 @@ function displayCountdowns()
       console.log("Trash Button Clicked");
       
       });
-    coundownCard.appendChild(trashButton);
+    countdownCard.appendChild(trashButton);
     countdownList.appendChild(countdownCard);
   });
 
