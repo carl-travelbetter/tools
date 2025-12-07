@@ -154,6 +154,12 @@ function displayCountdowns()
     shareButton.addEventListener("click", () => {
 
       console.log("Share Button Clicked");
+      if (navigator.share)
+        navigator.share({
+      text: countdown.title,
+    }).catch(() => {
+      // user cancelled – you can safely ignore this
+    });
 
     });
     countdownCard.appendChild(shareButton);
