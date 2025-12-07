@@ -126,7 +126,7 @@ function displayCountdowns()
     //create a trash can button for delete
     const trashButton = document.createElement("button");
     trashButton.className = "control-btn";
-    trashButton.textContent = "🗑️";
+    trashButton.textContent = "🗑️ Delete";
     trashButton.setAttribute("data-label", listID-1);
     trashButton.addEventListener("click", () => {
       
@@ -138,13 +138,25 @@ function displayCountdowns()
     countdownCard.appendChild(trashButton);
     const editButton = document.createElement("button");
     editButton.className = "control-btn";
-    editButton.textContent = "🖊";
+    editButton.textContent = "🖊 Edit";
     editButton.addEventListener("click", () => {
 
       console.log("Edit Button Clicked");
 
     });
+   
+
     countdownCard.appendChild(editButton);
+    //Create and add share button
+    const shareButton = document.createElement("button");
+    shareButton.className = "control-btn";
+    shareButton.textContent = "↗️ Share";
+    shareButton.addEventListener("click", () => {
+
+      console.log("Share Button Clicked");
+
+    });
+    countdownCard.appendChild(shareButton);
     countdownList.appendChild(countdownCard);
   });
 
