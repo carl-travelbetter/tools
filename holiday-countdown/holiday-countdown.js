@@ -74,7 +74,9 @@ function displayCountdowns()
   const countdownList = document.getElementById("countdown-list");
   //Clear the current displayed countdowns
   countdownList.innerHTML = "";
+  let listID = 0;
   state.countdownList.forEach(countdown => {
+    listID++;
     const date = new Date(countdown.tdate);
     let tripDetails = getTripDate(date);  
      //Work out how many years to go (for mutiplication factor of months) then add the difference in the month values;
@@ -125,7 +127,7 @@ function displayCountdowns()
     const trashButton = document.createElement("button");
     trashButton.className = "control-btn";
     trashButton.textContent = "🗑️";
-    trashButton.setAttribute("data-label", countdown.id-1);
+    trashButton.setAttribute("data-label", listID-1);
     trashButton.addEventListener("click", () => {
       
       console.log("Trash Button Clicked");
