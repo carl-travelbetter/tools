@@ -122,6 +122,7 @@ function displayCountdowns()
     countdownCard.appendChild(countdownDays);
     //create a trash can button for delete
     const trashButton = document.createElement("button");
+    trashButton.className = "control-btn";
     trashButton.textContent = "🗑️";
     trashButton.addEventListener("click", () => {
       
