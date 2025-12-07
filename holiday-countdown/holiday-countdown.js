@@ -125,10 +125,11 @@ function displayCountdowns()
     const trashButton = document.createElement("button");
     trashButton.className = "control-btn";
     trashButton.textContent = "🗑️";
+    trashButton.setAttribute("data-label", countdown.id-1);
     trashButton.addEventListener("click", () => {
       
       console.log("Trash Button Clicked");
-      trashButton.setAttribute("data-label", countdown.id-1);
+      
       state.countdownList.splice(trashButton.dataset.label, 1); 
       deleteCountdown();
       });
