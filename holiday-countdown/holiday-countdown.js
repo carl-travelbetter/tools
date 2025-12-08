@@ -152,11 +152,12 @@ function displayCountdowns()
     shareButton.className = "control-btn";
     shareButton.textContent = "↗️ Share";
     shareButton.addEventListener("click", () => {
-
+     let message = "Going to "+countdown.title+" in "+monthsDiff+" Months "+weeks+" Weeks "+days+" Days\n"+
+       "Explore more, worry less - https://travelbetter.co.uk"
       console.log("Share Button Clicked");
       if (navigator.share)
         navigator.share({
-      text: "Going to "+countdown.title+" in "+monthsDiff+" Months "+weeks+" Weeks "+days+" Days",
+      text: message,
     }).catch(() => {
       // user cancelled – you can safely ignore this
     });
