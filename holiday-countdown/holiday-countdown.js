@@ -156,7 +156,7 @@ function displayCountdowns()
       console.log("Share Button Clicked");
       if (navigator.share)
         navigator.share({
-      text: countdown.title,
+      text: "Going to "+countdown.title+" in "+monthsDiff+" Months "+weeks+" Weeks "+days+" Days",
     }).catch(() => {
       // user cancelled – you can safely ignore this
     });
