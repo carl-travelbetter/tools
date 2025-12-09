@@ -139,8 +139,9 @@ function displayCountdowns()
     const editButton = document.createElement("button");
     editButton.className = "control-btn";
     editButton.textContent = "🖊 Edit";
+    editButton.setAttribute("data-label", listID-1);
     editButton.addEventListener("click", () => {
-
+      alert("To edit a countdown simply delete it and then create again with the new data");
       console.log("Edit Button Clicked");
 
     });
