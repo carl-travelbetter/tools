@@ -1,0 +1,34 @@
+[
+  {
+    "operator": "P&O Ferries",
+    "crossings": ["doverCalais"],
+    "amendments": "No amendment fees with Flexi; fare difference may apply.",
+    "cancellations": "Fully refundable with Premium Flexi.",
+    "link": "https://www.poferries.com/?ref=travelbetter",
+    "travelbetterRating": 3.9
+  },
+  {
+    "operator": "DFDS",
+    "crossings": ["doverCalais", "newhavenDieppe", "doverDunkirk"],
+    "amendments": "Free changes up to 24 hours before departure.",
+    "cancellations": "Full refund if canceled 24+ hours in advance.",
+    "link": "https://www.dfds.com/ferry-deals/flexible-tickets?ref=travelbetter",
+    "travelbetterRating": 3.5
+  },
+  {
+    "operator": "Brittany Ferries",
+    "crossings": [
+      "pooleCherbourg",
+      "portsmouthCaen",
+      "portsmouthStMalo",
+      "portsmouthCherbourg",
+      "portsmouthLeHarve",
+      "plymouthRoscoff",
+      "rosslareDunkirk"
+    ],
+    "amendments": "Free changes up to 24 hours before departure.",
+    "cancellations": "Full refund if canceled 24+ hours in advance.",
+    "link": "https://www.brittany-ferries.co.uk/flexible?ref=travelbetter",
+    "travelbetterRating": 4.9
+  }
+]

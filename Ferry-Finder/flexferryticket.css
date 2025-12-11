@@ -1,0 +1,198 @@
+.intro h1 {
+    font-size:20px;
+    text-align:center;
+}
+
+.intro p {
+    text-align:center;
+}
+
+body {
+    
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.crossingResults {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.providerResults {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+#ferryRoute {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin: 0.5rem auto;
+  width: 90%;
+  max-width: 400px;
+  display: block;
+}
+
+#ferryProvider {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin: 0.5rem auto;
+  width: 90%;
+  max-width: 400px;
+  display: block;
+}
+
+.searchByCrossing, .searchByProvider {
+    text-align:center;
+    margin:auto;
+}
+
+.searchByCrossing h2,
+.operatorComparison h2,
+.searchByProvider h2,
+.FAQ h2{
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #004080;
+}
+
+
+.searchButton {
+  background-color: #004080;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.searchButton:hover {
+  background-color: #0066cc;
+}
+
+
+.operatorComparison {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.operatorComparison h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.ferryCard {
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #c2fcf7; /* optional: or keep your current color */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  text-align: left;
+}
+
+.crossingResults {
+  margin-top: 1.5rem;
+}
+
+.ferryCard:hover {
+  transform: translateY(-3px);
+}
+
+.ferryCard h3 {
+  margin-top: 0;
+  color: #004080;
+}
+
+.ferryCard p {
+  margin: 0.5rem 0;
+}
+
+.learnMore, .FAQ {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.learnMore h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #004080;
+}
+
+details {
+  margin-bottom: 1rem;
+  background: #c2fcf7;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.ferryCard a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background-color: #004080;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.ferryCard a:hover {
+  background-color: #0066cc;
+}
+
+main, .app {
+  padding: 1rem;
+}
+
+.ferryCard {
+  margin: 1rem 0;
+}
+
+@media (max-width: 600px) {
+  h1, h2, h3 {
+    font-size: 1.25rem;
+  }
+
+  
+  .searchButton {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+   #ferryRoute,
+  #ferryProvider {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .searchButton {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .ferryCard {
+    padding: 0.75rem;
+  }
+}
+
+.ferryCard p, .ferryCard h3 {
+  word-wrap: break-word;
+}
+
+

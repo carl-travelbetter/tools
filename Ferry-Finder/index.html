@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<head>
+    <title>Flexible Ferry Ticket App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="flexferryticket.css">
+    <script src="flexibleFerryTicketApp.js"></script>
+</head>
+<body>
+    <header>
+    <div class="intro">
+        <h1>Flexible Ferry Ticket App</h1>
+        <p>Learn all you need to know about <b>Flexible Ferry Tickets</b> and find the perfect ticket for your next ferry crossing.</p>
+    </div>
+    </header>
+    <main>
+    <div class="app">
+        <div class="searchByCrossing">
+            <h2>Search By Crossing</h2>
+            <label for="ferrRoute">Select Ferry Route</label>
+            <select id="ferryRoute">
+                <option value="">-- Select a Crossing --</option>
+                <option value="doverCalais" >Dover - Calais</option>
+                <option value="doverDunkirk">Dover - Dunkirk</option>
+                <option value="newhavenDieppe">Newhaven - Dieppe</option>
+                <option value="pooleCherbourg">Poole - Cherbourg</option>
+                <option value="portsmouthCaen">Portsmouth - Caen</option>
+                <option value="portsmouthStMalo">Portsmouth - St Malo</option>
+                <option value="portsmouthCherbourg">Portsmouth - Cherbourg</option>
+                <option value="portsmouthLeHarve">Portsmouth - LeHarve</option>
+                <option value="plymouthRoscoff">Plymouth - Roscoff</option>
+                <option value="rosslareDunkirk">Rosslare - Dunkirk</option>
+            </select>
+            <button class="searchButton" onclick="searchByCrossing()">Search</button>
+            <div class="crossingResults" id="crossingResults">
+               
+            </div>
+            
+        </div>
+        <div class="searchByProvider">
+            <h2>Search by Provider</h2>
+            <label for="ferryProvider">Choose a Ferry Operator</label>
+            <select id="ferryProvider">
+              <option value="">-- Select a Provider --</option>
+              <option value="P&O Ferries">P&O Ferries</option>
+              <option value="DFDS">DFDS</option>
+              <option value="Brittany Ferries">Brittany Ferries</option>
+            </select>
+            <button class="searchButton" onclick="searchByProvider()">Search</button>
+            <div class="providerResults" id="providerResults"></div>
+        </div>
+        <div class="learnMore">
+            <h2>Learn More About Flexible Ferry Tickets</h2>
+
+            <details>
+              <summary><strong>What is a Flexible Ticket?</strong></summary>
+              <p>A flexible ticket allows you to change or cancel your ferry booking with low or no fees. It's a great option if your plans might change, giving you peace of mind.</p>
+            </details>
+            
+            <details>
+              <summary><strong>Are all flexible tickets the same?</strong></summary>
+              <p>No—each ferry operator sets their own rules. Always check the amendment and cancellation terms before you book.</p>
+            </details>
+            
+            <details>
+              <summary><strong>Is it worth paying extra for flexibility?</strong></summary>
+              <p>If there's a chance your plans might shift, the extra cost of a flexible ticket is often much less than change or cancellation fees later.</p>
+            </details>
+            
+            <details>
+              <summary><strong>Does a flexible ticket garuntee I can change it to what I want at any time?</strong></summary>
+              <p>No-A flexible ticket doesn’t guarantee you’ll be able to change to exactly the travel time or date you want. Any changes still depend on availability e.g whether there is space on the ferry you’d prefer.</p>
+            </details>
+
+        </div>
+    </div>
+    <div class="operatorComparison">
+        <h2>Compare Flexible Ferry Tickets</h2>
+
+          <div class="ferryCard">
+            <h3>Brittany Ferries</h3>
+            <p><strong>Amendments:</strong> Free online changes up to 5 days before travel.</p>
+            <p><strong>Cancellations:</strong> Partial refund if canceled 15+ days before departure.</p>
+          </div>
+        
+          <div class="ferryCard">
+            <h3>P&O Ferries</h3>
+            <p><strong>Amendments:</strong> No amendment fees with Flexi; fare difference may apply.</p>
+            <p><strong>Cancellations:</strong> Fully refundable with Premium Flexi.</p>
+          </div>
+        
+          <div class="ferryCard">
+            <h3>Stena Line</h3>
+            <p><strong>Amendments:</strong> Free changes up to 24 hours before departure.</p>
+            <p><strong>Cancellations:</strong> Full refund if canceled 24+ hours in advance; partial refund up to 2 hours before.</p>
+          </div>
+    </div>
+    <div class="FAQ">
+        <h2>Frequently Asked Questions</h2>
+
+        <details>
+          <summary><strong>What happens if the ferry is full?</strong></summary>
+          <p>You may be offered the next available sailing, but this depends on the operator and your ticket type. Flexible tickets give you more options, but availability still matters.</p>
+        </details>
+        
+        <details>
+          <summary><strong>Can I change my ticket on the same day?</strong></summary>
+          <p>Some operators allow last-minute changes with flexible tickets, while others need more notice. Always check the terms at the time of booking.</p>
+        </details>
+        
+        <details>
+          <summary><strong>What’s the difference between standard and flexible tickets?</strong></summary>
+          <p>Standard tickets are cheaper but less flexible. If your plans change, you may face high amendment or cancellation fees. Flexible tickets cost a bit more but allow changes or cancellations with fewer penalties.</p>
+        </details>
+
+    </div>
+    </main>
+    <footer>
+        
+    </footer>
+</body>
