@@ -4,7 +4,7 @@
     "crossings": ["doverCalais"],
     "amendments": "No amendment fees with Flexi; fare difference may apply.",
     "cancellations": "Fully refundable with Premium Flexi.",
-    "link": "https://www.poferries.com/?ref=travelbetter",
+    "link": "https://tidd.ly/4oPLUzK",
     "travelbetterRating": 3.9
   },
   {
@@ -12,7 +12,7 @@
     "crossings": ["doverCalais", "newhavenDieppe", "doverDunkirk"],
     "amendments": "Free changes up to 24 hours before departure.",
     "cancellations": "Full refund if canceled 24+ hours in advance.",
-    "link": "https://www.dfds.com/ferry-deals/flexible-tickets?ref=travelbetter",
+    "link": "https://fave.co/3XR8BII",
     "travelbetterRating": 3.5
   },
   {
@@ -28,7 +28,17 @@
     ],
     "amendments": "Free changes up to 24 hours before departure.",
     "cancellations": "Full refund if canceled 24+ hours in advance.",
-    "link": "https://www.brittany-ferries.co.uk/flexible?ref=travelbetter",
+    "link": "https://tidd.ly/4qpSxKr",
+    "travelbetterRating": 4.9
+  },
+  {
+    "operator": "Irish Ferries",
+    "crossings": [
+      "doverCalais"
+    ],
+    "amendments": "Travel on sailings 12 hours before/after booked sailing - Flex+ Ticket.",
+    "cancellations": "Cancelled more than 24 hours before travel:  100% refund to credit card, Cancelled less than 24 hours before travel: 100% refund by Travel Credit ",
+    "link": "https://fave.co/3KI3tUs",
     "travelbetterRating": 4.9
   }
 ]
