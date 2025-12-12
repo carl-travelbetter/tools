@@ -1,7 +1,7 @@
 [
   {
     "operator": "P&O Ferries",
-    "crossings": ["doverCalais", "cairnryanLarne"],
+    "crossings": ["doverCalais", "cairnryanLarne", "hullRotterdam"],
     "amendments": "No amendment fees with Flexi; fare difference may apply.",
     "cancellations": "Fully refundable with Premium Flexi.",
     "link": "https://tidd.ly/4oPLUzK",
