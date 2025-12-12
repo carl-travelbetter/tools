@@ -34,7 +34,8 @@
   {
     "operator": "Irish Ferries",
     "crossings": [
-      "doverCalais"
+      "doverCalais",
+      "dublinCherbourg"
     ],
     "amendments": "Travel on sailings 12 hours before/after booked sailing - Flex+ Ticket.",
     "cancellations": "Cancelled more than 24 hours before travel:  100% refund to credit card, Cancelled less than 24 hours before travel: 100% refund by Travel Credit ",
