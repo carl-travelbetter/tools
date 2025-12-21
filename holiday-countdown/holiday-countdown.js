@@ -184,7 +184,7 @@ function displayCountdowns()
       focus.focusList = [];
       focus.focusList.push(countdown.title);
       saveFocusCountdown()
-      window.open("/view-countdown.html");
+      window.open("/holiday-countdown/view-countdown.html");
 
     });
     countdownCard.appendChild(focusButton);
