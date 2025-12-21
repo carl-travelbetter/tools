@@ -43,7 +43,7 @@ function displayCountdown(title, tripdate)
   countdownCard.appendChild(tripTitle);
   const tripDateString = getTripDate(date);
   const dateP = document.getElementById("p");
-  dateP.textContent = tripDateString;
+  dateP.textContent = "Trip Date "+tripDateString;
   countdownCard.appendChild(dateP);
   document.getElementById("countdown").hidden = false;
 }
