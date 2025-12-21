@@ -12,4 +12,33 @@ loadCountdown();
 function loadCountdown()
 {
   console.log("View Countdown - Load Countdown");
+  let focusTrip = focus.focusList[0];
+
+  //Check if focus is empty
+  if (focusTrip === "")
+  {
+    alert("No Trip Selected");
+    return;
+  }
+
+  state.countdownList.forEach(countdown => 
+    {
+      let tripName = countdown.title;
+      if (tripName === focusTrip)
+      {
+        console.log("Match Found");
+        //Grab the countdown output and add some elements.
+        displayCountdown(countdown.title, countdown.tdate);
+      }
+    });     
+}
+
+function displayCountdown(title, tripdate)
+{
+  const countdownCard = document.getElementById("countdown");
+  countdownCard.innerHTML = "";
+  const tripTitle = document.createElement("h1");
+  tripTitle.textContent = title;
+  coundownCard.appendChild(tripTitle);
+  document.getElementById("countdown").hidden = false;
 }
