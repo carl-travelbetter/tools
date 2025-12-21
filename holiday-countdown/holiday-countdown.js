@@ -175,7 +175,10 @@ function displayCountdowns()
     focusButton.addEventListener("click", () => {
       //Get title and add to focus list then change page
       console.log("Focus Button Clicked");
-     
+      //Clear the current focus
+      focus.focusList = [];
+      focus.focusList.push(countdown.title);
+      window.open("/view-countdown.html");
 
     });
     countdownCard.appendChild(focusButton);
