@@ -35,6 +35,7 @@ function loadCountdown()
 
 function displayCountdown(title, tripdate)
 {
+  console.log("tripdate "+tripdate);
   let date = new Date(tripdate);
   const countdownCard = document.getElementById("countdown");
   countdownCard.innerHTML = "";
