@@ -39,6 +39,6 @@ function displayCountdown(title, tripdate)
   countdownCard.innerHTML = "";
   const tripTitle = document.createElement("h1");
   tripTitle.textContent = title;
-  coundownCard.appendChild(tripTitle);
+  countdownCard.appendChild(tripTitle);
   document.getElementById("countdown").hidden = false;
 }
