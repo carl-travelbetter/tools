@@ -40,5 +40,22 @@ function displayCountdown(title, tripdate)
   const tripTitle = document.createElement("h1");
   tripTitle.textContent = title;
   countdownCard.appendChild(tripTitle);
+  const tripDateString = getTripDate(tripdate);
+  const dateP = document.getElementById("p");
+  dateP.textContent = tripDateString;
+  countdownCard.appendChild(dateP);
   document.getElementById("countdown").hidden = false;
+}
+
+function getTripDate(date)
+{
+  console.log("Get Trip Date String");
+  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  let day = days[date.getDay()];
+  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  let month = months[date.getMonth()];
+  let year = date.getFullYear();
+  let suffix = getOrdinalSuffix(date.getDate());
+  let tripDate = day+" "+date.getDate()+suffix+" "+month+" "+year;
+  return tripDate;
 }
