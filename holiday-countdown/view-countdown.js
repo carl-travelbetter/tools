@@ -3,8 +3,8 @@ console.log("View Holiday Countdown");
 const STORAGE_KEY = "holiday_countdown_tb";
 let state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {countdownList: []};
 
-const STORAGE_KEY = "holiday_countdown_focus";
-let focus = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {focusList: []};
+const FOCUS_STORAGE_KEY = "holiday_countdown_focus";
+let focus = JSON.parse(localStorage.getItem(FOCUS_STORAGE_KEY)) || {focusList: []};
 
 loadCountdown();
 
