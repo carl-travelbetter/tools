@@ -35,12 +35,13 @@ function loadCountdown()
 
 function displayCountdown(title, tripdate)
 {
+  let date = new Date(tripdate);
   const countdownCard = document.getElementById("countdown");
   countdownCard.innerHTML = "";
   const tripTitle = document.createElement("h1");
   tripTitle.textContent = title;
   countdownCard.appendChild(tripTitle);
-  const tripDateString = getTripDate(tripdate);
+  const tripDateString = getTripDate(date);
   const dateP = document.getElementById("p");
   dateP.textContent = tripDateString;
   countdownCard.appendChild(dateP);
@@ -58,4 +59,15 @@ function getTripDate(date)
   let suffix = getOrdinalSuffix(date.getDate());
   let tripDate = day+" "+date.getDate()+suffix+" "+month+" "+year;
   return tripDate;
+}
+
+function getOrdinalSuffix(n) {
+  const lastDigit = n % 10;
+  const lastTwo = n % 100;
+
+  if (lastTwo >= 11 && lastTwo <= 13) return "th";
+  if (lastDigit === 1) return "st";
+  if (lastDigit === 2) return "nd";
+  if (lastDigit === 3) return "rd";
+  return "th";
 }
