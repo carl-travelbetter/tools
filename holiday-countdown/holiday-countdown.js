@@ -3,6 +3,9 @@ console.log("Holiday Countdown");
 const STORAGE_KEY = "holiday_countdown_tb";
 let state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {countdownList: []};
 
+const STORAGE_KEY = "holiday_countdown_focus";
+let focus = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {focusList: []};
+
 function loadHolidayCountdowns()
 {
   console.log("Load Holiday Countdown");
@@ -165,6 +168,17 @@ function displayCountdowns()
 
     });
     countdownCard.appendChild(shareButton);
+     //Create and add share button
+    const focusButton = document.createElement("button");
+    focusButton.className = "control-btn";
+    focusButton.textContent = "↗️ More";
+    focusButton.addEventListener("click", () => {
+      //Get title and add to focus list then change page
+      console.log("Focus Button Clicked");
+     
+
+    });
+    countdownCard.appendChild(focusButton);
     countdownList.appendChild(countdownCard);
   });
 
