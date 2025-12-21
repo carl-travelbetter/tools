@@ -3,8 +3,8 @@ console.log("Holiday Countdown");
 const STORAGE_KEY = "holiday_countdown_tb";
 let state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {countdownList: []};
 
-const STORAGE_KEY = "holiday_countdown_focus";
-let focus = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {focusList: []};
+const FOCUS_STORAGE_KEY = "holiday_countdown_focus";
+let focus = JSON.parse(localStorage.getItem(FOCUS_STORAGE_KEY)) || {focusList: []};
 
 function loadHolidayCountdowns()
 {
@@ -64,6 +64,11 @@ function createHolidayCountdown()
 function saveCountdowns() {
   console.log("Saving countdowns...");
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+}
+
+function saveFocusCountdown() {
+  console.log("Saving Focus Reference...");
+  localStorage.setItem(FOCUS_STORAGE_KEY, JSON.stringify(focus));
 }
 
 function displayCountdowns()
@@ -178,6 +183,7 @@ function displayCountdowns()
       //Clear the current focus
       focus.focusList = [];
       focus.focusList.push(countdown.title);
+      saveFocusCountdown()
       window.open("/view-countdown.html");
 
     });
