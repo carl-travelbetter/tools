@@ -65,9 +65,17 @@ function displayCountdown(title, tripdate)
   let minutes = Math.floor((millSecToGo % (1000 * 60 * 60)) / (1000 * 60));
   let seconds = Math.floor((millSecToGo % (1000 * 60)) / 1000);
   console.log("Calculating date");
+  const output = document.getElementById("secondstogo");
+    if (output == null)
+    {
+      console.log("Element is Null");
+    }
+    else
+    {
+      console.log("Element is returned");
+    }
   
-  
-  document.getElementById("secondstogo").innerHTML = "Hello"; //days+"d "+hours+"h "+minutes+"m "+seconds+"s ";
+  //document.getElementById("secondstogo").innerHTML = "Hello"; //days+"d "+hours+"h "+minutes+"m "+seconds+"s ";
   }, 1000);
       
 
