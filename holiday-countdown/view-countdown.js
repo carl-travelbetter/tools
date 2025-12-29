@@ -51,7 +51,7 @@ function displayCountdown(title, tripdate)
   //Calculate a to the second countdown
  
   
-
+  document.getElementById("advanced-countdown").hidden = false;
   let x = setInterval(function()
   {
   
