@@ -67,7 +67,7 @@ function displayCountdown(title, tripdate)
   console.log("Calculating date");
   
   
-  document.getElementById("secondstogo").innerHTML = days+"d "+hours+"h "+minutes+"m "+seconds+"s ";
+  document.getElementById("secondstogo").innerHTML = "Hello"; //days+"d "+hours+"h "+minutes+"m "+seconds+"s ";
   }, 1000);
       
 
