@@ -75,7 +75,7 @@ function displayCountdown(title, tripdate)
       console.log("Element is returned");
     }
   
-  //document.getElementById("secondstogo").innerHTML = "Hello"; //days+"d "+hours+"h "+minutes+"m "+seconds+"s ";
+  output.innerHTML = days+"d "+hours+"h "+minutes+"m "+seconds+"s ";
   }, 1000);
       
 
