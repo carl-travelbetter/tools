@@ -50,29 +50,29 @@ function displayCountdown(title, tripdate)
 
   //Calculate a to the second countdown
  
-  /*
+  
 
   let x = setInterval(function()
-{
-let cmasdate = new Date("2026-12-25");
-let date1 = new Date();
-let millSecToGo = cmasdate.getTime() - date1.getTime();
+  {
+  
+  let today = new Date();
+  let millSecToGo = date.getTime() - today.getTime();
+  
+  
+  // Time calculations for hours, minutes and seconds
+  let days = Math.floor(millSecToGo / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((millSecToGo % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((millSecToGo % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((millSecToGo % (1000 * 60)) / 1000);
+  console.log("Calculating date");
+  
+  
+  document.getElementById("secondstogo").innerHTML = days+"d "+hours+"h "+minutes+"m "+seconds+"s ";
+  }, 1000);
+      
 
 
-// Time calculations for hours, minutes and seconds
-let days = Math.floor(millSecToGo / (1000 * 60 * 60 * 24));
-let hours = Math.floor((millSecToGo % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-let minutes = Math.floor((millSecToGo % (1000 * 60 * 60)) / (1000 * 60));
-let seconds = Math.floor((millSecToGo % (1000 * 60)) / 1000);
-console.log("Calculating date");
-
-
-document.getElementById("today").innerHTML = days+"d "+hours+"h "+minutes+"m "+seconds+"s ";
-}, 1000);
-}    
-
-
-  */
+  
 }
 
 function getTripDate(date)
