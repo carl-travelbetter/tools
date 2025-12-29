@@ -47,6 +47,32 @@ function displayCountdown(title, tripdate)
   dateP.textContent = "Trip Date "+tripDateString;
   countdownCard.appendChild(dateP);
   document.getElementById("countdown").hidden = false;
+
+  //Calculate a to the second countdown
+ 
+  /*
+
+  let x = setInterval(function()
+{
+let cmasdate = new Date("2026-12-25");
+let date1 = new Date();
+let millSecToGo = cmasdate.getTime() - date1.getTime();
+
+
+// Time calculations for hours, minutes and seconds
+let days = Math.floor(millSecToGo / (1000 * 60 * 60 * 24));
+let hours = Math.floor((millSecToGo % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+let minutes = Math.floor((millSecToGo % (1000 * 60 * 60)) / (1000 * 60));
+let seconds = Math.floor((millSecToGo % (1000 * 60)) / 1000);
+console.log("Calculating date");
+
+
+document.getElementById("today").innerHTML = days+"d "+hours+"h "+minutes+"m "+seconds+"s ";
+}, 1000);
+}    
+
+
+  */
 }
 
 function getTripDate(date)
