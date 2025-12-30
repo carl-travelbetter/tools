@@ -137,3 +137,49 @@ tb-navbar ul li a:hover {
   margin-top: 0;
   color: #0170b9;
 }
+
+/* Full-width footer */
+.tb-footer {
+  background-color: #000; /* black */
+  color: #fff;            /* white text */
+  width: 100%;
+  margin-top: 3rem;
+}
+
+/* Content container (optional) */
+.tb-footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+  line-height: 1.6;
+}
+
+/* Headings + text */
+.tb-footer h3,
+.tb-footer h4 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.tb-footer p {
+  margin: 0 0 0.75rem 0;
+}
+
+/* Tagline styling */
+.tb-footer .tagline {
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+/* Links in footer */
+.tb-footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.tb-footer a:hover,
+.tb-footer a:focus {
+  opacity: 0.85;
+}
+
