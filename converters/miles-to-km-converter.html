@@ -1,0 +1,42 @@
+<DOCTYPE! html>
+  <html lang="en">
+    <head>
+      <title>Travelbetter Tools - Miles to Kilometres Converter</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="Calm, family-friendly travel tools designed to reduce stress and support neurodiverse travellers. Simple planners, packing lists and calculators to help you travel better." />
+     <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" href="https://tools.travelbetter.co.uk/lib/travelbetter-tools.css">-->
+    <script src="distance-converter.js" defer></script>
+    <link rel="stylesheet" href="https://tools.travelbetter.co.uk/lib/travelbetter-tools.css">
+</head>
+<body>
+    <div class="miles-to-km-converter">
+        <table id="convertTable">
+        <tr>
+            <td><label for="miles">To: </label></td>
+            <td><input class="miles tbcalc" type="number" id="miles" onkeyup="milesToKm()" /></td>
+            <td> miles</td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><a href="https://travelbetter.co.uk/km-to-miles-converter.html/"><img src="https://travelbetter.co.uk/wp-content/uploads/2025/03/tb-switch.png" alt="switch units"></a></td>
+            <td></td>
+        </tr>
+          
+        <tr>
+            <td><label for="km">From: </label></td>
+            <td><input class="km tbcalc" type="number" id="km" onkeyup="kmToMiles()"/></td>
+            <td> km</td>
+        </tr>
+        
+            
+       
+        </table>
+        
+        <button class="convert-button" onclick="clearValues()">Clear</button>
+        <p class="result" id="result"></p>
+         </div>
+        <div class="gap"></div>
+    </body>
+  </html>
