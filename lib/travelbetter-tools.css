@@ -155,11 +155,13 @@ tb-navbar ul li a:hover {
 }
 
 /* Headings + text */
+.tb-footer h2,
 .tb-footer h3,
 .tb-footer h4 {
   margin-top: 0;
   margin-bottom: 0.75rem;
   font-weight: 600;
+  color: #fff;   
 }
 
 .tb-footer p {
