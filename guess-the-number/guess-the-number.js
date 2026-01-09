@@ -56,7 +56,7 @@ function submitGuess()
   const resultsPane = document.getElementById("results");
   resultsPane.innerHTML = "";
   //create Results Title
-  const resultsHeading = document.createElementById("h2");
+  const resultsHeading = document.createElement("h2");
   resultsHeading.textContent = "Result";
   resultsPane.appendChild(resultsHeading);
   if (higherOrLower())
