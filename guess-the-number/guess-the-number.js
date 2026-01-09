@@ -72,7 +72,7 @@ function outputResults()
 //determine hgher or lower for output
 function higherOrLower()
 {
-  concole.log("Higher or Lower");
+  console.log("Higher or Lower");
   if (guess > targetNumber)
   {
     console.log("Guess higher than Target Number");
