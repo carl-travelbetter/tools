@@ -43,6 +43,7 @@ function submitGuess()
   if (isNaN(guess))
   {
     alert("You Must Enter a number value to guess");
+    generateTargetNumber();
     return;
   }
 
