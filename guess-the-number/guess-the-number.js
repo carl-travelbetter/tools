@@ -11,6 +11,20 @@ let guessCount = 5;
 
 //Call method to generate first target number
 generateTargetNumber();
+setValues();
+
+//set the initial control values
+function setValues()
+{
+  console.log("Set Values");
+  const range = document.getElementById("range");
+  range.innerHTML = "";
+  range.innerHTML = "0.."+topOfRange;
+
+  const guesses = document.getElementById("guesses");
+  guesses.innerHTML = "";
+  guesses.innerHTML = ""+guessCount;
+}
 
 //generate target number based on range
 function generateTargetNumber(top, bottom)
