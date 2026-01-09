@@ -53,7 +53,6 @@ function submitGuess()
   if (guess == targetNumber)
   {
     winningResult();
-    console.log("Carried on after Winning Result Function");
   }
   else
   {
@@ -105,6 +104,7 @@ function winningResult()
   winningMessage.className = "winningmessage";
   winningMessage.textContent = "Correct - Well Done, time to level up and go again!";
   winningResultOutput.appendChild(winningMessage);
+  winningResultOutput.hidden = false;
 }
 
 //determine hgher or lower for output
