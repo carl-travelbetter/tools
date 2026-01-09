@@ -16,7 +16,7 @@ generateTargetNumber();
 function generateTargetNumber(top, bottom)
 {
   console.log("Generate Target Number");
-  tagrteNumber = Math.floor(Math.random() * (topOfRange+1));
+  targetNumber = Math.floor(Math.random() * (topOfRange+1));
   console.log("Target Number "+targetNumber);
 }
 
