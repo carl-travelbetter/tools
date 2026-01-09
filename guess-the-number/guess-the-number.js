@@ -55,41 +55,44 @@ function submitGuess()
     winningResult();
     console.log("Carried on after Winning Result Function");
   }
-
-  guessCount++;
-  let guessesLeft = guessLimit - guessCount;
-  if (guessesLeft == 0)
-  {
-    document.getElementById("results").hidden = true;
-    alert("No guesses left - lets go again");
-    startAgain();
-  }
-
-  const resultsPane = document.getElementById("results");
-  resultsPane.innerHTML = "";
-  //create Results Title
-  const resultsHeading = document.createElement("h2");
-  resultsHeading.textContent = "Result";
-  resultsPane.appendChild(resultsHeading);
-  if (higherOrLower())
-  {
-    
-    let higherMessage = document.createElement("p");
-    higherMessage.textContent = "Answer too high - go lower";
-    resultsPane.appendChild(higherMessage);
-  }
   else
   {
-    console.log("Answer too low - go higher");
-    let lowerMessage = document.createElement("p");
-    lowerMessage.textContent = "Answer too low - go higher";
-    resultsPane.appendChild(lowerMessage);
-  }
 
-  let guessOutput = document.createElement("p");
-  guessOutput.textContent = "Guesses left "+guessesLeft;
-  resultsPane.appendChild(guessOutput);
-  resultsPane.hidden = false;
+      guessCount++;
+      let guessesLeft = guessLimit - guessCount;
+      if (guessesLeft == 0)
+      {
+        document.getElementById("results").hidden = true;
+        alert("No guesses left - lets go again");
+        startAgain();
+      }
+    
+      const resultsPane = document.getElementById("results");
+      resultsPane.innerHTML = "";
+      //create Results Title
+      const resultsHeading = document.createElement("h2");
+      resultsHeading.textContent = "Result";
+      resultsPane.appendChild(resultsHeading);
+      if (higherOrLower())
+      {
+        
+        let higherMessage = document.createElement("p");
+        higherMessage.textContent = "Answer too high - go lower";
+        resultsPane.appendChild(higherMessage);
+      }
+      else
+      {
+        console.log("Answer too low - go higher");
+        let lowerMessage = document.createElement("p");
+        lowerMessage.textContent = "Answer too low - go higher";
+        resultsPane.appendChild(lowerMessage);
+      }
+    
+      let guessOutput = document.createElement("p");
+      guessOutput.textContent = "Guesses left "+guessesLeft;
+      resultsPane.appendChild(guessOutput);
+      resultsPane.hidden = false;
+  }
 }
 
 //output the results of the latest guess
@@ -102,7 +105,6 @@ function winningResult()
   winningMessage.className = "winningmessage";
   winningMessage.textContent = "Correct - Well Done, time to level up and go again!";
   winningResultOutput.appendChild(winningMessage);
-  break;
 }
 
 //determine hgher or lower for output
