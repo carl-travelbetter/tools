@@ -5,7 +5,8 @@ let targetNumber = 0;
 let guess = 0;
 let topOfRange = 10;
 let bottomOfRange = 0;
-let guessCount = 5;
+let guessLimit = 5;
+let guessCount = 0;
 
 //load best score for user
 
@@ -23,7 +24,10 @@ function setValues()
 
   const guesses = document.getElementById("guesses");
   guesses.innerHTML = "";
-  guesses.innerHTML = ""+guessCount;
+  guesses.innerHTML = "Guess Limit"+guessLimit;
+
+  //Reset guess count
+  guessCount = 0;
 }
 
 //generate target number based on range
@@ -49,9 +53,16 @@ function submitGuess()
   if (guess == targetNumber)
   {
     alert("Congrats - You did it, lets up the range and go again!");
-    increaseGuessCount();
     increaseNumberRange();
     return;
+  }
+
+  guessCount++;
+  let guessesLeft = guessLimit - guessCount;
+  if (guessesLeft == 0)
+  {
+    alert("No guesses left - lets go again");
+    startAgain();
   }
 
   const resultsPane = document.getElementById("results");
@@ -62,6 +73,7 @@ function submitGuess()
   resultsPane.appendChild(resultsHeading);
   if (higherOrLower())
   {
+    
     let higherMessage = document.createElement("p");
     higherMessage.textContent = "Answer too high - go lower";
     resultsPane.appendChild(higherMessage);
@@ -73,7 +85,11 @@ function submitGuess()
     lowerMessage.textContent = "Answer too low - go higher";
     resultsPane.appendChild(lowerMessage);
   }
-  
+
+  let guessOutput = document.createElement("p");
+  guessOutput.textContent = "Guesses left "+guessesLeft;
+  resultsPane.appendChild(guessOutput);
+  resultsPane.hidden = false;
 }
 
 //output the results of the latest guess
@@ -127,9 +143,9 @@ function increaseNumberRange()
   console.log("Increase Number Range");
   topOfRange = Math.floor(topOfRange+5);
   console.log("New Top of Range = "+topOfRange);
-  const range = document.getElementById("range");
-  range.innerHTML = "";
-  range.innerHTML = "0.."+topOfRange;
+  guessLimit = Math.floor((topOfRange / 2)+1);
+  console.log("New Guess Limit = "+guessLimit);
+  setValues();
   generateTargetNumber();
 }
 
@@ -144,8 +160,20 @@ function decreaseNumberRange()
   }
   topOfRange = Math.floor(topOfRange-5);
   console.log("New Top of Range = "+topOfRange);
-  const range = document.getElementById("range");
-  range.innerHTML = "";
-  range.innerHTML = "0.."+topOfRange;
+  guessLimit = Math.floor((topOfRange / 2)+1);
+  console.log("New Guess Limit = "+guessLimit);
+  setValues();
   generateTargetNumber();
 }
+
+//Start again
+function startAgain()
+{
+  console.log("Start Again");
+  const resultsPane = document.getElementById("results");
+  resultsPane.innerHTML = "";
+  resultsPane.hidden = true;
+  setValues(); 
+  generateTargetNumber();
+}
+  
