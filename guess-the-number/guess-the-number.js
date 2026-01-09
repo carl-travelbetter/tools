@@ -98,7 +98,7 @@ function winningResult()
   console.log("Winning Result");
   const winningResultOutput = document.getElementById("results");
   winningResultOutput.innerHTML = "";
-  const winningMessage = document.createElement9("p");
+  const winningMessage = document.createElement("p");
   winningMessage.className = "winningmessage";
   winningMessage.textContent = "Correct - Well Done, time to level up and go again!";
   winningResultOutput.appendChild(winningMessage);
