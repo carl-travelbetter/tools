@@ -154,8 +154,7 @@ function increaseNumberRange()
   console.log("New Top of Range = "+topOfRange);
   guessLimit = Math.floor((topOfRange / 2)+1);
   console.log("New Guess Limit = "+guessLimit);
-  setValues();
-  generateTargetNumber();
+  startAgain();
 }
 
 //decrease number range
@@ -171,8 +170,7 @@ function decreaseNumberRange()
   console.log("New Top of Range = "+topOfRange);
   guessLimit = Math.floor((topOfRange / 2)+1);
   console.log("New Guess Limit = "+guessLimit);
-  setValues();
-  generateTargetNumber();
+  startAgain();
 }
 
 //Start again
