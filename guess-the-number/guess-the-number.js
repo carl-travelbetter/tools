@@ -49,7 +49,8 @@ function submitGuess()
   if (guess == targetNumber)
   {
     alert("Congrats - You did it, lets up the range and go again!");
-    generateTargetNumber();
+    increaseGuessCount();
+    increaseNumberRange();
     return;
   }
 
