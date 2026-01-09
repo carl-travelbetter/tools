@@ -102,6 +102,7 @@ function winningResult()
   winningMessage.className = "winningmessage";
   winningMessage.textContent = "Correct - Well Done, time to level up and go again!";
   winningResultOutput.appendChild(winningMessage);
+  break;
 }
 
 //determine hgher or lower for output
