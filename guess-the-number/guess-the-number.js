@@ -38,7 +38,8 @@ function generateTargetNumber(top, bottom)
 function submitGuess()
 {
   console.log("Submit Guess");
-  guess = document.getElementById("guess");
+  guess = document.getElementById("guess").value;
+  console.log("Guess entered "+guess);
   if (isNaN(guess))
   {
     alert("You Must Enter a number value to guess");
