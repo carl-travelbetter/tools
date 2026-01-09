@@ -51,14 +51,25 @@ function submitGuess()
     alert("Congrats - You did it");
     return;
   }
-  
+
+  const resultsPane = document.getElementById("results");
+  resultsPane.innerHTML = "";
+  //create Results Title
+  const resultsHeading = document.createElementById("h2");
+  resultsHeading.textContent = "Result";
+  resultsPane.appendChild(resultsHeading);
   if (higherOrLower())
   {
-    console.log("Answer too high - go lower");
+    let higherMessage = document.createElement("p");
+    higherMessage.textContent = "Answer too high - go lower";
+    resultsPane.appendChild(higherMessage);
   }
   else
   {
     console.log("Answer too low - go higher");
+    let lowerMessage = document.createElement("p");
+    lowerMessage.textContent = "Answer too low - go higher";
+    resultsPane.appendChild(lowerMessage);
   }
   
 }
@@ -75,13 +86,11 @@ function higherOrLower()
   console.log("Higher or Lower");
   if (guess > targetNumber)
   {
-    console.log("Guess higher than Target Number");
     return true;
   }
   
   if (guess < targetNumber)
   {
-    console.log("Guess lower than Target Number");
     return false;
   }
 }
