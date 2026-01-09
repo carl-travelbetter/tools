@@ -52,10 +52,7 @@ function submitGuess()
 
   if (guess == targetNumber)
   {
-    document.getElementById("results").hidden = true;
-    alert("Congrats - You did it, lets up the range and go again!");
-    increaseNumberRange();
-    return;
+    winningResult();
   }
 
   guessCount++;
@@ -95,9 +92,16 @@ function submitGuess()
 }
 
 //output the results of the latest guess
-function outputResults()
+function winningResult()
 {
-  console.log("Output Results");
+  console.log("Winning Result");
+  const winningResultOutput = document.getElementById("results");
+  winningResultOutput.innerHTML = "";
+  const winningMessage = document.createElement9("p");
+  winningMessage.className = "winningmessage";
+  winningMessage.textContent = "Correct - Well Done, time to level up and go again!";
+  winningResultOutput.appendChild(winningMessage);
+  return;
 }
 
 //determine hgher or lower for output
