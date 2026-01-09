@@ -73,6 +73,14 @@ function outputResults()
 function higherOrLower()
 {
   concole.log("Higher or Lower");
+  if (guess > targetNumber)
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
 }
 
 //share the results
