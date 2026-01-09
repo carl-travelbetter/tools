@@ -24,7 +24,7 @@ function setValues()
 
   const guesses = document.getElementById("guesses");
   guesses.innerHTML = "";
-  guesses.innerHTML = "Guess Limit"+guessLimit;
+  guesses.innerHTML = "Guess Limit "+guessLimit;
 
   //Reset guess count
   guessCount = 0;
