@@ -52,7 +52,7 @@ function submitGuess()
     return;
   }
   
-  if (higherOrLower)
+  if (higherOrLower())
   {
     console.log("Answer too high - go lower");
   }
