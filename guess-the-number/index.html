@@ -1,0 +1,48 @@
+<!DOCTYPE html lang="en">
+<html>
+<head>
+  <title>Guess The Number</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Simple, yet addictive, guess the number games for kids and adults." />
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <script src="guess-the-number.js" defer></script>
+  </head>
+<body>
+  <div class="tb-navbar">
+    <ul>
+      <li><a href="https://travelbetter.co.uk">Travelbetter</a></li>
+      <li><a href="https://tools.travelbetter.co.uk/index.html">Tools</a></li>
+    </ul>
+   </div>
+  <div class="intro" id="intro">
+    <h1>Guess The Number</h1>
+    <p>How many tries will it take for you to guess the number? Can you beat your best?</p>
+    <p>Challenge your friends</p>
+  </div>
+  <div class="display-card" id="guess" hidden>
+    <label for="trip-name">Name Your Trip (Optional)</label>
+    <input type="text" name="tripName" id="trip-name" />
+    <label for="trip-date">Select your trip date</label>
+    <input type="date" name="tripDate" id="trip-date" />
+    <button class="control-btn" onclick="createHolidayCountdown()">Create Holiday Countdown</button>
+  </div>
+  <div class="card" id="controls">
+    
+  </div>
+  <div class="display-card" id="instructions">
+    <h2>How to Play Guess The Number</h2>
+    <ol>
+      <li><strong>Start by typing the name of your trip</strong><br>This helps you recognise it later.</li>
+      <li><strong>Choose the date you travel</strong><br>Use the calendar to pick the right day.</li>
+      <li><strong>Tap “Save Countdown”</strong><br>Your trip will now appear in the list below.</li>
+      <li><strong>Check in anytime and tap "Load Saved Holiday Countdowns"</strong><br>The timers will load and update automatically.</li>
+      <li><strong>Tap "More" to see more details</strong><br>This will show the countdown to the second and provide some helpful planning tools.</li>
+      <li><strong>Tap "Share" to send a countdown to friends or family</strong><br>This will use your phone or browsers share options.</li>
+      <li><strong>Add more trips if you want</strong><br>You can keep everything in one place.</li>
+      <li><strong>Remove a trip easily</strong><br>Tap the bin icon when you no longer need it.</li>
+    </ol>
+    <p>🔒 Your stats are saved privately on your device. Nobody else can see them.</p>
+  </div>   
+</body>
+</html>
