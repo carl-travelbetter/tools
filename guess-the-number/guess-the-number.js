@@ -111,7 +111,7 @@ function decreaseGuessCount()
 function increaseNumberRange()
 {
   console.log("Increase Number Range");
-  topOfRange = Maths.floor(topOfRange+5);
+  topOfRange = Math.floor(topOfRange+5);
   console.log("New Top of Range = "+topOfRange);
   const range = document.getElementById("range");
   range.innerHTML = "";
@@ -127,7 +127,7 @@ function decreaseNumberRange()
     alert("Range cannot go any lower");
     return;
   }
-  topOfRange = Maths.floor(topOfRange-5);
+  topOfRange = Math.floor(topOfRange-5);
   console.log("New Top of Range = "+topOfRange);
   const range = document.getElementById("range");
   range.innerHTML = "";
