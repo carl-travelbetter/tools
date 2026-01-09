@@ -65,32 +65,35 @@ function submitGuess()
         alert("No guesses left - lets go again");
         startAgain();
       }
-    
-      const resultsPane = document.getElementById("results");
-      resultsPane.innerHTML = "";
-      //create Results Title
-      const resultsHeading = document.createElement("h2");
-      resultsHeading.textContent = "Result";
-      resultsPane.appendChild(resultsHeading);
-      if (higherOrLower())
-      {
-        
-        let higherMessage = document.createElement("p");
-        higherMessage.textContent = "Answer too high - go lower";
-        resultsPane.appendChild(higherMessage);
-      }
       else
       {
-        console.log("Answer too low - go higher");
-        let lowerMessage = document.createElement("p");
-        lowerMessage.textContent = "Answer too low - go higher";
-        resultsPane.appendChild(lowerMessage);
-      }
     
-      let guessOutput = document.createElement("p");
-      guessOutput.textContent = "Guesses left "+guessesLeft;
-      resultsPane.appendChild(guessOutput);
-      resultsPane.hidden = false;
+          const resultsPane = document.getElementById("results");
+          resultsPane.innerHTML = "";
+          //create Results Title
+          const resultsHeading = document.createElement("h2");
+          resultsHeading.textContent = "Result";
+          resultsPane.appendChild(resultsHeading);
+          if (higherOrLower())
+          {
+            
+            let higherMessage = document.createElement("p");
+            higherMessage.textContent = "Answer too high - go lower";
+            resultsPane.appendChild(higherMessage);
+          }
+          else
+          {
+            console.log("Answer too low - go higher");
+            let lowerMessage = document.createElement("p");
+            lowerMessage.textContent = "Answer too low - go higher";
+            resultsPane.appendChild(lowerMessage);
+          }
+        
+          let guessOutput = document.createElement("p");
+          guessOutput.textContent = "Guesses left "+guessesLeft;
+          resultsPane.appendChild(guessOutput);
+          resultsPane.hidden = false;
+      }
   }
 }
 
