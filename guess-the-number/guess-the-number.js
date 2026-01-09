@@ -129,6 +129,7 @@ function increaseNumberRange()
   const range = document.getElementById("range");
   range.innerHTML = "";
   range.innerHTML = "0.."+topOfRange;
+  generateTargetNumber();
 }
 
 //decrease number range
@@ -145,4 +146,5 @@ function decreaseNumberRange()
   const range = document.getElementById("range");
   range.innerHTML = "";
   range.innerHTML = "0.."+topOfRange;
+  generateTargetNumber();
 }
