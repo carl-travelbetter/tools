@@ -75,10 +75,13 @@ function higherOrLower()
   concole.log("Higher or Lower");
   if (guess > targetNumber)
   {
+    console.log("Guess higher than Target Number");
     return true;
   }
-  else
+  
+  if (guess < targetNumber)
   {
+    console.log("Guess lower than Target Number");
     return false;
   }
 }
