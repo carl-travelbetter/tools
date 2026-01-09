@@ -22,17 +22,15 @@
   </div>
   <div class="card" id="options-pane">
     <div id="range-control">
-      <p>Number Range:</p>
+      <p>Guess the number in the range</p>
       <p id="range"></p>
-      <button class="control-btn" onclick="increaseNumberRange()">+ range</button>
-      <button class="control-btn" onclick="decreaseNumberRange()">- range</button>
+      
     </div>
 
     <div id="guess-control">
       <P>Number of Guesses:</P>
       <p id="guesses"></p>
-      <button class="control-btn" onclick="increaseGuessCount()">More Guesses</button>
-      <button class="control-btn" onclick="decreaseGuessCount()">Less Guesses</button>
+      
    </div>
   </div>
   <div class="display-card" id="guess-pane">
@@ -42,7 +40,10 @@
   </div>
     <div class="card" id="results"></div>
   <div class="card" id="controls">
-    
+      <button class="control-btn" onclick="increaseNumberRange()">+ range</button>
+      <button class="control-btn" onclick="decreaseNumberRange()">- range</button>
+      <button class="control-btn" onclick="increaseGuessCount()">More Guesses</button>
+      <button class="control-btn" onclick="decreaseGuessCount()">Less Guesses</button>
   </div>
   <div class="display-card" id="instructions">
     <h2>How to Play Guess The Number</h2>
