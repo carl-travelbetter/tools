@@ -61,6 +61,7 @@ function submitGuess()
   let guessesLeft = guessLimit - guessCount;
   if (guessesLeft == 0)
   {
+    document.getElementById("results").hidden = true;
     alert("No guesses left - lets go again");
     startAgain();
   }
