@@ -43,13 +43,13 @@ function submitGuess()
   if (isNaN(guess))
   {
     alert("You Must Enter a number value to guess");
-    generateTargetNumber();
     return;
   }
 
   if (guess == targetNumber)
   {
-    alert("Congrats - You did it");
+    alert("Congrats - You did it, lets up the range and go again!");
+    generateTargetNumber();
     return;
   }
 
