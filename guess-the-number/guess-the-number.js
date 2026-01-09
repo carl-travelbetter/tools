@@ -52,6 +52,7 @@ function submitGuess()
 
   if (guess == targetNumber)
   {
+    document.getElementById("results").hidden = true;
     alert("Congrats - You did it, lets up the range and go again!");
     increaseNumberRange();
     return;
