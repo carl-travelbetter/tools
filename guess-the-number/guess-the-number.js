@@ -169,10 +169,8 @@ function decreaseNumberRange()
 //Start again
 function startAgain()
 {
-  console.log("Start Again");
-  const resultsPane = document.getElementById("results");
-  resultsPane.innerHTML = "";
-  resultsPane.hidden = true;
+  console.log("Lets Start Again");
+  document.getElementById("results").hidden = true;
   setValues(); 
   generateTargetNumber();
 }
