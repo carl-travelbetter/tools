@@ -20,13 +20,25 @@
     <p>How many tries will it take for you to guess the number? Can you beat your best?</p>
     <p>Challenge your friends</p>
   </div>
-  <div class="display-card" id="guess" hidden>
-    <label for="trip-name">Name Your Trip (Optional)</label>
-    <input type="text" name="tripName" id="trip-name" />
-    <label for="trip-date">Select your trip date</label>
-    <input type="date" name="tripDate" id="trip-date" />
-    <button class="control-btn" onclick="createHolidayCountdown()">Create Holiday Countdown</button>
+  <div class="card" id="options-pane">
+    <div id="range-control">
+      <p>Number Range:</p>
+      <p id="range"></p>
+      <button class="control-btn" onclick="increaseNumberRange()">+ range</button>
+      <button class="control-btn" onclick="decreaseNumberRange()">- range</button>
+    </div>
+    <div id="guess-control">
+      <P>Number of Guesses:</P>
+      <p id="guesses"></p>
+      <button class="control-btn" onclick="increaseGuessCount()">More Guesses</button>
+      <button class="control-btn" onclick="decreaseGuessCount()">Less Guesses</button>
+   </div>
+  <div class="display-card" id="guess-pane">
+    <label for="trip-name">Enter Guess</label>
+    <input type="number" name="guess" id="trip-name" />
+    <button class="control-btn" onclick="submitGuess()">Guess</button>
   </div>
+    <div class="card" id="results"></div>
   <div class="card" id="controls">
     
   </div>
