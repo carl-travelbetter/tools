@@ -27,7 +27,7 @@ function setValues()
 }
 
 //generate target number based on range
-function generateTargetNumber(top, bottom)
+function generateTargetNumber()
 {
   console.log("Generate Target Number");
   targetNumber = Math.floor(Math.random() * (topOfRange+1));
