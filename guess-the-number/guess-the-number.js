@@ -44,6 +44,7 @@ function submitGuess()
   console.log("Submit Guess");
   guess = document.getElementById("guess").value;
   console.log("Guess entered "+guess);
+  document.getElementById("guess").value = "";
   if (isNaN(guess))
   {
     alert("You Must Enter a number value to guess");
@@ -95,6 +96,7 @@ function submitGuess()
           resultsPane.hidden = false;
       }
   }
+  document.getElementById("resultsr").focus();
 }
 
 //output the results of the latest guess
