@@ -96,7 +96,7 @@ function submitGuess()
           resultsPane.hidden = false;
       }
   }
-  document.getElementById("guess").focus();
+  //document.getElementById("guess").focus();
 }
 
 //output the results of the latest guess
