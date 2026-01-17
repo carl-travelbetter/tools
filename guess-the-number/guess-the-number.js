@@ -77,14 +77,14 @@ function submitGuess()
           resultsPane.appendChild(resultsHeading);*/
           if (higherOrLower())
           {
-            showMessage('<p> Nope - Try Higher</p>', 'RESULT');
+            showMessage('<p> Nope - Try Lower</p>', 'RESULT');
             //let higherMessage = document.createElement("p");
             //higherMessage.textContent = "Answer too high - go lower";
             //resultsPane.appendChild(higherMessage);
           }
           else
           {
-            showMessage('<p> Nope - Try Lower</p>', 'RESULT');
+            showMessage('<p> Nope - Try Higher</p>', 'RESULT');
             /*console.log("Answer too low - go higher");
             let lowerMessage = document.createElement("p");
             lowerMessage.textContent = "Answer too low - go higher";
