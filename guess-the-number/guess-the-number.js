@@ -83,7 +83,8 @@ function submitGuess()
       {
         document.getElementById("results").hidden = true;
         showMessage(`<p> No guesses left - bad luck, try again</p>`, 'RESULT');
-        startAgain();
+        document.getElementById("start-again").hidden = false;
+        //startAgain();
       }
       else
       {
@@ -203,6 +204,7 @@ function startAgain()
   guessesMade = [];
   document.getElementById("guesses-made").hidden = true;
   document.getElementById("results").hidden = true;
+  document.getElementById("start-again").hidden = true;
   document.getElementById("guesses-left").hidden = true;
   setValues(); 
   generateTargetNumber();
