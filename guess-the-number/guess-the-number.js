@@ -90,9 +90,9 @@ function submitGuess()
             resultsPane.appendChild(lowerMessage);
           }
         
-          let guessOutput = document.createElement("p");
+          let guessOutput = document.getElementById("guesses-left");
           guessOutput.textContent = "Guesses left "+guessesLeft;
-          resultsPane.appendChild(guessOutput);
+          guessOutput.hidden = false;
           resultsPane.hidden = false;
       }
   }
@@ -183,6 +183,7 @@ function startAgain()
 {
   console.log("Lets Start Again");
   document.getElementById("results").hidden = true;
+  document.getElementById("guesses-left").hidden = true;
   setValues(); 
   generateTargetNumber();
 }
