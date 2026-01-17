@@ -1,4 +1,4 @@
-console.log("Guess The Number");
+seconsole.log("Guess The Number");
 
 //iniitlise global variables
 let targetNumber = 0;
@@ -126,11 +126,12 @@ function higherOrLower()
   console.log("Higher or Lower");
   if (guess > targetNumber)
   {
+    console.log("Too HIGH");
     return true;
   }
-  
-  if (guess < targetNumber)
+  else
   {
+    console.log("Too LOW");
     return false;
   }
 }
