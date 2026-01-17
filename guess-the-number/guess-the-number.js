@@ -116,12 +116,12 @@ function winningResult()
 //Show an output message
 function showMessage(message, type) 
 {
-  const resultsPane = document.getElementById("results");
+  const results = document.getElementById("results");
   results.innerHTML = "";
-  resultsPane.hidden = false;
+  results.hidden = false;
 
   // Basic template; you can style by type later
-  resultsPane.innerHTML = `
+  results.innerHTML = `
     <h2>Result</h2>
     <p class="${type}">${message}</p>
   `;
