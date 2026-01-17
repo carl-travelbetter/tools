@@ -7,6 +7,7 @@ let topOfRange = 10;
 let bottomOfRange = 0;
 let guessLimit = 5;
 let guessCount = 0;
+let guessesMade = [];
 
 //load best score for user
 
@@ -66,7 +67,8 @@ function submitGuess()
     showMessage('<p> Error - Only enter a number in the range 0..${topOfRange}</p>', 'error');
     return;
   }
-  
+
+  //If correct then 
   if (guess == targetNumber)
   {
     showMessage('<p> Correct - Well Done, time to try the next level!</p>', 'winningmessage');
@@ -75,6 +77,7 @@ function submitGuess()
   {
 
       guessCount++;
+      guessesMade.push(guess);
       let guessesLeft = guessLimit - guessCount;
       if (guessesLeft == 0)
       {
@@ -98,6 +101,12 @@ function submitGuess()
           let guessOutput = document.getElementById("guesses-left");
           guessOutput.textContent = "Guesses left "+guessesLeft;
           guessOutput.hidden = false;
+
+          //output the previous guesses
+          let previousGuesses = document.getElementById("guesses-made");
+          previousGuesses.innerHTML = "Previous Guesses: "+guessesMade.toString();
+          previousGuesses.hidden = false;
+          
          
       }
   }
