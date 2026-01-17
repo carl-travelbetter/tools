@@ -51,7 +51,7 @@ function submitGuess()
     return;
   } // catches empty
   
-  const guess = Number(raw);
+  guess = Number(raw);
   console.log("Guess entered "+guess);
   //Clear value entered
   document.getElementById("guess").value = "";
