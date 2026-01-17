@@ -57,21 +57,21 @@ function submitGuess()
   document.getElementById("guess").value = "";
   if (!Number.isInteger(guess)) 
   { 
-    showMessage('<p> Error - You must enter a whole number to play e.g. 4 not 4.5</p>', 'error');
+    showMessage(`<p> Error - You must enter a whole number to play e.g. 4 not 4.5</p>`, `error`);
     return;
   } // if you only want integers
 
   //Check if number is out of range
   if (guess > topOfRange)
   {
-    showMessage('<p> Error - Only enter a number in the range 0..${topOfRange}</p>', 'error');
+    showMessage(`<p> Error - Only enter a number in the range 0..${topOfRange}</p>`, `error`);
     return;
   }
 
   //If correct then 
   if (guess == targetNumber)
   {
-    showMessage('<p> Correct - Well Done, time to try the next level!</p>', 'winningmessage');
+    showMessage(`<p> Correct - Well Done, time to try the next level!</p>`, 'winningmessage');
   }
   else
   {
@@ -82,7 +82,7 @@ function submitGuess()
       if (guessesLeft == 0)
       {
         document.getElementById("results").hidden = true;
-        showMessage('<p> No guesses left - bad luck, try again</p>', 'RESULT');
+        showMessage(`<p> No guesses left - bad luck, try again</p>`, 'RESULT');
         startAgain();
       }
       else
