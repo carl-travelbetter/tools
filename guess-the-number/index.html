@@ -17,18 +17,20 @@
    </div>
   <div class="intro" id="intro">
     <h1>Guess The Number Game</h1>
+    <p>Guess the number in the range - can you do it before you run out guesses? Don't worry, you get some handy hints to help you. See <a href="#instructions">instructions</a> for more details.</p>
   </div>
   <div class="card" id="options-pane">
     <div id="range-control">
-      <p>Guess the number in the range</p>
       <p id="range"></p>
-      
+      <button class="control-btn" onclick="increaseNumberRange()">Level Up</button>
+      <button class="control-btn" onclick="decreaseNumberRange()">Level Down</button>
+      <p>Warning - Changing these restarts the game.</p>
     </div>
 
     <div id="guess-control">
       <P>Number of Guesses:</P>
       <p id="guesses"></p>
-      
+      <p id="guesses-left" hidden>Guess Left</p>
    </div>
   </div>
   <div class="display-card" id="guess-pane">
@@ -53,10 +55,7 @@
 
   
   <div class="card" id="controls">
-    <h2>Game Settings</h2>
-    <p>Warning - Changing these restarts the game.</p>
-      <button class="control-btn" onclick="increaseNumberRange()">Level Up</button>
-      <button class="control-btn" onclick="decreaseNumberRange()">Level Down</button>
+    <h2>More Options</h2>
       <button class="control-btn" onclick="startAgain()">Re-start</button>
       <button class="control-btn" onclick="challengeAFriend()">Challenge a Friend</button>
   </div>
