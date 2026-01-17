@@ -42,15 +42,31 @@ function generateTargetNumber()
 function submitGuess()
 {
   console.log("Submit Guess");
-  guess = document.getElementById("guess").value;
-  console.log("Guess entered "+guess);
-  document.getElementById("guess").value = "";
-  if (isNaN(guess))
+  const raw = document.getElementById("guess").value;
+  //Check if blank entry
+  if (!raw.trim()) 
   {
     showMessage('<p> Error - You must enter a number to play</p>', 'error');
     return;
-  }
+  } // catches empty
+  
+  const guess = Number(raw);
+  console.log("Guess entered "+guess);
+  //Clear value entered
+  document.getElementById("guess").value = "";
+  if (!Number.isInteger(guess)) 
+  { 
+    showMessage('<p> Error - You must enter a whole number to play e.g. 4 not 4.5</p>', 'error');
+    return;
+  } // if you only want integers
 
+  //Check if number is out of range
+  if (guess > topOfRange)
+  {
+    showMessage('<p> Error - Only enter a number in the range 0..${topOfRange}</p>', 'error');
+    return;
+  }
+  
   if (guess == targetNumber)
   {
     showMessage('<p> Correct - Well Done, time to try the next level!</p>', 'winningmessage');
