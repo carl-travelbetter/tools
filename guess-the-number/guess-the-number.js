@@ -200,6 +200,8 @@ function decreaseNumberRange()
 function startAgain()
 {
   console.log("Lets Start Again");
+  guessesMade = [];
+  document.getElementById("guesses-made").hidden = true;
   document.getElementById("results").hidden = true;
   document.getElementById("guesses-left").hidden = true;
   setValues(); 
