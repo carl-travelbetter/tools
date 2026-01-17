@@ -47,7 +47,7 @@ function submitGuess()
   document.getElementById("guess").value = "";
   if (isNaN(guess))
   {
-    alert("You Must Enter a number value to guess");
+    showMessage('<p> Error - You must enter a number to play</p>', 'error');
     return;
   }
 
@@ -69,49 +69,26 @@ function submitGuess()
       else
       {
     
-          /*const resultsPane = document.getElementById("results");
-          resultsPane.innerHTML = "";
-          //create Results Title
-          const resultsHeading = document.createElement("h2");
-          resultsHeading.textContent = "Result";
-          resultsPane.appendChild(resultsHeading);*/
+          
           if (higherOrLower())
           {
-            showMessage('<p> Nope - Try Lower</p>', 'RESULT');
-            //let higherMessage = document.createElement("p");
-            //higherMessage.textContent = "Answer too high - go lower";
-            //resultsPane.appendChild(higherMessage);
+            showMessage('<p> Nope - Try Lower</p>', 'RESULT');            
           }
           else
           {
-            showMessage('<p> Nope - Try Higher</p>', 'RESULT');
-            /*console.log("Answer too low - go higher");
-            let lowerMessage = document.createElement("p");
-            lowerMessage.textContent = "Answer too low - go higher";
-            resultsPane.appendChild(lowerMessage);*/
+            showMessage('<p> Nope - Try Higher</p>', 'RESULT');          
           }
         
           let guessOutput = document.getElementById("guesses-left");
           guessOutput.textContent = "Guesses left "+guessesLeft;
           guessOutput.hidden = false;
-          //resultsPane.hidden = false;
+         
       }
   }
   
 }
 
-//output the results of the latest guess
-function winningResult()
-{
-  console.log("Winning Result");
-  const winningResultOutput = document.getElementById("results");
-  winningResultOutput.innerHTML = "";
-  const winningMessage = document.createElement("p");
-  winningMessage.className = "winningmessage";
-  winningMessage.textContent = "Correct - Well Done, time to level up and go again!";
-  winningResultOutput.appendChild(winningMessage);
-  winningResultOutput.hidden = false;
-}
+
 
 //Show an output message
 function showMessage(message, type) 
