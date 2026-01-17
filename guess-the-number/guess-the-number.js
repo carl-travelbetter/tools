@@ -1,4 +1,4 @@
-seconsole.log("Guess The Number");
+console.log("Guess The Number");
 
 //iniitlise global variables
 let targetNumber = 0;
