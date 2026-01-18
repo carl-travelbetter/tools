@@ -149,12 +149,28 @@ function higherOrLower()
 function shareResults()
 {
   console.log("Share results");
+  let message = "Can you beat me at Guess The Number?"+
+       "https://tools.travelbetter.co.uk/guess-the-number/"
+  if (navigator.share)
+        navigator.share({
+      text: message,
+    }).catch(() => {
+      // user cancelled – you can safely ignore this
+    });
 }
 
 //Challenge a friend
 function challengeAFriend()
 {
   console.log("Challenge A Friend");
+  let message = "See if you can beat this game..."+
+       "https://tools.travelbetter.co.uk/guess-the-number/"
+  if (navigator.share)
+        navigator.share({
+      text: message,
+    }).catch(() => {
+      // user cancelled – you can safely ignore this
+    });
 }
 
 //increase guess count
