@@ -221,19 +221,25 @@ tb-navbar ul li a:hover {
      height: 100px;
  }
 
-.conversiontable {
+.conversiontable 
+{
 margin-left:auto;
 margin-right:auto;
 }
-#kmtomTable, th, td {
+
+#kmtomTable, th, td 
+{
 border:1px solid blue;
 } 
-#kmtomTable th {
+
+#kmtomTable th 
+{
 background-color:green;
 color:white;
 }
 
-#kmtomTable td {
+#kmtomTable td 
+{
 text-align:center;
 }
 
