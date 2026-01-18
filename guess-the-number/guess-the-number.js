@@ -81,7 +81,6 @@ function submitGuess()
       let guessesLeft = guessLimit - guessCount;
       if (guessesLeft == 0)
       {
-        document.getElementById("results").hidden = true;
         showMessage(`<p> No guesses left - bad luck, try again</p>`, 'RESULT');
         document.getElementById("start-again").hidden = false;
         //startAgain();
