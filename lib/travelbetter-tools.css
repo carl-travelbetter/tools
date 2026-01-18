@@ -46,7 +46,7 @@ h3, h4, h5 {
   text-decoration: none;
 }
 
-tb-navbar ul li a:hover {
+.tb-navbar ul li a:hover {
   background-color: #111111;
 }
 
@@ -73,7 +73,7 @@ tb-navbar ul li a:hover {
     background-color: #dcf0fc;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
     border-radius: 12px;
-    width: 80%vw;
+    width: 80vw;
     max-width:800px;
     text-align:center;
     padding:10px;
@@ -124,7 +124,7 @@ tb-navbar ul li a:hover {
   border-radius: 12px;
   box-sizing: border-box;  
   text-align: left;
-  width: 90%vw;
+  width: 90vw;
   max-width:800px;
   padding:10px;
 }
