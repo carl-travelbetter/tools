@@ -158,6 +158,7 @@ function shareResults()
     }).catch(() => {
       // user cancelled – you can safely ignore this
     });
+  startAgain();
 }
 
 //Challenge a friend
@@ -222,6 +223,7 @@ function startAgain()
   document.getElementById("results").hidden = true;
   document.getElementById("start-again").hidden = true;
   document.getElementById("guesses-left").hidden = true;
+   document.getElementById("winner").hidden = true;
   setValues(); 
   generateTargetNumber();
 }
