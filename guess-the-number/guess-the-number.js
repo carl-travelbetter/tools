@@ -64,14 +64,14 @@ function submitGuess()
   //Check if number is out of range
   if (guess > topOfRange)
   {
-    showMessage(`<p> Error - Only enter a number in the range 0..${topOfRange}</p>`, `error`);
+    showMessage(`<p class="error"> Error - Only enter a number in the range 0..${topOfRange}</p>`, `error`);
     return;
   }
 
   //If correct then 
   if (guess == targetNumber)
   {
-    showMessage(`<p> Correct - Well Done, time to try the next level!</p>`, 'winningmessage');
+    showMessage(`<p class="winningmessage"> Correct - Well Done, time to try the next level!</p>`, 'winningmessage');
   }
   else
   {
