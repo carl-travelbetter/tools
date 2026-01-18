@@ -72,6 +72,7 @@ function submitGuess()
   if (guess == targetNumber)
   {
     showMessage(`<p class="winningmessage"> Correct - Well Done, time to try the next level!</p>`, 'winningmessage');
+    document.getElementById("guess-pane").hidden = true;
     document.getElementById("winner").hidden = false;
   }
   else
@@ -223,7 +224,8 @@ function startAgain()
   document.getElementById("results").hidden = true;
   document.getElementById("start-again").hidden = true;
   document.getElementById("guesses-left").hidden = true;
-   document.getElementById("winner").hidden = true;
+  document.getElementById("winner").hidden = true;
+  document.getElementById("guess-pane").hidden = false;
   setValues(); 
   generateTargetNumber();
 }
