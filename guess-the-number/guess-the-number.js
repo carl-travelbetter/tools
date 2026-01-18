@@ -47,7 +47,7 @@ function submitGuess()
   //Check if blank entry
   if (!raw.trim()) 
   {
-    showMessage('<p> Error - You must enter a number to play</p>', 'error');
+    showMessage('<p class="error"> Error - You must enter a number to play</p>', 'error');
     return;
   } // catches empty
   
@@ -57,7 +57,7 @@ function submitGuess()
   document.getElementById("guess").value = "";
   if (!Number.isInteger(guess)) 
   { 
-    showMessage(`<p> Error - You must enter a whole number to play e.g. 4 not 4.5</p>`, `error`);
+    showMessage(`<p class="error"> Error - You must enter a whole number to play e.g. 4 not 4.5</p>`, `error`);
     return;
   } // if you only want integers
 
@@ -81,7 +81,7 @@ function submitGuess()
       let guessesLeft = guessLimit - guessCount;
       if (guessesLeft == 0)
       {
-        showMessage(`<p> No guesses left - bad luck, try again</p>`, 'RESULT');
+        showMessage(`<p class="result"> No guesses left - bad luck, try again</p>`, 'RESULT');
         document.getElementById("start-again").hidden = false;
         //startAgain();
       }
@@ -91,11 +91,11 @@ function submitGuess()
           
           if (higherOrLower())
           {
-            showMessage('<p> Nope - Try Lower</p>', 'RESULT');            
+            showMessage('<p class="result"> Nope - Try Lower</p>', 'RESULT');            
           }
           else
           {
-            showMessage('<p> Nope - Try Higher</p>', 'RESULT');          
+            showMessage('<p class="result"> Nope - Try Higher</p>', 'RESULT');          
           }
         
           let guessOutput = document.getElementById("guesses-left");
@@ -125,7 +125,7 @@ function showMessage(message, type)
   // Basic template; you can style by type later
   results.innerHTML = `
     <h2>Result</h2>
-    <p class="${type}">${message}</p>
+    ${message}
   `;
 }
 
