@@ -84,6 +84,7 @@ function submitGuess()
       if (guessesLeft == 0)
       {
         showMessage(`<p class="result"> No guesses left - bad luck, try again</p>`, 'RESULT');
+        document.getElementById("guess-pane").hidden = true;
         document.getElementById("start-again").hidden = false;
         //startAgain();
       }
