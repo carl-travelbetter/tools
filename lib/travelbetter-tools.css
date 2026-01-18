@@ -245,13 +245,19 @@ text-align:center;
 
 .winningmessage {
    text-align:center;
-   color: #f5e105;
-   font-size:20px;
+   color: #b08100;
+   font-size:22px;
 }
 
 .error {
    text-align:center;
    color: #8a030a;
+   font-size:20px;
+}
+
+.result {
+   text-align:center;
+   color: #b00090;
    font-size:20px;
 }
 
