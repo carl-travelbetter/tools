@@ -72,6 +72,7 @@ function submitGuess()
   if (guess == targetNumber)
   {
     showMessage(`<p class="winningmessage"> Correct - Well Done, time to try the next level!</p>`, 'winningmessage');
+    document.getElementById("winner").hidden = false;
   }
   else
   {
