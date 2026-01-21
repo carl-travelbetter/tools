@@ -24,7 +24,7 @@ function loadTrips()
 //Display a helpful message saying no saved trips and provide an option to create a trip or see help files
 function displayNoSavedTrips()
 {
-  console.log("No Saved Trips");
+  console.log("Display No Saved Trips");
 }
 
 //Display the saved trips with summary data and provide a manage trip option
