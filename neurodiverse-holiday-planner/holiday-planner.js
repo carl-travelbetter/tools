@@ -3,14 +3,14 @@ console.log("Travelbetter Holiday Planner");
 //Load saved data
 //Load Trips
 const TRIP_KEY = "tb_trips";
-let state = JSON.parse(localStorage.getItem(TRIP_KEY)) || {savedTripList: []};
+let trips = JSON.parse(localStorage.getItem(TRIP_KEY)) || {savedTripList: []};
 
 function loadTrips()
 {
   console.log("Load Trips");
 
   //Check if any trips are saved
-  if (savedTripList.length === 0)
+  if (trips.savedTripList.length === 0)
   {
     console.log("No Trips Saved");
     displayNoSavedTrips();
