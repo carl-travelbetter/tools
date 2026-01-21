@@ -27,6 +27,11 @@ function displayNoSavedTrips()
   console.log("Display No Saved Trips");
 }
 
+function saveTrips() {
+  console.log("Saving Trips...");
+  localStorage.setItem(TRIP_KEY, JSON.stringify(trips));
+}
+
 //Display the saved trips with summary data and provide a manage trip option
 function displaySavedTrips()
 {
