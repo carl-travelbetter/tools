@@ -86,19 +86,37 @@ function displaySavedTrips()
   const heading = document.createElement("h2");
   heading.textContent = "Saved Trips";
   tripTable.appendChild(heading);
-  const tripList = document.createElement("ul");
-  trips.savedTripList.forEach (trip => {
-    const tripListItem = document.createElement("li");
-    //Get the trip title
-    const tripItemId = document.createElement("span");
-    tripItemId.className = "span-id";
-    tripItemId.textContent = trip.title;
-    tripListItem.appendChild(tripItemId);
 
-    //Get the trip destination
-    
-    tripList.appendChild(tripListItem);
+  //Create a card for each saved trip
+  trips.savedTripList.forEach (trip => {
+    const tripListCard = document.createElement("div");
+    tripListCard.className = "card";
+    //Get the trip title
+    const tripTitle = document.createElement("h3");
+    tripTitle.textContent = trip.title;
+    tripCard.appendChild(tripTitle);
+    const tripDestination = document.createElement("p");
+    tripDestintation = "Destination: "+trip.destination;
+    tripCard.appendChild(tripDestination);
+    const date = new Date(trip.travelDate.tdate);
+    let tripDate = "Travel Date "+getTripDate(date);  
+    tripCard.appendChild(tripDate);      
   });
-  tripTable.appendChild(tripList);
+  
+  tripTable.appendChild(tripCard);
   tripTable.hidden = false;
+}
+
+//Return a useable trip date
+function getTripDate(date)
+{
+  console.log("Get Trip Date String");
+  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  let day = days[date.getDay()];
+  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  let month = months[date.getMonth()];
+  let year = date.getFullYear();
+  let suffix = getOrdinalSuffix(date.getDate());
+  let tripDate = day+" "+date.getDate()+suffix+" "+month+" "+year;
+  return tripDate;
 }
