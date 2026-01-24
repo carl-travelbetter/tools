@@ -96,9 +96,9 @@ function displaySavedTrips()
     const tripTitle = document.createElement("h3");
     tripTitle.textContent = trip.title;
     tripCard.appendChild(tripTitle);
-    const tripDestination = document.createElement("p");
-    tripDestination = "Destination: "+trip.destination;
-    tripCard.appendChild(tripDestination);
+    const destination = document.createElement("p");
+    destination = "Destination: "+trip.destination;
+    tripCard.appendChild(destination);
     const date = new Date(trip.travelDate);
     const tripDate = document.createElement("p");
     tripDate.textContent = "Travel Date "+getTripDate(date);
