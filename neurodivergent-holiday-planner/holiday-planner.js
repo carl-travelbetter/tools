@@ -45,6 +45,9 @@ function createTrip()
   else
   {
     trip.title = tripTitle;
+    trip.desintation = document.getElementById("destination").value;
+    trip.travelDate = document.getElementById("trip-date").valueAsDate;
+    trip.who = document.getElementById("who").selected.value;
     trips.savedTripList.push(trip);
     saveTrips();
     document.getElementById("create-trip").hidden = true;
@@ -55,6 +58,8 @@ function createTrip()
   //Create blanks in trip object
   //load trip object to trips list and then call save option
 }
+
+
 
 function cancelCreateTrip()
 {
