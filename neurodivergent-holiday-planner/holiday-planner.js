@@ -120,3 +120,15 @@ function getTripDate(date)
   let tripDate = day+" "+date.getDate()+suffix+" "+month+" "+year;
   return tripDate;
 }
+
+//Return the correct data suffix
+function getOrdinalSuffix(n) {
+  const lastDigit = n % 10;
+  const lastTwo = n % 100;
+
+  if (lastTwo >= 11 && lastTwo <= 13) return "th";
+  if (lastDigit === 1) return "st";
+  if (lastDigit === 2) return "nd";
+  if (lastDigit === 3) return "rd";
+  return "th";
+}
