@@ -82,4 +82,16 @@ function saveTrips() {
 function displaySavedTrips()
 {
   console.log("Load Saved Trips");
+  const tripTable = document.getElementById("saved-trips");
+  const heading = document.createElement("h2");
+  heading.textContent = "Saved Trips";
+  tripTable.appendChild(heading);
+  const tripList = document.createElement("ul");
+  trips.savedTripList.forEach (trip => {
+    const tripListItem = document.createElement("li");
+    tripListItem.textContent = trip.title;
+    tripList.appendChild(tripListItem);
+  });
+  tripTable.appendChild(tripList);
+  tripTable.hidden = false;
 }
