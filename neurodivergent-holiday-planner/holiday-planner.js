@@ -1,4 +1,4 @@
-console.log("Travelbetter Holiday Planner");
+console.log("Travelbetter Neurodivergent Holiday Planner");
 
 //Load saved data
 //Load Trips
