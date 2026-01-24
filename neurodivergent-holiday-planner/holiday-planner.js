@@ -44,7 +44,7 @@ function createTrip()
   else
   {
     trip.title = tripTitle;
-    trips.push(trip);
+    trips.savedTripList.push(trip);
     saveTrips();
   }
 
