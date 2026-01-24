@@ -89,7 +89,14 @@ function displaySavedTrips()
   const tripList = document.createElement("ul");
   trips.savedTripList.forEach (trip => {
     const tripListItem = document.createElement("li");
-    tripListItem.textContent = trip.title;
+    //Get the trip title
+    const tripItemId = document.createElement("span");
+    tripItemId.className = "span-id";
+    tripItemId.textContent = trip.title;
+    tripListItem.appendChild(tripItemId);
+
+    //Get the trip destination
+    
     tripList.appendChild(tripListItem);
   });
   tripTable.appendChild(tripList);
