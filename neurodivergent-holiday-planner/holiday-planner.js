@@ -83,6 +83,7 @@ function displaySavedTrips()
 {
   console.log("Display Saved Trips");
   const tripTable = document.getElementById("saved-trips");
+  tripTable.innerHTML = "";
   const heading = document.createElement("h2");
   heading.textContent = "Saved Trips";
   tripTable.appendChild(heading);
