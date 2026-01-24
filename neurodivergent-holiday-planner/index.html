@@ -21,8 +21,30 @@
       </div>
       <div class="display-card" id="main-menu" >
         <button class="control-btn" onclick="loadTrips()">Load Saved Adventures</button>
-        <button class="control-btn" onclick="createTrip()">Create New Adventure</button>
+        <button class="control-btn" onclick="loadCreateTripOptions()">Create New Adventure</button>
         <button class="control-btn" onclick="manageNeeds()">Manage Needs</button>
+      </div>
+      <!-- Creat new trip -->
+      <div class="display-card" id="create-trip" hidden>
+        <h2>Create Trip</h2>
+        <h3>Mandatory Fields</h3>
+        <label for="trip-title">Enter Trip Name:</label>
+        <input type="text" id="trip-title" name="trip-title" />
+        <h3>Optional Fields</h3>
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" name="destination" />
+        <label for="travel-date">Travel date:</label>
+        <input type="date" id="travel-date" name="travel-date" />
+        <label for="who">Who is going:</label>
+        <select name="who" id="who">
+          <option>Family</option>
+          <option>Family and pets</option>
+          <option>Couple/Parents</option>
+          <option>Friends</option>
+          <option>Solo Adventure</option>
+        </select>
+        <button class="control-btn" onclick="createTrip()">Save Trip</button>
+        <p>Don't worry, you can change these settings later and add more detail to your trip.</p>
       </div>
       <!-- show the saved trips -->
       <div class="card" id="saved-trips" hidden></div>
