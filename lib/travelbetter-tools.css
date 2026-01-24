@@ -280,11 +280,11 @@ li span {
 }
 
 li .span-id {
-  flex-basis: 10%;
+  flex-basis: 25%;
 }
 
 li .span-name {
-  flex-basis: 50%;
+  flex-basis: 25%;
   text-align: left;
 }
 
