@@ -37,7 +37,7 @@ function createTrip()
   //Grab each value and create a new trip object
   
   const tripTitle = document.getElementById("trip-title").value;
-  if (tripTitle == null)
+  if (tripTitle == "")
   {
     console.log("Error - no trip title entered");
     return;
