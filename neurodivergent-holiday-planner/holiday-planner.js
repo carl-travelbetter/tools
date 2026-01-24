@@ -101,10 +101,10 @@ function displaySavedTrips()
     const date = new Date(trip.travelDate);
     const tripDate = document.createElement("p");
     tripDate.textContent = "Travel Date "+getTripDate(date);
-    tripCard.appendChild(tripDate);      
+    tripCard.appendChild(tripDate);     
+    tripTable.appendChild(tripCard);
   });
-  
-  tripTable.appendChild(tripCard);
+  //Show the trips 
   tripTable.hidden = false;
 }
 
