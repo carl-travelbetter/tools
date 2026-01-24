@@ -46,7 +46,7 @@ function createTrip()
   {
     trip.title = tripTitle;
     trip.desintation = document.getElementById("destination").value;
-    trip.travelDate = document.getElementById("trip-date").valueAsDate;
+    trip.travelDate = document.getElementById("travel-date").valueAsDate;
     trip.who = document.getElementById("who").selected.value;
     trips.savedTripList.push(trip);
     saveTrips();
