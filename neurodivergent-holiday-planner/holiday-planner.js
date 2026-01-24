@@ -99,7 +99,8 @@ function displaySavedTrips()
     tripDestintation = "Destination: "+trip.destination;
     tripCard.appendChild(tripDestination);
     const date = new Date(trip.travelDate);
-    let tripDate = "Travel Date "+getTripDate(date);  
+    const tripDate = document.createElement("p");
+    tripDate.textContent = "Travel Date "+getTripDate(date);
     tripCard.appendChild(tripDate);      
   });
   
