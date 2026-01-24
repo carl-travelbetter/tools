@@ -45,7 +45,7 @@ function createTrip()
   else
   {
     trip.title = tripTitle;
-    trip.desintation = document.getElementById("destination").value;
+    trip.destination = document.getElementById("destination").value;
     trip.travelDate = document.getElementById("travel-date").valueAsDate;
     trip.who = document.getElementById("who").value;
     trips.savedTripList.push(trip);
@@ -97,7 +97,7 @@ function displaySavedTrips()
     tripTitle.textContent = trip.title;
     tripCard.appendChild(tripTitle);
     const tripDestination = document.createElement("p");
-    tripDestintation = "Destination: "+trip.destination;
+    tripDestination = "Destination: "+trip.destination;
     tripCard.appendChild(tripDestination);
     const date = new Date(trip.travelDate);
     const tripDate = document.createElement("p");
