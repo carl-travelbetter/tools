@@ -81,7 +81,7 @@ function saveTrips() {
 //Display the saved trips with summary data and provide a manage trip option
 function displaySavedTrips()
 {
-  console.log("Load Saved Trips");
+  console.log("Display Saved Trips");
   const tripTable = document.getElementById("saved-trips");
   const heading = document.createElement("h2");
   heading.textContent = "Saved Trips";
