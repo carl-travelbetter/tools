@@ -56,6 +56,12 @@ function createTrip()
   //load trip object to trips list and then call save option
 }
 
+function cancelCreateTrip()
+{
+  console.log("Cancel Creating a Trip");
+  document.getElementById("create-trip").hidden = true;
+}
+
 //Display a helpful message saying no saved trips and provide an option to create a trip or see help files
 function displayNoSavedTrips()
 {
