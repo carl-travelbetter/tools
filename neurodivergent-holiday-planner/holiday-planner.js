@@ -25,6 +25,7 @@ function loadTrips()
 function loadCreateTripOptions()
 {
   console.log("Display Create Trip");
+  document.getElementById("trip-title").value = "";
   document.getElementById("create-trip").hidden = false;
 }
 
@@ -46,6 +47,7 @@ function createTrip()
     trip.title = tripTitle;
     trips.savedTripList.push(trip);
     saveTrips();
+    document.getElementById("create-trip").hidden = true;
   }
 
    
