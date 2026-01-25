@@ -3,6 +3,11 @@ html {
    font-size: clamp(16px, 2vw, 20px);
 }
 
+/*Enusre all elements sitck to the actual sizes given including padding */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 
 body {
   color:#46474b;  
