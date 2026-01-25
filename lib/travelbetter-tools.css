@@ -65,6 +65,7 @@ h3, h4, h5 {
    font-size:1.25em;
 }
 
+/* Card sits within display card or on its own */
 .card {
     box-sizing: border-box;
     margin-left:auto;
@@ -114,6 +115,7 @@ h3, h4, h5 {
   background-color: #0066cc;
 }
 
+/*Darker blue - hosts the cards or sits on its own */
 .display-card {
   box-sizing: border-box;
   margin-left: auto;
