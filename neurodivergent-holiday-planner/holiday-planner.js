@@ -91,7 +91,7 @@ function displaySavedTrips()
   //Create a card for each saved trip
   trips.savedTripList.forEach (trip => {
     const tripCard = document.createElement("div");
-    tripCard.className = "display-card";
+    tripCard.className = "card";
     //Get the trip title
     const tripTitle = document.createElement("h3");
     tripTitle.textContent = trip.title;
