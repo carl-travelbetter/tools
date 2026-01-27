@@ -5,6 +5,10 @@ console.log("Travelbetter Neurodivergent Holiday Planner");
 const TRIP_KEY = "tb_trips";
 let trips = JSON.parse(localStorage.getItem(TRIP_KEY)) || {savedTripList: []};
 
+//Setup Focus Trip
+const FOCUS_TRIP_KEY = "tb_focus_trips";
+let focus = JSON.parse(localStorage.getItem(FOCUS_TRIP_KEY)) || {savedFocus: []};
+
 function loadTrips()
 {
   console.log("Load Trips");
@@ -102,11 +106,33 @@ function displaySavedTrips()
     const date = new Date(trip.travelDate);
     const tripDate = document.createElement("p");
     tripDate.textContent = "Travel Date: "+getTripDate(date);
-    tripCard.appendChild(tripDate);     
+    tripCard.appendChild(tripDate);
+    //Create some buttons and then have them do something
+    const moreButton = document.createElement("button");
+    moreButton.className = "control-btn";
+    moreButton.textContent = "↗️ More";
+    moreButton.addEventListener("click", () => {
+      //Get title and add to focus list then change page
+      console.log("More Button Clicked");
+      //Need to create a global stored variable for focussed trip and then call in new app
+      focus.savedFocus = [];
+      focus.focusList.push(trip.title);
+      saveFocusCountdown();
+      window.open("/neurodivergent-holiday-planner/manage-trip.html");
+
+    });
+    tripCard.appendChild(moreButton);
+    
     tripTable.appendChild(tripCard);
   });
   //Show the trips 
   tripTable.hidden = false;
+}
+
+//Save the focussed countdown when more selected.
+function saveFocusCountdown() {
+  console.log("Saving Focus Reference...");
+  localStorage.setItem(FOCUS_TRIP_KEY, JSON.stringify(focus));
 }
 
 //Return a useable trip date
