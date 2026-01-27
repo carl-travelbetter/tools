@@ -116,7 +116,7 @@ function displaySavedTrips()
       console.log("More Button Clicked");
       //Need to create a global stored variable for focussed trip and then call in new app
       focus.savedFocus = [];
-      focus.focusList.push(trip.title);
+      focus.savedFocus.push(trip.title);
       saveFocusCountdown();
       window.open("/neurodivergent-holiday-planner/manage-trip.html");
 
