@@ -93,9 +93,9 @@ h3, h4, h5 {
     margin-top:0.75em;
     background-color: #d2d7f7; 
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
-    border: 1px solid #131414;
+    border: 3px solid #131414;
     border-radius: 12px;
-    width: 100%;
+    width: 85vw;
     max-width:800px;
     text-align:left;
     padding:10px;
