@@ -85,6 +85,21 @@ h3, h4, h5 {
     padding:10px;
 }
 
+/*Informational card - often linking to further options*/
+.information-card {
+    box-sizing: border-box;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:0.75em;
+    background-color: #d2d7f7; 
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    width: 100%;
+    max-width:800px;
+    text-align:left;
+    padding:10px;
+}
+
 /* Card sits within display card or on its own to be used for gathering information from a user e.g. hosting a form */
 .input-card {
     box-sizing: border-box;
