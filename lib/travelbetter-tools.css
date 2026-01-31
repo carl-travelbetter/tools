@@ -95,7 +95,7 @@ h3, h4, h5 {
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
     border: 3px solid #131414;
     border-radius: 12px;
-    width: 85vw;
+    width: 100%;
     max-width:800px;
     text-align:left;
     padding:10px;
