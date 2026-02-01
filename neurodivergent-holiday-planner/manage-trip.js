@@ -38,7 +38,7 @@ function displayFocusTrip()
         const outputCard = document.createElement('div');
         outputCard.className = 'output-card';
         let tripDestination = document.createElement('p');
-        tripDesination.textContent = "Destination "+trip.destination;
+        tripDestination.textContent = "Destination "+trip.destination;
         outputCard.appendChild(tripDestination);
         outputArea.appendChild(outputCard);
       }
