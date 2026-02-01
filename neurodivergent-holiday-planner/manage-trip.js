@@ -19,13 +19,36 @@ function displayFocusTrip()
   if (trips.savedTripList.length > 0)
   {
     console.log("Some trips have been loaded");
+    //Get the focus trip and assign to a variable
+    const focusTrip = focus.savedFocus[0];
+    
     //find the focus trip and display the result
     //Initially this can all be done here but we will want to break that diplay function out later
     //Lets test the focus trip by using its value to display a title
     const outputArea = document.getElementById("display-trip");
     const tripHead = document.createElement("h2");
-    tripHead.textContent = "Managing Trip: "+focus.savedFocus[0];
+    tripHead.textContent = "Managing Trip: "+focusTrip;
     outputArea.appendChild(tripHead);
+    
+    //Keep it basic for now, search though, when a match is found output it. 
+    trips.savedTripList.forEach (trip => {
+      if (trip.title == focusTrip)
+      {
+        console.log("Matching Trip Found");
+        const outputCard = document.createElement('div');
+        outputCard.className = 'output-card';
+        let tripDestination = document.createElement('p');
+        tripDesination.textContent = "Destination "+trip.destination;
+        outputCard.appendChild(tripDestination);
+        outputArea.appendChild(outputCard);
+      }
+      else
+      {
+        console.log("No match, lets keep looking");
+      }
+    });
+
+    //Unhide the output area
     outputArea.hidden = false;
   }
   else
