@@ -22,7 +22,7 @@ function updateMinutesLabel() {
 function createMinutesUntil()
 {
    const countdownOutput = document.getElementById('countdown');
-   countdownOutput.innerHTML = "";
+   
    
    info('Create Minutes Until');
    let seconds = 59;
@@ -35,9 +35,12 @@ function createMinutesUntil()
 
    // Clear the timer
    countdownOutput.innerHTML = "";
+   const countdownCard = document.createElement('div');
+   countdownCard.className = "output-card";    
    const countdown = document.createElement('p');
    countdown.textContent = minutes+" Mins "+seconds+" Seconds to go";
-   countdownOutput.appendChild(countdown);    
+   countdownCard.appendChild(countdown);    
+   countdownOutput.appendChild(countdownCard);    
    countdownOutput.hidden = false; 
    seconds = seconds - 1;
    if (seconds < 0)
