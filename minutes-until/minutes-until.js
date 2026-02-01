@@ -67,7 +67,7 @@ function oneMinute()
     createMinutesUntil();
 }
 
-//Quick timer for 1 minute
+//Quick timer for 5 minutes
 function fiveMinutes()
 {
     info('5 minutes');
@@ -75,6 +75,37 @@ function fiveMinutes()
     createMinutesUntil();
 }
 
+//Quick timer for 10 minutes
+function tenMinutes()
+{
+    info('10 minutes');
+    range.value = 10;
+    createMinutesUntil();
+}
+
+//Quick timer for 15 minutes
+function fifteenMinutes()
+{
+    info('15 minutes');
+    range.value = 15;
+    createMinutesUntil();
+}
+
+//Quick timer for 25 minutes
+function twentyfiveMinutes()
+{
+    info('25 minutes');
+    range.value = 25;
+    createMinutesUntil();
+}
+
+//Quick timer for 59 minutes
+function fiftynineMinutes()
+{
+    info('59 minutes');
+    range.value = 59;
+    createMinutesUntil();
+}
 
 
 //Display the countdown complete area
