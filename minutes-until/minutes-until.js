@@ -26,7 +26,7 @@ function createMinutesUntil()
    countdownOutput.hidden = false;
    info('Create Minutes Until');
    let seconds = 59;
-   let minutes = Number(range.value);
+   let minutes = Number(range.value)-1;
     
    // Update the count down every 1 second
    var x = setInterval(function() {
