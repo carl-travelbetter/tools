@@ -49,7 +49,7 @@ function createMinutesUntil()
        if (minutes < 0)
        {
            info('Countdown Complete')
-           return;
+           clearInterval(x);
        }
    } 
        
