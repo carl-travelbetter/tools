@@ -59,6 +59,24 @@ function createMinutesUntil()
     
 }
 
+//Quick timer for 1 minute
+function oneMinute()
+{
+    info('1 minute');
+    range.value = 1;
+    createMinutesUntil();
+}
+
+//Quick timer for 1 minute
+function fiveMinutes()
+{
+    info('5 minutes');
+    range.value = 5;
+    createMinutesUntil();
+}
+
+
+
 //Display the countdown complete area
 function displayComplete()
 {
@@ -70,6 +88,6 @@ function displayComplete()
 function info(message)
 {
   console.log("Minutes Until - INFO:"+message); 
-  
 }
+
 
