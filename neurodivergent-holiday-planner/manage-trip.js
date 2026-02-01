@@ -8,6 +8,9 @@ let focus = JSON.parse(localStorage.getItem(FOCUS_TRIP_KEY)) || {savedFocus: []}
 const TRIP_KEY = "tb_trips";
 let trips = JSON.parse(localStorage.getItem(TRIP_KEY)) || {savedTripList: []};
 
+displayFocusTrip();
+
+
 function displayFocusTrip()
 {
   conole.log("Display Focus Trip");
