@@ -9,5 +9,6 @@ info('Creating Minutes Until Countdown');
 function info(message)
 {
   console.log("Minutes Until - INFO:"+message); 
+  
 }
 
