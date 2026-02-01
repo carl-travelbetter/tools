@@ -25,7 +25,7 @@ function displayFocusTrip()
     const outputArea = document.getElementById("display-trip");
     const tripHead = document.createElement("h2");
     tripHead.textContent = "Managing Trip: "+focus.savedFocus[0];
-    outputArea.appendChild('tripHead');
+    outputArea.appendChild(tripHead);
     outputArea.hidden = false;
   }
   else
