@@ -16,7 +16,7 @@ function displayFocusTrip()
   console.log("Display Focus Trip");
   //Check that the trips have loaded.
 
-  if (trips.saveTripList.length > 0)
+  if (trips.savedTripList.length > 0)
   {
     console.log("Some trips have been loaded");
     //find the focus trip and display the result
