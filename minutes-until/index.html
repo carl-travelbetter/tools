@@ -19,14 +19,13 @@
     <h1>Minutes Until Timer</h1>
     <p>A simple countdown for focused time, planning, and transitions.</p>
   </div>
-  <div class="display-card" id="create-countdown">
+  <div class="controls-card" id="create-countdown">
     <p><span id="minutesValue">25</span> <span id="minutesUnit">minutes</span></p>
     <input type="range" name="minutes" id="minutes" min="1" max="59" value="25" step="1" />
     <button class="control-btn" onclick="createMinutesUntil()">Go</button>
   </div>
-  <div class="display-card" id="create-countdown">
-    <p>Quick select</p>
-    <input type="range" name="minutes" id="minutes" min="1" max="59" value="25" step="1" />
+  <div class="controls-card" id="quick-countdown">
+    <h2>Quick Select Option</h2>
     <button class="control-btn" onclick="oneMinute()">1 min</button>
     <button class="control-btn" onclick="fiveMinutes()">5 mins</button>
     <button class="control-btn" onclick="tenMinutes()">10 mins</button>
