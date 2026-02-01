@@ -23,7 +23,7 @@ function createMinutesUntil()
 {
    const countdownOutput = document.getElementById('countdown');
    countdownOutput.innerHTML = "";
-   countdownOutput.hidden = false;
+   
    info('Create Minutes Until');
    let seconds = 59;
    let minutes = Number(range.value)-1;
@@ -38,7 +38,7 @@ function createMinutesUntil()
    const countdown = document.createElement('p');
    countdown.textContent = minutes+" Mins "+seconds+" Seconds to go";
    countdownOutput.appendChild(countdown);    
-
+   countdownOutput.hidden = false; 
    seconds = seconds - 1;
    if (seconds == 0)
    {
