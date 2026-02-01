@@ -21,7 +21,40 @@ function updateMinutesLabel() {
 
 function createMinutesUntil()
 {
-    info('Create Minutes Until');
+   const countdownOutput = document.getElementById('countdown');
+   countdownOutput.innerHTML = "";
+   countdownOutput.hidden = false;
+   info('Create Minutes Until');
+   let seconds = 59;
+   let minutes = Number(range.value);
+    
+   // Update the count down every 1 second
+   var x = setInterval(function() {
+
+  
+
+   // Clear the timer
+   countdownOutput.innerHTML = "";
+   const countdown = document.createElementById('p');
+   countdown.textContent = minutes+" Mins "+seconds+" Seconds to go";
+   countdownOutput.appendChild(countdown);    
+
+   seconds = seconds - 1;
+   if (seconds == 0)
+   {
+       seconds = 59;
+       minutes = minutes - 1;
+
+       //If countdown complete (no minutes left)
+       if (minutes < 0)
+       {
+           info('Countdown Complete')
+           return;
+       }
+   } 
+       
+  }, 1000);
+    
 }
 
 
