@@ -50,7 +50,8 @@ function createMinutesUntil()
        {
            info('Countdown Complete')
            clearInterval(x);
-           countdownOutput.hidden = true; 
+           countdownOutput.hidden = true;
+           displayComplete();
        }
    } 
        
