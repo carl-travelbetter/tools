@@ -22,7 +22,7 @@ function updateMinutesLabel() {
 function createMinutesUntil()
 {
    const countdownOutput = document.getElementById('countdown');
-   
+   document.getElementById('countdown-complete').hidden = true;
    
    info('Create Minutes Until');
    let seconds = 59;
