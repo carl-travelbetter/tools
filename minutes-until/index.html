@@ -20,9 +20,19 @@
     <p>A simple countdown for focused time, planning, and transitions.</p>
   </div>
   <div class="display-card" id="create-countdown">
-    <label for="minutes"><span id="minutesValue">25</span> <span id="minutesUnit">minutes</span></label>
+    <p><span id="minutesValue">25</span> <span id="minutesUnit">minutes</span></p>
     <input type="range" name="minutes" id="minutes" min="1" max="59" value="25" step="1" />
     <button class="control-btn" onclick="createMinutesUntil()">Go</button>
+  </div>
+  <div class="display-card" id="create-countdown">
+    <p>Quick select</p>
+    <input type="range" name="minutes" id="minutes" min="1" max="59" value="25" step="1" />
+    <button class="control-btn" onclick="oneMinute()">1 min</button>
+    <button class="control-btn" onclick="fiveMinutes()">5 mins</button>
+    <button class="control-btn" onclick="tenMinutes()">10 mins</button>
+    <button class="control-btn" onclick="fifteenMinutes()">15 mins</button>
+    <button class="control-btn" onclick="twentyfiveMinutes()">25 mins</button>
+    <button class="control-btn" onclick="fiftynineMinutes()">59 mins</button>  
   </div>
     <div class="display-card" id="countdown" hidden>
     </div>
