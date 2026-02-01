@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Minutes Until Timer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Use this free online holiday countdown app to track your next trip, share your countdown with family and friends, and keep everyone organised and excited before you travel." />
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/lib/tb-style.css">
+  <script src="minutes-until.js" defer></script>
+</head>
+<body>
+  <div class="tb-navbar">
+    <ul>
+      <li><a href="https://travelbetter.co.uk">Travelbetter</a></li>
+      <li><a href="https://tools.travelbetter.co.uk/index.html">Tools</a></li>
+    </ul>
+   </div>
+  <div class="intro" id="intro">
+    <h1>Free Holiday Countdown Timer</h1>
+    <p>A free online holiday countdown app for tracking trips, sharing with others, and staying organised before you travel.</p>
+    <p><i>No sign-ups. No tracking. Just your countdown</i></p>
+  <div class="display-card" id="create-countdown">
+    <label for="minutes">Enter Number of Minutes (1 - 59)</label>
+    <input type="range" name="minutes" id="minutes" min="1" max="59" />
+    <button class="control-btn" onclick="createMinutesUntil()">Go</button>
+  </div>
+    <div class="display-card" id="countdown" hidden>
+    </div>
+  <footer class="tb-footer">
+    <h3>About Travelbetter</h3>
+      <div class="tb-footer-inner">
+        <p>Travelbetter is a family travel project created to support quiet, anxious and neurodiverse travellers. We believe travel should feel calm, kind and accessible — not overwhelming. Through simple tools, thoughtful guides and lived experience, we help families plan trips that truly work for them.
+        </p>
+        <p class="tagline">Our mission is to help familes Explore More and Worry Less</p>
+        <p><a href="https://travelbetter.co.uk">Learn More</a></p>
+      </div>
+  </footer>
+</body>
+</html>
