@@ -13,7 +13,7 @@ displayFocusTrip();
 
 function displayFocusTrip()
 {
-  conole.log("Display Focus Trip");
+  console.log("Display Focus Trip");
   //Check that the trips have loaded.
 
   if (trips.saveTripList.length > 0)
