@@ -40,7 +40,7 @@ function createMinutesUntil()
    countdownOutput.appendChild(countdown);    
    countdownOutput.hidden = false; 
    seconds = seconds - 1;
-   if (seconds == 0)
+   if (seconds < 0)
    {
        seconds = 59;
        minutes = minutes - 1;
@@ -50,6 +50,7 @@ function createMinutesUntil()
        {
            info('Countdown Complete')
            clearInterval(x);
+           countdownOutput.hidden = true; 
        }
    } 
        
@@ -57,6 +58,12 @@ function createMinutesUntil()
     
 }
 
+//Display the countdown complete area
+function displayComplete()
+{
+    info('Display Countdown Complete');
+    document.getElementById('countdown-complete').hidden = false;
+}
 
 //Simple output to apply some useful information
 function info(message)
