@@ -19,6 +19,11 @@ function updateMinutesLabel() {
   // Ensure correct label on page load
   updateMinutesLabel();
 
+function createMinutesUntil()
+{
+    info('Create Minutes Until');
+}
+
 
 //Simple output to apply some useful information
 function info(message)
