@@ -107,9 +107,8 @@ h3, h4, h5 {
     margin-left:auto;
     margin-right:auto;
     margin-top:0.75em;
-    background-color: #d2d7f7; 
+    background-color: #d1d4eb; 
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
-    border: 3px solid #131414;
     border-radius: 12px;
     width: 100%;
     max-width:800px;
