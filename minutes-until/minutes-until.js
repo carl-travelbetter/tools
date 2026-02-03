@@ -1,131 +1,99 @@
-info('Minutes Until Initialised');
-
-info('Creating Minutes Until Countdown');
+info("Minutes Until Initialised");
 
 const range = document.getElementById("minutes");
 const valueEl = document.getElementById("minutesValue");
 const unitEl = document.getElementById("minutesUnit");
 
+const countdownOutput = document.getElementById("countdown");
+const completeEl = document.getElementById("countdown-complete");
+
+let timerId = null;          // ✅ prevents multiple intervals
+let totalSeconds = 0;
+
+// Build output UI once (✅ no DOM rebuild every second)
+const countdownCard = document.createElement("div");
+countdownCard.className = "output-card";
+
+const countdownHeader = document.createElement("h2");
+countdownHeader.textContent = "Countdown Running...";
+countdownCard.appendChild(countdownHeader);
+
+const countdownText = document.createElement("p");
+countdownText.className = "countdown-font";
+countdownCard.appendChild(countdownText);
+
+countdownOutput.appendChild(countdownCard);
+
 function updateMinutesLabel() {
-    info('Update Minutes Label');
-    const mins = Number(range.value);
-    valueEl.textContent = mins;
-    unitEl.textContent = mins === 1 ? "minute" : "minutes";
+  const mins = Number(range.value);
+  valueEl.textContent = mins;
+  unitEl.textContent = mins === 1 ? "minute" : "minutes";
+}
+
+range.addEventListener("input", updateMinutesLabel);
+updateMinutesLabel();
+
+function renderCountdown() {
+  const mins = Math.floor(totalSeconds / 60);
+  const secs = totalSeconds % 60;
+
+  const minsLabel = mins === 1 ? "min" : "mins";
+  const secsLabel = secs === 1 ? "second" : "seconds";
+
+  countdownText.textContent = `${mins} ${minsLabel} ${secs} ${secsLabel} to go`;
+}
+
+function stopTimer() {
+  if (timerId !== null) {
+    clearInterval(timerId);
+    timerId = null;
   }
+}
 
-  // Update live while dragging
-  range.addEventListener("input", updateMinutesLabel);
+function createMinutesUntil() {
+  info("Create Minutes Until");
 
-  // Ensure correct label on page load
-  updateMinutesLabel();
+  // ✅ reset UI
+  completeEl.hidden = true;
+  countdownOutput.hidden = false;
 
-function createMinutesUntil()
-{
-   const countdownOutput = document.getElementById('countdown');
-   document.getElementById('countdown-complete').hidden = true;
-   
-   info('Create Minutes Until');
-   let seconds = 59;
-   let minutes = Number(range.value)-1;
-    
-   // Update the count down every 1 second
-   var x = setInterval(function() {
+  // ✅ stop any previous timer
+  stopTimer();
 
-  
+  // ✅ set total seconds from slider minutes
+  const mins = Number(range.value);
+  totalSeconds = mins * 60;
 
-   // Clear the timer
-   countdownOutput.innerHTML = "";
-   const countdownCard = document.createElement('div');
-   countdownCard.className = "output-card";
-   const countdownHeader = document.createElement('h2');
-   countdownHeader.textContent = 'Countdown Running...';
-   countdownCard.appendChild(countdownHeader);
-   const countdown = document.createElement('p');
-   countdown.className = "countdown-font";
-   countdown.textContent = minutes+" Mins "+seconds+" Seconds to go";
-   countdownCard.appendChild(countdown);    
-   countdownOutput.appendChild(countdownCard);    
-   countdownOutput.hidden = false; 
-   seconds = seconds - 1;
-   if (seconds < 0)
-   {
-       seconds = 59;
-       minutes = minutes - 1;
+  renderCountdown();
 
-       //If countdown complete (no minutes left)
-       if (minutes < 0)
-       {
-           info('Countdown Complete')
-           clearInterval(x);
-           countdownOutput.hidden = true;
-           displayComplete();
-       }
-   } 
-       
+  timerId = setInterval(() => {
+    totalSeconds -= 1;
+
+    if (totalSeconds <= 0) {
+      info("Countdown Complete");
+      stopTimer();
+      countdownOutput.hidden = true;
+      displayComplete();
+      return;
+    }
+
+    renderCountdown();
   }, 1000);
-    
 }
 
-//Quick timer for 1 minute
-function oneMinute()
-{
-    info('1 minute');
-    range.value = 1;
-    createMinutesUntil();
+// Quick timers (✅ update label too)
+function oneMinute() { range.value = 1; updateMinutesLabel(); createMinutesUntil(); }
+function fiveMinutes() { range.value = 5; updateMinutesLabel(); createMinutesUntil(); }
+function tenMinutes() { range.value = 10; updateMinutesLabel(); createMinutesUntil(); }
+function fifteenMinutes() { range.value = 15; updateMinutesLabel(); createMinutesUntil(); }
+function twentyfiveMinutes() { range.value = 25; updateMinutesLabel(); createMinutesUntil(); }
+function fiftynineMinutes() { range.value = 59; updateMinutesLabel(); createMinutesUntil(); }
+
+function displayComplete() {
+  info("Display Countdown Complete");
+  completeEl.hidden = false;
 }
 
-//Quick timer for 5 minutes
-function fiveMinutes()
-{
-    info('5 minutes');
-    range.value = 5;
-    createMinutesUntil();
+function info(message) {
+  console.log("Minutes Until - INFO:" + message);
 }
-
-//Quick timer for 10 minutes
-function tenMinutes()
-{
-    info('10 minutes');
-    range.value = 10;
-    createMinutesUntil();
-}
-
-//Quick timer for 15 minutes
-function fifteenMinutes()
-{
-    info('15 minutes');
-    range.value = 15;
-    createMinutesUntil();
-}
-
-//Quick timer for 25 minutes
-function twentyfiveMinutes()
-{
-    info('25 minutes');
-    range.value = 25;
-    createMinutesUntil();
-}
-
-//Quick timer for 59 minutes
-function fiftynineMinutes()
-{
-    info('59 minutes');
-    range.value = 59;
-    createMinutesUntil();
-}
-
-
-//Display the countdown complete area
-function displayComplete()
-{
-    info('Display Countdown Complete');
-    document.getElementById('countdown-complete').hidden = false;
-}
-
-//Simple output to apply some useful information
-function info(message)
-{
-  console.log("Minutes Until - INFO:"+message); 
-}
-
-
