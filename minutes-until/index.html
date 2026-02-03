@@ -20,6 +20,10 @@
     <p>A simple countdown for focused time, planning, and transitions.</p>
   </div>
    <div class="display-card" id="countdown" hidden></div>
+    <div class="display-card" id="countdown-complete" hidden>
+      <p>Countdown Complete </p>
+      <p>Ready for a new timer...</p>
+    </div>
   <div class="controls-card" id="create-countdown">
     <p><span id="minutesValue" style="color:white;">25</span> <span id="minutesUnit" style="color:white;">minutes</span></p>
     <input type="range" name="minutes" id="minutes" min="1" max="59" value="25" step="1" />
@@ -34,9 +38,7 @@
     <button class="control-btn" onclick="twentyfiveMinutes()">25 mins</button>
     <button class="control-btn" onclick="fiftynineMinutes()">59 mins</button>  
   </div>
-    <div class="display-card" id="countdown-complete" hidden>
-      <p>Countdown Complete </p>
-    </div>
+   
   <footer class="tb-footer">
     <h3>About Travelbetter</h3>
       <div class="tb-footer-inner">
