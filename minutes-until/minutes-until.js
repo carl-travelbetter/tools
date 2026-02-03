@@ -38,7 +38,7 @@ function createMinutesUntil()
    const countdownCard = document.createElement('div');
    countdownCard.className = "output-card";
    const countdownHeader = document.createElement('h2');
-   countdownHeader.textContent('Countdown');
+   countdownHeader.textContent = 'Countdown Running...';
    countdownCard.appendChild(countdownHeader);
    const countdown = document.createElement('p');
    countdown.className = "countdown-font";
