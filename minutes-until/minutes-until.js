@@ -36,8 +36,12 @@ function createMinutesUntil()
    // Clear the timer
    countdownOutput.innerHTML = "";
    const countdownCard = document.createElement('div');
-   countdownCard.className = "output-card";    
+   countdownCard.className = "output-card";
+   const countdownHeader = document.createElement('h2');
+   countdownHeader.textContent('Countdown');
+   countdownCard.appendChild(countdownHeader);
    const countdown = document.createElement('p');
+   countdown.className = "countdown-font";
    countdown.textContent = minutes+" Mins "+seconds+" Seconds to go";
    countdownCard.appendChild(countdown);    
    countdownOutput.appendChild(countdownCard);    
