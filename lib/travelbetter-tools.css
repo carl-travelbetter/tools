@@ -347,11 +347,11 @@ text-align:center;
 
 .countdown-font {
    font-size: 2em;
-   color:white;
+   color:black;
 }
 
 .countdown-font:hover {
-  background-color: yellow;
+  background-color: cream;
   font-size: 2.1em;
 }
 
