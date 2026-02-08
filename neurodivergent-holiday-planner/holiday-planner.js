@@ -54,7 +54,7 @@ function createTrip()
     trip.title = tripTitle;
     //trip.destination = document.getElementById("destination").value;
     const desintationInput = document.getElementById("destination");
-    trip.destination = input?.value?.trim() || NOT_SET;
+    trip.destination = desintationInput?.value?.trim() || NOT_SET;
 
     
      //Get the element
