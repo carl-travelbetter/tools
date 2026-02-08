@@ -67,7 +67,7 @@ function createTrip()
     //Get the element
     const returnDateInput = document.getElementById("return-date");
     //Check the element value is a date
-    let returnDate = returnInput?.valueAsDate;
+    let returnDate = returnDateInput?.valueAsDate;
     //If a date then set or put NOT_SET
     trip.returnDate = returnDate ?? NOT_SET;
     trip.who = document.getElementById("who").value;
