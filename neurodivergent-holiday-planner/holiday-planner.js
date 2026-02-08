@@ -35,8 +35,8 @@ function loadTrips()
 function loadCreateTripOptions()
 {
   console.log("Display Create Trip");
-  document.getElementById("trip-title").value = "";
-  document.getElementById("create-trip").hidden = false;
+  getEl("trip-title").value = "";
+  getEl("create-trip").hidden = false;
 }
 
 //create a new trip when the user hits save
@@ -46,8 +46,8 @@ function createTrip()
   const trip = {};
   //Grab each value and create a new trip object
   
-  const tripTitle = document.getElementById("trip-title").value;
-  if (tripTitle == "")
+  const tripTitle = getText("trip-title", NOT_SET);
+  if (tripTitle == NOT_SET)
   {
     console.log("Error - no trip title entered");
     return;
