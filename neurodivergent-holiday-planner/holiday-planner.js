@@ -16,10 +16,14 @@ let focus = JSON.parse(localStorage.getItem(FOCUS_TRIP_KEY)) || {savedFocus: []}
 //Setup default no value entered variable
 const NOT_SET = "NOT_SET";
 
+//Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
   getEl("load-trips-btn")?.addEventListener("click", loadTrips);
   getEl("load-create-btn")?.addEventListener("click", loadCreateTripOptions);
+  getEl("create-trip-btn")?.addEventListener("click", createTrip);
+  getEl("cancel-trip-btn")?.addEventListener("click", cancelCreateTrip);
 }
+
 
 //Ensure html bindings are not applied until the html structure is built
 document.addEventListener("DOMContentLoaded", bindEvents);
