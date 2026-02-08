@@ -11,6 +11,15 @@ let focus = JSON.parse(localStorage.getItem(FOCUS_TRIP_KEY)) || {savedFocus: []}
 const TRIP_KEY = "tb_trips";
 let trips = JSON.parse(localStorage.getItem(TRIP_KEY)) || {savedTripList: []};
 
+//Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
+function bindEvents() 
+{
+  getEl("delete-trip-btn")?.addEventListener("click", window.open("/neurodivergent-holiday-planner/delete-trip.html"));
+}
+
+
+//Ensure html bindings are not applied until the html structure is built
+document.addEventListener("DOMContentLoaded", bindEvents);
 
 
 displayFocusTrip();
@@ -76,12 +85,6 @@ function displayFocusTrip()
           window.open("/neurodivergent-holiday-planner/edit-trip.html");
         });
         editOptions.appendChild(editBtn);
-        const deleteBtn = document.createElement('button');
-        deleteBtn.className = ('delete-btn');
-        deleteBtn.textContent = 'Delete';
-        editBtn.addEventListener("click", () => {
-          window.open("/neurodivergent-holiday-planner/delete-trip.html");
-        });
         editOptions.appendChild(editBtn);
         outputArea.appendChild(editOptions);
     
