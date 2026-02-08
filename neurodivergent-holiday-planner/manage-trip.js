@@ -64,7 +64,7 @@ function displayFocusTrip()
           daysAway.textContent = 'Trip Duration: '+duration+' Days';
         }
         outputCard.appendChild(returnDateLabel);
-        putputCard.appendchild(daysAway);
+        outputCard.appendchild(daysAway);
         outputArea.appendChild(outputCard);
       }
       else
