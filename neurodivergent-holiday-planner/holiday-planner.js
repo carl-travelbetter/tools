@@ -54,7 +54,7 @@ function createTrip()
     trip.title = tripTitle;
     trip.destination = document.getElementById("destination").value;
     trip.travelDate = document.getElementById("travel-date").valueAsDate;
-    if (!document.getElementById("return-date"))
+    if (document.getElementById("return-date") == null)
     {
       trip.returnDate = NOT_SET;
     }
