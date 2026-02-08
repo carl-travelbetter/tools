@@ -1,7 +1,7 @@
 console.log("Travelbetter Neurodivergent Holiday Planner");
 
 //Import Dom utils
-import { getEl, getText, getDate } from "./utils.js";
+import { getEl, getText, getDate } from "./lib/dom.js";
 
 //Load saved data
 //Load Trips
