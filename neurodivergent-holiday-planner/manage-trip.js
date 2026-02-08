@@ -1,7 +1,7 @@
 console.log("Manage Trip");
 
 //import the date helper util
-import {getWrittenDate} from "/lib/date-helper.js";
+import {getWrittenDate, getDuration} from "/lib/date-helper.js";
 
 //Load Focus Trip Pointer
 const FOCUS_TRIP_KEY = "tb_focus_trips";
@@ -50,16 +50,21 @@ function displayFocusTrip()
         tripDateLabel.textContent = "Travel Date: "+getWrittenDate(tripDate);
         outputCard.appendChild(tripDateLabel);
         const returnDateLabel = document.createElement('p');
+        const daysAway = document.createElement('p');
         if (trip.returnDate == "NOT_SET")
         {
           returnDateLabel.textContent = "No Return Date Set Yet";
+          daysAway.textContent = 'Unable to calculate duration as no return date';
         }
         else 
         {
           let returnDate = new Date(trip.returnDate);
           returnDateLabel.textContent = "Return Date: "+getWrittenDate(returnDate);
+          let duration = getDuration(trip.travelDate, trip.returnDate);
+          daysAway.textContent = 'Trip Duration: '+duration+' Days';
         }
         outputCard.appendChild(returnDateLabel);
+        putputCard.appendchild(daysAway);
         outputArea.appendChild(outputCard);
       }
       else
