@@ -76,6 +76,13 @@ function displayFocusTrip()
           window.open("/neurodivergent-holiday-planner/edit-trip.html");
         });
         editOptions.appendChild(editBtn);
+        const deleteBtn = document.createElement('button');
+        deleteBtn.className = ('delete-btn');
+        deleteBtn.textContent = 'Delete';
+        editBtn.addEventListener("click", () => {
+          window.open("/neurodivergent-holiday-planner/delete-trip.html");
+        });
+        editOptions.appendChild(editBtn);
         outputArea.appendChild(editOptions);
     
       }
