@@ -1,5 +1,8 @@
 console.log("Travelbetter Neurodivergent Holiday Planner");
 
+//Import Dom utils
+import { getEl, getText, getDate } from "./utils.js";
+
 //Load saved data
 //Load Trips
 const TRIP_KEY = "tb_trips";
