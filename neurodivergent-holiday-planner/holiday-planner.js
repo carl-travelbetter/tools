@@ -52,8 +52,10 @@ function createTrip()
   else
   {
     trip.title = tripTitle;
-    trip.destination = document.getElementById("destination").value;
- 
+    //trip.destination = document.getElementById("destination").value;
+    const desintationInput = document.getElementById("destination");
+    trip.destination = input?.value?.trim() || NOT_SET;
+
     
      //Get the element
     const travelDateInput = document.getElementById("travel-date");
