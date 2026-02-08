@@ -196,6 +196,23 @@ h3, h4, h5 {
   background-color: #0066cc;
 }
 
+.delete-btn {
+  background-color: #a83234;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.control-btn:hover {
+  background-color: #873335;
+}
+
+
 /*Darker blue - hosts the cards or sits on its own */
 .display-card {
   box-sizing: border-box;
