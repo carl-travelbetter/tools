@@ -93,7 +93,7 @@ function createTrip()
 function cancelCreateTrip()
 {
   console.log("Cancel Creating a Trip");
-  document.getElementById("create-trip").hidden = true;
+  getEl("create-trip").hidden = true;
 }
 
 //Display a helpful message saying no saved trips and provide an option to create a trip or see help files
