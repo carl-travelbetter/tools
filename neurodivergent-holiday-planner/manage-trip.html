@@ -23,8 +23,27 @@
       <div class="display-card" id="display-trip" hidden>
         
       </div>
-      <!-- show the saved trips -->
-      <div class="display-card" id="saved-trips" hidden></div>
+      <!-- Display a simple to the day countdown to the trip - not seconds -->
+      <div class="display-card" id="trip-countdown" hidden>
+      </div>
+      <div class="display-card" id="accomodation">
+        <h2>Accomodation</h2>
+        <p>Here are all your essential accomodation details for your trip</p>
+        <div id="accomodation-list"></div>
+        <div class="controls-card">
+          <button class="control-btn" onclick="addAccomodation()">Add Accomodation</button>
+           <button class="control-btn" onclick="findAccomodation()">Find and Book Accomodation</button> 
+        </div>
+      </div>
+       <div class="display-card" id="transport">
+        <h2>Transport</h2>
+        <p>Here are all your essential travel details for your trip</p>
+        <div id="transport-list"></div>
+         <div class="controls-card">
+          <button class="control-btn" onclick="addTransport()">Add Transport Details</button>
+           <button class="control-btn" onclick="findTransport()">Find and Book Transport</button> 
+        </div>
+      </div>
       
       <div class="display-card" id="manage-transitions">
         <h2>Manage Trip Transitions</h2>
