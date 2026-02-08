@@ -44,6 +44,17 @@ function displayFocusTrip()
         const tripDateLabel = document.createElement("p");
         tripDateLabel.textContent = "Travel Date: "+getTripDate(tripDate);
         outputCard.appendChild(tripDateLabel);
+        const returnDateLabel = document.createElement('p');
+        if (trip.returnDate == "NOT_SET")
+        {
+          returnDateLabel.textContent = "No Return Date Set Yet";
+        }
+        else 
+        {
+          let returnDate = new Date(trip.returnDate);
+          returnDateLabel.textContent = "Return Date: "+getTripDate(returnDate);
+        }
+        outputCard.appendChild(returnDateLabel);
         outputArea.appendChild(outputCard);
       }
       else
