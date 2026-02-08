@@ -9,6 +9,9 @@ let trips = JSON.parse(localStorage.getItem(TRIP_KEY)) || {savedTripList: []};
 const FOCUS_TRIP_KEY = "tb_focus_trips";
 let focus = JSON.parse(localStorage.getItem(FOCUS_TRIP_KEY)) || {savedFocus: []};
 
+//Setup default no value entered variable
+const NOT_SET = "NOT_SET";
+
 function loadTrips()
 {
   console.log("Load Trips");
@@ -51,7 +54,14 @@ function createTrip()
     trip.title = tripTitle;
     trip.destination = document.getElementById("destination").value;
     trip.travelDate = document.getElementById("travel-date").valueAsDate;
-    trip.returnDate = document.getElementById("return-date").valueAsDate;
+    if (!document.document.getElementById("return-date"))
+    {
+      trip.returnDate = NOT_SET;
+    }
+    else
+    {
+      trip.returnDate = document.getElementById("return-date").valueAsDate;
+    }
     trip.who = document.getElementById("who").value;
     trips.savedTripList.push(trip);
     saveTrips();
