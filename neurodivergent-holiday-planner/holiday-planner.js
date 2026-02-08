@@ -67,25 +67,19 @@ function createTrip()
   }
   else
   {
-    trip.title = tripTitle;
-   
-     
+    trip.title = tripTitle;  
+    //Calls the util to return destination text or NOT_SET from the destination element 
     trip.destination = getText("destination", NOT_SET);
-
-    
     //Calls the util to return date or NOT_SET from the travel-date element
     trip.travelDate = getDate("travel-date");
-   
-    //Get the element
-    const returnDateInput = document.getElementById("return-date");
-    //Check the element value is a date
-    let returnDate = returnDateInput?.valueAsDate;
-    //If a date then set or put NOT_SET
-    trip.returnDate = returnDate ?? NOT_SET;
+    //Calls the util to return date or NOT_SET from the travel-date element
+    trip.returnDate = getDate("return-date", NOT_SET);
     trip.who = document.getElementById("who").value;
     trips.savedTripList.push(trip);
     saveTrips();
-    document.getElementById("create-trip").hidden = true;
+    getEl("create-trip").hidden = true;
+    //Load up the list of trups following creation
+    displaySavedTrips()
   }
 
    
