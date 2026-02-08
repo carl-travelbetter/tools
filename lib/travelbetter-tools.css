@@ -208,7 +208,7 @@ h3, h4, h5 {
   transition: background-color 0.2s ease;
 }
 
-.control-btn:hover {
+.delete-btn:hover {
   background-color: #873335;
 }
 
