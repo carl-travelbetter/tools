@@ -67,9 +67,9 @@ function displayFocusTrip()
         outputCard.appendChild(daysAway);
         outputArea.appendChild(outputCard);
         //Create an edit and delete button
-        const editOptions = createElement('div');
+        const editOptions = document.createElement('div');
         editOptions.className = ('controls-card');
-        const editBtn = createElement('button');
+        const editBtn = document.createElement('button');
         editBtn.className = ('control-btn');
         editBtn.textContent = 'Edit';
         editBtn.addEventListener("click", () => {
