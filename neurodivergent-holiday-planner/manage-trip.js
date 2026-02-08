@@ -2,6 +2,7 @@ console.log("Manage Trip");
 
 //import the date helper util
 import {getWrittenDate, getDuration} from "/lib/date-helper.js";
+import { getEl, getText, getDate} from "/lib/dom.js";
 
 //Load Focus Trip Pointer
 const FOCUS_TRIP_KEY = "tb_focus_trips";
