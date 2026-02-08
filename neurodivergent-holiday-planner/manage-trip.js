@@ -1,5 +1,8 @@
 console.log("Manage Trip");
 
+//import the date helper util
+import {getWrittenDate} from "/lib/date-helper.js";
+
 //Load Focus Trip Pointer
 const FOCUS_TRIP_KEY = "tb_focus_trips";
 let focus = JSON.parse(localStorage.getItem(FOCUS_TRIP_KEY)) || {savedFocus: []};
@@ -7,6 +10,8 @@ let focus = JSON.parse(localStorage.getItem(FOCUS_TRIP_KEY)) || {savedFocus: []}
 //Load All Saved Trips
 const TRIP_KEY = "tb_trips";
 let trips = JSON.parse(localStorage.getItem(TRIP_KEY)) || {savedTripList: []};
+
+
 
 displayFocusTrip();
 
@@ -42,7 +47,7 @@ function displayFocusTrip()
         outputCard.appendChild(tripDestination);
         let tripDate = new Date(trip.travelDate);
         const tripDateLabel = document.createElement("p");
-        tripDateLabel.textContent = "Travel Date: "+getTripDate(tripDate);
+        tripDateLabel.textContent = "Travel Date: "+getWritten(tripDate);
         outputCard.appendChild(tripDateLabel);
         const returnDateLabel = document.createElement('p');
         if (trip.returnDate == "NOT_SET")
@@ -52,7 +57,7 @@ function displayFocusTrip()
         else 
         {
           let returnDate = new Date(trip.returnDate);
-          returnDateLabel.textContent = "Return Date: "+getTripDate(returnDate);
+          returnDateLabel.textContent = "Return Date: "+getWrittenDate(returnDate);
         }
         outputCard.appendChild(returnDateLabel);
         outputArea.appendChild(outputCard);
