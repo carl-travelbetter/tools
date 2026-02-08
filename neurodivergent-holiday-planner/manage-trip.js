@@ -66,6 +66,21 @@ function displayFocusTrip()
         outputCard.appendChild(returnDateLabel);
         outputCard.appendChild(daysAway);
         outputArea.appendChild(outputCard);
+        //Create an edit and delete button
+        const editOptions = createElement('div');
+        editOptions.className = ('controls-card');
+        const editBtn = createElement('button');
+        editBtn.className = ('control-btn');
+        editBtn.textContent = 'Edit';
+        editBtn.addEventListener("click", () => {
+          //Get title and add to focus list then change page
+          console.log("Edit Button Clicked");
+          //Need to create a global stored variable for focussed trip and then call in new app
+          window.open("/neurodivergent-holiday-planner/edit-trip.html");
+        });
+        editOptions.appendChild(editBtn);
+        outputArea.appendChild(editOptions);
+    
       }
       else
       {
