@@ -68,18 +68,14 @@ function createTrip()
   else
   {
     trip.title = tripTitle;
-    //trip.destination = document.getElementById("destination").value;
-    const desintationInput = document.getElementById("destination");
-    trip.destination = desintationInput?.value?.trim() || NOT_SET;
+   
+     
+    trip.destination = getText("destination", NOT_SET);
 
     
-     //Get the element
-    const travelDateInput = document.getElementById("travel-date");
-    //Check the element value is a date
-    let travelDate = travelDateInput?.valueAsDate;
-    //If a date then set or put NOT_SET
-    trip.travelDate = travelDate ?? NOT_SET;
-    
+    //Calls the util to return date or NOT_SET from the travel-date element
+    trip.travelDate = getDate("travel-date");
+   
     //Get the element
     const returnDateInput = document.getElementById("return-date");
     //Check the element value is a date
