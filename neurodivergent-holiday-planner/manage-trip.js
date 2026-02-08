@@ -61,7 +61,7 @@ function displayFocusTrip()
           let returnDate = new Date(trip.returnDate);
           returnDateLabel.textContent = "Return Date: "+getWrittenDate(returnDate);
           let duration = getDuration(trip.travelDate, trip.returnDate);
-          daysAway.textContent = 'Trip Duration: '+duration+' Days';
+          daysAway.textContent = 'Trip Duration: '+duration+' Nights';
         }
         outputCard.appendChild(returnDateLabel);
         outputCard.appendChild(daysAway);
