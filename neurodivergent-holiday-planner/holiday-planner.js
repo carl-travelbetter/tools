@@ -53,15 +53,21 @@ function createTrip()
   {
     trip.title = tripTitle;
     trip.destination = document.getElementById("destination").value;
-    trip.travelDate = document.getElementById("travel-date").valueAsDate;
-    if (document.getElementById("return-date") == null)
-    {
-      trip.returnDate = NOT_SET;
-    }
-    else
-    {
-      trip.returnDate = document.getElementById("return-date").valueAsDate;
-    }
+ 
+    
+     //Get the element
+    const travelDateInput = document.getElementById("travel-date");
+    //Check the element value is a date
+    let travelDate = travelDateInput?.valueAsDate;
+    //If a date then set or put NOT_SET
+    trip.travelDate = travelDate ?? NOT_SET;
+    
+    //Get the element
+    const returnDateInput = document.getElementById("return-date");
+    //Check the element value is a date
+    let returnDate = returnInput?.valueAsDate;
+    //If a date then set or put NOT_SET
+    trip.returnDate = returnDate ?? NOT_SET;
     trip.who = document.getElementById("who").value;
     trips.savedTripList.push(trip);
     saveTrips();
