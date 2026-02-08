@@ -1,6 +1,6 @@
 console.log("Travelbetter Neurodivergent Holiday Planner");
 
-console.log("import /tools/lib/dom.js");
+
 //Import Dom utils
 import { getEl, getText, getDate} from "/lib/dom.js";
 
@@ -15,6 +15,14 @@ let focus = JSON.parse(localStorage.getItem(FOCUS_TRIP_KEY)) || {savedFocus: []}
 
 //Setup default no value entered variable
 const NOT_SET = "NOT_SET";
+
+function bindEvents() {
+  getEl("load-trips-btn")?.addEventListener("click", loadTrips);
+  getEl("load-create-btn")?.addEventListener("click", loadCreateTripOptions);
+}
+
+//Ensure html bindings are not applied until the html structure is built
+document.addEventListener("DOMContentLoaded", bindEvents);
 
 function loadTrips()
 {
