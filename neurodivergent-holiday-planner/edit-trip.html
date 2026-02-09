@@ -1,0 +1,45 @@
+<DOCTYPE! html>
+  <html lang="en">
+    <head>
+      <title>Neurodivergent Travel Planner - Edit Trip</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="Edit your trip." />
+     <meta charset="UTF-8">
+     <link rel="stylesheet" href="https://tools.travelbetter.co.uk/lib/travelbetter-tools.css">
+     <script type="module" src="edit-trip.js" defer></script>
+    </head>
+    <body>
+       <div class="tb-navbar">
+        <ul>
+          <li><a href="https://travelbetter.co.uk">Travelbetter</a></li>
+          <li><a href="https://tools.travelbetter.co.uk/index.html">Tools</a></li>
+        </ul>
+       </div>
+      <div class="intro" id="intro">
+        <h1>Neurodivergent Travel Planner - Edit Trip</h1>
+        <p>Add or Change your key trip details. </p>
+      </div>
+      <!-- Show Trip Details -->
+      <div class="display-card" id="edit-trip">
+        <label for="trip-title">Trip Name:</label>
+        <input class="form-input" type="text" id="trip-title" name="trip-title" />
+        <h3 style="text-align:center;">Optional (these can be added later)</h3>
+        <label for="destination">Destination:</label>
+        <input class="form-input" type="text" id="destination" name="destination" /><br>
+        <label for="travel-date">Travel date:</label>
+        <input class="form-input" type="date" id="travel-date" name="travel-date" /><br>
+        <label for="return-date">Return date:</label>
+        <input class="form-input" type="date" id="return-date" name="return-date" /><br>
+        <label for="who">Who is going:</label>
+        <select name="who" id="who">
+          <option>Family</option>
+          <option>Family and pets</option>
+          <option>Couple/Parents</option>
+          <option>Friends</option>
+          <option>Solo Adventure</option>
+        </select>
+        <button class="control-btn" id="save-trip-btn">Save Changes</button>
+        <button class="control-btn" id="cancel-trip-btn">Cancel</button>
+      </div>
+    </body>
+  </html>
