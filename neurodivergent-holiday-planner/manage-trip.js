@@ -15,7 +15,7 @@ let trips = JSON.parse(localStorage.getItem(TRIP_KEY)) || {savedTripList: []};
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() 
 {
-  getEl("delete-trip-btn")?.addEventListener("click", goToDelete());
+  getEl("delete-trip-btn")?.addEventListener("click", goToDelete);
 }
 
 
