@@ -40,7 +40,7 @@ function displayFocusTrip()
     //find the focus trip and display the result
     //Initially this can all be done here but we will want to break that diplay function out later
     //Lets test the focus trip by using its value to display a title
-    const outputArea = document.getElementById("display-trip");
+    const outputArea = getEl("display-trip");
     const tripHead = document.createElement("h2");
     tripHead.textContent = "Managing Trip: "+focusTrip;
     outputArea.appendChild(tripHead);
