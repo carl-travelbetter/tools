@@ -15,7 +15,7 @@ let trips = JSON.parse(localStorage.getItem(TRIP_KEY)) || {savedTripList: []};
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() 
 {
-  getEl("delete-trip-btn")?.addEventListener("click", window.open("/neurodivergent-holiday-planner/delete-trip.html"));
+  getEl("delete-trip-btn")?.addEventListener("click", goToDelete());
 }
 
 
@@ -104,5 +104,10 @@ function displayFocusTrip()
     console.log("No Trips Found");
     //Take some action
   }
+}
+
+function goToDelete()
+{
+  window.location.href = "/neurodivergent-holiday-planner/delete-trip.html";
 }
 
