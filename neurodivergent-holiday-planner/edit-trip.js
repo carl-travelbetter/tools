@@ -58,7 +58,7 @@ function loadTripDetails()
 function cancelEdit()
 {
   console.log("Cancel Edit Trip");
-  window..location.href("/neurodivergent-holiday-planner/manage-trip.html");
+  window.location.href("/neurodivergent-holiday-planner/manage-trip.html");
 }
 
 function saveChanges()
@@ -76,7 +76,7 @@ function saveChanges()
         trip.travelDate = getEl('travel-date').value;
         trip.returnDate = getEl('return-date').value;
         saveTrips();
-        window..location.href("/neurodivergent-holiday-planner/manage-trip.html");
+        window.location.href("/neurodivergent-holiday-planner/manage-trip.html");
       }
       else
       {
