@@ -23,6 +23,7 @@ function bindEvents() {
   getEl("cancel-btn")?.addEventListener("click", cancelChanges);
   getEl("duration")?.addEventListener("input", calcReturnDate);
   getEl("return-date")?.addEventListener("change", calcDuration);
+  getEl("travel-date")?.addEventListener("change", calcDuration);
 }
 
 //Ensure html bindings are not applied until the html structure is built
