@@ -2,6 +2,7 @@ console.log("Travelbetter Neurodivergent Holiday Planner");
 
 
 //Import Dom utils
+import {getWrittenDate, getDuration, addDays} from "/lib/date-helper.js";
 import { getEl, getText, getDate} from "/lib/dom.js";
 
 //Load saved data
@@ -22,6 +23,8 @@ function bindEvents() {
   getEl("load-create-btn")?.addEventListener("click", loadCreateTripOptions);
   getEl("create-trip-btn")?.addEventListener("click", createTrip);
   getEl("cancel-trip-btn")?.addEventListener("click", cancelCreateTrip);
+  getEl("duration")?.addEventListener("input", calcReturnDate);
+  getEl("return-date")?.addEventListener("change", calcduration);
 }
 
 
@@ -184,4 +187,19 @@ function getOrdinalSuffix(n) {
   if (lastDigit === 2) return "nd";
   if (lastDigit === 3) return "rd";
   return "th";
+}
+
+function calcReturnDate()
+{
+  const start = getEl("travel-date").value;
+  const duration = parseInt(getEl("duration").value, 10);
+
+  if (!start || isNaN(duration)) return;
+
+  getEl("return-date").value = addDays(start, duration);
+}
+
+function calcDuration()
+{
+    getEl('duration').value = getDuration(getEl('travel-date').value, getEl('return-date').value);
 }
