@@ -55,7 +55,7 @@ function loadTripDetails()
   
 }
 
-function cancelEdit()
+function cancelChanges()
 {
   console.log("Cancel Edit Trip");
   window.location.assign('/neurodivergent-holiday-planner/manage-trip.html');
