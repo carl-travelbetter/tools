@@ -73,10 +73,12 @@ function saveChanges()
       {
         console.log("Matching Trip Found");
         trip.title = getEl('trip-title').value;
+        focus.savedFocus[0] = trip.title;
         trip.destinatio = getEl('destination').value;
         trip.travelDate = getEl('travel-date').value;
         trip.returnDate = getEl('return-date').value;
         saveTrips();
+        saveFocusCountdown();
         window.location.assign('/neurodivergent-holiday-planner/manage-trip.html');
       }
       else
@@ -84,6 +86,12 @@ function saveChanges()
         console.log("No match, lets keep looking");
       }
     });
+}
+
+//Save the focussed countdown when more selected.
+function saveFocusCountdown() {
+  console.log("Saving Focus Reference...");
+  localStorage.setItem(FOCUS_TRIP_KEY, JSON.stringify(focus));
 }
 
 function saveTrips() {
