@@ -18,7 +18,7 @@ const NOT_SET = "NOT_SET";
 
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
-  getEl("save-btn")?.addEventListener("click", saveTrip);
+  getEl("save-btn")?.addEventListener("click", saveChanges);
   getEl("cancel-btn")?.addEventListener("click", cancelChanges);
 }
 
