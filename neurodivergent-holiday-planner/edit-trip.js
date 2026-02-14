@@ -2,6 +2,7 @@ console.log("Edit Trip");
 
 
 //Import Dom utils
+import {getWrittenDate, getDuration, addDays} from "/lib/date-helper.js";
 import { getEl, getText, getDate} from "/lib/dom.js";
 
 //Load saved data
@@ -20,6 +21,8 @@ const NOT_SET = "NOT_SET";
 function bindEvents() {
   getEl("save-btn")?.addEventListener("click", saveChanges);
   getEl("cancel-btn")?.addEventListener("click", cancelChanges);
+  getEl("duration")?.addEventListener("input", calcReturnDate);
+  getEl("return-date")?.addEventListener("change", calcDuration);
 }
 
 //Ensure html bindings are not applied until the html structure is built
@@ -41,7 +44,7 @@ function loadTripDetails()
         getEl('destination').value = trip.destination;
         getEl('travel-date').value = trip.travelDate;
         getEl('return-date').value = trip.returnDate;
-      
+        calcDuration();
       }
       else
       {
@@ -60,4 +63,19 @@ function cancelEdit()
 function saveChanges()
 {
   console.log("Save Changes");
+}
+
+function calcReturnDate()
+{
+  const start = getEl("travel-date").value;
+  const duration = parseInt(getEl("duration").value, 10);
+
+  if (!start || isNaN(duration)) return;
+
+  getEl("return-date").value = addDays(start, duration);
+}
+
+function calcDuration()
+{
+    getEl('duration').value = getDuration(getEl('travel-date').value, getEl('return-date').value);
 }
