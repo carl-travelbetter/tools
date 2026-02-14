@@ -18,8 +18,8 @@ const NOT_SET = "NOT_SET";
 
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
-  getEl("create-trip-btn")?.addEventListener("click", createTrip);
-  getEl("cancel-trip-btn")?.addEventListener("click", cancelCreateTrip);
+  getEl("save-btn")?.addEventListener("click", saveTrip);
+  getEl("cancel-btn")?.addEventListener("click", cancelChanges);
 }
 
 //Ensure html bindings are not applied until the html structure is built
@@ -88,4 +88,14 @@ function loadTripDetails()
     });
 
   
+}
+
+function cancelEdit()
+{
+  console.log("Cancel Edit Trip");
+}
+
+function saveChanges()
+{
+  console.log("Save Changes");
 }
