@@ -146,7 +146,7 @@ function displaySavedTrips()
       focus.savedFocus = [];
       focus.savedFocus.push(trip.title);
       saveFocusCountdown();
-      window.open("/neurodivergent-holiday-planner/manage-trip.html");
+      window.location.href("/neurodivergent-holiday-planner/manage-trip.html");
 
     });
     tripCard.appendChild(moreButton);
