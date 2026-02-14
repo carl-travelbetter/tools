@@ -77,18 +77,7 @@ function displayFocusTrip()
         outputCard.appendChild(returnDateLabel);
         outputCard.appendChild(daysAway);
         outputArea.appendChild(outputCard);
-        //Create an edit and delete button
-        const editOptions = document.createElement('div');
-        editOptions.className = ('controls-card');
-        const editBtn = document.createElement('button');
-        editBtn.className = ('control-btn');
-        editBtn.textContent = 'Edit';
-        editBtn.addEventListener("click", () => {
-          window.location.assign('/neurodivergent-holiday-planner/edit-trip.html');
-        });
-        editOptions.appendChild(editBtn);
-        editOptions.appendChild(editBtn);
-        outputArea.appendChild(editOptions);
+        
     
       }
       else
@@ -120,8 +109,10 @@ function permDelete()
     trips.savedTripList.forEach (trip => {
       if (trip.title == focusTrip)
       {
-        trips.savedTripList(pos,1);
+        //Splice - remove trip from list.
+        trips.savedTripList.splice(pos,1);
         saveTrips();
+        console.log("Trip Deleted");
       }
       else
       {
