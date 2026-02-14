@@ -39,7 +39,7 @@ function loadTripDetails()
         console.log("Matching Trip Found");
         getEl('trip-title').value = trip.title;
         getEl('destination').value = trip.destination;
-        getEl('travel-date').valueAsDate = trip.travelDate;
+        getEl('travel-date').value = trip.travelDate;
        /* 
         const outputCard = document.createElement('div');
         outputCard.className = 'output-card';
