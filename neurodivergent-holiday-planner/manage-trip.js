@@ -83,7 +83,7 @@ function displayFocusTrip()
         editBtn.className = ('control-btn');
         editBtn.textContent = 'Edit';
         editBtn.addEventListener("click", () => {
-          window.open("/neurodivergent-holiday-planner/edit-trip.html");
+          window.location.href("/neurodivergent-holiday-planner/edit-trip.html");
         });
         editOptions.appendChild(editBtn);
         editOptions.appendChild(editBtn);
