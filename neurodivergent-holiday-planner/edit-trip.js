@@ -40,46 +40,8 @@ function loadTripDetails()
         getEl('trip-title').value = trip.title;
         getEl('destination').value = trip.destination;
         getEl('travel-date').value = trip.travelDate;
-       /* 
-        const outputCard = document.createElement('div');
-        outputCard.className = 'output-card';
-        let tripDestination = document.createElement('p');
-        tripDestination.textContent = "Destination "+trip.destination;
-        outputCard.appendChild(tripDestination);
-        let tripDate = new Date(trip.travelDate);
-        const tripDateLabel = document.createElement("p");
-        tripDateLabel.textContent = "Travel Date: "+getWrittenDate(tripDate);
-        outputCard.appendChild(tripDateLabel);
-        const returnDateLabel = document.createElement('p');
-        const daysAway = document.createElement('p');
-        if (trip.returnDate == "NOT_SET")
-        {
-          returnDateLabel.textContent = "No Return Date Set Yet";
-          daysAway.textContent = 'Unable to calculate duration as no return date';
-        }
-        else 
-        {
-          let returnDate = new Date(trip.returnDate);
-          returnDateLabel.textContent = "Return Date: "+getWrittenDate(returnDate);
-          let duration = getDuration(trip.travelDate, trip.returnDate);
-          daysAway.textContent = 'Trip Duration: '+duration+' Nights';
-        }
-        outputCard.appendChild(returnDateLabel);
-        outputCard.appendChild(daysAway);
-        outputArea.appendChild(outputCard);
-        //Create an edit and delete button
-        const editOptions = document.createElement('div');
-        editOptions.className = ('controls-card');
-        const editBtn = document.createElement('button');
-        editBtn.className = ('control-btn');
-        editBtn.textContent = 'Edit';
-        editBtn.addEventListener("click", () => {
-          window.open("/neurodivergent-holiday-planner/edit-trip.html");
-        });
-        editOptions.appendChild(editBtn);
-        editOptions.appendChild(editBtn);
-        outputArea.appendChild(editOptions);
-        */
+        getEl('return-date').value = trip.returnDate;
+      
       }
       else
       {
