@@ -16,6 +16,7 @@ let trips = JSON.parse(localStorage.getItem(TRIP_KEY)) || {savedTripList: []};
 function bindEvents() 
 {
   getEl("delete-trip-btn")?.addEventListener("click", goToDelete);
+  getEl('exit-btn')?.addEventListener('click', exitToMain);
 }
 
 
@@ -104,6 +105,11 @@ function displayFocusTrip()
     console.log("No Trips Found");
     //Take some action
   }
+}
+
+function exitToMain()
+{
+  window.location.assign('/neurodivergent-holiday-planner/index.html');
 }
 
 function goToDelete()
