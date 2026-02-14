@@ -58,12 +58,36 @@ function loadTripDetails()
 function cancelEdit()
 {
   console.log("Cancel Edit Trip");
-  window.open("/neurodivergent-holiday-planner/manage-trip.html");
+  window..location.href("/neurodivergent-holiday-planner/manage-trip.html");
 }
 
 function saveChanges()
 {
   console.log("Save Changes");
+  const focusTrip = focus.savedFocus[0];
+
+  //Keep it basic for now, search though, when a match is found output it. 
+    trips.savedTripList.forEach (trip => {
+      if (trip.title == focusTrip)
+      {
+        console.log("Matching Trip Found");
+        trip.title = getEl('trip-title').value;
+        trip.destinatio = getEl('destination').value;
+        trip.travelDate = getEl('travel-date').value;
+        trip.returnDate = getEl('return-date').value;
+        saveTrips();
+        window..location.href("/neurodivergent-holiday-planner/manage-trip.html");
+      }
+      else
+      {
+        console.log("No match, lets keep looking");
+      }
+    });
+}
+
+function saveTrips() {
+  console.log("Saving Trips...");
+  localStorage.setItem(TRIP_KEY, JSON.stringify(trips));
 }
 
 function calcReturnDate()
