@@ -71,7 +71,7 @@ function createTrip()
     //Calls the util to return destination text or NOT_SET from the destination element 
     trip.destination = getText("destination", NOT_SET);
     //Calls the util to return date or NOT_SET from the travel-date element
-    trip.travelDate = getDate("travel-date");
+    trip.travelDate = getDate("travel-date", NOT_SET);
     //Calls the util to return date or NOT_SET from the travel-date element
     trip.returnDate = getDate("return-date", NOT_SET);
     trip.who = document.getElementById("who").value;
