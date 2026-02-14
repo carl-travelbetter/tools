@@ -24,7 +24,7 @@ function bindEvents() {
   getEl("create-trip-btn")?.addEventListener("click", createTrip);
   getEl("cancel-trip-btn")?.addEventListener("click", cancelCreateTrip);
   getEl("duration")?.addEventListener("input", calcReturnDate);
-  getEl("return-date")?.addEventListener("change", calcduration);
+  getEl("return-date")?.addEventListener("change", calcDuration);
 }
 
 
