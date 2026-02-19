@@ -18,7 +18,7 @@ function bindEvents()
   getEl("delete-trip-btn")?.addEventListener("click", goToDelete);
   getEl('exit-btn')?.addEventListener('click', exitToMain);
   getEl('find-accommodation')?.addEventListener('click', findAccommodation);
-  getEl('add-accommodation')?.addEventListener('click', addAccomodation);
+  getEl('add-accommodation')?.addEventListener('click', addAccommodation);
 }
 
 
