@@ -51,7 +51,7 @@ function saveAccommodation()
   accommodation.gmap = getEl('g-map').value;
   accommodations.savedAccommodation.push(accommodation);
   saveAccommodationList()
-  
+  window.location.assign('/neurodivergent-holiday-planner/manage-trip.html');
 }
 
 function saveAccommodationList()
