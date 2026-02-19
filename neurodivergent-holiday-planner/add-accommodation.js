@@ -50,7 +50,7 @@ function cancel()
 
 function calcDepartureDate()
 {
-  const start = getEl("travel-date").value;
+  const start = getEl("arrival-date").value;
   const duration = parseInt(getEl("duration").value, 10);
 
   if (!start || isNaN(duration)) return;
@@ -60,5 +60,11 @@ function calcDepartureDate()
 
 function calcDuration()
 {
-    getEl('duration').value = getDuration(getEl('arrival-date').value, getEl('departure-date').value);
+    const start = getEl('arrival-date').value;
+    const end = getEl('departure-date').value;
+
+    //If arrival date or departure date is missing, stop calc
+    if (!start || !end) return;
+  
+    getEl('duration').value = getDuration(start, end);
 }
