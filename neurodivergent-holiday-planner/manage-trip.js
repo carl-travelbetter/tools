@@ -17,7 +17,8 @@ function bindEvents()
 {
   getEl("delete-trip-btn")?.addEventListener("click", goToDelete);
   getEl('exit-btn')?.addEventListener('click', exitToMain);
-  getEl('find-accomodation')?.addEventListener('click', findAccomodation);
+  getEl('find-accommodation')?.addEventListener('click', findAccommodation);
+  getEl('add-accommodation')?.addEventListener('click', addAccomodation);
 }
 
 
@@ -118,8 +119,13 @@ function goToDelete()
   window.location.assign('/neurodivergent-holiday-planner/delete-trip.html');
 }
 
-function findAccomodation()
+function findAccommodation()
 {
   window.location.assign('https://www.agoda.com/partners/partnersearch.aspx?pcs=1&cid=1899707&hl=en-us');
+}
+
+function addAccommodation()
+{
+  window.location.assign('/neurodivergent-holiday-planner/add-accommodation.html');
 }
 
