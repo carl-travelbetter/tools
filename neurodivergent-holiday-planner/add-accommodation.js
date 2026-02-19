@@ -42,7 +42,7 @@ function saveAccommodation()
 {
   console.log("Saving...");
   const accommodation = {};
-  accommodation.trip = focus[0];
+  accommodation.trip = focus.savedFocus[0];
   accommodation.name = getEl('name').value;
   accommodation.country = getEl('country').value;
   accommodation.arrivalDate = getEl('arrival-date').value;
