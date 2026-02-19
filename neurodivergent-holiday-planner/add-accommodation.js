@@ -28,6 +28,7 @@ function bindEvents() {
   getEl("duration")?.addEventListener("input", calcDepartureDate);
   getEl("departure-date")?.addEventListener("change", calcDuration);
   getEl("arrival-date")?.addEventListener("change", calcDuration);
+  getEl("open-g-maps")?.addEventListener("click", openGoogleMaps);
 }
 
 //Ensure html bindings are not applied until the html structure is built
@@ -67,4 +68,17 @@ function calcDuration()
     if (!start || !end) return;
   
     getEl('duration').value = getDuration(start, end);
+}
+
+function openGoogleMaps()
+{
+  const currentURL = getEl('g-map').value;
+  if (!currentURL)
+  {
+    window.open("https://www.google.com/maps/", "_blank", "noopener");
+  }
+  else
+  {
+    window.open(currentURL, "_blank", "noopener");
+  }
 }
