@@ -23,7 +23,7 @@ const NOT_SET = "NOT_SET";
 
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
-  getEl("save-accommodation")?.addEventListener("click", saveAccommodation);
+  getEl("save")?.addEventListener("click", saveAccommodation);
   getEl("cancel")?.addEventListener("click", cancel);
   getEl("duration")?.addEventListener("input", calcDepartureDate);
   getEl("departure-date")?.addEventListener("change", calcDuration);
@@ -40,6 +40,7 @@ This will then be used to display the accommodations
 */
 function saveAccommodation()
 {
+  console.log("Saving...");
   const accommodation = {};
   accommodation.trip = focus[0];
   accommodation.name = getEl('name').value;
