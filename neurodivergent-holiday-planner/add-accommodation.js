@@ -40,7 +40,23 @@ This will then be used to display the accommodations
 */
 function saveAccommodation()
 {
+  const accommodation = {};
+  accommodation.trip = focus[0];
+  accommodation.name = getEl('name').value;
+  accommodation.country = getEl('country').value;
+  accommodation.arrivalDate = getEl('arrival-date').value;
+  accommodation.departureDate = getEl('departure-date').value;
+  accommodation.type = getEl('type').value;
+  accommodation.gmap = getEl('g-map').value;
+  accommodations.push(accommodation);
+  saveAccommodationList()
+  
+}
 
+function saveAccommodationList()
+{
+  console.log("Saving Accommdation...");
+  localStorage.setItem(ACCOM_TRIP_KEY, JSON.stringify(accommodations));
 }
 
 function cancel()
