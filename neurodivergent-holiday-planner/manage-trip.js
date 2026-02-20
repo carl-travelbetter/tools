@@ -129,8 +129,8 @@ function displayAccommodationList()
         placeCard.className = 'info-card';
         const placeName = document.createElement('p');
         placeName.textContent = "Name: "+place.name;
-        placeCard.addChild(placeName);
-        accommodationListDisplay.addChild(placeCard);
+        placeCard.appendChild(placeName);
+        accommodationListDisplay.appendChild(placeCard);
         matchFound = true;
       }
     });
