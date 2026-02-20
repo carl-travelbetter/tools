@@ -130,6 +130,11 @@ function displayAccommodationList()
         const placeName = document.createElement('p');
         placeName.textContent = "Name: "+place.name;
         placeCard.appendChild(placeName);
+        const editButton = document.createElement('button');
+        editButton.className = 'control-btn';
+        editButton.textContent = 'Edit';
+        editbutton.addEventListener('click', editAccommodation);
+        placeCard.appendChild(editButton);
         accommodationListDisplay.appendChild(placeCard);
         matchFound = true;
       }
@@ -139,6 +144,12 @@ function displayAccommodationList()
     {
       //if no matches found - display a no accommodation yet message
     }
+}
+
+//Load the edit accommodation options
+function editAccommodation()
+{
+  console.log('Edit Accommodation');
 }
 
 function exitToMain()
