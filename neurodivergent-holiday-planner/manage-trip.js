@@ -133,7 +133,7 @@ function displayAccommodationList()
         const editButton = document.createElement('button');
         editButton.className = 'control-btn';
         editButton.textContent = 'Edit';
-        editbutton.addEventListener('click', editAccommodation);
+        editButton.addEventListener('click', editAccommodation);
         placeCard.appendChild(editButton);
         accommodationListDisplay.appendChild(placeCard);
         matchFound = true;
