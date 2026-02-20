@@ -126,7 +126,7 @@ function displayAccommodationList()
       {
         //Create Output
         const placeCard = document.createElement('div');
-        placeCard.className = 'info-card';
+        placeCard.className = 'output-card';
         const placeName = document.createElement('p');
         placeName.textContent = "Name: "+place.name;
         placeCard.appendChild(placeName);
