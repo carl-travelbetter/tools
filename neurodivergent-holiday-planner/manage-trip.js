@@ -119,7 +119,7 @@ function displayAccommodationList()
   //Cycle through the accommodation list for matching trip id (set this globally?)
   //Add mathes to the output list (card per accommodation - start with name and give edit option)
   const accommodationListDisplay = getEl('accomodation-list');
-  const matchFound = false;
+  let matchFound = false;
   accommodations.savedAccommodation.forEach (place => {
     console.log('Checking for accommodation');
       if (place.trip == focusTrip)
