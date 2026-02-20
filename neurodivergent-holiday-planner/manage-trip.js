@@ -7,10 +7,15 @@ import { getEl, getText, getDate} from "/lib/dom.js";
 //Load Focus Trip Pointer
 const FOCUS_TRIP_KEY = "tb_focus_trips";
 let focus = JSON.parse(localStorage.getItem(FOCUS_TRIP_KEY)) || {savedFocus: []};
+const focusTrip = focus.savedFocus[0];
 
 //Load All Saved Trips
 const TRIP_KEY = "tb_trips";
 let trips = JSON.parse(localStorage.getItem(TRIP_KEY)) || {savedTripList: []};
+
+//Accommodation List
+const ACCOM_TRIP_KEY = "tb_trips_accom";
+let accommodations = JSON.parse(localStorage.getItem(ACCOM_TRIP_KEY)) || {savedAccommodation: []};
 
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() 
@@ -37,9 +42,7 @@ function displayFocusTrip()
   if (trips.savedTripList.length > 0)
   {
     console.log("Some trips have been loaded");
-    //Get the focus trip and assign to a variable
-    const focusTrip = focus.savedFocus[0];
-    
+   
     //find the focus trip and display the result
     //Initially this can all be done here but we will want to break that diplay function out later
     //Lets test the focus trip by using its value to display a title
@@ -91,7 +94,7 @@ function displayFocusTrip()
         editOptions.appendChild(editBtn);
         editOptions.appendChild(editBtn);
         outputArea.appendChild(editOptions);
-    
+        displayAccommodationList();
       }
       else
       {
@@ -107,6 +110,35 @@ function displayFocusTrip()
     console.log("No Trips Found");
     //Take some action
   }
+}
+
+function displayAccommodationList()
+{
+  console.log('Display Accommodation List');
+  //Get the accommodation list element, 
+  //Cycle through the accommodation list for matching trip id (set this globally?)
+  //Add mathes to the output list (card per accommodation - start with name and give edit option)
+  const accommodationListDisplay = getEl('accomodation-list');
+  const matchFound = false;
+  accommodations.savedAccommodation.forEach (place => {
+    console.log('Checking for accommodation');
+      if (place.trip == focusTrip)
+      {
+        //Create Output
+        const placeCard = document.createElement('div');
+        placeCard.className = 'info-card';
+        const placeName = document.createElement('p');
+        placeName.textContent = "Name: "+place.name;
+        placeCard.addChild(placeName);
+        accommodationListDisplay.addChild(placeCard);
+        matchFound = true;
+      }
+    });
+  
+    if (!matchFound)
+    {
+      //if no matches found - display a no accommodation yet message
+    }
 }
 
 function exitToMain()
