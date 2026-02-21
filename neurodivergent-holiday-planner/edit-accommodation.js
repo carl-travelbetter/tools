@@ -78,16 +78,19 @@ This will then be used to display the accommodations
 function saveAccommodation()
 {
   console.log("Saving...");
-  const accommodation = {};
-  accommodation.trip = focus.savedFocus[0];
-  accommodation.name = getEl('name').value;
-  accommodation.country = getEl('country').value;
-  accommodation.arrivalDate = getEl('arrival-date').value;
-  accommodation.departureDate = getEl('departure-date').value;
-  accommodation.type = getEl('type').value;
-  accommodation.gmap = getEl('g-map').value;
-  accommodations.savedAccommodation.push(accommodation);
-  saveAccommodationList()
+  accommodations.savedAccommodation.forEach(place => {
+    if (place.name == focusAccommodation)
+    {
+      place.trip = focus.savedFocus[0];
+      place.name = getEl('name').value;
+      place.country = getEl('country').value;
+      place.arrivalDate = getEl('arrival-date').value;
+      place.departureDate = getEl('departure-date').value;
+      place.type = getEl('type').value;
+      place.gmap = getEl('g-map').value;
+      saveAccommodationList()
+    }
+  });
   window.location.assign('/neurodivergent-holiday-planner/manage-trip.html');
 }
 
