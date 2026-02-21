@@ -59,6 +59,7 @@ function saveAccommodation()
   accommodation.trip = focus.savedFocus[0];
   accommodation.name = getEl('name').value;
   accommodation.country = getEl('country').value;
+  accommodation.town = getEl('town').value;
   accommodation.arrivalDate = getEl('arrival-date').value;
   accommodation.departureDate = getEl('departure-date').value;
   accommodation.type = getEl('type').value;
