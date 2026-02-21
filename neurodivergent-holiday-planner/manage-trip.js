@@ -180,7 +180,7 @@ function goToDelete()
 
 function findAccommodation()
 {
-  window.location.assign('https://www.agoda.com/partners/partnersearch.aspx?pcs=1&cid=1899707&hl=en-us');
+  window.location.assign('/neurodivergent-holiday-planner/find-accommodation.html');
 }
 
 function addAccommodation()
