@@ -1,0 +1,26 @@
+[
+ {
+   "Id": "quiet-friendly",
+   "Label": "Quiet-Friendly",
+   "Description": "This is in a quiet area or is a quiet and low-stimulation accommodation.",
+   "Icon": "🌿"
+ },
+ {
+   "Id": "accessible",
+   "Label": "Wheelchair Accessible",
+   "Description": "This accommodation has accessible rooms.",
+   "Icon": "♿"
+ },
+ {
+   "Id": "pet-friendly",
+   "Label": "Pet-Friendly",
+   "Description": "Allows pets or assistance animals.",
+   "Icon": "🐶"
+ },
+ {
+   "Id": "kitchen",
+   "Label": "Kitchen - Cooking facilities",
+   "Description": "Facilities to cook and store food, essential for those safe meals when they are needed.",
+   "Icon": "🚶"
+ }
+]
