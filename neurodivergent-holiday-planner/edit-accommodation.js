@@ -62,9 +62,9 @@ function loadAccommodation()
       getEl('name').value = place.name;
       getEl('country').value = place.country;
       getEl('town').value = place.town;
-      getEl('arrival-date') = place.arrivalDate;
-      getEl('departure-date') = place.departureDate;
-      getEl('type') = place.type;
+      getEl('arrival-date').value = place.arrivalDate;
+      getEl('departure-date').value = place.departureDate;
+      getEl('type').value = place.type;
       caclDuration();
     }
   });
