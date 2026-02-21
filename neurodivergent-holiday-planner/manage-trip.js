@@ -19,7 +19,7 @@ let accommodations = JSON.parse(localStorage.getItem(ACCOM_TRIP_KEY)) || {savedA
 
 //Load Focus Accommodation
 const ACC_FOCUS_KEY = "tb_focus_accom";
-let accFocus = JSON.parse(localStorage.getItem(FOCUS_TRIP_KEY)) || {focusAcc: []};
+let accFocus = JSON.parse(localStorage.getItem(ACC_FOCUS_KEY)) || {focusAcc: []};
 
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() 
