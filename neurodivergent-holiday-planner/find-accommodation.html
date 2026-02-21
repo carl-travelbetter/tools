@@ -1,0 +1,72 @@
+<DOCTYPE! html>
+  <html lang="en">
+    <head>
+      <title>Travelbetter Travel Planner - Find Accommodation</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="Find your perfect accommodation for this trip with our help." />
+     <meta charset="UTF-8">
+     <link rel="stylesheet" href="https://tools.travelbetter.co.uk/lib/travelbetter-tools.css">
+     <script type="module" src="edit-accommodation.js" defer></script>
+    </head>
+    <body>
+       <div class="tb-navbar">
+        <ul>
+          <li><a href="https://travelbetter.co.uk">Travelbetter</a></li>
+          <li><a href="https://tools.travelbetter.co.uk/index.html">Tools</a></li>
+        </ul>
+       </div>
+      <div class="intro" id="intro">
+        <h1>Travelbetter Travel Planner - Find Accommodation</h1>
+        <p>Find the perfect accommodation for your trip and famillies needs.</p>
+      </div>
+    
+      <div class="display-card" id="find-accomodation">
+        <h2>Accomodation Needs</h2>
+        <p>List all your accommodation needs. Remember, there is no right or wrong answer - is it what you need.</p>
+        <div id="accommodation-needs">
+          <label for="adults">How many adults:</label>
+          <input class="form-input" type="number" id="adults" name="adults"  min="0" max="90" step="1"/><br>
+          <label for="kids">How many Children (0-16 years old):</label>
+          <input class="form-input" type="number" id="kids" name="kids"  min="0" max="90" step="1"/><br>
+          <label for="country">Country:</label>
+          <input class="form-input" type="text" id="country" name="country" /><br>
+          <label for="town">City/Town/Area:</label>
+          <input class="form-input" type="text" id="town" name="town" /><br>
+          <label for="town">Close to:</label>
+          <input class="form-input" type="text" id="town" name="close-to" /><br>
+          <label for="arrival-date">Arrival date:</label>
+          <input class="form-input" type="date" id="arrival-date" name="arrival-date" /><br>
+          <label for="duration">Number of nights:</label>
+          <input class="form-input" type="number" id="duration" name="duration" min="0" max="90" step="1" /><br>
+          <label for="departure-date">Departure date:</label>
+          <input class="form-input" type="date" id="departure-date" name="departure-date" /><br>
+          <label for="type">Type:</label>
+            <select name="type" id="type">
+            <option>No preference</option>
+            <option>Hotel</option>
+            <option>Bed and Breakfast</option>
+            <option>Self Catering</option>
+            <option>Camping / Glamping</option>
+            <option>Other</option>
+          </select><br><br>
+          <label for="pool">Swimming Pool:</label>
+            <select name="pool" id="pool">
+            <option>No preference</option>
+            <option>Yes</option>
+            <option>No</option>
+            </select><br><br>
+        </div>
+        <div id="sensory-needs">
+            
+        </div>
+        
+        <div class="controls-card">
+          <p>Search for your needs on various platforms. <i>Search results open in a new window.</i></p>
+          <button class="control-btn" id="agoda">Search on Agoda</button>
+          <button class="control-btn" id="Expedia">Search on Expedia</button> 
+          <button class="control-btn" id="Airbnb">Search on Airbnb</button> 
+        </div>
+      </div>
+     
+    </body>
+  </html>
