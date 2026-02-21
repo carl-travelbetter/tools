@@ -137,7 +137,17 @@ function displayAccommodationList()
         const editButton = document.createElement('button');
         editButton.className = 'control-btn';
         editButton.textContent = 'Edit';
-        editButton.addEventListener('click', editAccommodation);
+      
+        editButton.addEventListener('click', () => {
+          //Get title and add to focus list then change page
+          console.log("Edit Accommodation Button Clicked");
+          //Need to create a global stored variable for focussed trip and then call in new app
+          accFocus.focusAcc = [];
+          accFocus.focusAcc.push(place.name);
+          saveFocusAccommodation();
+          window.location.assign('/neurodivergent-holiday-planner/edit-accommodation.html');
+    
+        });
         placeCard.appendChild(editButton);
         accommodationListDisplay.appendChild(placeCard);
         matchFound = true;
@@ -148,6 +158,12 @@ function displayAccommodationList()
     {
       //if no matches found - display a no accommodation yet message
     }
+}
+
+//Save the focussed countdown when more selected.
+function saveFocusAccommodation() {
+  console.log("Save Focus Accommodation...");
+  localStorage.setItem(ACC_FOCUS_KEY, JSON.stringify(accFocus));
 }
 
 //Load the edit accommodation options
