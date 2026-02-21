@@ -22,5 +22,11 @@
    "Label": "Kitchen - Cooking facilities",
    "Description": "Facilities to cook and store food, essential for those safe meals when they are needed.",
    "Icon": "🚶"
+ },
+ {
+   "Id": "Parking",
+   "Label": "On site, close, parking",
+   "Description": "Able to park the car at the accommodation or very close by.",
+   "Icon": "🚶"
  }
 ]
