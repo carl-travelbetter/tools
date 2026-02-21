@@ -41,6 +41,7 @@ const NOT_SET = "NOT_SET";
 function bindEvents() {
   getEl("save")?.addEventListener("click", saveAccommodation);
   getEl("cancel")?.addEventListener("click", cancel);
+  getEl('delete')?.addEventListener("click", deleteAccommodation);
   getEl("duration")?.addEventListener("input", calcDepartureDate);
   getEl("departure-date")?.addEventListener("change", calcDuration);
   getEl("arrival-date")?.addEventListener("change", calcDuration);
@@ -138,4 +139,9 @@ function openGoogleMaps()
   {
     window.open(currentURL, "_blank", "noopener");
   }
+}
+
+function deleteAccommodation()
+{
+  window.location.assign('/neurodivergent-holiday-planner/delete-accommodation.html');
 }
