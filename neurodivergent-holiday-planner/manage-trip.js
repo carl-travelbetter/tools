@@ -166,18 +166,13 @@ function saveFocusAccommodation() {
   localStorage.setItem(ACC_FOCUS_KEY, JSON.stringify(accFocus));
 }
 
-//Load the edit accommodation options
-function editAccommodation()
-{
-  console.log('Edit Accommodation');
-  window.location.assign('/neurodivergent-holiday-planner/edit-accommodation.html');
-}
-
+//Return to the main holiday planner menu
 function exitToMain()
 {
   window.location.assign('/neurodivergent-holiday-planner/index.html');
 }
 
+//Go to delete trip screen
 function goToDelete()
 {
   window.location.assign('/neurodivergent-holiday-planner/delete-trip.html');
