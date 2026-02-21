@@ -132,7 +132,7 @@ function displayAccommodationList()
         const placeCard = document.createElement('div');
         placeCard.className = 'output-card';
         const placeName = document.createElement('p');
-        placeName.textContent = place.name+" "+place.country+", "+place.town;
+        placeName.textContent = place.name+", "+place.country+", "+place.town;
         placeCard.appendChild(placeName);
         const editButton = document.createElement('button');
         editButton.className = 'control-btn';
