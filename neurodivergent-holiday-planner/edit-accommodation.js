@@ -65,7 +65,7 @@ function loadAccommodation()
       getEl('arrival-date').value = place.arrivalDate;
       getEl('departure-date').value = place.departureDate;
       getEl('type').value = place.type;
-      caclDuration();
+      calcDuration();
     }
   });
 }
