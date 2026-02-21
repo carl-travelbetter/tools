@@ -154,6 +154,7 @@ function displayAccommodationList()
 function editAccommodation()
 {
   console.log('Edit Accommodation');
+  window.location.assign('/neurodivergent-holiday-planner/edit-accommodation.html');
 }
 
 function exitToMain()
