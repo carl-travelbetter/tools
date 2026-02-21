@@ -1,0 +1,73 @@
+[
+ {
+   "Id": "quiet-friendly",
+   "Label": "Quiet-Friendly",
+   "Description": "This route and/or ferry operator provides low-stimulation environments.",
+   "Icon": "🌿"
+ },
+ {
+   "Id": "accessible",
+   "Label": "Wheelchair Accessible",
+   "Description": "This route or operator is confirmed to support wheelchair access.",
+   "Icon": "♿"
+ },
+ {
+   "Id": "pet-friendly",
+   "Label": "Pet-Friendly",
+   "Description": "Allows pets or assistance animals onboard.",
+   "Icon": "🐶"
+ },
+ {
+   "Id": "foot-passenger",
+   "Label": "Foot Passengers Welcome",
+   "Description": "Foot passengers can book this route without a vehicle.",
+   "Icon": "🚶"
+ },
+  {
+   "Id": "night-sailings",
+   "Label": "Night Sailings",
+   "Description": "Night crossings available",
+   "Icon": "🌙"
+ },
+ {
+   "Id": "cabins",
+   "Label": "Cabins Available",
+   "Description": "This route offers onboard cabins or private sleeping spaces, ideal to provide a safe space when onboard.",
+   "Icon": "🛌 "
+ },
+ {
+   "Id": "motor-homes",
+   "Label": "Motorhome & Caravans",
+   "Description": "This route has options to take motorhomes, campervans and caravans",
+   "Icon": "🚐"
+ },
+ {
+   "Id": "priority-boarding",
+   "Label": "Priority Boarding Available",
+   "Description": "Ability to have priority boarding",
+   "Icon": "⏩"
+ },
+ {
+   "Id": "priority-disembarking",
+   "Label": "Priority Disembarking Available",
+   "Description": "Ability to have priority disembarkation",
+   "Icon": "⏩"
+ },
+ {
+   "Id": "sensory-guide",
+   "Label": "Ferry Sensory Guide",
+   "Description": "Sensory guide available for each route or ferry to help prepare you for the journey",
+   "Icon": "🧠"
+ },
+ {
+   "Id": "flexible-sailing-times",
+   "Label": "Flexible Ferry Options",
+   "Description": "Ability to board earlier or later ferries depending on availability",
+   "Icon": "🕓"
+ },
+ {
+  "Id": "quickest",
+  "Label": "Quickest Crossing",
+  "Icon": "🚀"
+}
+]
