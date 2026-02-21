@@ -13,6 +13,17 @@ let trips = JSON.parse(localStorage.getItem(TRIP_KEY)) || {savedTripList: []};
 //Setup Focus Trip
 const FOCUS_TRIP_KEY = "tb_focus_trips";
 let focus = JSON.parse(localStorage.getItem(FOCUS_TRIP_KEY)) || {savedFocus: []};
+let focusTrip = focus.savedFocus[0];
+
+
+let tripData;
+//Find the trip and get the departure date if known
+trips.savedTripList.forEach(trip => {
+  if (trip.name == focusTrip)
+  {
+    tripData = trip;
+  }
+});
 
 //Accommodation List
 const ACCOM_TRIP_KEY = "tb_trips_accom";
@@ -28,6 +39,9 @@ function bindEvents() {
   getEl("duration")?.addEventListener("input", calcDepartureDate);
   getEl("departure-date")?.addEventListener("change", calcDuration);
   getEl("arrival-date")?.addEventListener("change", calcDuration);
+  //set the date if available - should go to today's date if not present
+  getEl('arrival-date')?.value = tripData.travelDate;
+  getEl("departure-date")?.value = tripData.travelDate;
   getEl("open-g-maps")?.addEventListener("click", openGoogleMaps);
 }
 
