@@ -1,0 +1,62 @@
+<DOCTYPE! html>
+  <html lang="en">
+    <head>
+      <title>Travelbetter Travel Planner - Edit Accommodation</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="Edit your accommodation details, including the option to delete an accommodation." />
+     <meta charset="UTF-8">
+     <link rel="stylesheet" href="https://tools.travelbetter.co.uk/lib/travelbetter-tools.css">
+     <script type="module" src="edit-accommodation.js" defer></script>
+    </head>
+    <body>
+       <div class="tb-navbar">
+        <ul>
+          <li><a href="https://travelbetter.co.uk">Travelbetter</a></li>
+          <li><a href="https://tools.travelbetter.co.uk/index.html">Tools</a></li>
+        </ul>
+       </div>
+      <div class="intro" id="intro">
+        <h1>Travelbetter Travel Planner - Edit Accommodation</h1>
+        <p>Edit your accommodation details, including an option to delete the stay if you need to. </p>
+      </div>
+    
+      <div class="display-card" id="edit-accomodation">
+        <h2>Edit Accomodation</h2>
+        <p>Edit your accommodation details</p>
+        <div id="accomodation-detail">
+          <label for="name">Name:</label>
+          <input class="form-input" type="text" id="name" name="name" />
+          <label for="country">Country:</label>
+          <input class="form-input" type="text" id="country" name="country" /><br>
+          <label for="town">Town:</label>
+          <input class="form-input" type="text" id="town" name="town" /><br>
+          <label for="arrival-date">Arrival date:</label>
+          <input class="form-input" type="date" id="arrival-date" name="arrival-date" /><br>
+          <label for="duration">Number of nights:</label>
+          <input class="form-input" type="number" id="duration" name="duration" min="0" max="90" step="1" /><br>
+          <label for="departure-date">Departure date:</label>
+          <input class="form-input" type="date" id="departure-date" name="departure-date" /><br>
+          <label for="type">Type:</label>
+            <select name="type" id="type">
+            <option>Hotel</option>
+            <option>Bed and Breakfast</option>
+            <option>Self Catering</option>
+            <option>Camping / Glamping</option>
+            <option>Other</option>
+          </select><br><br>
+          <label for="g-map">Google Maps Link:</label>
+          <input class="form-input" type="text" id="g-map" name="g-map" /><br>
+            <div class="controls-card">
+              <button class="control-btn" id="open-g-maps">Open Google Maps</button> 
+            </div>
+        </div>
+        
+        <div class="controls-card">
+          <button class="control-btn" id="save">Save</button>
+          <button class="control-btn" id="cancel">Cancel</button> 
+          <button class="delete-btn" id="delete">Delete</button> 
+        </div>
+      </div>
+     
+    </body>
+  </html>
