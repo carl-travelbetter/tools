@@ -17,7 +17,7 @@ let focusTrip = focus.savedFocus[0];
 
 //Load Focus Accommodation
 const ACC_FOCUS_KEY = "tb_focus_accom";
-let accFocus = JSON.parse(localStorage.getItem(FOCUS_TRIP_KEY)) || {focusAcc: []};
+let accFocus = JSON.parse(localStorage.getItem(ACC_FOCUS_KEY)) || {focusAcc: []};
 //Set the focus accommodation for load and save
 let focusAccommodation = accFocus.focusAcc[0];
 
