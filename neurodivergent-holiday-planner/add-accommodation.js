@@ -40,8 +40,8 @@ function bindEvents() {
   getEl("departure-date")?.addEventListener("change", calcDuration);
   getEl("arrival-date")?.addEventListener("change", calcDuration);
   //set the date if available - should go to today's date if not present
-  getEl('arrival-date')?.value = tripData.travelDate;
-  getEl("departure-date")?.value = tripData.travelDate;
+  getEl('arrival-date').value = tripData.travelDate;
+  getEl("departure-date").value = tripData.travelDate;
   getEl("open-g-maps")?.addEventListener("click", openGoogleMaps);
 }
 
