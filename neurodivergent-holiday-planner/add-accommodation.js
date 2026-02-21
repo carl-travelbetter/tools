@@ -19,7 +19,7 @@ let focusTrip = focus.savedFocus[0];
 let tripData;
 //Find the trip and get the departure date if known
 trips.savedTripList.forEach(trip => {
-  if (trip.name == focusTrip)
+  if (trip.title == focusTrip)
   {
     tripData = trip;
   }
