@@ -19,7 +19,7 @@ let focusTrip = focus.savedFocus[0];
 const ACC_FOCUS_KEY = "tb_focus_accom";
 let accFocus = JSON.parse(localStorage.getItem(FOCUS_TRIP_KEY)) || {focusAcc: []};
 //Set the focus accommodation for load and save
-let focusAccommodation = focusAcc.savedFocus[0];
+let focusAccommodation = accFocus.focusAcc[0];
 
 let tripData;
 //Find the trip and get the departure date if known
@@ -52,10 +52,22 @@ document.addEventListener("DOMContentLoaded", bindEvents);
 
 loadAccommodation();
 
+//Go through the accommodation list until you find a match and display
 function loadAccommodation()
 {
   console.log('Load Accommodation Details');
-  
+  accommodations.savedAccommodation.forEach(place => {
+    if (place.name == focusAccommodation)
+    {
+      getEl('name').value = place.name;
+      getEl('country').value = place.country;
+      getEl('town').value = place.town;
+      getEl('arrival-date') = place.arrivalDate;
+      getEl('departure-date') = place.departureDate;
+      getEl('type') = place.type;
+      caclDuration();
+    }
+  });
 }
 
 
@@ -87,7 +99,7 @@ function saveAccommodationList()
 
 function cancel()
 {
-  console.log("Cancel Add Accommodation");
+  console.log("Cancel Edit Accommodation");
   window.location.assign('/neurodivergent-holiday-planner/manage-trip.html');
 }
 
