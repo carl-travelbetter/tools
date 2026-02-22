@@ -384,4 +384,19 @@ text-align:center;
    border-bottom: 1px solid #aaa;
 }
 
+.tag-btn {
+  background-color: #fff;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.tag-btn.active {
+  background-color: #0077cc;
+  color: #fff;
+  border-color: #0077cc;
+}
+
+
 
