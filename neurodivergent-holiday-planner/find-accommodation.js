@@ -62,10 +62,7 @@ function bindEvents() {
 //Ensure html bindings are not applied until the html structure is built
 document.addEventListener("DOMContentLoaded", bindEvents);
 
-function createAccommodationTagButtons()
-{
-  console.log('Create Accommodation Tag Buttons');
-}
+
 
 function cancel()
 {
@@ -108,7 +105,9 @@ function openGoogleMaps()
 }
 
 //Create the tag - special needs buttons
-function createTagButtons() {
+function createAccommodationTagButtons()
+{
+  console.log('Create Accommodation Tag Buttons');
   const container = getEl('sensory-needs');
   
   if (!accommodationTags.length) return;
