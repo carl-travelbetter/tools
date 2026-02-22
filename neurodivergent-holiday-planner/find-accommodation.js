@@ -66,3 +66,74 @@ function createAccommodationTagButtons()
 {
   console.log('Create Accommodation Tag Buttons');
 }
+
+function cancel()
+{
+  console.log("Cancel Edit Accommodation");
+  window.location.assign('/neurodivergent-holiday-planner/manage-trip.html');
+}
+
+function calcDepartureDate()
+{
+  const start = getEl("arrival-date").value;
+  const duration = parseInt(getEl("duration").value, 10);
+
+  if (!start || isNaN(duration)) return;
+
+  getEl("departure-date").value = addDays(start, duration);
+}
+
+function calcDuration()
+{
+    const start = getEl('arrival-date').value;
+    const end = getEl('departure-date').value;
+
+    //If arrival date or departure date is missing, stop calc
+    if (!start || !end) return;
+  
+    getEl('duration').value = getDuration(start, end);
+}
+
+function openGoogleMaps()
+{
+  const currentURL = getEl('g-map').value;
+  if (!currentURL)
+  {
+    window.open("https://www.google.com/maps/", "_blank", "noopener");
+  }
+  else
+  {
+    window.open(currentURL, "_blank", "noopener");
+  }
+}
+
+//Create the tag - special needs buttons
+function createTagButtons() {
+  const container = getEl('sensory-needs');
+  
+  if (!accommodationTags.length) return;
+
+  accommodationTags.forEach(tag => {
+    const button = document.createElement("button");
+    button.className = "tag-btn";
+    button.setAttribute("data-tag", tag.Id);
+    button.innerHTML = `${tag.Icon} ${tag.Label}`;
+
+    //add to description
+    //const desP = document.createElement("p");
+    //desP.innerHTML = `${tag.Icon} <strong>${tag.Label}</strong>: ${tag.Description}`;
+    
+    
+    button.addEventListener("click", () => {
+      button.classList.toggle("active");
+    
+      activeTags = Array.from(document.querySelectorAll('.tag-btn.active'))
+        .map(btn => btn.dataset.tag);
+    
+     
+});
+    
+    //descriptions.appendChild(desP);
+    container.appendChild(button);
+  });
+}
