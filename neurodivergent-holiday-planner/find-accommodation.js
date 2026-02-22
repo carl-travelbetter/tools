@@ -1,7 +1,7 @@
 console.log("Find Accommodation");
 
 let accommodationTags = [];
-
+let activeTags = [];
 //Load Accommodation Tag data
 fetch('/lib/tags/accommodation-tags.json')
   .then(response => response.json())
