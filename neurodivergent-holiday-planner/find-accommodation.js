@@ -3,7 +3,7 @@ console.log("Find Accommodation");
 let accommodationTags = [];
 
 //Load Accommodation Tag data
-fetch('/lib/tags/accommodation-tags.js')
+fetch('/lib/tags/accommodation-tags.json')
   .then(response => response.json())
   .then(data => {
     accommodationTags = data;
