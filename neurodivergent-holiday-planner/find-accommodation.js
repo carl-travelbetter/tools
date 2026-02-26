@@ -15,7 +15,7 @@ fetch('/lib/tags/accommodation-tags.json')
 let placesToStay = [];
 let selectedPlaces = [];
 //Load Accommodation Tag data
-fetch('lib/data/places-to-stay.json')
+fetch('/lib/data/places-to-stay.json')
   .then(response => response.json())
   .then(data => {
     placesToStay = data;
