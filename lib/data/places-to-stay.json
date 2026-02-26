@@ -1,22 +1,32 @@
 [
  {
-   "id": "1",
-   "name": "Place 1",
-   "type": "hotel",
-   "location": {city:"London", region:"Greater London", country:"UK"},
-   "search-tags": ["London", "South Bank", "UK", "Capital"],
-   "sleeps": {lower:1, upper:6},
-   "bedrooms": 1,
-   "rating": 5
- },
+  "id": "acc_001",
+  "name": "Place 1",
+  "type": "hotel",
+  "location": {
+    "city": "London",
+    "region": "Greater London",
+    "country": "UK",
+    "label": "London, UK"
+  },
+  "searchTags": ["london", "south bank", "uk", "capital"],
+  "maxOccupancy": 6,
+  "bedrooms": 1,
+  "rating": 5
+},
  {
-   "id": "2",
-   "name": "Place 2",
-   "type": "self-catering",
-   "location": {city:"Birmingham", region:"Midlands", country:"UK"},
-   "search-tags": ["Brum", "Aston Villa", "UK", "NEC"],
-   "sleeps": {lower:1, upper:6},
-   "bedrooms": 3,
-   "rating": 5
- }
+  "id": "acc_002",
+  "name": "Place 2",
+  "type": "self-catering",
+  "location": {
+    "city": "Birmingham",
+    "region": "Midlands",
+    "country": "UK",
+    "label": "Birmingham, UK"
+  },
+  "searchTags": ["brum", "aston villa", "uk", "midlands"],
+  "maxOccupancy": 6,
+  "bedrooms": 1,
+  "rating": 5
+}
 ]
