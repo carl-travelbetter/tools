@@ -12,6 +12,17 @@ fetch('/lib/tags/accommodation-tags.json')
   })
   .catch(error => console.error("Error loading accommodation tag data:", error));
 
+let placesToStay = [];
+let selectedPlaces = [];
+//Load Accommodation Tag data
+fetch('lib/data/places-to-stay.json')
+  .then(response => response.json())
+  .then(data => {
+    placesToStay = data;
+    console.log("places data loaded:", placesToStay);
+  })
+  .catch(error => console.error("Error loading places data:", error));
+
 //Import Dom utils
 import {getWrittenDate, getDuration, addDays} from "/lib/date-helper.js";
 import { getEl, getText, getDate} from "/lib/dom.js";
@@ -50,6 +61,7 @@ const NOT_SET = "NOT_SET";
 
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
+  getEl("whereto")?.addEventListener("input", searchForMatchingPlaces);
   getEl("save")?.addEventListener("click", saveAccommodation);
   getEl("cancel")?.addEventListener("click", cancel);
   getEl('delete')?.addEventListener("click", deleteAccommodation);
@@ -68,6 +80,12 @@ function cancel()
 {
   console.log("Cancel Edit Accommodation");
   window.location.assign('/neurodivergent-holiday-planner/manage-trip.html');
+}
+
+//function to start searching for a place as user enters some data
+function searchForMatchingPlaces()
+{
+  console.log('Search for matching places');
 }
 
 function calcDepartureDate()
