@@ -233,7 +233,7 @@ function closeResults() {
   activeIndex = -1;
 }
 
-getEl('where-to').addEventListener("keydown", (e) => {
+getEl('whereto').addEventListener("keydown", (e) => {
   if (resultsEl.hidden) return;
 
   if (e.key === "ArrowDown") {
