@@ -233,8 +233,7 @@ function closeResults() {
   activeIndex = -1;
 }
 
-// Keyboard navigation
-input.addEventListener("keydown", (e) => {
+getEl('where-to').addEventListener("keydown", (e) => {
   if (resultsEl.hidden) return;
 
   if (e.key === "ArrowDown") {
