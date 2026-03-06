@@ -9,7 +9,7 @@
     "country": "UK",
     "label": "London, UK"
   },
-  "searchTags": ["london", "south bank", "uk", "capital"],
+  "searchTags": ["london", "southbank", "uk", "capital"],
   "maxOccupancy": 6,
   "bedrooms": 1,
   "rating": 5
@@ -24,7 +24,7 @@
     "country": "UK",
     "label": "Birmingham, UK"
   },
-  "searchTags": ["brum", "aston villa", "uk", "midlands"],
+  "searchTags": ["brum", "astonvilla", "uk", "midlands"],
   "maxOccupancy": 6,
   "bedrooms": 1,
   "rating": 5
