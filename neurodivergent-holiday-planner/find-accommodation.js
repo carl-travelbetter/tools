@@ -97,6 +97,7 @@ function searchForMatchingPlaces()
   if (str.length < 3)
   {
     return;
+    resultsEl.hidden = true;
   }
   else
   {
