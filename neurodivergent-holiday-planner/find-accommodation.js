@@ -86,16 +86,15 @@ function cancel()
 function searchForMatchingPlaces()
 {
   console.log('Search for matching places');
-  normalizeInput(getEl('whereto').value);
+  const str = normalizeInput(getEl('whereto').value);
+  console.log('normalized serach '+str);
 }
 
 //Normalize the input string to remove elements
 function normalizeInput(searchTerm)
 {
-  console.log("Normalize Input")
-  console.log('Starting Value'+searchTerm);
   const normalizedTerm = searchTerm.toLowerCase().trim().replace(/\s+/g, " ");
-  console.log('Normalized Term'+normalizedTerm);
+  return normalizedTerm;
 }
 
 function calcDepartureDate()
