@@ -96,7 +96,7 @@ function searchForMatchingPlaces()
   const str = normalize(getEl('whereto').value);
   if (str.length < 3)
   {
-    return;
+    currentResults = [];
     resultsEl.hidden = true;
   }
   else
