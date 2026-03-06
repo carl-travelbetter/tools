@@ -214,6 +214,64 @@ function openGoogleMaps()
   }
 }
 
+// --- 4) Select a result ---
+function selectResult(index) {
+  const acc = currentResults[index];
+  if (!acc) return;
+
+  // Fill the input with something friendly
+  getEl('whereto').value = `${acc.name} — ${acc.location.city}`;
+
+  closeResults();
+}
+
+//Close the match results once an item is selected
+function closeResults() {
+  resultsEl.hidden = true;
+  resultsEl.innerHTML = "";
+  currentResults = [];
+  activeIndex = -1;
+}
+
+// Keyboard navigation
+input.addEventListener("keydown", (e) => {
+  if (resultsEl.hidden) return;
+
+  if (e.key === "ArrowDown") {
+    e.preventDefault();
+    activeIndex = Math.min(activeIndex + 1, currentResults.length - 1);
+    updateActiveItem();
+  }
+
+  if (e.key === "ArrowUp") {
+    e.preventDefault();
+    activeIndex = Math.max(activeIndex - 1, 0);
+    updateActiveItem();
+  }
+
+  if (e.key === "Enter") {
+    // If user hasn't moved highlight, pick first result
+    if (activeIndex === -1 && currentResults.length) {
+      e.preventDefault();
+      selectResult(0);
+    } else if (activeIndex >= 0) {
+      e.preventDefault();
+      selectResult(activeIndex);
+    }
+  }
+
+  if (e.key === "Escape") {
+    closeResults();
+  }
+});
+
+function updateActiveItem() {
+  const items = resultsEl.querySelectorAll(".result-item");
+  items.forEach((el, i) => {
+    el.setAttribute("aria-selected", i === activeIndex ? "true" : "false");
+  });
+}
+
 //Create the tag - special needs buttons
 function createAccommodationTagButtons()
 {
