@@ -97,7 +97,8 @@ function searchForMatchingPlaces()
     .slice(0, limit)
     .map(x => x.place);
 
-  console.log("Scored Length "+scored.length);
+  //Send the scored and filtered results tp be displayed
+  displayPlaceSearch(scored);
 }
 
 //Normalize the input string to remove elements
@@ -133,8 +134,13 @@ function score(query, place)
   if (region.includes(query)) score += 20;
   if (country.includes(query)) score += 10;
   
-  return score;
- 
+  return score;  
+}
+
+//Show the options in the where bar to allow auser to select based on input so far
+function displayPlaceSearch(places)
+{
+  console.log('Display Place Search');
   
 }
 
