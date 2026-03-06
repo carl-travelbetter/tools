@@ -94,16 +94,23 @@ function searchForMatchingPlaces()
 {
   console.log('Search for matching places');
   const str = normalize(getEl('whereto').value);
-  console.log('normalized serach '+str);
-  const scored = placesToStay
-    .map(place => ({ place, score: score(str, place) }))
-    .filter(x => x.score > 0)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, limit)
-    .map(x => x.place);
-
-  //Send the scored and filtered results tp be displayed
-  displayPlaceSearch(scored);
+  if (str.length < 3)
+  {
+    return;
+  }
+  else
+  {
+    console.log('normalized serach '+str);
+    const scored = placesToStay
+      .map(place => ({ place, score: score(str, place) }))
+      .filter(x => x.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, limit)
+      .map(x => x.place);
+  
+    //Send the scored and filtered results tp be displayed
+    displayPlaceSearch(scored);
+  }
 }
 
 //Normalize the input string to remove elements
