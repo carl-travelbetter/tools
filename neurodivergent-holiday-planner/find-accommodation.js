@@ -82,19 +82,45 @@ function cancel()
   window.location.assign('/neurodivergent-holiday-planner/manage-trip.html');
 }
 
+const resultsLimits = 8;
+
 //function to start searching for a place as user enters some data
 function searchForMatchingPlaces()
 {
   console.log('Search for matching places');
-  const str = normalizeInput(getEl('whereto').value);
+  const str = normalize(getEl('whereto').value);
   console.log('normalized serach '+str);
+  const scored = placesToStay
+    .map(place => ({ place, score: scoreAccommodation(str, place) }))
+    .filter(x => x.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit)
+    .map(x => x.acc);
 }
 
 //Normalize the input string to remove elements
-function normalizeInput(searchTerm)
+function normalize(input)
 {
   const normalizedTerm = searchTerm.toLowerCase().trim().replace(/\s+/g, " ");
   return normalizedTerm;
+}
+
+//Score matches and return the top 8
+function score(query, place)
+{
+ 
+
+  //Set the score
+  let score = 0;
+  // Combine searchable fields
+  const name = normalize(placesToStay.name);
+  const city = normalize(placesToStay.location?.city);
+  const region = normalize(placesToStay.location?.region);
+  const country = normalize(placesToStay.location?.country);
+
+  return score;
+ 
+  
 }
 
 function calcDepartureDate()
