@@ -91,7 +91,7 @@ function searchForMatchingPlaces()
   const str = normalize(getEl('whereto').value);
   console.log('normalized serach '+str);
   const scored = placesToStay
-    .map(place => ({ place, score: scoreAccommodation(str, place) }))
+    .map(place => ({ place, score: score(str, place) }))
     .filter(x => x.score > 0)
     .sort((a, b) => b.score - a.score)
     .slice(0, limit)
