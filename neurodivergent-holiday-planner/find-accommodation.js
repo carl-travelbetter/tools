@@ -84,6 +84,11 @@ function cancel()
 
 const limit = 8;
 
+const resultsEl = getEl('where-results');
+
+let activeIndex = -1;          // for keyboard navigation
+let currentResults = [];       // stores last rendered matches
+
 //function to start searching for a place as user enters some data
 function searchForMatchingPlaces()
 {
@@ -141,6 +146,29 @@ function score(query, place)
 function displayPlaceSearch(places)
 {
   console.log('Display Place Search');
+
+  currentResults = list;
+  activeIndex = -1;
+
+  if (!places.length) {
+    resultsEl.hidden = true;
+    resultsEl.innerHTML = "";
+    return;
+  }
+
+  const html = places.map((acc, idx) => {
+    const title = acc.name;
+    const sub = acc.location.city+", "+acc.location.country;
+    return `
+      <div class="result-item" role="option" data-idx="${idx}" aria-selected="false">
+        <div class="result-title">${title}</div>
+        <div class="result-sub">${sub}</div>
+      </div>
+    `;
+  }).join("");
+
+  resultsEl.innerHTML = html;
+  resultsEl.hidden = false
   
 }
 
