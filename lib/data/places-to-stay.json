@@ -28,5 +28,20 @@
   "maxOccupancy": 6,
   "bedrooms": 1,
   "rating": 5
+},
+ {
+  "id": "acc_003",
+  "name": "Place 3",
+  "type": "hotel",
+  "location": {
+    "city": "Winchester",
+    "region": "South",
+    "country": "UK",
+    "label": "Winchester, UK"
+  },
+  "searchTags": ["wessex", "king alfred", "south", "river itchen"],
+  "maxOccupancy": 2,
+  "bedrooms": 50,
+  "rating": 5
 }
 ]
