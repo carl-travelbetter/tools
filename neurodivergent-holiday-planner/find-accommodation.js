@@ -82,7 +82,7 @@ function cancel()
   window.location.assign('/neurodivergent-holiday-planner/manage-trip.html');
 }
 
-const resultsLimits = 8;
+const limit = 8;
 
 //function to start searching for a place as user enters some data
 function searchForMatchingPlaces()
@@ -95,7 +95,9 @@ function searchForMatchingPlaces()
     .filter(x => x.score > 0)
     .sort((a, b) => b.score - a.score)
     .slice(0, limit)
-    .map(x => x.acc);
+    .map(x => x.place);
+
+  console.log("Scored Length "+scored.length);
 }
 
 //Normalize the input string to remove elements
@@ -113,11 +115,24 @@ function score(query, place)
   //Set the score
   let score = 0;
   // Combine searchable fields
-  const name = normalize(placesToStay.name);
-  const city = normalize(placesToStay.location?.city);
-  const region = normalize(placesToStay.location?.region);
-  const country = normalize(placesToStay.location?.country);
+  const name = normalize(place.name);
+  const city = normalize(place.location?.city);
+  const region = normalize(place.location?.region);
+  const country = normalize(place.location?.country);
 
+  if (query === name) score += 100;
+  if (query === city) score += 90;
+
+// Prefix matches
+  if (name.startsWith(query)) score += 70;
+  if (city.startsWith(query)) score += 60;
+
+  // Contains matches
+  if (name.includes(query)) score += 40;
+  if (city.includes(query)) score += 35;
+  if (region.includes(query)) score += 20;
+  if (country.includes(query)) score += 10;
+  
   return score;
  
   
