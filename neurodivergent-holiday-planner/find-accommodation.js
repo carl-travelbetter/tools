@@ -103,7 +103,7 @@ function searchForMatchingPlaces()
 //Normalize the input string to remove elements
 function normalize(input)
 {
-  const normalizedTerm = searchTerm.toLowerCase().trim().replace(/\s+/g, " ");
+  const normalizedTerm = input.toLowerCase().trim().replace(/\s+/g, " ");
   return normalizedTerm;
 }
 
