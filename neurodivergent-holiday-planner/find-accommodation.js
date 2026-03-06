@@ -147,7 +147,7 @@ function displayPlaceSearch(places)
 {
   console.log('Display Place Search');
 
-  currentResults = list;
+  currentResults = places;
   activeIndex = -1;
 
   if (!places.length) {
