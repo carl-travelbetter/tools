@@ -398,27 +398,32 @@ text-align:center;
   border-color: #0077cc;
 }
 
-.search-wrap { position: relative; max-width: 520px; }
+.search-wrap { 
+   position: relative; 
+   width: 100%;
+   max-width: 500px;
+}
+
 .match-results {
   position: absolute;
-  top: calc(100% + 6px);
+  top: calc(100% + 4px);
   left: 0;
   right: 0;
-  border: 1px solid #ccc;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
   z-index: 1000;
 }
+
 .match-result-item {
   padding: 10px 12px;
   cursor: pointer;
 }
+
 .match-result-item:hover,
 .match-result-item[aria-selected="true"] {
   background: #f3f6ff;
 }
+
 .match-result-title { font-weight: 600; }
 .match-result-sub { font-size: 0.9rem; opacity: 0.75; }
 
