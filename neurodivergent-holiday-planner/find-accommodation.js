@@ -168,9 +168,9 @@ function displayPlaceSearch(places)
     const title = acc.name;
     const sub = acc.location.city+", "+acc.location.country;
     return `
-      <div class="result-item" role="option" data-idx="${idx}" aria-selected="false">
-        <div class="result-title">${title}</div>
-        <div class="result-sub">${sub}</div>
+      <div class="match-result-item" role="option" data-idx="${idx}" aria-selected="false">
+        <div class="match-result-title">${title}</div>
+        <div class="match-result-sub">${sub}</div>
       </div>
     `;
   }).join("");
@@ -267,7 +267,7 @@ getEl('whereto').addEventListener("keydown", (e) => {
 });
 
 function updateActiveItem() {
-  const items = resultsEl.querySelectorAll(".result-item");
+  const items = resultsEl.querySelectorAll(".match-result-item");
   items.forEach((el, i) => {
     el.setAttribute("aria-selected", i === activeIndex ? "true" : "false");
   });
