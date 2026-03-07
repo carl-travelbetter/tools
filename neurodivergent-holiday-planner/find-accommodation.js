@@ -266,6 +266,14 @@ getEl('whereto').addEventListener("keydown", (e) => {
   }
 });
 
+//Takes care of mouse selection
+resultsEl.addEventListener("mousedown", (e) => {
+  const item = e.target.closest(".match-result-item");
+  if (!item) return;
+
+  selectResult(Number(item.dataset.idx));
+});
+
 function updateActiveItem() {
   const items = resultsEl.querySelectorAll(".match-result-item");
   items.forEach((el, i) => {
