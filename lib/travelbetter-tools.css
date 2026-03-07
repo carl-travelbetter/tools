@@ -411,6 +411,10 @@ text-align:center;
   right: 0;
   width: 100%;
   box-sizing: border-box;
+  background-color: ##fafbfc; 
+  color: ##000d24;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
   z-index: 1000;
 }
 
@@ -427,5 +431,10 @@ text-align:center;
 .match-result-title { font-weight: 600; }
 .match-result-sub { font-size: 0.9rem; opacity: 0.75; }
 
+#whereto {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
 
 
