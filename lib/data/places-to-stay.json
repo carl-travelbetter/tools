@@ -43,5 +43,20 @@
   "maxOccupancy": 2,
   "bedrooms": 50,
   "rating": 5
+},
+ {
+  "id": "acc_003",
+  "name": "Winchester Hotel",
+  "type": "hotel",
+  "location": {
+    "city": "Winchester",
+    "region": "South",
+    "country": "UK",
+    "label": "Winchester, UK"
+  },
+  "searchTags": ["wessex", "king alfred", "south", "river itchen"],
+  "maxOccupancy": 2,
+  "bedrooms": 50,
+  "rating": 5
 }
 ]
