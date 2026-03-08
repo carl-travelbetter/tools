@@ -67,6 +67,8 @@ function bindEvents() {
   getEl('submit-btn')?.addEventListener("click", submitCalories);
   getEl('cancel-btn')?.addEventListener("click", cancelAddItem);
   getEl('set-limit-btn')?.addEventListener("click", setDailyLimit);
+  getEl('exit-btn')?.addEventListener("click", exitTracker);
+  getEl('new-day-btn')?.addEventListener("click", startNewDay);
 }
 
 //Ensure html bindings are not applied until the html structure is built
@@ -83,8 +85,7 @@ function addItem()
 function openLimitControl()
 {
   console.log('Open Limit Controls');
-  getEl('item-name').value = "";
-  getEl('calories').value = "";
+  getEl('daily-limit').value = dailyCalorieLimit;
   getEl('set-limit').hidden = false;
 }
 
@@ -98,6 +99,8 @@ function resetData()
 function submitCalories()
 {
   console.log('submit Calories');
+  getEl('item-name').value = "";
+  getEl('calories').value = "";
   //Insert calorie adding code here
   let item = {};
   item.description = getEl('item-name').value || NOT_SET;
@@ -171,4 +174,21 @@ function saveData()
   localStorage.setItem(CALORIE_LIST_KEY, JSON.stringify(calorieList));
   localStorage.setItem(CALORIE_TOTAL_KEY, JSON.stringify(totalData));
   localStorage.setItem(CALORIE_LIMIT_KEY, JSON.stringify(limitData));
+}
+
+//Start a new day
+function startNewDay()
+{
+  console.log('Start a new day');
+  calorieList.caloriesSpent = [];
+  saveData();
+  getEl('add-calories').hidden = true;
+  getEl('limit-check').hidden = true;
+  getEl('daily-log').hidden = true;
+}
+
+//Exit to the main menu
+function exitTracker()
+{
+  window.location.assign('https://tools.travelbetter.co.uk/');
 }
