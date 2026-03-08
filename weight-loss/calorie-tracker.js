@@ -66,7 +66,7 @@ function bindEvents() {
   getEl('reset-btn')?.addEventListener("click", resetData);
   getEl('submit-btn')?.addEventListener("click", submitCalories);
   getEl('cancel-btn')?.addEventListener("click", cancelAddItem);
-  getEl('set-limit-btn')?.addEventListener("change", setDailyLimit);
+  getEl('set-limit-btn')?.addEventListener("click", setDailyLimit);
 }
 
 //Ensure html bindings are not applied until the html structure is built
