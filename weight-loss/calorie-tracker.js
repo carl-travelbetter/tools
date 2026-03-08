@@ -159,10 +159,30 @@ function displayLog()
   //Need to have a delete option created, a bit like the list work done before 
   const dailyLog = getEl('daily-log');
   const list = document.createElement('ul');
+  let idx = 0;
   calorieList.caloriesSpent.forEach (item => {
+    idx++; 
     let listItem = document.createElement('li');
     listItem.textContent = item.description+': '+item.calories;
-    list.appendChild(listItem);
+    
+
+    //create a delete button
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "❌";
+    deleteButton.setAttribute("data-label", idx-1);
+      //Make the button do something
+       //Make the button do something when clicked
+      deleteButton.addEventListener("click", () => {
+      
+      console.log("Delete Expense Button Clicked");
+      console.log("Delete ID = "+deleteExpenseButton.dataset.label);   
+      calorieList.caloriesSpent.splice(deleteExpenseButton.dataset.label, 1); 
+      saveData();  
+      updateTracker();
+      displayLog();
+      });  
+      listItem.appendChild(deleteButton);
+      list.appendChild(listItem);
   });
   dailyLog.appendChild(list);
   dailyLog.hidden = false;
