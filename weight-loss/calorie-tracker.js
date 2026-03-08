@@ -104,7 +104,7 @@ function submitCalories()
 function cancelAddItem()
 {
   console.log('Cancel add item');
-  getEl('add-calories').hidden = true;
+  getEl('add-calories').hidden = false;
 }
 
 //Set a new daily limit
