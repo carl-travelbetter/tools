@@ -97,6 +97,12 @@ function submitCalories()
 {
   console.log('submit Calories');
   //Insert calorie adding code here
+  let item = {};
+  item.description = getEl('item-name').value || NOT_SET;
+  item.calories = getEl('calories').value || 0;
+  calorieList.caloriesSpent.push(item);
+  saveData();
+  updateTracker();
   getEl('add-calories').hidden = true;
 }
 
