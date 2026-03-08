@@ -83,6 +83,8 @@ function addItem()
 function openLimitControl()
 {
   console.log('Open Limit Controls');
+  getEl('item-name').value = "";
+  getEl('calories').value = "";
   getEl('set-limit').hidden = false;
 }
 
@@ -136,6 +138,7 @@ function updateTracker()
   });
   console.log('Total Calories Consumed '+totalCaloriesConsumed)
   const limitCheckDiv = getEl('limit-check');
+  limitCheckDiv.innerHTML = "";
   let remainingBalance = dailyCalorieLimit - totalCaloriesConsumed;
   const balanceSum = document.createElement('p');
   balanceSum.textContent = "Limit "+dailyCalorieLimit+" - Total Consumed "+totalCaloriesConsumed+" = "+remainingBalance+" remaining";
