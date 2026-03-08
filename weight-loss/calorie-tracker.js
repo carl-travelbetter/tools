@@ -79,6 +79,8 @@ document.addEventListener("DOMContentLoaded", bindEvents);
 function addItem()
 {
   console.log('Add Item');
+  getEl('item-name').value = "";
+  getEl('calories').value = "";
   getEl('add-calories').hidden = false;
 }
 
@@ -100,8 +102,6 @@ function resetData()
 function submitCalories()
 {
   console.log('submit Calories');
-  getEl('item-name').value = "";
-  getEl('calories').value = "";
   //Insert calorie adding code here
   let item = {};
   item.description = getEl('item-name').value || NOT_SET;
