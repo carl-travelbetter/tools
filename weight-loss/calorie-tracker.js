@@ -113,6 +113,7 @@ function setDailyLimit()
   console.log('Set Daily Limit');
   dailyCalorieLimit = getEl('daily-limit').value;
   console.log('New Daily Calorie Limit '+dailyCalorieLimit);
+  limitData.limitList[0] = dailyCalorieLimit;
   getEl('set-limit').hidden = true;
 }
 
@@ -129,4 +130,13 @@ function updateTracker()
   let remainingBalance = dailyCalorieLimit - totalCaloriesConsumed;
   
   getEl('limit-check').hidden = true;
+}
+
+//Save data
+function saveData()
+{
+  console.log("Saving Data...");
+  localStorage.setItem(CALORIE_LIST_KEY, JSON.stringify(calorieList));
+  localStorage.setItem(CALORIE_TOTAL_KEY, JSON.stringify(totalData));
+  localStorage.setItem(CALORIE_LIMIT_KEY, JSON.stringify(limitData));
 }
