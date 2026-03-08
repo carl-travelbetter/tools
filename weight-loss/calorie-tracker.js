@@ -154,7 +154,8 @@ function updateTracker()
   let remainingBalance = dailyCalorieLimit - totalCaloriesConsumed;
   const balanceSum = document.createElement('p');
   //Need to assign the class based on how close to the limit it is
-  let percentageUsed = (remainingBalance / totalCaloriesConsumed) * 100;
+  let percentageUsed = (totalCaloriesConsumed / dailyCalorieLimit) * 100;
+  console.log('Percentage Used '+percentageUsed);
   if (percentageUsed < 61)
   { 
     console.log('In the Green'); 
