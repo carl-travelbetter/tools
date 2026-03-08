@@ -105,6 +105,7 @@ function submitCalories()
   calorieList.caloriesSpent.push(item);
   saveData();
   updateTracker();
+  displayLog();
   getEl('add-calories').hidden = true;
 }
 
