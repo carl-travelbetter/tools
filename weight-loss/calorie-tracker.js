@@ -159,6 +159,7 @@ function displayLog()
   //Add code to go through and display each entry
   //Need to have a delete option created, a bit like the list work done before 
   const dailyLog = getEl('daily-log');
+  dailyLog.innerHTML = "";
   const list = document.createElement('ul');
   let idx = 0;
   calorieList.caloriesSpent.forEach (item => {
