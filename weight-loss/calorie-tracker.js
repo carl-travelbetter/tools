@@ -176,8 +176,8 @@ function displayLog()
       deleteButton.addEventListener("click", () => {
       
       console.log("Delete Expense Button Clicked");
-      console.log("Delete ID = "+deleteExpenseButton.dataset.label);   
-      calorieList.caloriesSpent.splice(deleteExpenseButton.dataset.label, 1); 
+      console.log("Delete ID = "+deleteButton.dataset.label);   
+      calorieList.caloriesSpent.splice(deleteButton.dataset.label, 1); 
       saveData();  
       updateTracker();
       displayLog();
