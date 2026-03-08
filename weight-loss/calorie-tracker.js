@@ -115,6 +115,7 @@ function setDailyLimit()
   console.log('New Daily Calorie Limit '+dailyCalorieLimit);
   limitData.limitList[0] = dailyCalorieLimit;
   saveData();
+  updateTracker();
   getEl('set-limit').hidden = true;
 }
 
@@ -128,9 +129,12 @@ function updateTracker()
     totalCaloriesConsumed += cal;
   });
   console.log('Total Calories Consumed '+totalCaloriesConsumed)
+  const limitCheckDiv = getEl('limit-check');
   let remainingBalance = dailyCalorieLimit - totalCaloriesConsumed;
-  
-  getEl('limit-check').hidden = true;
+  const balanceSum = document.createElement('p');
+  balanceSum.textContent = "Limit "+dailyCalorieLimit+" - Total Consumed "+totalCaloriesConsumed+" = "+remainingBalance+" remaining";
+  limitCheckDiv.appendChild(balanceSum);
+  limitCheckDiv.hidden = true;
 }
 
 //Save data
