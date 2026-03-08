@@ -51,7 +51,7 @@ let totalData = JSON.parse(localStorage.getItem(CALORIE_TOTAL_KEY)) || {totalLis
 let runningTotal = totalData.totalList[0];
 
 //If no total set yet
-if (isNan(runningTotal))
+if (isNaN(runningTotal))
 {
   runningTotal = 0;
 }
