@@ -114,6 +114,7 @@ function setDailyLimit()
   dailyCalorieLimit = getEl('daily-limit').value;
   console.log('New Daily Calorie Limit '+dailyCalorieLimit);
   limitData.limitList[0] = dailyCalorieLimit;
+  saveData();
   getEl('set-limit').hidden = true;
 }
 
