@@ -437,4 +437,19 @@ text-align:center;
     box-sizing: border-box;
 }
 
+.in-the-green {
+   color:#058003;
+}
+
+.in-the-amber {
+   color:#cc5a02;
+}
+
+.in-the-red {
+   color:#800309;
+}
+
+
+
+
 
