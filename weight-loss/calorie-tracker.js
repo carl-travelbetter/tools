@@ -156,11 +156,20 @@ function updateTracker()
   //Need to assign the class based on how close to the limit it is
   let percentageUsed = (remainingBalance / totalCaloriesConsumed) * 100;
   if (percentageUsed < 61)
-  { console.log('In the Green'); }
+  { 
+    console.log('In the Green'); 
+    balanceSum.className = 'in-the-green';
+  }
   if ((percentageUsed > 60) && (percentageUsed < 86 )) 
-  { console.log('In the Amber'); }
+  { 
+    console.log('In the Amber'); 
+    balanceSum.className = 'in-the-amber';
+  }
   if ((percentageUsed > 85) && (percentageUsed < 101))
-  { console.log('In the Red'); }
+  { 
+    console.log('In the Red'); 
+    balanceSum.className = 'in-the-red';
+  }
   balanceSum.textContent = "Limit "+dailyCalorieLimit+" - Total Consumed "+totalCaloriesConsumed+" = "+remainingBalance+" remaining";
   limitCheckDiv.appendChild(balanceSum);
   limitCheckDiv.hidden = false;
