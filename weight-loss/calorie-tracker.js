@@ -56,7 +56,7 @@ if (isNaN(runningTotal))
   runningTotal = 0;
 }
 
-if (calorieList.caloraiesSpent.length > 0)
+if (calorieList.caloriesSpent.length > 0)
 {  
   displayLog(); 
   updateTracker();
