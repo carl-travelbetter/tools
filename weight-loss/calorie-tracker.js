@@ -70,6 +70,7 @@ function bindEvents() {
   getEl('exit-btn')?.addEventListener("click", exitTracker);
   getEl('new-day-btn')?.addEventListener("click", startNewDay);
   getEl('display-tracker-btn')?.addEventListener("click", updateTracker);
+  getEl('show-log-btn')?.addEventListener("click", displayLog);
 }
 
 //Ensure html bindings are not applied until the html structure is built
