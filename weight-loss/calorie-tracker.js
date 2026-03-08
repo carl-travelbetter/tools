@@ -61,15 +61,72 @@ const NOT_SET = "BLANK";
 
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
-  getEl("whereto")?.addEventListener("input", searchForMatchingPlaces);
-  getEl("save")?.addEventListener("click", saveAccommodation);
-  getEl("cancel")?.addEventListener("click", cancel);
-  getEl('delete')?.addEventListener("click", deleteAccommodation);
-  getEl("duration")?.addEventListener("input", calcDepartureDate);
-  getEl("departure-date")?.addEventListener("change", calcDuration);
-  getEl("arrival-date")?.addEventListener("change", calcDuration);
-  getEl("open-g-maps")?.addEventListener("click", openGoogleMaps);
+  getEl('add-btn')?.addEventListener("click", addItem);
+  getEl('open-limit-btn')?.addEventListener("click", openLimitControl);
+  getEl('reset-btn')?.addEventListener("click", resetData);
+  getEl('submit-btn')?.addEventListener("click", submitCalories);
+  getEl('cancel-btn')?.addEventListener("click", cancelAddItem);
+  getEl('set-limit-btn')?.addEventListener("change", setDailyLimit);
 }
 
 //Ensure html bindings are not applied until the html structure is built
 document.addEventListener("DOMContentLoaded", bindEvents);
+
+//open add item controls
+function addItem()
+{
+  console.log('Add Item');
+  getEl('add-calories').hidden = false;
+}
+
+//Open the options to set or reset the daily calorie limit
+function openLimitControl()
+{
+  console.log('Open Limit Controls');
+  getEl('set-limit').hidden = false;
+}
+
+//Reset all data to defaults
+function resetData()
+{
+  console.log('Reset All Data');
+}
+
+//function submit item/calorie update
+function submitCalories()
+{
+  console.log('submit Calories');
+  //Insert calorie adding code here
+  getEl('add-calories').hidden = true;
+}
+
+//Cancel adding an item
+function cancelAddItem()
+{
+  console.log('Cancel add item');
+  getEl('add-calories').hidden = true;
+}
+
+//Set a new daily limit
+function setDailyLimit()
+{
+  console.log('Set Daily Limit');
+  dailyCalorieLimit = getEl('daily-limit').value;
+  console.log('New Daily Calorie Limit '+dailyCalorieLimit);
+  getEl('set-limit').hidden = true;
+}
+
+//Update the total and tracker
+function updateTracker()
+{
+  //loop through all items and add up the calories
+  let totalCaloriesConsumed = 0;
+  calorieList.caloriesSpent.forEach (item => {
+    let cal = parseFloat(item.calories);
+    totalCaloriesConsumed += cal;
+  });
+  console.log('Total Calories Consumed '+totalCaloriesConsumed)
+  let remainingBalance = dailyCalorieLimit - totalCaloriesConsumed;
+  
+  getEl('limit-check').hidden = true;
+}
