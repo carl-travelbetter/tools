@@ -104,7 +104,7 @@ function submitCalories()
 function cancelAddItem()
 {
   console.log('Cancel add item');
-  getEl('add-calories').hidden = false;
+  getEl('add-calories').hidden = true;
 }
 
 //Set a new daily limit
@@ -134,7 +134,7 @@ function updateTracker()
   const balanceSum = document.createElement('p');
   balanceSum.textContent = "Limit "+dailyCalorieLimit+" - Total Consumed "+totalCaloriesConsumed+" = "+remainingBalance+" remaining";
   limitCheckDiv.appendChild(balanceSum);
-  limitCheckDiv.hidden = true;
+  limitCheckDiv.hidden = false;
 }
 
 //Save data
