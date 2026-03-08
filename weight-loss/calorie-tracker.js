@@ -69,6 +69,7 @@ function bindEvents() {
   getEl('set-limit-btn')?.addEventListener("click", setDailyLimit);
   getEl('exit-btn')?.addEventListener("click", exitTracker);
   getEl('new-day-btn')?.addEventListener("click", startNewDay);
+  getEl('display-tracker-btn')?.addEventListener("click", updateTracker);
 }
 
 //Ensure html bindings are not applied until the html structure is built
