@@ -1,0 +1,49 @@
+<DOCTYPE! html>
+  <html lang="en">
+    <head>
+      <title>Travelbetter - Daily Calorie Tracker</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="Calm, family-friendly travel planner designed to reduce stress and support neurodivergent travellers. Simple to use, low pressure, useful tool to help you explore more and worry less." />
+     <meta charset="UTF-8">
+     <link rel="stylesheet" href="https://tools.travelbetter.co.uk/lib/travelbetter-tools.css">
+     <script type="module" src="calorie-tracker.js" defer></script>
+    </head>
+    <body>
+       <div class="tb-navbar">
+        <ul>
+          <li><a href="https://travelbetter.co.uk">Travelbetter</a></li>
+          <li><a href="https://tools.travelbetter.co.uk/index.html">Tools</a></li>
+        </ul>
+       </div>
+      <div class="intro" id="intro">
+        <h1>Travelbetter Calorie Tracker</h1>
+        <p>Daily actions, big results</p> 
+        <p>A simple, effective, tool for tracking calorie intake to help you with your weight loss and weight management goals. </p>
+      </div>
+      <div class="controls-card" id="main-menu" >
+        <button class="control-btn" id="add-btn">Add</button>
+        <button class="control-btn" id="add-btn">Set Limit</button>
+        <button class="control-btn" id="reset-btn">Reset</button>
+      </div>
+      <!-- Creat new trip -->
+      <div class="display-card" id="add-calories" hidden>
+        <h2>Add Calories</h2>
+        <label for="item-name">Item (Optional): </label>
+        <input class="form-input" type="text" id="item-name" name="item-name" />
+        <label for="calories">Calories:</label>
+        <input class="form-input" type="number" id="calories" name="calories" /><br>       
+        <button class="control-btn" id="submit-btn">Submit</button>
+        <button class="control-btn" id="cancel-btn">Cancel</button>
+        <p>Don't worry, you can change these settings later and add more detail to your trip.</p>
+      </div>
+      <!-- show the calories spent todate -->
+      <div class="display-card" id="set-limit" hidden>
+         <h2>Set Daily Limit</h2>
+        <label for="daily-limit">Limit: </label>
+        <input class="form-input" type="number" id="daily-limit" name="daily-limit" />
+        <button class="control-btn" id="limit-btn">Submit</button>
+      </div>
+      <div class="display-card" id="daily-log" hidden></div>
+      <div class="display-card" id="limit-check" hidden></div>
+    </body>
+  </html>
