@@ -146,6 +146,23 @@ function updateTracker()
   limitCheckDiv.hidden = false;
 }
 
+//display the entries made so far
+function displayLog()
+{
+  console.log('Display Log');
+  //Add code to go through and display each entry
+  //Need to have a delete option created, a bit like the list work done before 
+  const dailyLog = getEl('daily-log');
+  const list = document.createElement('ul');
+  calorieList.caloriesSpent.forEach (item => {
+    let listItem = document.createElement('li');
+    listItem.textContent = item.description+': '+item.calories;
+    list.appendChild(listItem);
+  });
+  dailyLog.appendChild(list);
+  dailyLog.hidden = false;
+}
+
 //Save data
 function saveData()
 {
