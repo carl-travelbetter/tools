@@ -56,6 +56,12 @@ if (isNaN(runningTotal))
   runningTotal = 0;
 }
 
+if (calorieList.caloraiesSpent.length > 0)
+{  
+  displayLog(); 
+  updateTracker();
+}
+
 //Setup default no value entered variable
 const NOT_SET = "BLANK";
 
