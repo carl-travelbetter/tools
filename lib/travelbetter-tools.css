@@ -449,6 +449,45 @@ text-align:center;
    color:#800309;
 }
 
+/* list styling for nice spaced layouts */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  border-bottom: 1px solid #ccc; /* optional table-like look */
+  padding: 4px 0;
+}
+
+li span {
+  flex-shrink: 0;   /* prevents spans from shrinking smaller */
+  overflow: hidden; /* keeps long text from breaking layout */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+li .span-id {
+  flex-basis: 10%;
+}
+
+li .span-text {
+  flex-basis: 50%;
+  text-align: left;
+}
+
+li .span-value {
+  flex-basis: 25%;
+  text-align: left;
+}
+
+li .span-action {
+  flex-basis: 15%;
+  text-align: left;
+}
+
 
 
 
