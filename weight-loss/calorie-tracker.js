@@ -185,6 +185,29 @@ function displayLog()
   const dailyLog = getEl('daily-log');
   dailyLog.innerHTML = "";
   const list = document.createElement('ul');
+
+  //Create a header row for the list
+  const listHeader = document.createElement('li');
+  const listHeaderID = document.createElement('span');
+  listHeaderID.className = 'span-id';
+  listHeaderID.textContent = 'Item';
+  listHeader.appendChild(listHeaderID);
+  const listHeaderItem = document.createElement('span');
+  listHeaderItem.className = 'span-text';
+  listHeaderItem.textContent = 'Description';
+  listHeader.appendChild(listHeaderItem);
+  const listHeaderValue = document.createElement('span');
+  listHeaderValue.className = 'span-value';
+  listHeaderValue.textContent = 'Calories';
+  listHeader.appendChild(listHeaderValue);
+  const listHeaderAction = document.createElement('span');
+  listHeaderAction.className = 'span-action';
+  listHeaderAction.textContent = 'Delete Item';
+  listHeader.appendChild(listHeaderAction);
+
+  list.appendChild(listHeader);
+  
+  
   let idx = 0;
   calorieList.caloriesSpent.forEach (item => {
     idx++; 
