@@ -189,9 +189,22 @@ function displayLog()
   calorieList.caloriesSpent.forEach (item => {
     idx++; 
     let listItem = document.createElement('li');
-    listItem.textContent = item.description+': '+item.calories;
+    //listItem.textContent = item.description+': '+item.calories;
+    let listID = document.createElement('span');
+    listID.className = 'span-id';
+    listID.textContent = ""+idx;
+    listItem.appendChild(listID);
+    let listDescription = document.createElement('span');
+    listDescription.className = 'span-text';
+    listDescription.textContent = item.description;
+    listItem.appendChild(listDescription);
+    let listCalories = document.createElement('span');
+    listCalories.className = 'span-value';
+    listCalories.textContent = item.calories;
+    listItem.appendChild(listCalories);
+    let listDeleteControl = document.createElement('span');
+    listDeleteControl.className = 'span-action';
     
-
     //create a delete button
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "❌";
@@ -206,8 +219,9 @@ function displayLog()
       saveData();  
       updateTracker();
       displayLog();
-      });  
-      listItem.appendChild(deleteButton);
+      });
+      listDeleteControl.appendChild(deleteButton);
+      listItem.appendChild(listDeleteControl);
       list.appendChild(listItem);
   });
   dailyLog.appendChild(list);
