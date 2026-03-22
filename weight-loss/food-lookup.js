@@ -20,7 +20,12 @@ function bindEvents() {
 document.addEventListener("DOMContentLoaded", bindEvents);
 
 async function searchProducts(query) {
-  const url = `https://world.openfoodfacts.net/cgi/search.pl?search_terms=${encodeURIComponent(query)}&search_simple=1&action=process&json=1&page_size=10&fields=product_name,brands,nutriscore_grade,image_front_thumb_url`;
+  const url = `https://world.openfoodfacts.net/cgi/search.pl?search_terms=${encodeURIComponent(query)}
+  &search_simple=1
+  &action=process
+  &json=1
+  &page_size=10
+  &fields=product_name,brands,nutriments`;
 
   const res = await fetch(url);
   const data = await res.json();
