@@ -1,0 +1,52 @@
+<DOCTYPE! html>
+  <html lang="en">
+    <head>
+      <title>Travelbetter - Travel Fit - Food Lookup</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="Calm, family-friendly travel planner designed to reduce stress and support neurodivergent travellers. Simple to use, low pressure, useful tool to help you explore more and worry less." />
+     <meta charset="UTF-8">
+     <link rel="stylesheet" href="https://tools.travelbetter.co.uk/lib/travelbetter-tools.css">
+     <script type="module" src="food-lookup.js" defer></script>
+    </head>
+    <body>
+       <div class="tb-navbar">
+        <ul>
+          <li><a href="https://travelbetter.co.uk">Travelbetter</a></li>
+          <li><a href="https://tools.travelbetter.co.uk/index.html">Tools</a></li>
+        </ul>
+       </div>
+      <div class="intro" id="intro">
+        <h1>Travelbetter Travel Fit Food Lookup</h1>
+        <p>Daily actions, big results</p> 
+        <p>A simple to use tool to find the nutrition information of any food. </p>
+        <p>This tool is built using the Open Food Database, the largest database of food information in the world. </p>
+      </div>
+      <div class="controls-card" id="main-menu" >
+        <label for="food-name">Item (Optional): </label>
+        <input class="form-input" type="text" id="food-name" name="food-name" />
+        <button class="control-btn" id="food-search-btn">Search</button>
+      </div>
+      <div class="display-card" id="search-result" hidden>
+        <h2>Search Results</h2>
+      </div>
+      
+      <!-- Simple Ad -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9165315921199540"
+     crossorigin="anonymous"></script>
+        <!-- Basic-Ad -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9165315921199540"
+             data-ad-slot="5810299649"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      <!-- End of Ad -->
+      
+      <div class="controls-card" id="exit-menu" >
+        <button class="control-btn" id="exit-btn">Exit Search</button>
+      </div>
+    </body>
+  </html>
