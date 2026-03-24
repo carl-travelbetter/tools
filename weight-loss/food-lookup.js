@@ -47,11 +47,11 @@ function searchForFood()
 function displayResult()
 {
   console.log('Display Result');
-  results = getEl('search-result');
+  const output = getEl('search-result');
   const p = document.createElement('p');
   p.textContent = "Calories per 100grams: "+caloriesPer100g;
-  results.appendChild(p);
-  results.hidden = false;
+  output.appendChild(p);
+  output.hidden = false;
 }
 
 //Exit Food Lookup
