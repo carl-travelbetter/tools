@@ -37,7 +37,8 @@ function searchForFood()
   foodName = getEl('food-name').value;
   // Example usage
   searchProducts(foodName).then(results => {
-  console.log(results[1]);
+  console.log(results[1].nutriments["energy-kcal_100g"]);
+);
 });
   
 }
