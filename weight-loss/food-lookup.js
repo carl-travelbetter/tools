@@ -39,7 +39,7 @@ function searchForFood()
   searchProducts(foodName).then(results => {
   caloriesPer100g = results[1].nutriments["energy-kcal_100g"];  
   console.log(caloriesPer100g);
-);
+
 });
   displayResult();
 }
