@@ -41,7 +41,7 @@ function searchForFood()
   console.log(caloriesPer100g);
 );
 });
-  
+  displayResult();
 }
 
 function displayResult()
