@@ -51,7 +51,7 @@ function displayResult()
   const p = document.createElement('p');
   p.textContent = "Calories per 100grams: "+caloriesPer100g;
   results.appendChild(p);
-  result.hidden = false;
+  results.hidden = false;
 }
 
 //Exit Food Lookup
