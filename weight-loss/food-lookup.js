@@ -4,7 +4,7 @@ console.log('Food Lookup');
 
 //Variables
 let foodName;
-let calories = 0;
+let caloriesPer100g = 0;
 
 //Import Dom utils
 import {getWrittenDate, getDuration, addDays} from "/lib/date-helper.js";
@@ -37,7 +37,8 @@ function searchForFood()
   foodName = getEl('food-name').value;
   // Example usage
   searchProducts(foodName).then(results => {
-  console.log(results[1].nutriments["energy-kcal_100g"]);
+  caloriesPer100g = results[1].nutriments["energy-kcal_100g"];  
+  console.log(caloriesPer100g);
 );
 });
   
