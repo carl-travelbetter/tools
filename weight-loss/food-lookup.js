@@ -37,7 +37,7 @@ function searchForFood()
   foodName = getEl('food-name').value;
   // Example usage
   searchProducts(foodName).then(results => {
-  console.log(results);
+  console.log(results[1]);
 });
   
 }
