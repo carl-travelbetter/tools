@@ -64,7 +64,7 @@ function calcCaloriesPerGrams()
   console.log('Calculate Calories Per Grams');
   let grams = getEl('grams-eaten').value;
   let calories = (caloriesPer100g / 100) * grams;
-  console.log('Calorie Calc = "+calories);
+  console.log('Calorie Calc = '+calories);
   const gramsResults = getEl('grams-results');
   const gramsResultsHeader = document.createElement('h2');
   gramsResultHeader.textContent = 'Results of Calories Per Grams';
