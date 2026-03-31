@@ -71,7 +71,7 @@ function calcCaloriesPerGrams()
   gramsResultsHeader.textContent = 'Results of Calories Per Grams';
   gramsResults.appendChild(gramsResultsHeader);
   const gramsResultsValue = document.createElement('p');
-  gramsResultsValue.textContent = grams+' grams of '+foodName+' is '+calories+' Calories';
+  gramsResultsValue.textContent = grams+' grams of '+foodName+' is '+calories.toFixed(2)+' Calories';
   gramsResults.appendChild(gramsResultsValue);
   gramsResults.hidden = false;
 }
