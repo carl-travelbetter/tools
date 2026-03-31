@@ -67,8 +67,8 @@ function calcCaloriesPerGrams()
   console.log('Calorie Calc = '+calories);
   const gramsResults = getEl('grams-results');
   const gramsResultsHeader = document.createElement('h2');
-  gramsResultHeader.textContent = 'Results of Calories Per Grams';
-  gramResults.appendChild(gramsResultHeader);
+  gramsResultsHeader.textContent = 'Results of Calories Per Grams';
+  gramResults.appendChild(gramsResultsHeader);
   const gramsResultsValue = document.createElement('p');
   gramsResultsValue.textContent = grams+' grams of '+foodName+' is '+calories+' Calories';
   gramsResults.appendChild(gramsResultsValue);
