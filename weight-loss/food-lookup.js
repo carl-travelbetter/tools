@@ -14,6 +14,7 @@ import { getEl, getText, getDate} from "/lib/dom.js";
 function bindEvents() {
   getEl('food-search-btn')?.addEventListener("click", searchForFood);
   getEl('exit-btn')?.addEventListener("click", exitLookup);
+  getEl('calories-per-grams')?.addEventListener("click", calcCaloriesPerGrams);
 }
 
 //Ensure html bindings are not applied until the html structure is built
@@ -53,6 +54,25 @@ function displayResult()
   p.textContent = "Calories per 100grams: "+caloriesPer100g;
   output.appendChild(p);
   output.hidden = false;
+  const gramCalculator = getEl('gram-calculator');
+  gramCalculator.hidden = false;
+}
+
+//Calculate Calories Per Gram
+function calcCaloriesPerGrams()
+{
+  console.log('Calculate Calories Per Grams');
+  let grams = getEl('grams-eaten').value;
+  let calories = (caloriesPer100g / 100) * grams;
+  console.log('Calorie Calc = "+calories);
+  const gramsResults = getEl('grams-results');
+  const gramsResultsHeader = document.createElement('h2');
+  gramsResultHeader.textContent = 'Results of Calories Per Grams';
+  gramResults.appendChild(gramsResultHeader);
+  const gramsResultsValue = document.createElement('p');
+  gramsResultsValue.textContent = grams+' grams of '+foodName+' is '+calories+' Calories';
+  gramsResults.appendChild(gramsResultsValue);
+  gramsResults.hidden = false;
 }
 
 //Exit Food Lookup
