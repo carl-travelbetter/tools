@@ -68,7 +68,7 @@ function calcCaloriesPerGrams()
   const gramsResults = getEl('grams-results');
   const gramsResultsHeader = document.createElement('h2');
   gramsResultsHeader.textContent = 'Results of Calories Per Grams';
-  gramResults.appendChild(gramsResultsHeader);
+  gramsResults.appendChild(gramsResultsHeader);
   const gramsResultsValue = document.createElement('p');
   gramsResultsValue.textContent = grams+' grams of '+foodName+' is '+calories+' Calories';
   gramsResults.appendChild(gramsResultsValue);
