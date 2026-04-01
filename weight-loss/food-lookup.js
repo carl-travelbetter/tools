@@ -59,7 +59,7 @@ function displayResult()
   const output = getEl('search-result');
   output.innerHTML = "";
   const p = document.createElement('p');
-  p.textContent = "Calories per 100grams: "+caloriesPer100g.toFixed(0);
+  p.textContent = "Calories per 100 grams of "+foodName+": "+caloriesPer100g.toFixed(0);
   output.appendChild(p);
   output.hidden = false;
   const gramCalculator = getEl('gram-calculator');
