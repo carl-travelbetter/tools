@@ -36,6 +36,10 @@ function searchForFood()
 {
   console.log('Search For Food');
   foodName = getEl('food-name').value;
+
+  //Display Progress Bar
+  getEl('main-menu').hidden = true;
+  getEl('searching').hidden = false;
   // Example usage
   searchProducts(foodName).then(results => {
   caloriesPer100g = results[1].nutriments["energy-kcal_100g"];  
@@ -48,6 +52,8 @@ function searchForFood()
 function displayResult()
 {
   console.log('Display Result');
+  getEl('searching').hidden = true;
+  getEl('main-menu').hidden = false;
   const output = getEl('search-result');
   output.innerHTML = "";
   const p = document.createElement('p');
