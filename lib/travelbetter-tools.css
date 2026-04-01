@@ -85,6 +85,11 @@ h3, h4, h5 {
     padding:10px;
 }
 
+.control-text {
+   color:#fff;
+   font-size: 2em;
+}
+
 /* Card sits within display card or on its own to be used for controls */
 .loading-card {
     box-sizing: border-box;
