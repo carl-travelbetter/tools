@@ -63,7 +63,8 @@ function displayResult()
   output.appendChild(p);
   output.hidden = false;
   const gramCalculator = getEl('gram-calculator');
-  gramCalculator.innerHTML = "";
+  getEl('grams-eaten').value = "";
+  getEl('grams-results').innerHTML = "";
   gramCalculator.hidden = false;
 }
 
