@@ -13,6 +13,7 @@ import { getEl, getText, getDate} from "/lib/dom.js";
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
   getEl('food-search-btn')?.addEventListener("click", searchForFood);
+  getEl('food-name')?.addEventListener("submit", searchForFood);
   getEl('exit-btn')?.addEventListener("click", exitLookup);
   getEl('calories-per-grams')?.addEventListener("click", calcCaloriesPerGrams);
 }
