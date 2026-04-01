@@ -85,6 +85,22 @@ h3, h4, h5 {
     padding:10px;
 }
 
+/* Card sits within display card or on its own to be used for controls */
+.loading-card {
+    box-sizing: border-box;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:0.75em;
+    background-color: #26272e; 
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    width: 100%;
+    max-width:800px;
+    text-align:center;
+    padding:10px;
+    color: ##fff;
+}
+
 /*Darker shade of blue outer card - used to contain the information cards and others*/
 .outer-card {
     box-sizing: border-box;
