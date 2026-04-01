@@ -40,6 +40,8 @@ function searchForFood()
   //Display Progress Bar
   getEl('main-menu').hidden = true;
   getEl('searching').hidden = false;
+  getEl('gram-calculator').hidden = true;
+  getEl('search-result').hidden = true;
   // Example usage
   searchProducts(foodName).then(results => {
   caloriesPer100g = results[1].nutriments["energy-kcal_100g"];  
