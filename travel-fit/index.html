@@ -1,0 +1,75 @@
+<DOCTYPE! html>
+  <html lang="en">
+    <head>
+      <title>Travelbetter - Travel Fit Tools</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="Calm, low demand,  tools to help you and your family improve your travel fitness and travel better." />
+     <meta charset="UTF-8">
+     <link rel="stylesheet" href="https://tools.travelbetter.co.uk/lib/travelbetter-tools.css">
+     <script type="module" src="travel-fit-tracker.js" defer></script>
+    </head>
+    <body>
+       <div class="tb-navbar">
+        <ul>
+          <li><a href="https://travelbetter.co.uk">Travelbetter</a></li>
+          <li><a href="https://tools.travelbetter.co.uk/index.html">Tools</a></li>
+        </ul>
+       </div>
+      <div class="intro" id="intro">
+        <h1>Travelbetter Travel Fit Tools</h1>
+        <p>Get Travel Fit to Travel Better</p> 
+        <p>Explore More and Worry Less. </p>
+        <p>This tool is built using the <a href="https://en.openfoodfacts.org">Open Food Facts Database</a>, the largest database of food information in the world. </p>
+      </div>
+      <div class="controls-card" id="main-menu" >
+        <label class="controls-text" for="food-name">Enter Food To Search For</label>
+        <input class="form-input" type="text" id="food-name" name="food-name" />
+        <button class="control-btn" id="food-search-btn">Search</button>
+      </div>
+      <div class="loading-card" id="searching" hidden>
+        <p class="controls-text">Looking Up Food...</p>
+        <p class="controls-text">Right now we are searching through millions of logged food items in the Open Food Facts Database to find a match to your search.</p>
+      </div>
+      <div class="display-card" id="search-result" hidden>
+        <h2>Search Results</h2>
+      </div>
+      <div class="display-card" id="gram-calculator" hidden>
+        <label for="grams-eaten">Grams Eaten</label>
+        <input class="form-input" type="number" id="grams-eaten" name="grams-eaten" />
+        <button class="control-btn" id="calories-per-grams">Calories per Grams</button>
+        <div id="grams-results"></div>
+      </div>
+      <div id="ad-gap">
+        <p> </p>
+      <hr>
+      <!-- Simple Ad -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9165315921199540"
+     crossorigin="anonymous"></script>
+        <!-- Basic-Ad -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9165315921199540"
+             data-ad-slot="5810299649"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      <!-- End of Ad -->
+      <hr>
+        <p> </p>
+      </div>
+      <div class="controls-card" id="exit-menu" >
+        <button class="control-btn" id="exit-btn">Exit Search</button>
+      </div>
+      <div class="display-card" id="intructions" >
+        <h3>Instructions for use</h3>
+          <P>1. Enter the name of the food you are looking for, provide the name of the producer as well as the name of the food if known e.g. <strong>Walkers</strong> Ready Salted Crips. This helps narrow down the search and avoids returning a generic item. </p>
+          <P>2. Click on the Search Button</p>
+          <P>3. The app will now search the database and return the calories per 100 grams for that item, and display the option to enter the grams you plan to consume.</p>
+          <P>4. Enter the number of grams of the product that you plan to consume and click on the calculate calories button</p>
+          <P>5. Adjust the grams and click search again if you are looking to reduce or increase the calorie amount</p>
+        </ul>
+      </div>
+    </body>
+  </html>
