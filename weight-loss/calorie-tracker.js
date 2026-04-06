@@ -1,32 +1,9 @@
 console.log("Travelbetter Calorie Tracker");
 
-/*
-let accommodationTags = [];
-let activeTags = [];
-//Load Accommodation Tag data
-fetch('/lib/tags/accommodation-tags.json')
-  .then(response => response.json())
-  .then(data => {
-    accommodationTags = data;
-    console.log("Accommodation Tags loaded:", accommodationTags);
-    createAccommodationTagButtons(); // load tag buttons
-  })
-  .catch(error => console.error("Error loading accommodation tag data:", error));
 
-let placesToStay = [];
-let selectedPlaces = [];
-//Load Accommodation Tag data
-fetch('/lib/data/places-to-stay.json')
-  .then(response => response.json())
-  .then(data => {
-    placesToStay = data;
-    console.log("places data loaded:", placesToStay);
-  })
-  .catch(error => console.error("Error loading places data:", error));
-*/
 
 //Import Dom utils
-import {getWrittenDate, getDuration, addDays} from "/lib/date-helper.js";
+import {getWrittenDate, getDuration, addDays, getDayOfYear} from "/lib/date-helper.js";
 import { getEl, getText, getDate} from "/lib/dom.js";
 
 //Load saved data
@@ -38,6 +15,12 @@ let calorieList = JSON.parse(localStorage.getItem(CALORIE_LIST_KEY)) || {calorie
 const CALORIE_LIMIT_KEY = "calorie-limit";
 let limitData = JSON.parse(localStorage.getItem(CALORIE_LIMIT_KEY)) || {limitList: []};
 let dailyCalorieLimit = limitData.limitList[0];
+
+//Load calorie day
+const CALORIE_TRACKING_DAY = "calorie-tracking-day";
+let calTrackingDay = JSON.parse(localStorage.getItem(CALORIE_TRACKING_DAY)) || {trackingDay: []};
+
+const dayOfYear = getDayOfYear();
 
 //If no limit set
 if (isNaN(dailyCalorieLimit))
@@ -114,6 +97,7 @@ function submitCalories()
   item.description = getEl('item-name').value || NOT_SET;
   item.calories = getEl('calories').value || 0;
   calorieList.caloriesSpent.push(item);
+  calTrackingDay.trackingDay[0] = dayOfYear;
   saveData();
   updateTracker();
   displayLog();
@@ -134,6 +118,7 @@ function setDailyLimit()
   dailyCalorieLimit = getEl('daily-limit').value;
   console.log('New Daily Calorie Limit '+dailyCalorieLimit);
   limitData.limitList[0] = dailyCalorieLimit;
+  
   saveData();
   updateTracker();
   getEl('set-limit').hidden = true;
@@ -258,7 +243,9 @@ function saveData()
   localStorage.setItem(CALORIE_LIST_KEY, JSON.stringify(calorieList));
   localStorage.setItem(CALORIE_TOTAL_KEY, JSON.stringify(totalData));
   localStorage.setItem(CALORIE_LIMIT_KEY, JSON.stringify(limitData));
+  localStorage.setItem(CALORIE_TRACKING_DAY, JSON.stringify(calTrackingDay));
 }
+
 
 //Start a new day
 function startNewDay()
