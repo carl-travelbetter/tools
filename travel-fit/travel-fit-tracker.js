@@ -21,6 +21,24 @@ if (yesterday < 0)
 
 console.log('Yesterday '+yesterday);
 
+//Ensure html bindings are not applied until the html structure is built
+document.addEventListener("DOMContentLoaded", updateCalorieTracker);
+
+
+//Update the calorie tracker circle if the last calorie update date is today
+function updateCalorieTracker()
+{
+  const calorieCircle = getEl('calorie-circle');
+  let lastCalorieUpdate = calTrackingDay.trackingDay[0] || 999;
+  if (lastCalorieUpdate == getDayOfYear())
+  {
+    calorieCircle.setAttribute("fill", "green");
+  }
+  else
+  {
+    calorieCircle.setAttribute("fill", "red");
+  }
+}
 
 //State logic will need to review the state list that says done for yesterday and turn red, in the actual trackers you will need to update the day to today on the first entry saved or even all entries saved. 
 //Perhaps working in a transient day state e.g. does it show state of done for today, if so ignore then otherwise save
