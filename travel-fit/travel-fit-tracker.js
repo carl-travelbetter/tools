@@ -14,6 +14,12 @@ import {getEl, getText, getDate} from "/lib/dom.js";
 //Lets work with days first...
 
 console.log("This is day "+getDayOfYear());
+//You will need to handle end of year events ultimately.
+let yesterday = getDayOfYear() = 1;
+if (yesterday < 0)
+{ yesterday = 365; }
+
+console.log('Yesterday '+yesterday);
 
 function getDayOfYear(date = new Date()) {
   const start = new Date(date.getFullYear(), 0, 0); // Jan 0 = last day of previous year
