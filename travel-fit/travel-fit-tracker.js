@@ -15,7 +15,7 @@ import {getEl, getText, getDate} from "/lib/dom.js";
 
 console.log("This is day "+getDayOfYear());
 //You will need to handle end of year events ultimately.
-let yesterday = getDayOfYear() = 1;
+let yesterday = getDayOfYear() - 1;
 if (yesterday < 0)
 { yesterday = 365; }
 
