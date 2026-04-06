@@ -1,7 +1,7 @@
 console.log('Travel Fit Tracker');
 
 //Import Dom utils
-import {getWrittenDate, getDuration, addDays} from "/lib/date-helper.js";
+import {getWrittenDate, getDuration, addDays, getDayOfYear} from "/lib/date-helper.js";
 import {getEl, getText, getDate} from "/lib/dom.js";
 
 //Load State Data
@@ -20,10 +20,10 @@ if (yesterday < 0)
 { yesterday = 365; }
 
 console.log('Yesterday '+yesterday);
-
+/*
 function getDayOfYear(date = new Date()) {
   const start = new Date(date.getFullYear(), 0, 0); // Jan 0 = last day of previous year
   const diff = date - start;
   const oneDay = 1000 * 60 * 60 * 24;
   return Math.floor(diff / oneDay);
-}
+}*/
