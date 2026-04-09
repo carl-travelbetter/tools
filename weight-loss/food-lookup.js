@@ -10,6 +10,10 @@ let caloriesPer100g = 0;
 import {getWrittenDate, getDuration, addDays} from "/lib/date-helper.js";
 import { getEl, getText, getDate} from "/lib/dom.js";
 
+//Load Calorie Tracker List
+const CALORIE_LIST_KEY = "calories-list";
+let calorieList = JSON.parse(localStorage.getItem(CALORIE_LIST_KEY)) || {caloriesSpent: []};
+
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
   getEl('food-search-btn')?.addEventListener("click", searchForFood);
