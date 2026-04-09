@@ -16,6 +16,7 @@ function bindEvents() {
   getEl('food-name')?.addEventListener("submit", searchForFood);
   getEl('exit-btn')?.addEventListener("click", exitLookup);
   getEl('calories-per-grams')?.addEventListener("click", calcCaloriesPerGrams);
+  getEl('calorie-tracker')?.addEventListener("click", goToCalorieTracker);
 }
 
 //Ensure html bindings are not applied until the html structure is built
@@ -92,4 +93,11 @@ function exitLookup()
 {
   console.log('Exit Food Lookup');
   window.location.assign('https://tools.travelbetter.co.uk/');
+}
+
+//Go to the calorie tracker
+function goToCalorieTracker()
+{
+  console.log('Go To Calorie Tracker');
+  window.location.assign('https://tools.travelbetter.co.uk/weight-loss/');
 }
