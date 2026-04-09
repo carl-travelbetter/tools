@@ -1,0 +1,78 @@
+<DOCTYPE! html>
+  <html lang="en">
+    <head>
+      <title>Travelbetter - Daily Weight Loss Walk Tracker</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="Easy to use, daily weight loss walk tracker, to help you become travel fit and travel better." />
+     <meta charset="UTF-8">
+     <link rel="stylesheet" href="https://tools.travelbetter.co.uk/lib/travelbetter-tools.css">
+     <script type="module" src="walk-tracker.js" defer></script>
+    </head>
+    <body>
+       <div class="tb-navbar">
+        <ul>
+          <li><a href="https://travelbetter.co.uk">Travelbetter</a></li>
+          <li><a href="https://tools.travelbetter.co.uk/index.html">Tools</a></li>
+        </ul>
+       </div>
+      <div class="intro" id="intro">
+        <h1>Travelbetter Walk Tracker</h1>
+        <p>Daily actions, big results to get you and your family travel (and life) fit</p> 
+        <p>A simple, effective, tool for tracking daily walks to help you with your weight loss and weight management goals. </p>
+      </div>
+      <div class="controls-card" id="main-menu" >
+        <button class="control-btn" id="add-btn">Add Walk</button>
+        <button class="control-btn" id="set-target-btn">Set Target</button>
+        <button class="control-btn" id="show-log-btn">Show Log</button>
+        <button class="control-btn" id="reset-btn">Reset</button>
+      </div>
+      <!-- Creat new trip -->
+      <div class="display-card" id="add-calories" hidden>
+        <h2>Add Walk</h2>
+        <label for="walk-time">Enter Time: </label>
+        <input class="form-input" type="text" id="walk-time" name="walk-time" />
+        <label for="walk-distance">Enter Distance:</label>
+        <input class="form-input" type="number" id="walk-distance" name="walk-distance" /><br>       
+        <button class="control-btn" id="submit-btn">Submit</button>
+        <button class="control-btn" id="cancel-btn">Cancel</button>
+        <p>Don't worry, you can change these value later if you need to.</p>
+      </div>
+      <!-- show the calories spent todate -->
+      <div class="display-card" id="set-limit" hidden>
+        <h2>Set Daily Walk Target</h2>
+        <label for="daily-target">Time Target (minutes): </label>
+        <input class="form-input" type="number" id="daily-target" name="daily-target" />
+        <button class="control-btn" id="set-target-btn">Submit</button>
+      </div>
+      <div class="display-card" id="limit-check" hidden>
+        <h2>Progress</h2>
+      </div>
+      <div class="display-card" id="daily-log" hidden>
+        <h2>Daily Log</h2>
+      </div>
+      <!-- Simple Ad -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9165315921199540"
+     crossorigin="anonymous"></script>
+        <!-- Basic-Ad -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9165315921199540"
+             data-ad-slot="5810299649"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      <!-- End of Ad -->
+      <!-- Search for food -->
+      <div class="display-card" id="tracker-card" >
+        <h2>Travel Fit Tracker</h2>
+        <p>Review your travel fit progress for today</p>
+        <a href="https://tools.travelbetter.co.uk/travel-fit/">Travel Fit Tracker</a>
+      </div>
+      <div class="controls-card" id="exit-menu" >
+        <button class="control-btn" id="new-day-btn">New Day</button>
+        <button class="control-btn" id="exit-btn">Exit Tracker</button>
+      </div>
+    </body>
+  </html>
