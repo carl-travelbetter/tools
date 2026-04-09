@@ -5,7 +5,7 @@ console.log('Food Lookup');
 //Variables
 let foodName;
 let caloriesPer100g = 0;
-
+let calories = 0;
 //Import Dom utils
 import {getWrittenDate, getDuration, addDays} from "/lib/date-helper.js";
 import { getEl, getText, getDate} from "/lib/dom.js";
@@ -67,11 +67,6 @@ function displayResult()
   const p = document.createElement('p');
   p.textContent = "Calories per 100 grams of "+foodName+": "+caloriesPer100g.toFixed(0);
   output.appendChild(p);
-  const addButton = document.createElement('button');
-  addButton.className = 'control-btn';
-  addButton.textContent = 'Add To Calorie Tracker';
-  addButton.addEventListener("click", addToCalorieTracker);
-  output.appendChild(addButton);
   output.hidden = false;
   const gramCalculator = getEl('gram-calculator');
   getEl('grams-eaten').value = "";
@@ -83,7 +78,19 @@ function displayResult()
 function addToCalorieTracker()
 {
   console.log('Add To Calorie Tracker');
-  
+  let item = {};
+  item.description = foodName || NOT_SET;
+  item.calories = calories || 0;
+  calorieList.caloriesSpent.push(item);
+  saveData();
+  goToCalorieTracker();
+}
+
+//Save data
+function saveData()
+{
+  console.log("Saving Data...");
+  localStorage.setItem(CALORIE_LIST_KEY, JSON.stringify(calorieList));
 }
 
 //Calculate Calories Per Gram
@@ -91,7 +98,7 @@ function calcCaloriesPerGrams()
 {
   console.log('Calculate Calories Per Grams');
   let grams = getEl('grams-eaten').value;
-  let calories = (caloriesPer100g / 100) * grams;
+  calories = (caloriesPer100g / 100) * grams;
   console.log('Calorie Calc = '+calories);
   const gramsResults = getEl('grams-results');
   gramsResults.innerHTML = "";
@@ -101,6 +108,11 @@ function calcCaloriesPerGrams()
   const gramsResultsValue = document.createElement('p');
   gramsResultsValue.textContent = grams+' grams of '+foodName+' is '+calories.toFixed(0)+' Calories';
   gramsResults.appendChild(gramsResultsValue);
+  const addButton = document.createElement('button');
+  addButton.className = 'control-btn';
+  addButton.textContent = 'Add To Calorie Tracker';
+  addButton.addEventListener("click", addToCalorieTracker);
+  gramsResults.appendChild(addButton);
   gramsResults.hidden = false;
 }
 
