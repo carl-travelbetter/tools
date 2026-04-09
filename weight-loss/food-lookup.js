@@ -80,7 +80,7 @@ function addToCalorieTracker()
   console.log('Add To Calorie Tracker');
   let item = {};
   item.description = foodName || NOT_SET;
-  item.calories = calories || 0;
+  item.calories = calories.toFixed(0) || 0;
   calorieList.caloriesSpent.push(item);
   saveData();
   goToCalorieTracker();
