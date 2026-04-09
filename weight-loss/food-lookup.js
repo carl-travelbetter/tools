@@ -63,11 +63,23 @@ function displayResult()
   const p = document.createElement('p');
   p.textContent = "Calories per 100 grams of "+foodName+": "+caloriesPer100g.toFixed(0);
   output.appendChild(p);
+  const addButton = document.createElement('button');
+  addButton.className = 'control-btn';
+  addButton.textContent = 'Add To Calorie Tracker';
+  addButton.addEventListener("click", addToCalorieTracker);
+  output.appendChild(addButton);
   output.hidden = false;
   const gramCalculator = getEl('gram-calculator');
   getEl('grams-eaten').value = "";
   getEl('grams-results').innerHTML = "";
   gramCalculator.hidden = false;
+}
+
+//add to calorie tracker
+function addToCalorieTracker()
+{
+  console.log('Add To Calorie Tracker');
+  
 }
 
 //Calculate Calories Per Gram
