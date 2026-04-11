@@ -22,7 +22,7 @@ const dayOfYear = getDayOfYear();
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
   getEl('add-btn')?.addEventListener("click", addWalk);
-  getEl('set-target-btn')?.addEventListener("click", openTargetControl);
+  getEl('open-target-btn')?.addEventListener("click", openTargetControl);
   getEl('reset-btn')?.addEventListener("click", resetData);
   getEl('submit-btn')?.addEventListener("click", submitWalk);
   getEl('cancel-btn')?.addEventListener("click", cancelAddWalk);
