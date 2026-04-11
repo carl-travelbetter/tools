@@ -172,7 +172,7 @@ function updateTracker()
   const progressHeader = document.createElement('h2');
   progressHeader.textContent = "Progress";
   progressCard.appendChild(progressHeader);
-  totalWalkTime = 0;
+  let totalWalkTime = 0;
   //add up the minutes in the walk list
   walkList.walks.forEach(walk => {
     totalWalkTime += parseFloat(walk.minutes);
