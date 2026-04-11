@@ -81,6 +81,7 @@ function submitWalk()
   walkTrackingDay.trackingDay[0] = dayOfYear;
   saveData();
   displayLog();
+  updateTracker();
 }
 
 //Cancel Adding a Walk
