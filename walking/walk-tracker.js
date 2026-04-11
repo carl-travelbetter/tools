@@ -36,6 +36,12 @@ function bindEvents() {
 //Ensure html bindings are not applied until the html structure is built
 document.addEventListener("DOMContentLoaded", bindEvents);
 
+//set daily target
+function setDailyTarget()
+{
+  console.log('Set Daily Target');
+}
+
 //Open up Add Walk
 function addWalk()
 {
