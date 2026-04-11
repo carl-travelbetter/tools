@@ -176,7 +176,7 @@ function closeAll()
 function startNewDay()
 {
   console.log('Start a new day');
-  calorieList.caloriesSpent = [];
+  walkList.walks = [];
   saveData();
   getEl('add-walk').hidden = true;
   getEl('set-target').hidden = true;
