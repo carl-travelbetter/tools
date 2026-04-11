@@ -157,8 +157,8 @@ function displayLog()
       console.log("Delete ID = "+deleteButton.dataset.label);   
       walkList.walks.splice(deleteButton.dataset.label, 1); 
       saveData();  
-      updateTracker();
       displayLog();
+      updateTracker();
       });
       listDeleteControl.appendChild(deleteButton);
       listItem.appendChild(listDeleteControl);
