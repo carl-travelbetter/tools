@@ -40,6 +40,12 @@ document.addEventListener("DOMContentLoaded", bindEvents);
 function setDailyTarget()
 {
   console.log('Set Daily Target');
+  walkTarget = getEl('daily-target').value || 45;
+  targetData.target[0] = walkTarget;
+  saveData();
+  closeAll();
+  displayLog();
+  updateTracker();
 }
 
 //Open up Add Walk
@@ -144,7 +150,7 @@ function displayLog()
       console.log("Delete ID = "+deleteButton.dataset.label);   
       walkList.walks.splice(deleteButton.dataset.label, 1); 
       saveData();  
-      //updateTracker();
+      updateTracker();
       displayLog();
       });
       listDeleteControl.appendChild(deleteButton);
@@ -154,6 +160,36 @@ function displayLog()
   
   walkLogDisplay.appendChild(list);
   walkLogDisplay.hidden = false;
+  
+}
+
+//Update the tracker to show progress towards today's target
+function updateTracker()
+{
+  console.log('Update Tracker');
+  const progressCard = getEl('progress-check');
+  progressCard.innerHTML = "";
+  const progressHeader = document.createElement('h2');
+  progressHeader.textContent = "Progress";
+  progressCard.appendChild(progressHeader);
+  totalWalkTime = 0;
+  //add up the minutes in the walk list
+  walkList.walks.forEach(walk => {
+    totalWalkTime += parseFloat(walk.minutes);
+  });
+
+  const progressStatement = document.createElement('p');
+  if (totalWalkTime < walkTarget)
+  {
+    progressStatment.textContent = totalWalkTime+" minutes walked towards target of "+walkTarget+" minutes. Keep Going, you've got this";
+  }
+  else
+  {
+    progressStatment.textContent = totalWalkTime+" minutes walked, target "+walkTarget+" minutes. You hit your target, great job.";
+  }
+
+  progressCard.appendChild(progressStatement);
+  progressCard.hidden = false; 
   
 }
 
