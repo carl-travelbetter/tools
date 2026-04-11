@@ -187,11 +187,11 @@ function updateTracker()
   const progressStatement = document.createElement('p');
   if (totalWalkTime < walkTarget)
   {
-    progressStatment.textContent = totalWalkTime+" minutes walked towards target of "+walkTarget+" minutes. Keep Going, you've got this";
+    progressStatement.textContent = totalWalkTime+" minutes walked towards target of "+walkTarget+" minutes. Keep Going, you've got this";
   }
   else
   {
-    progressStatment.textContent = totalWalkTime+" minutes walked, target "+walkTarget+" minutes. You hit your target, great job.";
+    progressStatement.textContent = totalWalkTime+" minutes walked, target "+walkTarget+" minutes. You hit your target, great job.";
   }
 
   progressCard.appendChild(progressStatement);
