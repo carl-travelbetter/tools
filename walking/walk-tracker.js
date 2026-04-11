@@ -66,6 +66,7 @@ function submitWalk()
   walk.minutes = getEl('walk-time').value || 0;
   walk.distance = getEl('walk-distance').value || 0;
   walkList.walks.push(walk);
+  walkTrackingDay.trackingDay[0] = dayOfYear;
   saveData();
   displayLog();
 }
