@@ -33,6 +33,12 @@ function bindEvents() {
   getEl('show-log-btn')?.addEventListener("click", displayLog);
 }
 
+if (walkList.walks.length > 0)
+{
+  displayLog();
+  updateTracker();
+}
+
 //Ensure html bindings are not applied until the html structure is built
 document.addEventListener("DOMContentLoaded", bindEvents);
 
