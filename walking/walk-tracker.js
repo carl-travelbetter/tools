@@ -74,6 +74,9 @@ function submitWalk()
 function cancelAddWalk()
 {
   console.log('Cancel Add Walk');
+  getEl('walk-time').value = "";
+  getEl('walk-distance').value = "";
+  getEl('add-walk').hidden = true;
 }
 
 //display walk log
