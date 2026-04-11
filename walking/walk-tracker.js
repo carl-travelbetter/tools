@@ -183,3 +183,9 @@ function startNewDay()
   getEl('progress-check').hidden = true;
   getEl('daily-log').hidden = true;
 }
+
+//Exit to the main menu
+function exitTracker()
+{
+  window.location.assign('https://tools.travelbetter.co.uk/');
+}
