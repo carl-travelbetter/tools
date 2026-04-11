@@ -15,7 +15,7 @@ let walkTarget = targetData.target[0] || 45;
 
 //Load Walk day
 const WALK_TRACKING_DAY = "walk-tracking-day";
-let walkTrackingDay = JSON.parse(localStorage.getItem(walk_TRACKING_DAY)) || {trackingDay: []};
+let walkTrackingDay = JSON.parse(localStorage.getItem(WALK_TRACKING_DAY)) || {trackingDay: []};
 
 const dayOfYear = getDayOfYear();
 
