@@ -136,7 +136,7 @@ function displayLog()
     listItem.appendChild(listID);
     let listMinutes = document.createElement('span');
     listMinutes.className = 'span-text';
-    listMinutes.textContent = walk.minuntes;
+    listMinutes.textContent = walk.minutes;
     listItem.appendChild(listMinutes);
     let listDistance = document.createElement('span');
     listDistance.className = 'span-value';
