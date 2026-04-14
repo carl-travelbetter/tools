@@ -29,6 +29,7 @@ function bindEvents() {
   getEl('set-target-btn')?.addEventListener("click", setDailyTarget);
   getEl('exit-btn')?.addEventListener("click", exitTracker);
   getEl('new-day-btn')?.addEventListener("click", startNewDay);
+  getEl('ant-new-day-btn')?.addEventListener("click", startNewDay);
   getEl('display-tracker-btn')?.addEventListener("click", updateTracker);
   getEl('show-log-btn')?.addEventListener("click", displayLog);
 }
