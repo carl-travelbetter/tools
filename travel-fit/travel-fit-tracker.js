@@ -56,11 +56,11 @@ function updateWalkTracker()
   let lastWalkUpdate = walkTrackingDay.trackingDay[0] || 999;
   if (lastWalkUpdate == getDayOfYear())
   {
-    calorieCircle.setAttribute("fill", "green");
+    walkCircle.setAttribute("fill", "green");
   }
   else
   {
-    calorieCircle.setAttribute("fill", "red");
+    walkCircle.setAttribute("fill", "red");
   }
 }
 
