@@ -11,6 +11,10 @@ import {getEl, getText, getDate} from "/lib/dom.js";
 const CALORIE_TRACKING_DAY = "calorie-tracking-day";
 let calTrackingDay = JSON.parse(localStorage.getItem(CALORIE_TRACKING_DAY)) || {trackingDay: []};
 
+//Load Walk day
+const WALK_TRACKING_DAY = "walk-tracking-day";
+let walkTrackingDay = JSON.parse(localStorage.getItem(WALK_TRACKING_DAY)) || {trackingDay: []};
+
 //Lets work with days first...
 
 console.log("This is day "+getDayOfYear());
@@ -22,8 +26,13 @@ if (yesterday < 0)
 console.log('Yesterday '+yesterday);
 
 //Ensure html bindings are not applied until the html structure is built
-document.addEventListener("DOMContentLoaded", updateCalorieTracker);
+document.addEventListener("DOMContentLoaded", updateTrackers);
 
+function updateTrackers()
+{
+  updateCalorieTracker();
+  updateWalkTracker();
+}
 
 //Update the calorie tracker circle if the last calorie update date is today
 function updateCalorieTracker()
@@ -31,6 +40,21 @@ function updateCalorieTracker()
   const calorieCircle = getEl('calorie-circle');
   let lastCalorieUpdate = calTrackingDay.trackingDay[0] || 999;
   if (lastCalorieUpdate == getDayOfYear())
+  {
+    calorieCircle.setAttribute("fill", "green");
+  }
+  else
+  {
+    calorieCircle.setAttribute("fill", "red");
+  }
+}
+
+//Update the calorie tracker circle if the last calorie update date is today
+function updateWalkTracker()
+{
+  const walkCircle = getEl('walk-circle');
+  let lastWalkUpdate = walkTrackingDay.trackingDay[0] || 999;
+  if (lastWalkUpdate == getDayOfYear())
   {
     calorieCircle.setAttribute("fill", "green");
   }
