@@ -1,4 +1,4 @@
-console.log('Travel Fit Tracker');
+console.log('Travel Fit Tracker - Travelbetter');
 
 //Import Dom utils
 import {getWrittenDate, getDuration, addDays, getDayOfYear} from "/lib/date-helper.js";
