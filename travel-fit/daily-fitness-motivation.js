@@ -46,6 +46,8 @@ function loadDailyMotivation()
       const statement = document.createElement('p');
       statement.textContent = motivation.motivation;
       card.appendChild(statement);
+      //Next step is to build the links to more info and product of the day
+      
   } 
   else 
   {
