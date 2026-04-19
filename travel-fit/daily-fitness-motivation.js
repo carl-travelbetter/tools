@@ -12,6 +12,7 @@ fetch('daily-fitness-motivation.json')
   .then(data => {
     motivationData = data;
     console.log("Motivation data loaded:", motivationData);
+    loadDailyMotivation();
   })
   .catch(error => console.error("Error loading motivation data:", error));
 
@@ -29,9 +30,6 @@ let walkTrackingDay = JSON.parse(localStorage.getItem(WALK_TRACKING_DAY)) || {tr
 //Lets work with days first...
 
 let dayOfYear = getDayOfYear();
-
-//Ensure html bindings are not applied until the html structure is built
-document.addEventListener("DOMContentLoaded", loadDailyMotivation);
 
 
 //Find and display the motivation data for today
