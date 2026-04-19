@@ -39,7 +39,7 @@ function loadDailyMotivation()
 {
   console.log('Loading Daily Motivation for Day '+dayOfYear);
   const motivation = motivationData.find(entry => entry.day === dayOfYear);
-  const card = document.getEl('daily-motivation');
+  const card = getEl('daily-motivation');
   if (motivation) 
   {
       const header = document.createElement('h3');
