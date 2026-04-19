@@ -7,7 +7,7 @@ import {getEl, getText, getDate} from "/lib/dom.js";
 //Load the JSON Motivation File
 let motivationData = [];
 
-fetch('daily fitness motivation.json')
+fetch('daily-fitness-motivation.json')
   .then(response => response.json())
   .then(data => {
     motivationData = data;
