@@ -27,6 +27,10 @@ let calTrackingDay = JSON.parse(localStorage.getItem(CALORIE_TRACKING_DAY)) || {
 const WALK_TRACKING_DAY = "walk-tracking-day";
 let walkTrackingDay = JSON.parse(localStorage.getItem(WALK_TRACKING_DAY)) || {trackingDay: []};
 
+//Load Motivation day
+const MOTIVATION_TRACKING_DAY = "motivation-tracking-day";
+let motivationTrackingDay = JSON.parse(localStorage.getItem(MOTIVATION_TRACKING_DAY)) || {trackingDay: []};
+
 //Lets work with days first...
 
 let dayOfYear = getDayOfYear();
@@ -47,11 +51,19 @@ function loadDailyMotivation()
       statement.textContent = motivation.motivation;
       card.appendChild(statement);
       //Next step is to build the links to more info and product of the day
-      
+      motivationTrackingDay.trackingDay[0] = dayOfYear;
+      saveData();
   } 
   else 
   {
       const errorMessage = document.createElement('p');
       errorMessage.textContent = "Unable to load motivation - take the day off";
   }
+}
+
+//Save data
+function saveData()
+{
+  console.log("Saving Data...");
+  localStorage.setItem(MOTIVATION_TRACKING_DAY, JSON.stringify(motivationTrackingDay));
 }
