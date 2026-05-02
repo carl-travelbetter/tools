@@ -15,7 +15,9 @@ let calTrackingDay = JSON.parse(localStorage.getItem(CALORIE_TRACKING_DAY)) || {
 const WALK_TRACKING_DAY = "walk-tracking-day";
 let walkTrackingDay = JSON.parse(localStorage.getItem(WALK_TRACKING_DAY)) || {trackingDay: []};
 
-//Lets work with days first...
+//Load Motivation day
+const MOTIVATION_TRACKING_DAY = "motivation-tracking-day";
+let motivationTrackingDay = JSON.parse(localStorage.getItem(MOTIVATION_TRACKING_DAY)) || {trackingDay: []};
 
 console.log("This is day "+getDayOfYear());
 //You will need to handle end of year events ultimately.
@@ -32,6 +34,7 @@ function updateTrackers()
 {
   updateCalorieTracker();
   updateWalkTracker();
+  updateMotivationTracker();
 }
 
 //Update the calorie tracker circle if the last calorie update date is today
@@ -61,6 +64,21 @@ function updateWalkTracker()
   else
   {
     walkCircle.setAttribute("fill", "red");
+  }
+}
+
+//Update the motivation tracker circle if motivation viewed and date set to today
+function updateMotivationTracker()
+{
+  const motivationCircle = getEl('motivation-circle');
+  let lastViewDate = motivationTrackingDay.trackingDay[0] || 999;
+  if (lastViewDate == getDayOfYear())
+  {
+    motivationCircle.setAttribute("fill", "green");
+  }
+  else
+  {
+    motivationCircle.setAttribute("fill", "red");
   }
 }
 
