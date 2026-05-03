@@ -86,10 +86,10 @@ function displayPushGoals()
   listHeaderItem.className = 'span-text';
   listHeaderItem.textContent = 'Goal';
   listHeader.appendChild(listHeaderItem);
-  const listHeaderValue = document.createElement('span');
-  listHeaderValue.className = 'span-value';
-  listHeaderValue.textContent = 'Something';
-  listHeader.appendChild(listHeaderValue);
+  //const listHeaderValue = document.createElement('span');
+  //listHeaderValue.className = 'span-value';
+  //listHeaderValue.textContent = 'Area';
+  //listHeader.appendChild(listHeaderValue);
   const listHeaderAction = document.createElement('span');
   listHeaderAction.className = 'span-action';
   listHeaderAction.textContent = 'Delete Item';
@@ -111,10 +111,10 @@ function displayPushGoals()
     listDescription.className = 'span-text';
     listDescription.textContent = item;
     listItem.appendChild(listDescription);
-    let listCalories = document.createElement('span');
-    listCalories.className = 'span-value';
-    listCalories.textContent = "TBC";
-    listItem.appendChild(listCalories);
+    //let listCalories = document.createElement('span');
+    //listCalories.className = 'span-value';
+    //listCalories.textContent = "TBC";
+    //listItem.appendChild(listCalories);
     let listDeleteControl = document.createElement('span');
     listDeleteControl.className = 'span-action';
     
@@ -144,6 +144,72 @@ function displayPushGoals()
 function displayPullGoals()
 {
   console.log('display the latest pull goals');
+  const pullGoalsList = getEl('pull-list');
+  pullGoalsList.innerHTML = "";
+  const list = document.createElement('ul');
+
+  //Create a header row for the list
+  const listHeader = document.createElement('li');
+  const listHeaderID = document.createElement('span');
+  listHeaderID.className = 'span-id';
+  listHeaderID.textContent = 'Item';
+  listHeader.appendChild(listHeaderID);
+  const listHeaderItem = document.createElement('span');
+  listHeaderItem.className = 'span-text';
+  listHeaderItem.textContent = 'Goal';
+  listHeader.appendChild(listHeaderItem);
+  //const listHeaderValue = document.createElement('span');
+  //listHeaderValue.className = 'span-value';
+  //listHeaderValue.textContent = 'Area';
+  //listHeader.appendChild(listHeaderValue);
+  const listHeaderAction = document.createElement('span');
+  listHeaderAction.className = 'span-action';
+  listHeaderAction.textContent = 'Delete Item';
+  listHeader.appendChild(listHeaderAction);
+
+  list.appendChild(listHeader);
+  
+  
+  let idx = 0;
+  pullList.pullItems.forEach (item => {
+    idx++; 
+    let listItem = document.createElement('li');
+    //listItem.textContent = item.description+': '+item.calories;
+    let listID = document.createElement('span');
+    listID.className = 'span-id';
+    listID.textContent = ""+idx;
+    listItem.appendChild(listID);
+    let listDescription = document.createElement('span');
+    listDescription.className = 'span-text';
+    listDescription.textContent = item;
+    listItem.appendChild(listDescription);
+    //let listCalories = document.createElement('span');
+    //listCalories.className = 'span-value';
+    //listCalories.textContent = "TBC";
+    //listItem.appendChild(listCalories);
+    let listDeleteControl = document.createElement('span');
+    listDeleteControl.className = 'span-action';
+    
+    //create a delete button
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "❌";
+    deleteButton.setAttribute("data-label", idx-1);
+      //Make the button do something
+       //Make the button do something when clicked
+      deleteButton.addEventListener("click", () => {
+      
+      console.log("Delete Goal Button Clicked");
+      console.log("Delete ID = "+deleteButton.dataset.label);   
+      pullList.pullItems.splice(deleteButton.dataset.label, 1); 
+      saveData();  
+      displayPullGoals();
+      });
+      listDeleteControl.appendChild(deleteButton);
+      listItem.appendChild(listDeleteControl);
+      list.appendChild(listItem);
+  });
+  pullGoalsList.appendChild(list);
+  pullGoalsList.hidden = false;
 }
 
 
