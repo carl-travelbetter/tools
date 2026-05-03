@@ -19,7 +19,6 @@ const NOT_SET = "BLANK";
 function bindEvents() {
   getEl('add-push-btn')?.addEventListener("click", addPush);
   getEl('add-pull-btn')?.addEventListener("click", addPull);
-  getEl('view-goals')?.addEventListener("click", viewGoals);
   getEl('submit-push-btn')?.addEventListener("click", createPushGoal);
   getEl('submit-pull-btn')?.addEventListener("click", createPullGoal);
   getEl('cancel-push-btn')?.addEventListener("click", cancelPushGoal);
@@ -29,6 +28,7 @@ function bindEvents() {
 
 //Ensure html bindings are not applied until the html structure is built
 document.addEventListener("DOMContentLoaded", bindEvents);
+
 
 //open add item controls
 function addPush()
