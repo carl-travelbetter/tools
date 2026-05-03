@@ -25,8 +25,20 @@
         <button class="control-btn" id="add-pull-btn">Add Pull Goal</button>
         <button class="control-btn" id="view-goals">View Goals</button>
       </div>
-      <div class="controls-card" id="add-pull" hidden></div>
-      <div class="controls-card" id="add-push" hidden></div>
+      <div class="controls-card" id="add-pull" hidden>
+        <h2>Create Push Goal</h2>
+        <label for="push-goal">Enter Goal </label>
+        <input class="form-input" type="text" id="push-goal" name="push-goal" />
+        <button class="control-btn" id="submit-push-btn">Create Goal</button>
+        <button class="control-btn" id="cancel-push-btn">Cancel</button>
+      </div>
+      <div class="controls-card" id="add-push" hidden>
+        <h2>Create Pull Goal</h2>
+        <label for="pull-goal">Enter Goal </label>
+        <input class="form-input" type="text" id="pull-goal" name="pull-goal" />
+        <button class="control-btn" id="submit-pull-btn">Create Goal</button>
+        <button class="control-btn" id="cancel-pull-btn">Cancel</button>
+      </div>
       <!-- display push goals -->
       <div class="display-card" id="push-goals">
         <h2>Push Goals</h2>
