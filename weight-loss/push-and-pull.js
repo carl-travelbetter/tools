@@ -29,6 +29,9 @@ function bindEvents() {
 //Ensure html bindings are not applied until the html structure is built
 document.addEventListener("DOMContentLoaded", bindEvents);
 
+//Display the saved goals
+displayPushGoals();
+displayPullGoals();
 
 //open add item controls
 function addPush()
