@@ -54,6 +54,7 @@ function createPushGoal()
   pushList.pushItems.push(goal);
   saveData();
   displayPushGoals();
+  getEl('add-push').hidden = true;
 }
 
 //saveData
@@ -85,6 +86,7 @@ function createPullGoal()
   pullList.pullItems.push(goal);
   saveData();
   displayPushGoals();
+  getEl('add-pull').hidden = true;
 }
 
 //Cancel creating a push goal
