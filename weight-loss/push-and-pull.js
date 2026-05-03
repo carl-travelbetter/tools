@@ -50,23 +50,54 @@ function addPull()
 function createPushGoal()
 {
   console.log('Create Push Goal');
+  let goal = getEl('push-goal').value || "No Goal Entered";
+  pushList.pushItems.push(goal);
+  saveData();
+  displayPushGoals();
 }
+
+//saveData
+function saveData()
+{
+  console.log('save data');
+  localStorage.setItem(PULL_LIST_KEY, JSON.stringify(pullList));
+  localStorage.setItem(PUSH_LIST_KEY, JSON.stringify(pushList));
+}
+
+//display the later push goals
+function displayPushGoals()
+{
+  console.log('display the latest push goals');
+}
+
+//display the later pull goals
+function displayPullGoals()
+{
+  console.log('display the latest pull goals');
+}
+
 
 //Create a push goal and update the displayed list
 function createPullGoal()
 {
   console.log('Create Pull Goal');
+  let goal = getEl('pull-goal').value || "No Goal Entered";
+  pullList.pullItems.push(goal);
+  saveData();
+  displayPushGoals();
 }
 
 //Cancel creating a push goal
 function cancelPushGoal()
 {
+  console.log('Cancel Push Goal');
   getEl('add-push').hidden = true;
 }
 
 //Cancel creating a pull goal
 function cancelPullGoal()
 {
+  console.log('Cancel Pull Goal');
   getEl('add-pull').hidden = true;
 }
 
