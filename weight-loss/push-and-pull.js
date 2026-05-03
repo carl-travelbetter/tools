@@ -41,7 +41,7 @@ function addPush()
 //open add item controls
 function addPull()
 {
-  console.log('Add Push Goal');
+  console.log('Add Pull Goal');
   getEl('pull-goal').value = "";
   getEl('add-pull').hidden = false;
 }
