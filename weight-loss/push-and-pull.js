@@ -220,7 +220,7 @@ function createPullGoal()
   let goal = getEl('pull-goal').value || "No Goal Entered";
   pullList.pullItems.push(goal);
   saveData();
-  displayPushGoals();
+  displayPullGoals();
   getEl('add-pull').hidden = true;
 }
 
