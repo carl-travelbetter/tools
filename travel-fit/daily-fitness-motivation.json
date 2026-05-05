@@ -109,7 +109,25 @@
   },
   {
     "day":127,
-    "motivation":"Just think about all clothes, food and travel choices that will be open to you when you get travel fit.",
+    "motivation":"Think about all clothes, food and travel choices that will be open to you when you get travel fit.",
+    "link":"https://travelbetter.co.uk",
+    "product":"https://amzn.to/3QvTm7y"
+  },
+  {
+    "day":128,
+    "motivation":"Getting fit significantly increases your chances of having more days to travel in the future.",
+    "link":"https://travelbetter.co.uk",
+    "product":"https://amzn.to/3QvTm7y"
+  },
+  {
+    "day":129,
+    "motivation":"Not only are you helping yourself, but your actions will inspire others to do the same - whether they tell you or not.",
+    "link":"https://travelbetter.co.uk",
+    "product":"https://amzn.to/3QvTm7y"
+  },
+  {
+    "day":130,
+    "motivation":"Which are you going to regret more on your death bed, giving up a few takeaways or missing out on that travel adventure as you weren't fit enough?",
     "link":"https://travelbetter.co.uk",
     "product":"https://amzn.to/3QvTm7y"
   }
