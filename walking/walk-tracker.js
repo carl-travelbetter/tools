@@ -52,9 +52,12 @@ function updateProgress(distance, time)
 {
   console.log('Update Progress');
   console.log('Values Passed '+distance+' '+time);
+  let currentValues = walkTotal.progress[0];
+  let currentDistance = currentValues.distance;
+  let currentTime = currentValues.time;
   let totals = {};
-  totals.distance = 10;
-  totals.time = 12;
+  totals.distance = currentDistance + distance;
+  totals.time = currentTime + time;
  // totals.distance = totals.distance + distance;
  // totals.time = totals.time + time;
   walkTotal.progress[0] = totals;
