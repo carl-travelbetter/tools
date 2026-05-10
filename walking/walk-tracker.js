@@ -10,7 +10,7 @@ let walkList = JSON.parse(localStorage.getItem(WALK_LIST_KEY)) || {walks: []};
 
 //Load Walk List
 const WALK_TOTAL_KEY = "walk-total";
-let walkTotal = JSON.parse(localStorage.getItem(WALK_TOTAL_KEY)) || {total: []};
+let walkTotal = JSON.parse(localStorage.getItem(WALK_TOTAL_KEY)) || {progress: []};
 
 //Load Target
 const WALK_TARGET_KEY = "walk-target";
@@ -52,32 +52,22 @@ function updateProgress(distance, time)
 {
   console.log('Update Progress');
   console.log('Values Passed '+distance+' '+time);
-  let totals = walkTotal.total[0] || (totals => 
-    {
-      console.log('Setting the totals');
-      totals.distance = distance;
-      totals.time = time;
-      walkTotal.total[0] = totals;
-      return;
-    });
-  console.log('Updating totals');
-  console.log('Distance '+totals.distance);
-
+  let totals = {};
   totals.distance = 10;
   totals.time = 10;
  // totals.distance = totals.distance + distance;
  // totals.time = totals.time + time;
-  walkTotal[0] = totals;
+  walkTotal.progress[0] = totals;
 }
 
 //Display the progress bat showing progress to date
 function displayProgressBar()
 {
   console.log('Display Progress Bar');
-  let totals = walkTotal.total[0];
+  let progress = walkTotal.progress[0];
   const progressBar = getEl('progress-bar');
   const totalMinutes = document.createElement('p');
-  totalMinutes.textContent = "Total Minutes Walked "+totals.time;
+  totalMinutes.textContent = "Total Minutes Walked "+progress.time;
   progressBar.appendChild(totalMinutes);
   progressBar.hidden = false;
 }
