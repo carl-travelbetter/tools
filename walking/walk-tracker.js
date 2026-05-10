@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", bindEvents);
 function updateProgress(distance, time)
 {
   console.log('Update Progress');
+  console.log('Values Passed '+distance+' '+time);
   let totals = walkTotal.total[0] || (totals => 
     {
       console.log('Setting the totals');
