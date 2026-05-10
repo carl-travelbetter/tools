@@ -113,7 +113,7 @@ function submitWalk()
   walkList.walks.push(walk);
   walkTrackingDay.trackingDay[0] = dayOfYear;
   updateProgress(walk.distance, walk.minutes);
-  displayProgress();
+  displayProgressBar();
   saveData();
   displayLog();
   updateTracker();
