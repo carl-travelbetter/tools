@@ -57,7 +57,7 @@ function updateProgress(distance, time)
   totals.time = 10;
  // totals.distance = totals.distance + distance;
  // totals.time = totals.time + time;
-  walkTotal.progress[0] = totals;
+  walkTotal.progress[0] = 10;
 }
 
 //Display the progress bat showing progress to date
