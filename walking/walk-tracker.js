@@ -61,8 +61,12 @@ function updateProgress(distance, time)
       return;
     });
   console.log('Updating totals');
-  totals.distance = totals.distance + distance;
-  totals.time = totals.time + time;
+  console.log('Distance '+totals.distance);
+
+  totals.distance = 10;
+  totals.time = 10;
+ // totals.distance = totals.distance + distance;
+ // totals.time = totals.time + time;
   walkTotal[0] = totals;
 }
 
