@@ -53,11 +53,11 @@ function updateProgress(distance, time)
   console.log('Update Progress');
   console.log('Values Passed '+distance+' '+time);
   let currentValues = walkTotal.progress[0];
-  let currentDistance = currentValues.distance;
-  let currentTime = currentValues.time;
+  let currentDistance = Number(currentValues.distance);
+  let currentTime = Number(currentValues.time);
   let totals = {};
-  totals.distance = currentDistance + distance;
-  totals.time = currentTime + time;
+  totals.distance = currentDistance + Number(distance);
+  totals.time = currentTime + Number(time);
  // totals.distance = totals.distance + distance;
  // totals.time = totals.time + time;
   walkTotal.progress[0] = totals;
@@ -69,6 +69,7 @@ function displayProgressBar()
   console.log('Display Progress Bar');
   let progress = walkTotal.progress[0];
   const progressBar = getEl('progress-bar');
+  progressBar.innerHTML = "";
   const totalMinutes = document.createElement('p');
   totalMinutes.textContent = "Total Minutes Walked "+progress.time;
   progressBar.appendChild(totalMinutes);
