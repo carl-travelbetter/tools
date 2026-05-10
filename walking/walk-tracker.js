@@ -8,6 +8,10 @@ import { getEl, getText, getDate} from "/lib/dom.js";
 const WALK_LIST_KEY = "walk-list";
 let walkList = JSON.parse(localStorage.getItem(WALK_LIST_KEY)) || {walks: []};
 
+//Load Walk List
+const WALK_TOTAL_KEY = "walk-total";
+let walkTotal = JSON.parse(localStorage.getItem(WALK_TOTAL_KEY)) || {total: []};
+
 //Load Target
 const WALK_TARGET_KEY = "walk-target";
 let targetData = JSON.parse(localStorage.getItem(WALK_TARGET_KEY)) || {target: []};
@@ -42,6 +46,34 @@ if (walkList.walks.length > 0)
 
 //Ensure html bindings are not applied until the html structure is built
 document.addEventListener("DOMContentLoaded", bindEvents);
+
+//Update the toals walked to date
+function updateProgress(distance, time)
+{
+  console.log('Update Progress');
+  let totals = walkTotal.total[0] || (totals => 
+    {
+      totals.distance = distance;
+      totals.time = time;
+      walkTotal.total[0] = totals;
+      return;
+    });
+  totals.distance = totals.distance + distance;
+  totals.time = totals.time + time;
+  walkTotal[0] = totals;
+}
+
+//Display the progress bat showing progress to date
+function displayProgressBar()
+{
+  console.log('Display Progress Bar');
+  let totals = walkTotal.total[0];
+  const progressBar = getEl('progress-bar');
+  const totalMinutes = document.createElement('p');
+  totalMinutes.textContent = "Total Minutes Walked "+totals.time;
+  progressBar.appendChild(totalMinutes);
+  progressBar.hidden = false;
+}
 
 //set daily target
 function setDailyTarget()
@@ -80,6 +112,8 @@ function submitWalk()
   walk.distance = getEl('walk-distance').value || 0;
   walkList.walks.push(walk);
   walkTrackingDay.trackingDay[0] = dayOfYear;
+  updateProgress(walk.distance, walk.minutes);
+  displayProgress();
   saveData();
   displayLog();
   updateTracker();
@@ -208,6 +242,7 @@ function saveData()
   localStorage.setItem(WALK_LIST_KEY, JSON.stringify(walkList));
   localStorage.setItem(WALK_TRACKING_DAY, JSON.stringify(walkTrackingDay));
   localStorage.setItem(WALK_TARGET_KEY, JSON.stringify(targetData));
+  localStorage.setItem(WALK_TOTAL_KEY, JSON.stringify(walkTotal));
 }
 
 //close all option cards
