@@ -54,10 +54,10 @@ function updateProgress(distance, time)
   console.log('Values Passed '+distance+' '+time);
   let totals = {};
   totals.distance = 10;
-  totals.time = 10;
+  totals.time = 12;
  // totals.distance = totals.distance + distance;
  // totals.time = totals.time + time;
-  walkTotal.progress[0] = 10;
+  walkTotal.progress[0] = totals;
 }
 
 //Display the progress bat showing progress to date
