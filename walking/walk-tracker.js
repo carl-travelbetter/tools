@@ -53,11 +53,13 @@ function updateProgress(distance, time)
   console.log('Update Progress');
   let totals = walkTotal.total[0] || (totals => 
     {
+      console.log('Setting the totals');
       totals.distance = distance;
       totals.time = time;
       walkTotal.total[0] = totals;
       return;
     });
+  console.log('Updating totals');
   totals.distance = totals.distance + distance;
   totals.time = totals.time + time;
   walkTotal[0] = totals;
