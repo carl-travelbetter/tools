@@ -128,7 +128,8 @@ h3, h4, h5 {
     margin-left:auto;
     margin-right:auto;
     margin-top:0.75em;
-    background-color: white;
+    background-color: #fafcfc;
+    border-radius: 12px;
     width: 85vw;
     max-width:800px;
     text-align:center;
