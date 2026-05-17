@@ -1,6 +1,9 @@
 console.log("Travelbetter Calorie Tracker");
 
-
+//global variables
+let foodName;
+let caloriesPer100g = 0;
+//let calories = 0;
 
 //Import Dom utils
 import {getWrittenDate, getDuration, addDays, getDayOfYear} from "/lib/date-helper.js";
@@ -251,7 +254,7 @@ function openFoodLookup()
 function searchForFood()
 {
   console.log('search for food');
-  const foodName = getEl('food-name');
+  foodName = getEl('food-name');
   console.log('Searching for...'+foodName);
   
 }
