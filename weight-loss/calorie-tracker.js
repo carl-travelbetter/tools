@@ -60,6 +60,8 @@ function bindEvents() {
   getEl('new-day-btn')?.addEventListener("click", startNewDay);
   getEl('display-tracker-btn')?.addEventListener("click", updateTracker);
   getEl('show-log-btn')?.addEventListener("click", displayLog);
+  getEl('food-lookup')?.addEventListener("click", openFoodLookup);
+  getEl('food-search')?.addEventListener("click", searchForFood);
 }
 
 //Ensure html bindings are not applied until the html structure is built
@@ -101,7 +103,9 @@ function submitCalories()
   saveData();
   updateTracker();
   displayLog();
-  getEl('add-calories').hidden = true;
+  //getEl('add-calories').hidden = true;
+  getEl('item-name').value = "";
+  getEl('calories').value = "";
 }
 
 //Cancel adding an item
@@ -236,6 +240,22 @@ function displayLog()
   dailyLog.hidden = false;
 }
 
+//open the foodlookup tool
+function openFoodLookup()
+{
+  console.log('Food Lookup');
+  getEl('food-lookup-card').hidden = false;
+}
+
+//search for a food using the OpenFood DB
+function searchForFood()
+{
+  console.log('search for food');
+  const foodName = getEl('food-name');
+  console.log('Searching for...'+foodName);
+  
+}
+
 //Save data
 function saveData()
 {
@@ -245,7 +265,6 @@ function saveData()
   localStorage.setItem(CALORIE_LIMIT_KEY, JSON.stringify(limitData));
   localStorage.setItem(CALORIE_TRACKING_DAY, JSON.stringify(calTrackingDay));
 }
-
 
 //Start a new day
 function startNewDay()
