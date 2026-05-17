@@ -9,6 +9,7 @@ let focus = JSON.parse(localStorage.getItem(FOCUS_STORAGE_KEY)) || {focusList: [
 function loadHolidayCountdowns()
 {
   console.log("Load Holiday Countdown");
+  document.getElementById("create-countdown").hidden = true;
   displayCountdowns();
 }
 
@@ -56,7 +57,7 @@ function createHolidayCountdown()
     state.countdownList.push(countdown);
     saveCountdowns();
   }
-
+  document.getElementById("create-countdown").hidden = true;
   displayCountdowns();  
   //USe this for colour blocks  
 }
