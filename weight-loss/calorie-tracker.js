@@ -299,7 +299,7 @@ function searchForFood()
   console.log('Searching for...'+foodName);
   getEl('searching').hidden = false;
   searchProducts(foodName).then(results => {
-  caloriesPer100g = results[0].nutriments["energy-kcal_100g"];  
+  caloriesPer100g = results[1].nutriments["energy-kcal_100g"];  
   console.log(caloriesPer100g);
   displayFoodSearchResult();
   });
