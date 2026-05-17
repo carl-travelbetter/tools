@@ -64,7 +64,7 @@ function bindEvents() {
   getEl('display-tracker-btn')?.addEventListener("click", updateTracker);
   getEl('show-log-btn')?.addEventListener("click", displayLog);
   getEl('food-lookup')?.addEventListener("click", openFoodLookup);
-  getEl('food-search')?.addEventListener("click", searchForFood);
+  getEl('food-search-btn')?.addEventListener("click", searchForFood);
 }
 
 //Ensure html bindings are not applied until the html structure is built
