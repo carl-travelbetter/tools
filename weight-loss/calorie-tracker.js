@@ -275,7 +275,7 @@ function startNewDay()
   console.log('Start a new day');
   calorieList.caloriesSpent = [];
   saveData();
-  getEl('add-calories').hidden = true;
+  getEl('add-calories').hidden = false;
   getEl('limit-check').hidden = true;
   getEl('daily-log').hidden = true;
 }
