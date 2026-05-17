@@ -254,7 +254,7 @@ function openFoodLookup()
 function searchForFood()
 {
   console.log('search for food');
-  foodName = getEl('food-name');
+  foodName = getEl('food-name').value;
   console.log('Searching for...'+foodName);
   
 }
