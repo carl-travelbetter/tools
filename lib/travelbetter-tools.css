@@ -141,6 +141,7 @@ h3, h4, h5 {
 .image-card img {
    width:100%;
    height:100%;
+   object-fill: fill;
 }
 
 /*Informational card - often linking to further options*/
