@@ -357,9 +357,13 @@ function addToCalorieTracker()
   item.calories = calories.toFixed(0) || 0;
   calorieList.caloriesSpent.push(item);
   saveData();
+  updateTracker();
+  displayLog();
   getEl('grams-results').hidden = true;
   getEl('search-gram-calculator').hidden = true;
   getEl('food-search-result').hidden = true;
+  getEl('food-lookup-card').hidden = true;
+  
 }
 
 //Save data
