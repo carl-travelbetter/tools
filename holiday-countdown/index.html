@@ -132,23 +132,24 @@
     <h1>Free Holiday Countdown Timer</h1>
     <p>A free online holiday countdown app for tracking trips, sharing with others, and staying organised before you travel.</p>
     <p><i>No sign-ups. No tracking. Just your countdown</i></p>
-  <div class="display-card" id="menu">
+   <div class="controls-card " id="create-countdown" >
+    <label for="trip-name">Name Your Trip (Optional)</label>
+    <input type="text" name="tripName" id="trip-name" /><br>
+    <label for="trip-date">Select your trip date</label>
+    <input type="date" name="tripDate" id="trip-date" /><br>
+    <button class="control-btn" onclick="createHolidayCountdown()">Create Holiday Countdown</button>
+  </div>
+  <div class="controls-card " id="menu">
     <button class="control-btn" onclick="loadHolidayCountdowns()">Load Saved Holiday Countdowns</button>
     <button class="control-btn" onclick="loadCreateOptions()">Create New Holiday Countdown</button>
   </div>
-  <div class="display-card" id="create-countdown" hidden>
-    <label for="trip-name">Name Your Trip (Optional)</label>
-    <input type="text" name="tripName" id="trip-name" />
-    <label for="trip-date">Select your trip date</label>
-    <input type="date" name="tripDate" id="trip-date" />
-    <button class="control-btn" onclick="createHolidayCountdown()">Create Holiday Countdown</button>
-  </div>
+ 
   <div id="countdown-list"></div>
   <div id="countdown-timer"></div>
   <div id="countdown-days"></div>
   <div id="colour-chart"></div>
-  <div id="image-block">
-    <img src="https://tools.travelbetter.co.uk/holiday-countdown/Holiday-Countdown.jpg" width="400px" height="300px"  />
+  <div id="image-card">
+    <img src="https://tools.travelbetter.co.uk/holiday-countdown/Holiday-Countdown.jpg" />
   </div>
   <div class="display-card" id="instructions">
     <h2>How to Use This Free Holiday Countdown Timer</h2>
