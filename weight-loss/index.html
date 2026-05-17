@@ -13,25 +13,17 @@
         <ul>
           <li><a href="https://travelbetter.co.uk">Travelbetter</a></li>
           <li><a href="https://tools.travelbetter.co.uk/index.html">Tools</a></li>
-          <li><a href="https://tools.travelbetter.co.uk/travel-fit/">Fitness Tracker</a></li>
+          <li><a href="https://tools.travelbetter.co.uk/travel-fit/">Daily Fit Tracker</a></li>
+          <li><a href="https://travelbetter.co.uk/travel-fit/">Travel Fit Home</a></li>
         </ul>
        </div>
       <div class="intro" id="intro">
         <h1>Travelbetter Daily Calorie Tracker</h1>
         <p>Track your calories. Stay in control.</p> 
-        <p><i>A simple daily calorie tracker to help you stay consistent and reach your weight loss goals</i></p>
+        <p><i>A simple, free, daily calorie tracker to help you stay consistent and reach your weight loss goals.</i></p>
       </div>
-      <div class="controls-card" id="main-menu" >
-        <button class="control-btn" id="add-btn">Add Food</button>
-        <button class="control-btn" id="open-limit-btn">Set Limit</button>
-        <button class="control-btn" id="display-tracker-btn">Show Tracker</button>
-        <button class="control-btn" id="show-log-btn">Show Log</button>
-        <button class="control-btn" id="reset-btn">Reset</button>
-        <button class="control-btn" id="new-day-btn">New Day</button>
-        <p>Track your calories daily to stay consistent—even on busy or off-track days.</p>
-      </div>
-      <!-- Creat new trip -->
-      <div class="display-card" id="add-calories" hidden>
+      <!-- Log Food and Calories -->
+      <div class="display-card" id="add-calories">
         <h2>Add Calories</h2>
         <label for="item-name">Item (Optional): </label>
         <input class="form-input" type="text" id="item-name" name="item-name" />
@@ -41,12 +33,35 @@
         <button class="control-btn" id="cancel-btn">Cancel</button>
         <p>Don't worry, you can change these settings later and add more detail to your trip.</p>
       </div>
+      <div class="controls-card" id="main-menu" >
+        <button class="control-btn" id="add-btn">Add Food</button>
+        <button class="control-btn" id="open-limit-btn">Set Limit</button>
+        <button class="control-btn" id="display-tracker-btn">Show Tracker</button>
+        <button class="control-btn" id="show-log-btn">Show Log</button>
+        <button class="control-btn" id="new-day-btn">New Day</button>
+        <button class="control-btn" id="food-lookup">Food Lookup</button>
+        <p>Track your calories daily to stay consistent—even on busy or off-track days.</p>
+      </div>
+      
       <!-- show the calories spent todate -->
       <div class="display-card" id="set-limit" hidden>
         <h2>Set Daily Limit</h2>
         <label for="daily-limit">Limit: </label>
         <input class="form-input" type="number" id="daily-limit" name="daily-limit" />
         <button class="control-btn" id="set-limit-btn">Submit</button>
+      </div>
+      <div class="display-card" id="food-lookup-card" hidden>
+        <h2>Food Lookup</h2>
+        <label class="controls-text" for="food-name">Enter Food To Search For</label>
+        <input class="form-input" type="text" id="food-name" name="food-name" />
+        <button class="control-btn" id="food-search-btn">Search</button>
+        <div class="loading-card" id="searching" hidden>
+        <p class="controls-text">Looking Up Food...</p>
+        <p class="controls-text">Right now we are searching through millions of logged food items in the Open Food Facts Database to find a match to your search.</p>
+        </div>
+        <div class="display-card" id="food-search-result" hidden>
+          <h2>Search Results</h2>
+        </div>
       </div>
       <div class="display-card" id="limit-check" hidden>
         <h2>Progress</h2>
