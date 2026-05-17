@@ -316,7 +316,7 @@ function displayFoodSearchResult()
   header.textContent = "Food Lookup Result";
   foodSearchResult.appendChild(header);
   const searchResults = document.createElement('p');
-  searchResults.textContent = "Calories For 100 grams of "+foodName+" is "+caloriesPer100g;
+  searchResults.textContent = "Calories For 100 grams of "+foodName+" is "+caloriesPer100g.toFixed(0);
   foodSearchResult.appendChild(searchResults);
   foodSearchResult.hidden = false;
   //Load the gram calculator
