@@ -3,7 +3,7 @@ console.log("Travelbetter Calorie Tracker");
 //global variables
 let foodName;
 let caloriesPer100g = 0;
-//let calories = 0;
+let calories = 0;
 
 //Import Dom utils
 import {getWrittenDate, getDuration, addDays, getDayOfYear} from "/lib/date-helper.js";
@@ -65,6 +65,7 @@ function bindEvents() {
   getEl('show-log-btn')?.addEventListener("click", displayLog);
   getEl('food-lookup')?.addEventListener("click", openFoodLookup);
   getEl('food-search-btn')?.addEventListener("click", searchForFood);
+  getEl('calories-per-grams')?.addEventListener("click", searchGrams);
 }
 
 //Ensure html bindings are not applied until the html structure is built
@@ -74,10 +75,39 @@ document.addEventListener("DOMContentLoaded", bindEvents);
 async function searchProducts(query) {
   const url = `https://world.openfoodfacts.net/cgi/search.pl?search_terms=${encodeURIComponent(query)}&search_simple=1&action=process&json=1&page_size=5&fields=product_name,brands,nutriments`;
 
-  const res = await fetch(url);
-  const data = await res.json();
+  const controller = new AbortController();
 
-  return data.products || [];
+  // Timeout after 5 seconds
+  const timeoutId = setTimeout(() => {
+    controller.abort();
+  }, 5000);
+
+  try {
+    const res = await fetch(url, {
+      signal: controller.signal
+    });
+
+    if (!res.ok) {
+      throw new Error(`HTTP error: ${res.status}`);
+    }
+
+    const data = await res.json();
+
+    return data.products || [];
+
+  } catch (error) {
+
+    if (error.name === "AbortError") {
+      console.error("Request timed out");
+    } else {
+      console.error("API error:", error);
+    }
+
+    return [];
+
+  } finally {
+    clearTimeout(timeoutId);
+  }
 }
 
 
@@ -285,8 +315,51 @@ function displayFoodSearchResult()
   header.textContent = "Food Lookup Result";
   foodSearchResult.appendChild(header);
   getEl('searching').hidden = false;
+  const searchResults = document.createElement('p');
+  searchResults.textContent = "Calories For 100 grams of "+foodName+" is "+caloriesPer100g;
+  foodSearchResult.appendChild(searchResults);
   foodSearchResult.hidden = true;
-  
+  //Load the gram calculator
+  getEl('grams-eaten').value = "";
+  getEl('grams-results').innerHTML = "";
+  getEl('search-gram-calculator').hidden = false;
+}
+
+//calculate the calories from the grams eaten from the search results
+function searchGrams()
+{
+  console.log('Calculate the calories for the grams eaten');
+  let grams = getEl('grams-eaten').value;
+  calories = (caloriesPer100g / 100) * grams;
+  console.log('Calorie Calc = '+calories);
+  const gramsResults = getEl('grams-results');
+  gramsResults.innerHTML = "";
+  const gramsResultsHeader = document.createElement('h2');
+  gramsResultsHeader.textContent = 'Results of Calories Per Grams';
+  gramsResults.appendChild(gramsResultsHeader);
+  const gramsResultsValue = document.createElement('p');
+  gramsResultsValue.textContent = grams+' grams of '+foodName+' is '+calories.toFixed(0)+' Calories';
+  gramsResults.appendChild(gramsResultsValue);
+  const addButton = document.createElement('button');
+  addButton.className = 'control-btn';
+  addButton.textContent = 'Add To Calorie Tracker';
+  addButton.addEventListener("click", addToCalorieTracker);
+  gramsResults.appendChild(addButton);
+  gramsResults.hidden = false;
+}
+
+//add results to the calorie tracker list
+function addToCalorieTracker()
+{
+  console.log('Add To Calorie Tracker');
+  let item = {};
+  item.description = foodName || NOT_SET;
+  item.calories = calories.toFixed(0) || 0;
+  calorieList.caloriesSpent.push(item);
+  saveData();
+  getEl('grams-results').hidden = true;
+  getEl('search-gram-calculator').hidden = true;
+  getEl('food-search-result').hidden = true;
 }
 
 //Save data
