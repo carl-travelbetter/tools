@@ -309,16 +309,16 @@ function searchForFood()
 function displayFoodSearchResult()
 {
   console.log('Display Food Search Result');
+  getEl('searching').hidden = true;
   const foodSearchResult = getEl('food-search-result');
   foodSearchResult.innerHTML = "";
   const header = document.createElement('h2');
   header.textContent = "Food Lookup Result";
   foodSearchResult.appendChild(header);
-  getEl('searching').hidden = false;
   const searchResults = document.createElement('p');
   searchResults.textContent = "Calories For 100 grams of "+foodName+" is "+caloriesPer100g;
   foodSearchResult.appendChild(searchResults);
-  foodSearchResult.hidden = true;
+  foodSearchResult.hidden = false;
   //Load the gram calculator
   getEl('grams-eaten').value = "";
   getEl('grams-results').innerHTML = "";
