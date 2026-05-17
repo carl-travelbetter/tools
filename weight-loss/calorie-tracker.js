@@ -147,7 +147,7 @@ function submitCalories()
   saveData();
   updateTracker();
   displayLog();
-  //getEl('add-calories').hidden = true;
+  getEl('add-calories').hidden = true;
   getEl('item-name').value = "";
   getEl('calories').value = "";
 }
