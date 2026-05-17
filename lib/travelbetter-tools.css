@@ -78,6 +78,7 @@ h3, h4, h5 {
     margin-top:0.75em;
     background-color: #26272e; 
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+    border: 3px solid #131414;
     border-radius: 12px;
     width: 100%;
     max-width:800px;
@@ -98,6 +99,7 @@ h3, h4, h5 {
     margin-top:0.75em;
     background-color: #26272e; 
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+    border: 3px solid #131414;
     border-radius: 12px;
     width: 100%;
     max-width:800px;
@@ -136,6 +138,11 @@ h3, h4, h5 {
     padding:10px;
 }
 
+.image-card img {
+   width:100%;
+   height:100%;
+}
+
 /*Informational card - often linking to further options*/
 .information-card {
     box-sizing: border-box;
@@ -144,6 +151,7 @@ h3, h4, h5 {
     margin-top:0.75em;
     background-color: #d1d4eb; 
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+    border: 3px solid #131414;
     border-radius: 12px;
     width: 100%;
     max-width:800px;
@@ -159,6 +167,7 @@ h3, h4, h5 {
     margin-top:0.75em;
     background-color: #d1d4eb; 
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+    border: 3px solid #131414;
     border-radius: 12px;
     border: 2px solid #2574f5;
     width: 100%;
@@ -175,6 +184,7 @@ h3, h4, h5 {
     margin-top:0.75em;
     background-color: #dcf0fc;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+    border: 3px solid #131414;
     border-radius: 12px;
     width: 100%;
     max-width:800px;
@@ -190,6 +200,7 @@ h3, h4, h5 {
     margin-top:0.75em;
     background-color: #dcf0fc;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+    border: 3px solid #131414;
     border-radius: 12px;
     width: 100%;
     max-width:800px;
@@ -205,6 +216,7 @@ h3, h4, h5 {
     margin-top:0.75em;
     background-color: #dcf0fc;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+    border: 3px solid #131414;
     border-radius: 12px;
     width: 100%;
     max-width:800px;
@@ -273,6 +285,7 @@ h3, h4, h5 {
   margin-bottom: 0.75rem;  
   background-color: #c6cef7; 
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+  border: 3px solid #131414;
   border-radius: 12px;
   box-sizing: border-box;  
   text-align: left;
