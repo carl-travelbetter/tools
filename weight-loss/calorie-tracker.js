@@ -70,6 +70,17 @@ function bindEvents() {
 //Ensure html bindings are not applied until the html structure is built
 document.addEventListener("DOMContentLoaded", bindEvents);
 
+//Asynchonous function to look food based on query
+async function searchProducts(query) {
+  const url = `https://world.openfoodfacts.net/cgi/search.pl?search_terms=${encodeURIComponent(query)}&search_simple=1&action=process&json=1&page_size=5&fields=product_name,brands,nutriments`;
+
+  const res = await fetch(url);
+  const data = await res.json();
+
+  return data.products || [];
+}
+
+
 //open add item controls
 function addItem()
 {
@@ -256,6 +267,25 @@ function searchForFood()
   console.log('search for food');
   foodName = getEl('food-name').value;
   console.log('Searching for...'+foodName);
+  getEl('searching').hidden = false;
+  searchProducts(foodName).then(results => {
+  caloriesPer100g = results[0].nutriments["energy-kcal_100g"];  
+  console.log(caloriesPer100g);
+  displayFoodSearchResult();
+  });
+}
+
+//Display the results of the food look up search
+function displayFoodSearchResult()
+{
+  console.log('Display Food Search Result');
+  const foodSearchResult = getEl('food-search-result');
+  foodSearchResult.innerHTML = "";
+  const header = document.createElement('h2');
+  header.textContent = "Food Lookup Result";
+  foodSearchResult.appendChild(header);
+  getEl('searching').hidden = false;
+  foodSearchResult.hidden = true;
   
 }
 
