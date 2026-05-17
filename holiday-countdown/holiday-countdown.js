@@ -16,6 +16,7 @@ function loadHolidayCountdowns()
 function loadCreateOptions()
 {
   console.log("Load Create Options");
+  document.getElementById("trip-name").value = "";
   document.getElementById("create-countdown").hidden = false;
 }
 
