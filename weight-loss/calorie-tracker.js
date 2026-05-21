@@ -317,7 +317,7 @@ function searchForFood()
   catch (err)
   {  
     console.log('Error Processing Food Lookup Results');
-    alert('No food found');
+    alert('Sorry, we were not able to find that food. Please check the search term and try again.');
     getEl('searching').hidden = true;
     getEl('food-lookup-card').hidden = false;
   }
