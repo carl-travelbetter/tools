@@ -89,6 +89,7 @@ async function searchProducts(query) {
 
     if (!res.ok) {
       throw new Error(`HTTP error: ${res.status}`);
+      foodLookupError();
     }
 
     const data = await res.json();
@@ -102,12 +103,20 @@ async function searchProducts(query) {
     } else {
       console.error("API error:", error);
     }
-
+    foodLookupError
     return [];
 
   } finally {
     clearTimeout(timeoutId);
   }
+}
+
+//food lookup error
+function foodLookupError()
+{
+  alert('Apologies, someting has gone wrong with the food lookup. Sorry for the inconvienance');
+  getEl('searching').hidden = true;
+  openFoodLookup();
 }
 
 
