@@ -331,7 +331,7 @@ function saveData()
 function closeAll()
 {
   console.log('close all non-control cards');
-  getEl('add-walk').hidden = true;
+  //getEl('add-walk').hidden = true;
   getEl('set-target').hidden = true;
   getEl('progress-check').hidden = true;
   getEl('daily-log').hidden = true;
@@ -343,7 +343,7 @@ function startNewDay()
   console.log('Start a new day');
   walkList.walks = [];
   saveData();
-  getEl('add-walk').hidden = true;
+  //getEl('add-walk').hidden = true;
   getEl('set-target').hidden = true;
   getEl('progress-check').hidden = true;
   getEl('daily-log').hidden = true;
