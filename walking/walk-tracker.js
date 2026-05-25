@@ -269,6 +269,7 @@ function saveData()
   localStorage.setItem(WALK_TRACKING_DAY, JSON.stringify(walkTrackingDay));
   localStorage.setItem(WALK_TARGET_KEY, JSON.stringify(targetData));
   localStorage.setItem(WALK_TOTAL_KEY, JSON.stringify(walkTotal));
+  localStorage.setItem(WALK_RECORDS, JSON.stringify(walkRecords));
 }
 
 //close all option cards
