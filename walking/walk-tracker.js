@@ -132,9 +132,9 @@ function displayRecords()
     let currentDistanceProgress = Number(currentProgress.distance);
     let currentTimeProgress = Number(currentProgress.time);
     let currentWalkCount = Number(currentProgress.walks);
-    const progressHeader = document.createElement('h2');
-    progressHeader.textContent = "Progress";
-    walkRecordsPane.appendChild(prgressHeader);
+    const recordsHeader = document.createElement('h2');
+    recordsHeader.textContent = "Walking Records";
+    walkRecordsPane.appendChild(recordsHeader);
     const distanceProgress = document.createElement('p');
     distanceProgress.textContent = 'Total Distance Walked '+currentDistanceProgress;
     progressBar.appendChild(distanceProgress);
