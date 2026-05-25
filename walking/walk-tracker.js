@@ -51,8 +51,8 @@ if (walkList.walks.length > 0)
 //Ensure html bindings are not applied until the html structure is built
 document.addEventListener("DOMContentLoaded", bindEvents);
 
-//Update the totals walked to date
-function updateProgress(distance, time)
+//Update the totals walked to date, add an operator to the options for addition or subtraction
+function updateProgress(distance, time, operand)
 {
   console.log('Update Progress');
   console.log('Values Passed '+distance+' '+time);
@@ -138,7 +138,7 @@ function submitWalk()
   walk.distance = getEl('walk-distance').value || 0;
   walkList.walks.push(walk);
   walkTrackingDay.trackingDay[0] = dayOfYear;
-  updateProgress(walk.distance, walk.minutes);
+  updateProgress(walk.distance, walk.minutes, "addition");
   saveData();
  // displayProgressBar();
   displayLog();
