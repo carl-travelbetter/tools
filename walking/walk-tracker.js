@@ -21,6 +21,10 @@ let walkTarget = targetData.target[0] || 45;
 const WALK_TRACKING_DAY = "walk-tracking-day";
 let walkTrackingDay = JSON.parse(localStorage.getItem(WALK_TRACKING_DAY)) || {trackingDay: []};
 
+//Load Walking records
+const WALK_RECORDS = "walk-records";
+let walkRecords = JSON.parse(localStorage.getItem(WALK_RECORDS)) || {records: []};
+
 const dayOfYear = getDayOfYear();
 
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
@@ -47,20 +51,40 @@ if (walkList.walks.length > 0)
 //Ensure html bindings are not applied until the html structure is built
 document.addEventListener("DOMContentLoaded", bindEvents);
 
-//Update the toals walked to date
+//Update the totals walked to date
 function updateProgress(distance, time)
 {
   console.log('Update Progress');
   console.log('Values Passed '+distance+' '+time);
-  let currentValues = walkTotal.progress[0];
-  let currentDistance = Number(currentValues.distance);
-  let currentTime = Number(currentValues.time);
-  let totals = {};
-  totals.distance = currentDistance + Number(distance);
-  totals.time = currentTime + Number(time);
- // totals.distance = totals.distance + distance;
- // totals.time = totals.time + time;
-  walkTotal.progress[0] = totals;
+  if (records.length > 0) //If we already have a running total
+  {
+      let currentRecords = records.record[0];
+      let currentDistanceRecord = Number(currentRecords.distance);
+      console.log('Update Progress: old distance = '+currentDistanceRecord);
+      let currentTimeRecord = Number(currentRecords.time);
+      console.log('Update Progress: old Time = '+currentTimeRecord);
+      let currentWalkRecord = Number(currentRecords.walks);
+      console.log('Update Progress: old walk count = '+currentWalkRecord);
+      currentDistanceRecord = currentDistanceRecord + Number(distance);
+      console.log('Updated Progress: New Distance = '+currentDistanceRecord);
+      currentTimeRecord = currentTimeRecord + Number(time);
+      console.log('Update Progress: New Time = '+currentTimeRecord);
+      currentWalkRecord++;
+      console.log('Update Progress: new walk count = '+currentWalkRecord);
+      let newRecords = {};
+      newRecords.distance = currentDistanceRecord;
+      newRecords.time = currentTimeRecord;
+      newReocrds.walks = currentWalkRecord;
+      records[0] = newRecords;
+  }
+  else //if we don't have a running total then start one
+  {
+      let newRecords = {};
+      newRecords.distance = Number(distance);
+      newRecords.time = Number(time);
+      newRecords.walks = 1;
+      records[0] = newRecords;
+  }
 }
 
 //Display the progress bat showing progress to date
@@ -113,7 +137,7 @@ function submitWalk()
   walk.distance = getEl('walk-distance').value || 0;
   walkList.walks.push(walk);
   walkTrackingDay.trackingDay[0] = dayOfYear;
- // updateProgress(walk.distance, walk.minutes);
+  updateProgress(walk.distance, walk.minutes);
   saveData();
  // displayProgressBar();
   displayLog();
