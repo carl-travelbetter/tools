@@ -294,7 +294,7 @@ function updateTracker()
   const progressCard = getEl('progress-check');
   progressCard.innerHTML = "";
   const progressHeader = document.createElement('h2');
-  progressHeader.textContent = "Progress";
+  progressHeader.textContent = "Today's Progress";
   progressCard.appendChild(progressHeader);
   let totalWalkTime = 0;
   //add up the minutes in the walk list
