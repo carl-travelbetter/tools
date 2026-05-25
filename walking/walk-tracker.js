@@ -136,10 +136,10 @@ function displayRecords()
     recordsHeader.textContent = "Walking Records";
     walkRecordsPane.appendChild(recordsHeader);
     const distanceProgress = document.createElement('p');
-    distanceProgress.textContent = 'Total Distance Walked '+currentDistanceProgress;
+    distanceProgress.textContent = 'Total Distance Walked '+currentDistanceProgress+' km';
     walkRecordsPane.appendChild(distanceProgress);
     const timeProgress = document.createElement('p');
-    timeProgress.textContent = 'Total Time Walked '+currentTimeProgress;
+    timeProgress.textContent = 'Total Time Walked '+currentTimeProgress+ ' minutes';
     walkRecordsPane.appendChild(timeProgress);
     const walkCount = document.createElement('p');
     walkCount.textContent = 'Total Walks Recorded '+currentWalkCount;
