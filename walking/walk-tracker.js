@@ -46,6 +46,7 @@ if (walkList.walks.length > 0)
 {
   displayLog();
   updateTracker();
+  displayRecords();
 }
 
 //Ensure html bindings are not applied until the html structure is built
