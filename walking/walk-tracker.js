@@ -56,9 +56,9 @@ function updateProgress(distance, time)
 {
   console.log('Update Progress');
   console.log('Values Passed '+distance+' '+time);
-  if (records.length > 0) //If we already have a running total
+  if (walkRecords.records.length > 0) //If we already have a running total
   {
-      let currentRecords = records.record[0];
+      let currentRecords = walkRecords.records.record[0];
       let currentDistanceRecord = Number(currentRecords.distance);
       console.log('Update Progress: old distance = '+currentDistanceRecord);
       let currentTimeRecord = Number(currentRecords.time);
@@ -75,7 +75,7 @@ function updateProgress(distance, time)
       newRecords.distance = currentDistanceRecord;
       newRecords.time = currentTimeRecord;
       newReocrds.walks = currentWalkRecord;
-      records[0] = newRecords;
+      walkRecords.records[0] = newRecords;
   }
   else //if we don't have a running total then start one
   {
@@ -83,7 +83,7 @@ function updateProgress(distance, time)
       newRecords.distance = Number(distance);
       newRecords.time = Number(time);
       newRecords.walks = 1;
-      records[0] = newRecords;
+      walkRecords.records[0] = newRecords;
   }
 }
 
