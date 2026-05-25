@@ -78,6 +78,7 @@ function updateProgress(distance, time, operand)
       newRecords.time = currentTimeRecord;
       newRecords.walks = currentWalkRecord;
       walkRecords.records[0] = newRecords;
+      localStorage.setItem(WALK_RECORDS, JSON.stringify(walkRecords));
   }
   else //if we don't have a running total then start one
   {
@@ -86,6 +87,7 @@ function updateProgress(distance, time, operand)
       newRecords.time = Number(time);
       newRecords.walks = 1;
       walkRecords.records[0] = newRecords;
+      localStorage.setItem(WALK_RECORDS, JSON.stringify(walkRecords));
   }
  }
  else if (operand == "subtract")
@@ -109,24 +111,46 @@ function updateProgress(distance, time, operand)
       newRecords.time = currentTimeRecord;
       newRecords.walks = currentWalkRecord;
       walkRecords.records[0] = newRecords;
+      localStorage.setItem(WALK_RECORDS, JSON.stringify(walkRecords));
  }
  else
  {
     console.log('Update Progress: Progress not updated as no recognised operand passed');
  }
+ displayProgressBar();
 }
 
 //Display the progress bat showing progress to date
 function displayProgressBar()
 {
   console.log('Display Progress Bar');
-  let progress = walkTotal.progress[0];
   const progressBar = getEl('progress-bar');
   progressBar.innerHTML = "";
-  const totalMinutes = document.createElement('p');
-  totalMinutes.textContent = "Total Minutes Walked "+progress.time;
-  progressBar.appendChild(totalMinutes);
-  progressBar.hidden = false;
+  if (walkRecords.records.length > 0) //If we already have a running total
+  {  
+    let currentProgress = walkRecords.records[0];
+    let currentDistanceProgress = Number(currentProgress.distance);
+    let currentTimeProgress = Number(currentProgress.time);
+    let currentWalkCount = Number(currentProgress.walks);
+    const progressHeader = document.createElement('h2');
+    progressHeader.textContent = "Progress";
+    progressBar.appendChild(prgressHeader);
+    const distanceProgress = document.createElement('p');
+    distanceProgress.textContent = 'Total Distance Walked '+currentDistanceProgress;
+    progressBar.appendChild(distanceProgress);
+    const timeProgress = document.createElement('p');
+    timeProgress.textContent = 'Total Time Walked '+currentTimeProgress;
+    progressBar.appendChild(timeProgress);
+    const walkCount = document.createElement('p');
+    walkCount.textContent = 'Total Walks Recorded '+currentWalkCount;
+    progressBar.appendChild(walkCount);  
+    progressBar.hidden = false;
+  }
+  else
+  {
+    console.log('Display Progress: No progress to show');
+  }
+  
 }
 
 //set daily target
