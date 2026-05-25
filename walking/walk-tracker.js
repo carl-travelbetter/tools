@@ -117,15 +117,15 @@ function updateProgress(distance, time, operand)
  {
     console.log('Update Progress: Progress not updated as no recognised operand passed');
  }
- displayProgressBar();
+ displayRecords();
 }
 
 //Display the progress bat showing progress to date
-function displayProgressBar()
+function displayRecords()
 {
-  console.log('Display Progress Bar');
-  const progressBar = getEl('progress-bar');
-  progressBar.innerHTML = "";
+  console.log('Display Walk Records');
+  const walkRecordsPane = getEl('walk-records');
+  walkRecordsPane.innerHTML = "";
   if (walkRecords.records.length > 0) //If we already have a running total
   {  
     let currentProgress = walkRecords.records[0];
@@ -134,21 +134,21 @@ function displayProgressBar()
     let currentWalkCount = Number(currentProgress.walks);
     const progressHeader = document.createElement('h2');
     progressHeader.textContent = "Progress";
-    progressBar.appendChild(prgressHeader);
+    walkRecordsPane.appendChild(prgressHeader);
     const distanceProgress = document.createElement('p');
     distanceProgress.textContent = 'Total Distance Walked '+currentDistanceProgress;
     progressBar.appendChild(distanceProgress);
     const timeProgress = document.createElement('p');
     timeProgress.textContent = 'Total Time Walked '+currentTimeProgress;
-    progressBar.appendChild(timeProgress);
+    walkRecordsPane.appendChild(timeProgress);
     const walkCount = document.createElement('p');
     walkCount.textContent = 'Total Walks Recorded '+currentWalkCount;
-    progressBar.appendChild(walkCount);  
-    progressBar.hidden = false;
+    walkRecordsPane.appendChild(walkCount);  
+    walkRecordsPane.hidden = false;
   }
   else
   {
-    console.log('Display Progress: No progress to show');
+    console.log('Display Records: No records to show');
   }
   
 }
