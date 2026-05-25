@@ -56,7 +56,8 @@ function updateProgress(distance, time, operand)
 {
   console.log('Update Progress');
   console.log('Values Passed '+distance+' '+time);
- 
+ if (operand == "addition")
+ {
   if (walkRecords.records.length > 0) //If we already have a running total
   {  
       let currentRecords = walkRecords.records[0];
@@ -86,6 +87,33 @@ function updateProgress(distance, time, operand)
       newRecords.walks = 1;
       walkRecords.records[0] = newRecords;
   }
+ }
+ else if (operand == "subtract")
+ {
+      consoloe.log('Updated Progress: Removing from records as deleted from the list');
+      let currentRecords = walkRecords.records[0];
+      let currentDistanceRecord = Number(currentRecords.distance);
+      console.log('Update Progress: old distance = '+currentDistanceRecord);
+      let currentTimeRecord = Number(currentRecords.time);
+      console.log('Update Progress: old Time = '+currentTimeRecord);
+      let currentWalkRecord = Number(currentRecords.walks);
+      console.log('Update Progress: old walk count = '+currentWalkRecord);
+      currentDistanceRecord = currentDistanceRecord - Number(distance);
+      console.log('Updated Progress: New Distance = '+currentDistanceRecord);
+      currentTimeRecord = currentTimeRecord - Number(time);
+      console.log('Update Progress: New Time = '+currentTimeRecord);
+      currentWalkRecord--;
+      console.log('Update Progress: new walk count = '+currentWalkRecord);
+      let newRecords = {};
+      newRecords.distance = currentDistanceRecord;
+      newRecords.time = currentTimeRecord;
+      newRecords.walks = currentWalkRecord;
+      walkRecords.records[0] = newRecords;
+ }
+ else
+ {
+    console.log('Update Progress: Progress not updated as no recognised operand passed');
+ }
 }
 
 //Display the progress bat showing progress to date
@@ -215,7 +243,10 @@ function displayLog()
       deleteButton.addEventListener("click", () => {
       
       console.log("Delete Expense Button Clicked");
-      console.log("Delete ID = "+deleteButton.dataset.label);   
+      console.log("Delete ID = "+deleteButton.dataset.label);
+      //Insert subtract code for walk records - get item and pass with subtract operand
+      let deletedWalk = walkList.walks[dataset.label);
+      updateProgress(deletedWalk.distance, deletedWalk.time, "subtract");
       walkList.walks.splice(deleteButton.dataset.label, 1); 
       saveData();  
       displayLog();
