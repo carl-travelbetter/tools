@@ -75,7 +75,7 @@ function updateProgress(distance, time)
       let newRecords = {};
       newRecords.distance = currentDistanceRecord;
       newRecords.time = currentTimeRecord;
-      newReocrds.walks = currentWalkRecord;
+      newRecords.walks = currentWalkRecord;
       walkRecords.records[0] = newRecords;
   }
   else //if we don't have a running total then start one
