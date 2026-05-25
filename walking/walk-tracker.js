@@ -246,7 +246,7 @@ function displayLog()
       console.log("Delete ID = "+deleteButton.dataset.label);
       //Insert subtract code for walk records - get item and pass with subtract operand
       let deletedWalk = walkList.walks[deleteButton.dataset.label];
-      updateProgress(deletedWalk.distance, deletedWalk.time, "subtract");
+      updateProgress(deletedWalk.distance, deletedWalk.minutes, "subtract");
       walkList.walks.splice(deleteButton.dataset.label, 1); 
       saveData();  
       displayLog();
