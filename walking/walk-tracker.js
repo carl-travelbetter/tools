@@ -90,7 +90,7 @@ function updateProgress(distance, time, operand)
  }
  else if (operand == "subtract")
  {
-      consoloe.log('Updated Progress: Removing from records as deleted from the list');
+      console.log('Updated Progress: Removing from records as deleted from the list');
       let currentRecords = walkRecords.records[0];
       let currentDistanceRecord = Number(currentRecords.distance);
       console.log('Update Progress: old distance = '+currentDistanceRecord);
