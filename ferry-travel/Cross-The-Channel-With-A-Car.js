@@ -62,7 +62,7 @@ function loadResult()
       item.operators.forEach (op =>
         {
           let operatorName = document.createElement('p');
-          operatorName.textContent = op;
+          operatorName.textContent = op.value;
           //Need to look up more operator details and potentially create cards
           answer.appendChild(op);
         });
