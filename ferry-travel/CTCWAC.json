@@ -1,12 +1,10 @@
 [
   {
     "bestFor": "fastest",
-    "solution": "Le Shuttle - Channel Tunnel",
-    "operators": ["Le Shuttle"],
+    "solution": "LeShuttle - Eurotunnel",
+    "operators": ["LeShuttle"],
     "route": "Folkestone (UK) to Calais (France)",
     "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour.",
-    "link": "https://tidd.ly/4oPLUzK",
-    "travelbetterRating": 3.9
   },
   {
     "bestFor": "cheapest",
@@ -14,8 +12,6 @@
     "operators": ["P&O Ferries", "DFDS Ferries"],
     "route": "Dover (UK) to Calais (France)",
     "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour.",
-    "link": "https://tidd.ly/4oPLUzK",
-    "travelbetterRating": 3.9
   },
   {
     "bestFor": "nothern",
@@ -23,8 +19,6 @@
     "operators": ["Le Shuttle"],
     "route": "Folkestone, UK to Calais, France",
     "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour.",
-    "link": "https://tidd.ly/4oPLUzK",
-    "travelbetterRating": 3.9
   },
   {
     "bestFor": "paris",
@@ -32,8 +26,6 @@
     "operators": ["Le Shuttle"],
     "route": "Folkestone, UK to Calais, France",
     "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour.",
-    "link": "https://tidd.ly/4oPLUzK",
-    "travelbetterRating": 3.9
   },
   {
     "bestFor": "disneyLandParis",
@@ -41,17 +33,13 @@
     "operators": ["Le Shuttle"],
     "route": "Folkestone, UK to Calais, France",
     "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour.",
-    "link": "https://tidd.ly/4oPLUzK",
-    "travelbetterRating": 3.9
   },
   {
     "bestFor": "brittany",
     "solution": "Brittany Ferries - Portsmouth to St Malo",
     "operators": ["Brittany Ferries"],
     "route": "Portsmouth (UK) to St Malo (France)",
-    "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour.",
-    "link": "https://tidd.ly/4oPLUzK",
-    "travelbetterRating": 3.9
+    "reason": "While you could opt for Plymouth to Roscoff to land directly in Brittany, we believe the Portsmouth to St Malo ferry is a better option as it is more accessible from across the UK and you can take the relaxing night ferry across the channel and land only one and a half hours away from the Brittany region.",
   },
   {
     "bestFor": "normandy",
@@ -59,8 +47,6 @@
     "operators": ["Le Shuttle"],
     "route": "Folkestone, UK to Calais, France",
     "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour.",
-    "link": "https://tidd.ly/4oPLUzK",
-    "travelbetterRating": 3.9
   },
   {
     "bestFor": "western",
@@ -68,8 +54,6 @@
     "operators": ["Le Shuttle"],
     "route": "Folkestone, UK to Calais, France",
     "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour.",
-    "link": "https://tidd.ly/4oPLUzK",
-    "travelbetterRating": 3.9
   },
   {
     "bestFor": "south",
@@ -77,8 +61,6 @@
     "operators": ["Le Shuttle"],
     "route": "Folkestone, UK to Calais, France",
     "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour.",
-    "link": "https://tidd.ly/4oPLUzK",
-    "travelbetterRating": 3.9
   }
 ]
 
