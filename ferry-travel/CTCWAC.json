@@ -11,9 +11,9 @@
     "bestFor": "cheapest",
     "description": "Cheapest Cross Channel Option with A Car",
     "solution": "Dover to Calais",
-    "operators": ["P&O Ferries", "DFDS Ferries"],
+    "operators": ["P&O Ferries", "DFDS Ferries", "Irish Ferries"],
     "route": "Dover (UK) to Calais (France)",
-    "reason": "Dover to Calais has many options, is the cheapest in our checks, and runs 24/7."
+    "reason": "Dover to Calais has many provider options, is consistently the cheapest in our checks, and runs 24/7."
   },
   {
     "bestFor": "nothern",
