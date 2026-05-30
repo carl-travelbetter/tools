@@ -43,11 +43,13 @@ function loadResult()
   console.log('Option Selected '+option);
   const answer = getEl('results');
   answer.innerHTML = "";
-  ctcwacData.forEach (item => {
-    console.log("Best For "+item.bestFor.value);
-    if (item.bestFor.value === option)
-    {
-      let operatorNames = item.operators;
+  const matchingOption = ctcwacData.filter(options => 
+     options.bestFor.includes(option)
+  );
+  
+  matchingOption.forEach(item => {
+    console.log("Best For "+item.bestFor);
+    let operatorNames = item.operators;
       let answerHeader = document.createElement('h2');
       answerHeader.textContent = "Cross Channel Ferry With A Car: "+option;
       answer.appendChild(answerHeader);
@@ -68,12 +70,6 @@ function loadResult()
           answer.appendChild(op);
         });
       answer.hidden = false;
-      
-    }
-    else
-    {
-      console.log('No match - The Search Continues');
-    }
   });
  
 }
