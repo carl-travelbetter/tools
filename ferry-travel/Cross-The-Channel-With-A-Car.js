@@ -44,7 +44,8 @@ function loadResult()
   const answer = getEl('results');
   answer.innerHTML = "";
   ctcwacData.forEach (item => {
-    if (item.bestFor == option)
+    console.log("Best For "+item.bestFor);
+    if (item.bestFor === option)
     {
       let operatorNames = item.operators;
       let answerHeader = document.createElement('h2');
