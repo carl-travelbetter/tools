@@ -49,7 +49,7 @@
  },
  {
    "operatorID": "O0005",
-   "operatorName": "DFDS",
+   "operatorName": "DFDS Ferries",
    "amendmentPolicy": "Free changes up to 24 hours before departure.",
    "cancellationPolicy": "Free changes up to 24 hours before departure.",
    "link": "https://fave.co/4dcxpBC",
@@ -64,6 +64,18 @@
    "operatorName": "Condor Ferries",
    "amendmentPolicy": "Free online amendments with a standard ticket, all changes need to be made before you travel.",
    "cancellationPolicy": "FREE cancellation up to 48 hours before departure with a standard ticket",
+   "link": "https://tidd.ly/4iQAeK5",
+   "travelbetterRating": 3,
+   "moreInfoLink": "https://travelbetter.co.uk",
+   "footPassengers": true,
+   "dogFriendly": true,
+   "accessibilitySupport": true
+ },
+ {
+   "operatorID": "O0007",
+   "operatorName": "Eurotunnel LeShuttle",
+   "amendmentPolicy": "TBC",
+   "cancellationPolicy": "TBC",
    "link": "https://tidd.ly/4iQAeK5",
    "travelbetterRating": 3,
    "moreInfoLink": "https://travelbetter.co.uk",
