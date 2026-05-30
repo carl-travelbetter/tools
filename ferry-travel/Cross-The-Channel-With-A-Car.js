@@ -68,7 +68,7 @@ function loadResult()
           let operatorName = document.createElement('p');
           operatorName.textContent = routeOperator;
           //Need to look up more operator details and potentially create cards
-          answer.appendChild(op);
+          answer.appendChild(operatorName);
         });
       answer.hidden = false;
   });
