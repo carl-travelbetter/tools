@@ -51,10 +51,12 @@ function loadResult()
     console.log("Best For "+item.bestFor);
     let operatorNames = item.operators;
       let answerHeader = document.createElement('h2');
-      answerHeader.textContent = "Cross Channel Ferry With A Car: "+option;
+      answerHeader.textContent = item.description
       answer.appendChild(answerHeader);
+      let solution = document.createElement('p');
+      solution.textContent = "The best option is: "+item.solution;
       let reason = document.createElement('p');
-      reason.textContent = item.reason;
+      reason.textContent = "Reason: "+item.reason;
       answer.appendChild(reason);
       let route = document.createElement('p');
       route.textContent = item.route;
@@ -69,6 +71,15 @@ function loadResult()
           operatorName.textContent = routeOperator;
           //Need to look up more operator details and potentially create cards
           answer.appendChild(operatorName);
+          const matchingOperators = operators.filter(item => 
+          item.operatorName.includes(routeOperator)
+          );
+          matchingOpertors.forEach(item =>
+            {
+              let operatorLink = document.createElement('div'); 
+              operatorLink.innerHTML = '<p><a href="${item.link}" target="_blank" rel="noopener noreferrer">Book with ${item.operatorName} </a></p>';
+              answer.appendChild(operatorLink);
+            });
         });
       answer.hidden = false;
   });
