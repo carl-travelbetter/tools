@@ -1,0 +1,50 @@
+[
+ {
+   "Id": "quiet-friendly",
+   "Label": "Quiet-Friendly",
+   "Description": "Ideal for travellers who prefer low-stimulation environments.",
+   "Icon": "🌿"
+ },
+ {
+   "Id": "accessible",
+   "Label": "Wheelchair Accessible",
+   "Description": "This route is confirmed to support wheelchair access.",
+   "Icon": "♿"
+ },
+ {
+   "Id": "pet-friendly",
+   "Label": "Pet-Friendly",
+   "Description": "Allows pets or assistance animals onboard.",
+   "Icon": "🐶"
+ },
+ {
+   "Id": "foot-passenger",
+   "Label": "Foot Passengers Welcome",
+   "Description": "Foot passengers can book this route without a vehicle.",
+   "Icon": "🚶"
+ },
+ {
+   "Id": "cabins",
+   "Label": "Cabins Available",
+   "Description": "This route offers onboard cabins or private sleeping spaces.",
+   "Icon": "🛌 "
+ },
+ {
+   "Id": "motor-homes",
+   "Label": "Motorhome & Caravans",
+   "Description": "This route has options to take motorhomes, campervans and caravans",
+   "Icon": "🚐"
+ },
+ {
+   "Id": "priority-boarding",
+   "Label": "Priority Boarding Available",
+   "Description": "Ability to have priority boarding or disembarkation",
+   "Icon": "⏩"
+ },
+ {
+   "Id": "flexible-sailing-times",
+   "Label": "Flexible Ferry Options",
+   "Description": "Ability to board earlier or later ferries depending on availability",
+   "Icon": "🕓"
+ }
+]

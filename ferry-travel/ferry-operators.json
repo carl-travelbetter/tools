@@ -1,0 +1,74 @@
+[
+ {
+   "operatorID": "O0001",
+   "operatorName": "Brittany Ferries",
+   "amendmentPolicy": "Free changes up to 24 hours before departure with a flexible ticket.",
+   "cancellationPolicy": "Full refund if canceled 24+ hours in advance.",
+   "link": "https://tidd.ly/44jxUHV",
+   "travelbetterRating": 4,
+   "moreInfoLink": "https://travelbetter.co.uk",
+   "footPassengers": true,
+   "dogFriendly": true,
+   "accessibilitySupport": true
+ },
+ {
+   "operatorID": "O0002",
+   "operatorName": "P&O Ferries",
+   "amendmentPolicy": "No amendment fees with Flexi; fare difference may apply.",
+   "cancellationPolicy": "Fully refundable with Premium Flexi.",
+   "link": "https://fave.co/4ddRBTY",
+   "travelbetterRating": 4,
+   "moreInfoLink": "https://travelbetter.co.uk",
+   "footPassengers": true,
+   "dogFriendly": true,
+   "accessibilitySupport": true
+ },
+ {
+   "operatorID": "O0003",
+   "operatorName": "Irish Ferries",
+   "amendmentPolicy": "Economy fares are subject to amendment feess. Flexi bookings allowing free amendments prior to departure.",
+   "cancellationPolicy": "Economy fares are subject to 100% cancellation fee.",
+   "link": "https://fave.co/4iWgHaU",
+   "travelbetterRating": 4,
+   "moreInfoLink": "https://travelbetter.co.uk",
+   "footPassengers": true,
+   "dogFriendly": true,
+   "accessibilitySupport": true
+ },
+ {
+   "operatorID": "O0004",
+   "operatorName": "Stena Line",
+   "amendmentPolicy": "Economy fares are subject to an amendment fee. Other fares can make changes withut incurring a charge. ",
+   "cancellationPolicy": "No refunds for cancellation on economy fares. Other fares will recieve a refund but may stil lbe subject to cancellation fees. ",
+   "link": "https://www.stenaline.co.uk/",
+   "travelbetterRating": 4,
+   "moreInfoLink": "https://travelbetter.co.uk",
+   "footPassengers": true,
+   "dogFriendly": true,
+   "accessibilitySupport": true
+ },
+ {
+   "operatorID": "O0005",
+   "operatorName": "DFDS",
+   "amendmentPolicy": "Free changes up to 24 hours before departure.",
+   "cancellationPolicy": "Free changes up to 24 hours before departure.",
+   "link": "https://fave.co/4dcxpBC",
+   "travelbetterRating": 4,
+   "moreInfoLink": "https://travelbetter.co.uk",
+   "footPassengers": true,
+   "dogFriendly": true,
+   "accessibilitySupport": true
+ },
+ {
+   "operatorID": "O0006",
+   "operatorName": "Condor Ferries",
+   "amendmentPolicy": "Free online amendments with a standard ticket, all changes need to be made before you travel.",
+   "cancellationPolicy": "FREE cancellation up to 48 hours before departure with a standard ticket",
+   "link": "https://tidd.ly/4iQAeK5",
+   "travelbetterRating": 3,
+   "moreInfoLink": "https://travelbetter.co.uk",
+   "footPassengers": true,
+   "dogFriendly": true,
+   "accessibilitySupport": true
+ }
+]
