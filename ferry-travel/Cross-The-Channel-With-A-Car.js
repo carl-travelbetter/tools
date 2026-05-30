@@ -60,7 +60,7 @@ function loadResult()
       route.textContent = item.route;
       answer.appendChild(route);
       let operatorHeader = document.createElement('h3');
-      operatorHeader.textContent = "Opertor(s)";
+      operatorHeader.textContent = "Operator(s)";
       answer.appendChild(operatorHeader);
       item.operators.forEach (routeOperator =>
         {
