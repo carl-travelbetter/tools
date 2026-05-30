@@ -2,7 +2,7 @@
   {
     "bestFor": "fastest",
     "solution": "Le Shuttle - Channel Tunnel",
-    "operators": ["Le Shuttle"]
+    "operators": ["Le Shuttle"],
     "route": "Folkestone, UK to Calais, France",
     "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour.",
     "link": "https://tidd.ly/4oPLUzK",
@@ -11,7 +11,7 @@
   {
     "bestFor": "cheapest",
     "solution": "Le Shuttle - Channel Tunnel",
-    "operators": ["Le Shuttle"]
+    "operators": ["Le Shuttle"],
     "route": "Folkestone, UK to Calais, France",
     "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour.",
     "link": "https://tidd.ly/4oPLUzK",
@@ -20,7 +20,7 @@
   {
     "bestFor": "nothern",
     "solution": "Le Shuttle - Channel Tunnel",
-    "operators": ["Le Shuttle"]
+    "operators": ["Le Shuttle"],
     "route": "Folkestone, UK to Calais, France",
     "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour.",
     "link": "https://tidd.ly/4oPLUzK",
@@ -29,7 +29,7 @@
   {
     "bestFor": "paris",
     "solution": "Le Shuttle - Channel Tunnel",
-    "operators": ["Le Shuttle"]
+    "operators": ["Le Shuttle"],
     "route": "Folkestone, UK to Calais, France",
     "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour.",
     "link": "https://tidd.ly/4oPLUzK",
@@ -38,7 +38,7 @@
   {
     "bestFor": "disneyLandParis",
     "solution": "Le Shuttle - Channel Tunnel",
-    "operators": ["Le Shuttle"]
+    "operators": ["Le Shuttle"],
     "route": "Folkestone, UK to Calais, France",
     "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour.",
     "link": "https://tidd.ly/4oPLUzK",
@@ -47,7 +47,7 @@
   {
     "bestFor": "brittany",
     "solution": "Le Shuttle - Channel Tunnel",
-    "operators": ["Le Shuttle"]
+    "operators": ["Le Shuttle"],
     "route": "Folkestone, UK to Calais, France",
     "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour.",
     "link": "https://tidd.ly/4oPLUzK",
@@ -56,7 +56,7 @@
   {
     "bestFor": "normandy",
     "solution": "Le Shuttle - Channel Tunnel",
-    "operators": ["Le Shuttle"]
+    "operators": ["Le Shuttle"],
     "route": "Folkestone, UK to Calais, France",
     "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour.",
     "link": "https://tidd.ly/4oPLUzK",
@@ -65,7 +65,7 @@
   {
     "bestFor": "western",
     "solution": "Le Shuttle - Channel Tunnel",
-    "operators": ["Le Shuttle"]
+    "operators": ["Le Shuttle"],
     "route": "Folkestone, UK to Calais, France",
     "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour.",
     "link": "https://tidd.ly/4oPLUzK",
@@ -74,7 +74,7 @@
   {
     "bestFor": "south",
     "solution": "Le Shuttle - Channel Tunnel",
-    "operators": ["Le Shuttle"]
+    "operators": ["Le Shuttle"],
     "route": "Folkestone, UK to Calais, France",
     "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour.",
     "link": "https://tidd.ly/4oPLUzK",
