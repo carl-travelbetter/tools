@@ -74,7 +74,7 @@ function loadResult()
           const matchingOperators = operators.filter(item => 
           item.operatorName.includes(routeOperator)
           );
-          matchingOpertors.forEach(item =>
+          matchingOperators.forEach(item =>
             {
               let operatorLink = document.createElement('div'); 
               operatorLink.innerHTML = '<p><a href="${item.link}" target="_blank" rel="noopener noreferrer">Book with ${item.operatorName} </a></p>';
