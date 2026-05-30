@@ -77,7 +77,7 @@ function loadResult()
           matchingOperators.forEach(item =>
             {
               let operatorLink = document.createElement('div'); 
-              operatorLink.innerHTML = '<p><a href="${item.link}" target="_blank" rel="noopener noreferrer">Book with ${item.operatorName} </a></p>';
+              operatorLink.innerHTML = `<p><a href="${item.link}" target="_blank" rel="noopener noreferrer">Book with ${item.operatorName} </a></p>`;
               answer.appendChild(operatorLink);
             });
         });
