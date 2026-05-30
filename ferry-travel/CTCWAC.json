@@ -4,63 +4,63 @@
     "solution": "LeShuttle - Eurotunnel",
     "operators": ["LeShuttle"],
     "route": "Folkestone (UK) to Calais (France)",
-    "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour.",
+    "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour."
   },
   {
     "bestFor": "cheapest",
     "solution": "Dover to Calais",
     "operators": ["P&O Ferries", "DFDS Ferries"],
     "route": "Dover (UK) to Calais (France)",
-    "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour.",
+    "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour."
   },
   {
     "bestFor": "nothern",
     "solution": "Le Shuttle - Channel Tunnel",
     "operators": ["Le Shuttle"],
     "route": "Folkestone, UK to Calais, France",
-    "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour.",
+    "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour."
   },
   {
     "bestFor": "paris",
     "solution": "Le Shuttle - Channel Tunnel",
     "operators": ["Le Shuttle"],
     "route": "Folkestone, UK to Calais, France",
-    "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour.",
+    "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour."
   },
   {
     "bestFor": "disneyLandParis",
     "solution": "Le Shuttle - Channel Tunnel",
     "operators": ["Le Shuttle"],
     "route": "Folkestone, UK to Calais, France",
-    "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour.",
+    "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour."
   },
   {
     "bestFor": "brittany",
     "solution": "Brittany Ferries - Portsmouth to St Malo",
     "operators": ["Brittany Ferries"],
     "route": "Portsmouth (UK) to St Malo (France)",
-    "reason": "While you could opt for Plymouth to Roscoff to land directly in Brittany, we believe the Portsmouth to St Malo ferry is a better option as it is more accessible from across the UK and you can take the relaxing night ferry across the channel and land only one and a half hours away from the Brittany region.",
+    "reason": "While you could opt for Plymouth to Roscoff to land directly in Brittany, we believe the Portsmouth to St Malo ferry is a better option as it is more accessible from across the UK and you can take the relaxing night ferry across the channel and land only one and a half hours away from the Brittany region."
   },
   {
     "bestFor": "normandy",
     "solution": "Le Shuttle - Channel Tunnel",
     "operators": ["Le Shuttle"],
     "route": "Folkestone, UK to Calais, France",
-    "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour.",
+    "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour."
   },
   {
     "bestFor": "western",
     "solution": "Le Shuttle - Channel Tunnel",
     "operators": ["Le Shuttle"],
     "route": "Folkestone, UK to Calais, France",
-    "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour.",
+    "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour."
   },
   {
     "bestFor": "south",
     "solution": "Le Shuttle - Channel Tunnel",
     "operators": ["Le Shuttle"],
     "route": "Folkestone, UK to Calais, France",
-    "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour.",
+    "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour."
   }
 ]
 
