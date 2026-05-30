@@ -1,6 +1,7 @@
 [
   {
     "bestFor": "fastest",
+    "description": "Fastest Cross Channel Option with A Car",
     "solution": "LeShuttle - Eurotunnel",
     "operators": ["LeShuttle"],
     "route": "Folkestone (UK) to Calais (France)",
@@ -8,13 +9,15 @@
   },
   {
     "bestFor": "cheapest",
+    "description": "Cheapest Cross Channel Option with A Car",
     "solution": "Dover to Calais",
     "operators": ["P&O Ferries", "DFDS Ferries"],
     "route": "Dover (UK) to Calais (France)",
-    "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour."
+    "reason": "Dover to Calais has many options, is the cheapest in our checks, and runs 24/7."
   },
   {
     "bestFor": "nothern",
+    "description": "Best Cross Channel Option with A Car for Northern Europe",
     "solution": "Le Shuttle - Channel Tunnel",
     "operators": ["Le Shuttle"],
     "route": "Folkestone, UK to Calais, France",
@@ -22,6 +25,7 @@
   },
   {
     "bestFor": "paris",
+    "description": "Best Cross Channel Option with A Car for Paris",
     "solution": "Le Shuttle - Channel Tunnel",
     "operators": ["Le Shuttle"],
     "route": "Folkestone, UK to Calais, France",
@@ -29,6 +33,7 @@
   },
   {
     "bestFor": "disneyLandParis",
+    "description": "Best Cross Channel Option with A Car for Disneyland Paris",
     "solution": "Le Shuttle - Channel Tunnel",
     "operators": ["Le Shuttle"],
     "route": "Folkestone, UK to Calais, France",
@@ -36,6 +41,7 @@
   },
   {
     "bestFor": "brittany",
+    "description": "Best Cross Channel Option with A Car for the Brittany region of France.",
     "solution": "Brittany Ferries - Portsmouth to St Malo",
     "operators": ["Brittany Ferries"],
     "route": "Portsmouth (UK) to St Malo (France)",
@@ -43,13 +49,15 @@
   },
   {
     "bestFor": "normandy",
-    "solution": "Le Shuttle - Channel Tunnel",
-    "operators": ["Le Shuttle"],
-    "route": "Folkestone, UK to Calais, France",
-    "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour."
+    "description": "Best Cross Channel Option with A Car for the Normandy region of France",
+    "solution": "Brittany Ferries to Caen",
+    "operators": ["Brittany Ferries"],
+    "route": "Portsmouth (UK) to Ouistream-Caen (France)",
+    "reason": "The Portsmouth to Caen ferry will drop you right into Normandy, while being one of the most accessible and comfortable options from the UK"
   },
   {
     "bestFor": "western",
+    "description": "Best Cross Channel Option with A Car for Western France",
     "solution": "Le Shuttle - Channel Tunnel",
     "operators": ["Le Shuttle"],
     "route": "Folkestone, UK to Calais, France",
@@ -57,7 +65,8 @@
   },
   {
     "bestFor": "south",
-    "solution": "Le Shuttle - Channel Tunnel",
+    "description": "Best Cross Channel Option with A Car for the South of France",
+    "solution": "Brittany Ferries to Caen",
     "operators": ["Le Shuttle"],
     "route": "Folkestone, UK to Calais, France",
     "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour."
