@@ -23,7 +23,7 @@ let operators = [];
 fetch('ferry-operators.json')
   .then(response => response.json())
   .then(data => {
-    ctcwacData = data;
+    operators = data;
     console.log("Ferry Operator Data Loaded:", operators);
   })
   .catch(error => console.error("Error loading Ferry Operator Data:", error));
@@ -62,10 +62,11 @@ function loadResult()
       let operatorHeader = document.createElement('h3');
       operatorHeader.textContent = "Opertor(s)";
       answer.appendChild(operatorHeader);
-      item.operators.forEach (op =>
+      item.operators.forEach (routeOperator =>
         {
+          console.log('Route Operator '+routeOperator);
           let operatorName = document.createElement('p');
-          operatorName.textContent = op.value;
+          operatorName.textContent = routeOperator;
           //Need to look up more operator details and potentially create cards
           answer.appendChild(op);
         });
