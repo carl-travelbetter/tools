@@ -10,9 +10,9 @@
   },
   {
     "bestFor": "cheapest",
-    "solution": "Le Shuttle - Channel Tunnel",
-    "operators": ["Le Shuttle"],
-    "route": "Folkestone, UK to Calais, France",
+    "solution": "Dover to Calais",
+    "operators": ["P&O Ferries", "DFDS Ferries"],
+    "route": "Dover (UK) to Calais (France)",
     "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour.",
     "link": "https://tidd.ly/4oPLUzK",
     "travelbetterRating": 3.9
