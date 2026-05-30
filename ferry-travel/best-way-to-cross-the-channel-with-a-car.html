@@ -13,9 +13,9 @@
   "@graph": [
     {
       "@type": "WebApplication",
-      "@id": "https://tools.travelbetter.co.uk/flexible-ferry-ticket/#webapp",
+      "@id": "https://tools.travelbetter.co.uk/ferry-travel/best-way-to-cross-the-channel-with-a-car.html/#webapp",
       "name": "Best Way To Cross The Channel With A Car App",
-      "url": "https://tools.travelbetter.co.uk/flexible-ferry-ticket/",
+      "url": "https://tools.travelbetter.co.uk/ferry-travel/best-way-to-cross-the-channel-with-a-car.html",
       "description": "Easy to use tool that helps you find the best way to cross the channel with a car.",
       "applicationCategory": "TravelApplication",
       "operatingSystem": "Web browser",
@@ -34,7 +34,7 @@
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://tools.travelbetter.co.uk/flexible-ferry-ticket/#breadcrumbs",
+      "@id": "https://tools.travelbetter.co.uk/ferry-travel/best-way-to-cross-the-channel-with-a-car.html/#breadcrumbs",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -51,8 +51,14 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Flexible Ferry Ticket App",
-          "item": "https://tools.travelbetter.co.uk/flexible-ferry-ticket/"
+          "name": "Ferry Travel",
+          "item": "https://tools.travelbetter.co.uk/ferry-travel/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Best way to cross the channel with a car",
+          "item": "https://tools.travelbetter.co.uk/ferry-travel/best-way-to-cross-the-channel-with-a-car.html"
         }
       ]
     },
@@ -127,26 +133,23 @@
 
 </head>
 <body>
-    <header>
     <div class="tb-navbar">
         <ul>
           <li><a href="https://travelbetter.co.uk">Travelbetter</a></li>
           <li><a href="https://tools.travelbetter.co.uk/index.html">Tools</a></li>
+          <li><a href="https://tools.travelbetter.co.uk/travel-fit/">Fitness Tracker</a></li>
         </ul>
-    </div>    
-    <div class="intro">
-        <h1>Flexible Ferry Ticket Finer</h1>
-        <p>Compare <b>Flexible Ferry Tickets</b> and find the perfect ticket for your next ferry crossing.</p>
-        <p>Unsure what a flexible ferry ticket is? Learn more in our <a href="https://travelbetter.co.uk/what-is-a-flexible-ferry-ticket/">guide.</a></p>
+    </div>
+    <div class="intro" id="intro">
+        <h1>Best Way To Cross The Channel With A Car</h1>
+        <p>Easily find the best way to cross the channel with your car.</p>
     </div>
     </header>
     <main>
-    <div class="app">
-        <div class="searchByCrossing">
-            <h2>Search By Crossing</h2>
-            <label for="ferrRoute">Select Ferry Route</label>
-            <select id="ferryRoute">
-                <option value="">-- Select a Crossing --</option>
+    <div class="display-card" id="needs-options">
+        <label for="ferrRoute">Select Your Primary Need</label>
+           <select id="travelOption">
+                <option value="">-- Select Your Need --</option>
                 <option value="doverCalais" >Dover - Calais</option>
                 <option value="doverDunkirk">Dover - Dunkirk</option>
                 <option value="newhavenDieppe">Newhaven - Dieppe</option>
@@ -161,48 +164,11 @@
                 <option value="cairnryanLarne">Cairnryan - Larne</option>
                 <option value="hullRotterdam">Hull - Rotterdam</option>
             </select>
-            <button class="searchButton" onclick="searchByCrossing()">Search</button>
-            <div class="crossingResults" id="crossingResults">
-               
-            </div>
-            
-        </div>
-        <div class="searchByProvider">
-            <h2>Search by Provider</h2>
-            <label for="ferryProvider">Choose a Ferry Operator</label>
-            <select id="ferryProvider">
-              <option value="">-- Select a Provider --</option>
-              <option value="P&O Ferries">P&O Ferries</option>
-              <option value="DFDS">DFDS</option>
-              <option value="Brittany Ferries">Brittany Ferries</option>
-              <option value="Irish Ferries">Irish Ferries</option>
-            </select>
-            <button class="searchButton" onclick="searchByProvider()">Search</button>
-            <div class="providerResults" id="providerResults"></div>
-        </div>
-        
-    </div>
-    <div class="operatorComparison">
-        <h2>Compare Flexible Ferry Tickets</h2>
-
-          <div class="ferryCard">
-            <h3>Brittany Ferries</h3>
-            <p><strong>Amendments:</strong> Free online changes up to 5 days before travel.</p>
-            <p><strong>Cancellations:</strong> Partial refund if canceled 15+ days before departure.</p>
-          </div>
-        
-          <div class="ferryCard">
-            <h3>P&O Ferries</h3>
-            <p><strong>Amendments:</strong> No amendment fees with Flexi; fare difference may apply.</p>
-            <p><strong>Cancellations:</strong> Fully refundable with Premium Flexi.</p>
-          </div>
-        
-          <div class="ferryCard">
-            <h3>Stena Line</h3>
-            <p><strong>Amendments:</strong> Free changes up to 24 hours before departure.</p>
-            <p><strong>Cancellations:</strong> Full refund if canceled 24+ hours in advance; partial refund up to 2 hours before.</p>
-          </div>
-    </div>
+            <button class="control-btn" id="submit-need">Search</button>
+            <div class="results" id="results">      
+        </div>       
+     </div>
+     <div class="display-card" id="results" hidden></div>   
     <div class="FAQ">
         <h2>Frequently Asked Questions - Learn More About Flexible Ferry Tickets</h2>
             <details>
