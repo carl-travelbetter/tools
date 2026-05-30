@@ -19,7 +19,7 @@ fetch('CTCWAC.json')
 
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
-  getEl('travelOption')?.addEventListener("select", loadResult);
+  getEl('travelOption')?.addEventListener("change", loadResult);
 }
 
 //Ensure html bindings are not applied until the html structure is built
