@@ -1,7 +1,7 @@
 console.log('Cross The Channel With A Car (CTCWAC)');
 
 //Import Dom utils
-import {getWrittenDate, getDuration, addDays, getDayOfYear} from "/lib/date-helper.js";
+import {getWrittenDate, getDuration, addDays, getDayOfYear} from "https://tools.travelbetter.co.uk/lib/date-helper.js";
 import { getEl, getText, getDate} from "/lib/dom.js";
 
 //Load Data
