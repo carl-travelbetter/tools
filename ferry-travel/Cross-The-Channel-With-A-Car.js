@@ -73,6 +73,6 @@ function loadResult()
     {
       console.log('No match - The Search Continues');
     }
-    
+  });
  
 }
