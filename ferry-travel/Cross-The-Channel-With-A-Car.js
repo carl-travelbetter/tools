@@ -17,6 +17,17 @@ fetch('CTCWAC.json')
   })
   .catch(error => console.error("Error loading Cross The Channel With A Car data:", error));
 
+//Load the Ferry Operator Data
+let operators = [];
+
+fetch('ferry-operators.json')
+  .then(response => response.json())
+  .then(data => {
+    ctcwacData = data;
+    console.log("Ferry Operator Data Loaded:", operators);
+  })
+  .catch(error => console.error("Error loading Ferry Operator Data:", error));
+
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
   getEl('travelOption')?.addEventListener("change", loadResult);
