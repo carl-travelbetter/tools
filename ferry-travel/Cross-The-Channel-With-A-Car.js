@@ -41,4 +41,38 @@ function loadResult()
   console.log('CTCWAC - Load Result');
   let option = getEl('travelOption').value;
   console.log('Option Selected '+option);
+  const answer = getEl('results');
+  answer.innerHTML = "";
+  ctcwacData.forEach (item => {
+    if (item.bestFor == option)
+    {
+      let operatorNames[] = item.operators;
+      let answerHeader = document.createElement('h2');
+      answerHeader.textContent = "Cross Channel Ferry With A Car: "+option;
+      answer.appendChild(answerHeader);
+      let reason = document.createElement('p');
+      reason.textContent = item.reason;
+      answer.appendChild(reason);
+      let route = document.createElement('p');
+      route.textContent = item.route;
+      answer.appendChild(route);
+      let operatorHeader = document.createElement('h3');
+      operatorHeader.textContent = "Opertor(s)";
+      answer.appendChild(operatorHeader);
+      item.operators.forEach (op =>
+        {
+          let operatorName = document.createElement('p');
+          operatorName.textContent = op;
+          //Need to look up more operator details and potentially create cards
+          answer.appendChild(op);
+        });
+      answer.hidden = false;
+      
+    }
+    else
+    {
+      console.log('No match - The Search Continues');
+    }
+    
+ 
 }
