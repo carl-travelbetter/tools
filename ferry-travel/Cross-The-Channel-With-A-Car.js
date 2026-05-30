@@ -46,7 +46,7 @@ function loadResult()
   ctcwacData.forEach (item => {
     if (item.bestFor == option)
     {
-      let operatorNames[] = item.operators;
+      let operatorNames = item.operators;
       let answerHeader = document.createElement('h2');
       answerHeader.textContent = "Cross Channel Ferry With A Car: "+option;
       answer.appendChild(answerHeader);
