@@ -57,7 +57,7 @@ function loadResult()
       solution.textContent = "The best option is: "+item.solution;
       answer.appendChild(solution);
       let reason = document.createElement('p');
-      reason.textContent = "Reason: "+item.reason;
+      reason.textContent = "Rationale: "+item.reason;
       answer.appendChild(reason);
       let route = document.createElement('p');
       route.textContent = item.route;
