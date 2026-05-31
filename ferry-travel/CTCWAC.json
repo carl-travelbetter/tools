@@ -3,7 +3,7 @@
     "bestFor": "fastest",
     "description": "Fastest Cross Channel Option with A Car",
     "solution": "LeShuttle - Eurotunnel",
-    "operators": ["LeShuttle"],
+    "operators": ["Eurotunnel LeShuttle"],
     "route": "Folkestone (UK) to Calais (France)",
     "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour."
   },
@@ -18,26 +18,26 @@
   {
     "bestFor": "northern",
     "description": "Best Cross Channel Option with A Car for Northern Europe",
-    "solution": "Le Shuttle - Channel Tunnel",
-    "operators": ["Le Shuttle"],
-    "route": "Folkestone, UK to Calais, France",
-    "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour."
+    "solution": "Dover to Dunkirk Ferry",
+    "operators": ["DFDS Ferries"],
+    "route": "Dover (UK) to Dunkirk (France)",
+    "reason": "If you're heading to Northern Europe, the Dover to Dunkirk ferry is well worth considering. Dunkirk is less than an hour's drive from Bruges and provides easy onward access to Belgium, the Netherlands and Germany. The route is often quieter and less hectic than Dover–Calais, helping to make the start of your journey feel a little more relaxed, while still offering frequent departures and a crossing time of around two hours."
   },
   {
     "bestFor": "paris",
     "description": "Best Cross Channel Option with A Car for Paris",
-    "solution": "Le Shuttle - Channel Tunnel",
-    "operators": ["Le Shuttle"],
-    "route": "Folkestone, UK to Calais, France",
-    "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour."
+    "solution": "Newhaven to Dieppe",
+    "operators": ["DFDS Ferries"],
+    "route": "Newhaven (UK) to Dieppe (France)",
+    "reason": "If you're travelling to Paris by car, the Newhaven to Dieppe ferry is one of the most convenient options available. Although Le Havre is slightly closer to Paris, the crossing from Newhaven to Dieppe takes around four hours, compared with more than six hours to Le Havre. Once you arrive, the drive to Paris is straightforward and typically takes between two and a half and three hours. Combined with a choice of daytime and overnight sailings, this route offers a great balance of journey time, flexibility and ease of travel."
   },
   {
     "bestFor": "disneyLandParis",
     "description": "Best Cross Channel Option with A Car for Disneyland Paris",
-    "solution": "Le Shuttle - Channel Tunnel",
-    "operators": ["Le Shuttle"],
-    "route": "Folkestone, UK to Calais, France",
-    "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour."
+    "solution": "Newhaven to Dieppe",
+    "operators": ["DFDS Ferries"],
+    "route": "Newhaven (UK) to Dieppe (France)",
+    "reason": "If you're driving to Disneyland Paris, the Newhaven to Dieppe ferry is one of the most convenient options available. From Dieppe, Disneyland Paris is less than three hours away by car, and you can travel via Amiens to avoid the busy Paris ring roads and the traffic they often bring. The route offers a straightforward and relatively stress-free drive, making it a great choice for families eager to start their Disney adventure. As an added bonus, Amiens makes an excellent stop for a coffee and croissant if you're arriving on an early morning or overnight sailing."
   },
   {
     "bestFor": "brittany",
@@ -45,7 +45,7 @@
     "solution": "Brittany Ferries - Portsmouth to St Malo",
     "operators": ["Brittany Ferries"],
     "route": "Portsmouth (UK) to St Malo (France)",
-    "reason": "While you could opt for Plymouth to Roscoff to land directly in Brittany, we believe the Portsmouth to St Malo ferry is a better option as it is more accessible from across the UK and you can take the relaxing night ferry across the channel and land only one and a half hours away from the Brittany region."
+    "reason": "If you're heading to Brittany by car, the Portsmouth to St Malo ferry is often the most convenient option for travellers from across the UK. While the Plymouth to Roscoff route lands you directly in Brittany, Portsmouth is easier to reach for many people and offers a wider choice of sailing times. The popular overnight crossing also allows you to relax onboard, get some rest, and wake up in France ready to continue your journey. From St Malo, many of Brittany's most popular destinations are less than two hours away, making this a comfortable and stress-free way to start your holiday."
   },
   {
     "bestFor": "normandy",
@@ -53,23 +53,31 @@
     "solution": "Brittany Ferries to Caen",
     "operators": ["Brittany Ferries"],
     "route": "Portsmouth (UK) to Ouistream-Caen (France)",
-    "reason": "The Portsmouth to Caen ferry will drop you right into Normandy, while being one of the most accessible and comfortable options from the UK"
+    "reason": "The Portsmouth to Caen ferry is one of our favourite ways to reach France and an excellent choice for exploring Normandy. Arriving just outside Caen places you right at the gateway to the region, with easy access to the D-Day beaches, charming market towns and beautiful coastline. With a choice of daytime and overnight sailings, it's a flexible and relaxed route that lets you start your holiday almost as soon as you leave the ferry."
   },
   {
     "bestFor": "western",
     "description": "Best Cross Channel Option with A Car for Western France",
-    "solution": "Le Shuttle - Channel Tunnel",
-    "operators": ["Le Shuttle"],
-    "route": "Folkestone, UK to Calais, France",
-    "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour."
+    "solution": "Portsmouth to Caen",
+    "operators": ["Brittany Ferries"],
+    "route": "Portsmouth (UK) to Caen (France)",
+    "reason": "If you're exploring Western France by car, the Portsmouth to Caen ferry offers one of the best all-round options. Portsmouth is easy to reach from across much of the UK, and once you arrive in Normandy you'll have excellent road links to Brittany, the Loire Valley, Nantes, La Rochelle and beyond. With a choice of daytime and overnight sailings, the route provides a comfortable and flexible way to cross the Channel while keeping your onward journey straightforward. For most travellers, it strikes the right balance between ferry time, driving distance and overall convenience."
   },
   {
     "bestFor": "south",
     "description": "Best Cross Channel Option with A Car for the South of France",
-    "solution": "Brittany Ferries to Caen",
-    "operators": ["Le Shuttle"],
-    "route": "Folkestone, UK to Calais, France",
-    "reason": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour."
+    "solution": "Portsmouth to St Malo - Overnight",
+    "operators": ["Brittany Ferries"],
+    "route": "Portsmouth (UK) to St Malo (France) ",
+    "reason": "For many journeys to the South of France, the Portsmouth to St Malo overnight ferry is an excellent option. Instead of spending the day crossing the Channel, you can relax onboard, get some rest, and wake up in France ready to continue your journey. Because St Malo is much further south than ports such as Caen or Calais, you'll also spend less time driving and more time enjoying your holiday. It's a comfortable and surprisingly efficient way to cover a large part of the journey while you sleep."
+  },
+  {
+    "bestFor": "uksouthwest",
+    "description": "Best Cross Channel Option with A Car When Travelling from Devon or Cornwall",
+    "solution": "Plymouth to Roscoff",
+    "operators": ["Brittany Ferries"],
+    "route": "Plymouth (UK) to Roscoff (France)",
+    "reason": "This ferry route allows you to swap the UK driving time for relaxing on board time getting you in the holiday mood rather than slogging it across the UK to reach an alternative port. However, this route is only operational between June and October every year so if you are travelling outside of that window you will need to look at an alternative."
   }
 ]
 
