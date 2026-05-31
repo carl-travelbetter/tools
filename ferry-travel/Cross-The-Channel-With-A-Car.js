@@ -57,11 +57,8 @@ function loadResult()
       solution.textContent = "The best option is: "+item.solution;
       answer.appendChild(solution);
       let reason = document.createElement('p');
-      reason.textContent = "Rationale: "+item.reason;
+      reason.textContent = "Rationale: "+item.rationale;
       answer.appendChild(reason);
-      let route = document.createElement('p');
-      route.textContent = item.route;
-      answer.appendChild(route);
       let operatorHeader = document.createElement('h3');
       operatorHeader.textContent = "Operator(s)";
       answer.appendChild(operatorHeader);
