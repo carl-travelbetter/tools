@@ -76,6 +76,7 @@ function loadResult()
             });
         });
       answer.hidden = false;
+      getEl('alternatives').hidden = false;
   });
  
 }
