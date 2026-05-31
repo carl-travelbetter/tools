@@ -53,14 +53,14 @@ function loadResult()
       let answerHeader = document.createElement('h2');
       answerHeader.textContent = item.description
       answer.appendChild(answerHeader);
-      let solution = document.createElement('p');
-      solution.textContent = "The best option is: "+item.solution;
+      let solution = document.createElement('div');
+      solution.innerHTML = `<p><strong>Our recommendation:</strong> ${item.solution}`;
       answer.appendChild(solution);
       let reason = document.createElement('p');
       reason.textContent = "Rationale: "+item.rationale;
       answer.appendChild(reason);
       let operatorHeader = document.createElement('h3');
-      operatorHeader.textContent = "Operator(s)";
+      operatorHeader.textContent = "Operators For This Route";
       answer.appendChild(operatorHeader);
       item.operators.forEach (routeOperator =>
         {
