@@ -65,10 +65,6 @@ function loadResult()
       item.operators.forEach (routeOperator =>
         {
           console.log('Route Operator '+routeOperator);
-          //let operatorName = document.createElement('p');
-          //operatorName.textContent = routeOperator;
-          //Need to look up more operator details and potentially create cards
-          //answer.appendChild(operatorName);
           const matchingOperators = operators.filter(item => 
           item.operatorName.includes(routeOperator)
           );
