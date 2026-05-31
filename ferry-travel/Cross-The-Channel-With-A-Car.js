@@ -65,17 +65,17 @@ function loadResult()
       item.operators.forEach (routeOperator =>
         {
           console.log('Route Operator '+routeOperator);
-          let operatorName = document.createElement('p');
-          operatorName.textContent = routeOperator;
+          //let operatorName = document.createElement('p');
+          //operatorName.textContent = routeOperator;
           //Need to look up more operator details and potentially create cards
-          answer.appendChild(operatorName);
+          //answer.appendChild(operatorName);
           const matchingOperators = operators.filter(item => 
           item.operatorName.includes(routeOperator)
           );
           matchingOperators.forEach(item =>
             {
               let operatorLink = document.createElement('div'); 
-              operatorLink.innerHTML = `<p><a href="${item.link}" target="_blank" rel="noopener noreferrer">Book with ${item.operatorName} </a></p>`;
+              operatorLink.innerHTML = `<p><strong>${item.operatorName}</strong>: <a href="${item.link}" target="_blank" rel="noopener noreferrer">Check Availability and Book</a></p>`;
               answer.appendChild(operatorLink);
             });
         });
