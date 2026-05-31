@@ -56,9 +56,9 @@ function loadResult()
       let solution = document.createElement('div');
       solution.innerHTML = `<p><strong>Our recommendation:</strong> ${item.solution}`;
       answer.appendChild(solution);
-      let reason = document.createElement('p');
-      reason.textContent = "Rationale: "+item.rationale;
-      answer.appendChild(reason);
+      let rationale = document.createElement('div');
+      rationale.innerHTML = `<p><strong>Rationale:</strong> ${item.rationale}`;
+      answer.appendChild(rationale);
       let operatorHeader = document.createElement('h3');
       operatorHeader.textContent = "Operators For This Route";
       answer.appendChild(operatorHeader);
