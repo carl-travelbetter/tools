@@ -2,7 +2,7 @@
   {
     "bestFor": "fastest",
     "description": "Fastest Cross Channel Option with A Car",
-    "solution": "LeShuttle - Eurotunnel",
+    "solution": "LeShuttle - Eurotunnel (Folkstone to Calais)",
     "operators": ["Eurotunnel LeShuttle"],
     "route": "Folkestone (UK) to Calais (France)",
     "rationale": "The journey time on the Channel Tunnel is 35 minutes, it runs 24/7 and has four departures each hour."
