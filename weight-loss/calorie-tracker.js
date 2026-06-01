@@ -25,6 +25,18 @@ let calTrackingDay = JSON.parse(localStorage.getItem(CALORIE_TRACKING_DAY)) || {
 
 const dayOfYear = getDayOfYear();
 
+let dayCheck  = Num(calTrackingDay.trackingDay[0]) || 0;
+
+if (dayCheck < dayOfYear) || (dayCheck > dayOfYear)
+{
+  console.log('Its a New Day - Removing Old Log');
+  startNewDay();
+} 
+else
+{
+  console.log('Not a new day');
+}
+
 //If no limit set
 if (isNaN(dailyCalorieLimit))
 {
