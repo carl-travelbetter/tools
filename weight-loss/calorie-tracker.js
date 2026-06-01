@@ -30,7 +30,7 @@ let dayCheck  = calTrackingDay.trackingDay[0] || 0;
 if ((dayCheck < dayOfYear) || (dayCheck > dayOfYear))
 {
   console.log('Its a New Day - Removing Old Log');
-  //startNewDay();
+  startNewDay();
 } 
 else
 {
