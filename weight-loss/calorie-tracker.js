@@ -25,7 +25,7 @@ let calTrackingDay = JSON.parse(localStorage.getItem(CALORIE_TRACKING_DAY)) || {
 
 const dayOfYear = getDayOfYear();
 
-let dayCheck  = Num(calTrackingDay.trackingDay[0]) || 0;
+let dayCheck  = calTrackingDay.trackingDay[0]) || 0;
 
 if ((dayCheck < dayOfYear) || (dayCheck > dayOfYear))
 {
