@@ -27,6 +27,18 @@ let walkRecords = JSON.parse(localStorage.getItem(WALK_RECORDS)) || {records: []
 
 const dayOfYear = getDayOfYear();
 
+let dayCheck  = walkTrackingDay.trackingDay[0] || 0;
+
+if ((dayCheck < dayOfYear) || (dayCheck > dayOfYear))
+{
+  console.log('Its a New Day - Removing Old Log');
+  startNewDay();
+} 
+else
+{
+  console.log('Not a new day');
+}
+
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
   getEl('add-btn')?.addEventListener("click", addWalk);
@@ -324,7 +336,7 @@ function saveData()
   localStorage.setItem(WALK_LIST_KEY, JSON.stringify(walkList));
   localStorage.setItem(WALK_TRACKING_DAY, JSON.stringify(walkTrackingDay));
   localStorage.setItem(WALK_TARGET_KEY, JSON.stringify(targetData));
-  localStorage.setItem(WALK_TOTAL_KEY, JSON.stringify(walkTotal));
+  //localStorage.setItem(WALK_TOTAL_KEY, JSON.stringify(walkTotal));
   localStorage.setItem(WALK_RECORDS, JSON.stringify(walkRecords));
 }
 
