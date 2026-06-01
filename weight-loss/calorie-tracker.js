@@ -206,6 +206,9 @@ function updateTracker()
   const limitCheckDiv = getEl('limit-check');
   limitCheckDiv.innerHTML = "";
   let remainingBalance = dailyCalorieLimit - totalCaloriesConsumed;
+  const progressHeader = document.createElement('h2');
+  progressHeader.textContent = "Caloire Balance Remaining";
+  limitCheckDiv.appendChild(progressHeader);
   const balanceSum = document.createElement('p');
   //Need to assign the class based on how close to the limit it is
   let percentageUsed = (totalCaloriesConsumed / dailyCalorieLimit) * 100;
