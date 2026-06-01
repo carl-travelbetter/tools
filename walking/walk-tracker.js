@@ -305,9 +305,6 @@ function updateTracker()
   console.log('Update Tracker');
   const progressCard = getEl('progress-check');
   progressCard.innerHTML = "";
-  const progressHeader = document.createElement('h2');
-  progressHeader.textContent = "Today's Progress";
-  progressCard.appendChild(progressHeader);
   let totalWalkTime = 0;
   //add up the minutes in the walk list
   walkList.walks.forEach(walk => {
@@ -317,11 +314,11 @@ function updateTracker()
   const progressStatement = document.createElement('p');
   if (totalWalkTime < walkTarget)
   {
-    progressStatement.textContent = totalWalkTime+" minutes walked towards target of "+walkTarget+" minutes. Keep Going, you've got this";
+    progressStatement.textContent = "Today's Progress: "+totalWalkTime+" minutes walked towards target of "+walkTarget+" minutes. Keep Going, you've got this";
   }
   else
   {
-    progressStatement.textContent = totalWalkTime+" minutes walked, target "+walkTarget+" minutes. You hit your target, great job.";
+    progressStatement.textContent = "Today's Progress: "+totalWalkTime+" minutes walked, target "+walkTarget+" minutes. You hit your target, great job.";
   }
 
   progressCard.appendChild(progressStatement);
