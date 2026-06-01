@@ -44,15 +44,15 @@ if (isNaN(dailyCalorieLimit))
 }
  
 //Load Running Total
-const CALORIE_TOTAL_KEY = "calorie-total";
-let totalData = JSON.parse(localStorage.getItem(CALORIE_TOTAL_KEY)) || {totalList: []};
+//const CALORIE_TOTAL_KEY = "calorie-total";
+/*let totalData = JSON.parse(localStorage.getItem(CALORIE_TOTAL_KEY)) || {totalList: []};
 let runningTotal = totalData.totalList[0];
 
 //If no total set yet
 if (isNaN(runningTotal))
 {
   runningTotal = 0;
-}
+}*/
 
 if (calorieList.caloriesSpent.length > 0)
 {  
@@ -403,7 +403,7 @@ function saveData()
 {
   console.log("Saving Data...");
   localStorage.setItem(CALORIE_LIST_KEY, JSON.stringify(calorieList));
-  localStorage.setItem(CALORIE_TOTAL_KEY, JSON.stringify(totalData));
+  //localStorage.setItem(CALORIE_TOTAL_KEY, JSON.stringify(totalData));
   localStorage.setItem(CALORIE_LIMIT_KEY, JSON.stringify(limitData));
   localStorage.setItem(CALORIE_TRACKING_DAY, JSON.stringify(calTrackingDay));
 }
