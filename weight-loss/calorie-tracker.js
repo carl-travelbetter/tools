@@ -297,6 +297,7 @@ function displayLog()
 function openFoodLookup()
 {
   console.log('Food Lookup');
+  getEl('food-name').value = "";
   getEl('food-lookup-card').hidden = false;
 }
 
