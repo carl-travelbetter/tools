@@ -28,3 +28,25 @@ fetch('ferry-operators.json')
     console.log("Ferry Operator Data Loaded:", operators);
   })
   .catch(error => console.error("Error loading Ferry Operator Data:", error));
+
+//Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
+function bindEvents() {
+  getEl('crossings')?.addEventListener("change", loadResults); 
+  getEl('load-comparison-table').addEventlistener("click", showTable);
+}
+
+//Ensure html bindings are not applied until the html structure is built
+document.addEventListener("DOMContentLoaded", bindEvents);
+
+//Function to display the key route details (including corssing times) and provider information
+function loadResult()
+{
+  console.log('Channel Crossing: load results');
+  
+}
+
+//function to display the route comparison table
+function showTable()
+{
+  console.log('Channel Crossing: show table');
+}
