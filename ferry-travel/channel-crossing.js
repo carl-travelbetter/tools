@@ -42,7 +42,37 @@ document.addEventListener("DOMContentLoaded", bindEvents);
 function loadResults()
 {
   console.log('Channel Crossing: load results');
-  
+  const selectedRouteID = getEl('crossings').value;
+ 
+  console.log('Value selected '+selectedRouteID);
+  if (selectedRouteID === "fastest")
+  {
+    showFastestRoute();
+  }
+  else
+  {
+    const results = getEl('results');
+    results.innerHTML = "";
+    const routeLookup = routeData.filter(route => 
+       route.id.includes(selectedRouteID)
+    );
+    
+    routeLookup.forEach(route => {
+      let routeName = document.createElement('p');
+      routeName.textContent = "Route Name "+route.route;
+      results.appendChild(routeName);
+      let crossingTime = document.createElement('p');
+      crossingTime.textContent = "Crossing Time: "+route.dayCrossingTimeMins;
+      results.appendChild(crossingTime);
+    }
+    );
+    results.hidden = false;
+  }
+}
+
+function showFastestRoute()
+{
+  console.log('Load Fastest Route');
 }
 
 //function to display the route comparison table
