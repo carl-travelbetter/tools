@@ -39,7 +39,7 @@ function bindEvents() {
 document.addEventListener("DOMContentLoaded", bindEvents);
 
 //Function to display the key route details (including corssing times) and provider information
-function loadResult()
+function loadResults()
 {
   console.log('Channel Crossing: load results');
   
