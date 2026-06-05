@@ -32,7 +32,7 @@ fetch('ferry-operators.json')
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
   getEl('crossings')?.addEventListener("change", loadResults); 
-  getEl('load-comparison-table')?.addEventListener("click", showTable);
+  getEl('load-table')?.addEventListener("click", showTable);
 }
 
 //Ensure html bindings are not applied until the html structure is built
