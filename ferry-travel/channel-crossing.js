@@ -82,6 +82,7 @@ function loadResults()
 
       const operatorHeader = document.createElement('h4');
       operatorHeader.textContent = "Route Operators:";
+      results.appendChild(operatorHeader);
       //load the operators for this route
       //Go through each operator against the route
       route.operators.forEach(operatorName => {
