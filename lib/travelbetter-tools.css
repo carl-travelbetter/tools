@@ -562,6 +562,22 @@ li .span-action {
    max-width: 500px;
 }
 
+table, th, td {
+  border: 1px solid black;
+}
+
+th .one {
+   background-color: #34b7eb;
+}
+
+th .two {
+   background-color: #ebb434;
+}
+
+th .three {
+   background-color: #34eb92;
+}
+
 
 
 
