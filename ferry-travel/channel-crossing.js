@@ -77,6 +77,26 @@ function loadResults()
       const routeOptions = document.createElement('p');
       routeOptions.textContent = "Route Options: "+tagsList;
       results.appendChild(routeOptions);
+
+      const operatorHeader = document.createElement('h4');
+      operatorHeader.textContent = "Route Operators:";
+      //load the operators for this route
+      //Go through each operator against the route
+      route.operators.forEach(operatorName => {
+        //Filter the operator file by the operator name, this should only return one result
+        const operatorData = operators.filter(item =>
+          item.operatorName.includes(operatorName)
+          );
+        //Although only one result, go through the result list and create an operator output
+        operatorData.forEach(operator => {
+          let operatorDiv = document.createElement('div');
+          operatorDiv.innerHTML = `
+          <p>${operator.operatorName}</p>
+          <a href="${operator.link}" target="_blank" rel="noopener noreferrer">Check Availability</a>
+          `
+          results.appendChild(operatorDiv);
+        });
+      });
       
     }
     );
