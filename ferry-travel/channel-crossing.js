@@ -73,7 +73,7 @@ function loadResults()
       let tagsList = document.createElement('ul');
       route.tags.forEach(tag => {
         let tagListItem = document.createElement('li');
-        tagList.textContent = tag;
+        tagListItem.textContent = tag;
         tagsList.appendChild(tagListItem);
       });
       const routeOptions = document.createElement('div');
