@@ -147,6 +147,79 @@ function getHrsAndMinutes(totalMinutes)
 function showFastestRoute()
 {
   console.log('Load Fastest Route');
+   const results = getEl('results');
+    results.innerHTML = "";
+    const routeLookup = ferryRoutes.filter(route => 
+       route.id.includes("R0001")
+    );
+    
+    routeLookup.forEach(route => {
+      let routeName = document.createElement('h3');
+      routeName.textContent = "Route: "+route.route;
+      results.appendChild(routeName);
+      let dayRouteCheck = route.dayCrossingTimeMins;
+      if (dayRouteCheck > 0)
+      {
+        let dayCrossingTime = document.createElement('p');
+        dayCrossingTime.textContent = "Day Crossing Time: "+getHrsAndMinutes(route.dayCrossingTimeMins);
+        results.appendChild(dayCrossingTime);
+      }
+      else
+      {
+        let dayCrossingTime = document.createElement('p');
+        dayCrossingTime.textContent = "Day Crossing Time: Day crossing not available on this route";
+        results.appendChild(dayCrossingTime);
+      }
+      let nightRouteCheck = route.nightCrossingTimeMins;
+      console.log('Night Route Check '+nightRouteCheck);
+      if (nightRouteCheck > 0)
+      {
+        let nightCrossingTime = document.createElement('p');
+        nightCrossingTime.textContent = "Night Crossing Time: "+getHrsAndMinutes(route.nightCrossingTimeMins);
+        results.appendChild(nightCrossingTime);
+      }
+      else
+      {
+        let nightCrossingTime = document.createElement('p');
+        nightCrossingTime.textContent = "Night Crossing Time: Night crossing not available on this route";
+        results.appendChild(nightCrossingTime);
+      }
+      let sailings = document.createElement('p');
+      sailings.textContent = "Sailings: "+route.sailings;
+      results.appendChild(sailings);
+      let tagsList = document.createElement('ul');
+      route.tags.forEach(tag => {
+        let tagListItem = document.createElement('li');
+        tagListItem.textContent = "⭐ "+tag;
+        tagsList.appendChild(tagListItem);
+      });
+      const routeOptions = document.createElement('h4');
+      routeOptions.textContent = "Route Options:"                               
+      results.appendChild(routeOptions);
+      results.appendChild(tagsList);
+
+      const operatorHeader = document.createElement('h4');
+      operatorHeader.textContent = "Route Operators:";
+      results.appendChild(operatorHeader);
+      //load the operators for this route
+      //Go through each operator against the route
+      route.operators.forEach(operatorName => {
+        //Filter the operator file by the operator name, this should only return one result
+        const operatorData = operators.filter(item =>
+          item.operatorName.includes(operatorName)
+          );
+        //Although only one result, go through the result list and create an operator output
+        operatorData.forEach(operator => {
+          let operatorDiv = document.createElement('div');
+          operatorDiv.innerHTML = `<p>⛴️ <strong>${operator.operatorName}</strong> <a href="${operator.link}" target="_blank" rel="noopener noreferrer">Check Availability</a></p>`
+          results.appendChild(operatorDiv);
+        });
+      });
+      
+    }
+    );
+    results.hidden = false;
+    getEl('alternatives').hidden = false;
 }
 
 //function to display the route comparison table
