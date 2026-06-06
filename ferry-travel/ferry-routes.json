@@ -47,7 +47,7 @@
    "startCountry": "England",
    "destinationCountry": "France",
    "dayCrossingTimeMins": 360,
-   "nightCrossingTimeMins": 480,
+   "nightCrossingTimeMins": 405,
    "distance": "112 miles",
    "operators": ["Brittany Ferries"],
    "pricesFrom": "£126.00",
