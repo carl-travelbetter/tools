@@ -74,8 +74,11 @@ function loadResults()
       route.tags.forEach(tag => {
         tagsList = tagsList + tag +", ";
       });
-      const routeOptions = document.createElement('p');
-      routeOptions.textContent = "Route Options: "+tagsList;
+      const routeOptions = document.createElement('div');
+      routeOptions.textContent = `
+                                  <p><strong>Route Options:</strong></p>
+                                  <p>${tagsList}</p>
+                                  `;
       results.appendChild(routeOptions);
 
       const operatorHeader = document.createElement('h4');
