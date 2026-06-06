@@ -67,7 +67,7 @@ function loadResults()
       let nightCrossingTime = document.createElement('p');
       nightCrossingTime.textContent = "Day Crossing Time: "+getHrsAndMinutes(route.nightCrossingTimeMins);
       results.appendChild(nightCrossingTime);
-      let salings = document.createElement('p');
+      let sailings = document.createElement('p');
       sailings.textContent = "Sailings: "+route.sailings;
       results.appendChild(sailings);
       let tagsList = "";
