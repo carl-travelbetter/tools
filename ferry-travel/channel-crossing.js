@@ -58,17 +58,34 @@ function loadResults()
     );
     
     routeLookup.forEach(route => {
-      let routeName = document.createElement('p');
+      let routeName = document.createElement('h3');
       routeName.textContent = "Route Name "+route.route;
-      results.appendChild(routeName);
-      let crossingTime = document.createElement('p');
-      crossingTime.textContent = "Crossing Time: "+route.dayCrossingTimeMins;
+      results.appendChild(routeName);   
+      let dayCrossingTime = document.createElement('p');
+      crossingTime.textContent = "Crossing Time: "+getHrsAndMinutes(route.dayCrossingTimeMins);
       results.appendChild(crossingTime);
     }
     );
     results.hidden = false;
   }
 }
+
+//function to return the hours and minutes from total minutes
+function getHrsAndMinutes(totalMinutes)
+{
+  console.log('Turning '+totalMinutes+' to Hrs and Minutes');
+  const hours = Math.floor(totalMinutes / 60);
+  const minutes = totalMinutes % 60;
+
+  const hourText = hours === 1 ? 'hr' : 'hrs';
+  const minuteText = minutes === 1 ? 'min' : 'mins';
+
+  if (hours === 0) return `${minutes} ${minuteText}`;
+  if (minutes === 0) return `${hours} ${hourText}`;
+
+  return `${hours} ${hourText} ${minutes} ${minuteText}`;
+}
+
 
 function showFastestRoute()
 {
