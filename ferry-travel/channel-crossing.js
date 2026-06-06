@@ -132,5 +132,8 @@ function showFastestRoute()
 function showTable()
 {
   console.log('Channel Crossing: show table');
+  getEl('results').hidden = true;
+  getEl('alternatives').hidden = true;
   getEl('comparison-table').hidden = false;
+  
 }
