@@ -76,7 +76,7 @@ function loadResults()
       });
       const routeOptions = document.createElement('p');
       routeOptions.textContent = "Route Options: "+tagsList;
-      results.appendChild(reoutOptions);
+      results.appendChild(routeOptions);
       
     }
     );
