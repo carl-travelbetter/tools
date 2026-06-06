@@ -59,11 +59,25 @@ function loadResults()
     
     routeLookup.forEach(route => {
       let routeName = document.createElement('h3');
-      routeName.textContent = "Route Name "+route.route;
+      routeName.textContent = "Route: "+route.route;
       results.appendChild(routeName);   
       let dayCrossingTime = document.createElement('p');
       dayCrossingTime.textContent = "Day Crossing Time: "+getHrsAndMinutes(route.dayCrossingTimeMins);
       results.appendChild(dayCrossingTime);
+      let nightCrossingTime = document.createElement('p');
+      nightCrossingTime.textContent = "Day Crossing Time: "+getHrsAndMinutes(route.nightCrossingTimeMins);
+      results.appendChild(nightCrossingTime);
+      let salings = document.createElement('p');
+      sailings.textContent = "Sailings: "+route.sailings;
+      results.appendChild(sailings);
+      let tagsList = "";
+      route.tags.forEach(tag => {
+        tagsList = tagsList + tag +", ";
+      });
+      const routeOptions = document.createElement('p');
+      routeOptions.textContent = "Route Options: "+tagsList;
+      results.appendChild(reoutOptions);
+      
     }
     );
     results.hidden = false;
