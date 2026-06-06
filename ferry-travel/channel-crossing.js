@@ -102,6 +102,7 @@ function loadResults()
     }
     );
     results.hidden = false;
+    getEl('alternatives').hidden = false;
   }
 }
 
