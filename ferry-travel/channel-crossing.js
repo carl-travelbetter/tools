@@ -73,7 +73,7 @@ function loadResults()
       let tagsList = document.createElement('ul');
       route.tags.forEach(tag => {
         let tagListItem = document.createElement('li');
-        tagListItem.textContent = tag;
+        tagListItem.textContent = "⭐ "+tag;
         tagsList.appendChild(tagListItem);
       });
       const routeOptions = document.createElement('h4');
@@ -94,7 +94,7 @@ function loadResults()
         //Although only one result, go through the result list and create an operator output
         operatorData.forEach(operator => {
           let operatorDiv = document.createElement('div');
-          operatorDiv.innerHTML = `<p><strong>${operator.operatorName}</strong> <a href="${operator.link}" target="_blank" rel="noopener noreferrer">Check Availability</a></p>`
+          operatorDiv.innerHTML = `<p>⛴️ <strong>${operator.operatorName}</strong> <a href="${operator.link}" target="_blank" rel="noopener noreferrer">Check Availability</a></p>`
           results.appendChild(operatorDiv);
         });
       });
