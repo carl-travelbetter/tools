@@ -79,4 +79,5 @@ function showFastestRoute()
 function showTable()
 {
   console.log('Channel Crossing: show table');
+  getEl('comparison-table').hidden = false;
 }
