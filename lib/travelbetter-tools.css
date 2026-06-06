@@ -563,6 +563,8 @@ li .span-action {
 }
 
 table, th, td {
+  margin-left: auto;
+  margin-right: auto;
   border: 1px solid black;
   border-collapse: collapse;
   padding: 15px;
