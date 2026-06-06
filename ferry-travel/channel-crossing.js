@@ -76,11 +76,10 @@ function loadResults()
         tagListItem.textContent = tag;
         tagsList.appendChild(tagListItem);
       });
-      const routeOptions = document.createElement('div');
-      routeOptions.innerHTML = `<h4>Route Options:</h4>
-                                <br>${tagsList}
-                                `;
+      const routeOptions = document.createElement('h4');
+      routeOptions.textContent = "Route Options:"                               
       results.appendChild(routeOptions);
+      results.appendChild(tagsList);
 
       const operatorHeader = document.createElement('h4');
       operatorHeader.textContent = "Route Operators:";
