@@ -64,7 +64,9 @@ function loadResults()
       let dayCrossingTime = document.createElement('p');
       dayCrossingTime.textContent = "Day Crossing Time: "+getHrsAndMinutes(route.dayCrossingTimeMins);
       results.appendChild(dayCrossingTime);
-      if (route.nightCrossingTimeMins > 0)
+      let nightRouteCheck = route.nightCrossingTimeMins;
+      console.log('Night Route Check '+nightRouteCheck);
+      if (nightRouteCheck > 0)
       {
         let nightCrossingTime = document.createElement('p');
         nightCrossingTime.textContent = "Night Crossing Time: "+getHrsAndMinutes(route.nightCrossingTimeMins);
