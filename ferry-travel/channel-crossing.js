@@ -53,7 +53,7 @@ function loadResults()
   {
     const results = getEl('results');
     results.innerHTML = "";
-    const routeLookup = routeData.filter(route => 
+    const routeLookup = ferryRoutes.filter(route => 
        route.id.includes(selectedRouteID)
     );
     
