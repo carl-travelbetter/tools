@@ -15,7 +15,7 @@
         <ul>
           <li><a href="https://travelbetter.co.uk">Travelbetter</a></li>
           <li><a href="https://tools.travelbetter.co.uk/index.html">Tools</a></li>
-          <li><a href="https://tools.travelbetter.co.uk/travel-fit/">Fitness Tracker</a></li>
+          <li><a href="https://tools.travelbetter.co.uk/ferry-travel/">Ferry Travel</a></li>
         </ul>
     </div>
     <div class="intro" id="intro">
@@ -42,10 +42,43 @@
             </select>
      </div>
     <div class="controls-card" id="load-comparison-table" hidden>
-           <button class="control-btn" id="load-table">Compare All Routes In A Table</button>
+         <button class="control-btn" id="load-table">Compare All Routes In A Table</button>
      </div>   
      
      <div class="display-card" id="results" hidden></div>
+     <div class="display-card" id="comparison-table" hidden>
+         <h2>Channel Crossing Times</h2>
+         <table>
+             <tr>
+                 <th>Ferry Route</th>
+                 <th>Crossing Time Day</th>
+                 <th>Crossing Time Night</th>
+                 <th>More</th>
+             </tr>
+             <tr>
+                 <td>Dover to Calais</td>
+                 <td>1h 30m</td>
+                 <td>1h 30m</td>
+                 <td><button class="control-btn" id="R0001">More</button></td>
+             </tr>
+             <tr>
+                 <td>Dover to Dunkirk</td>
+                 <td>2h 0m</td>
+                 <td>2h 0m</td>
+                 <td><button class="control-btn" id="R0002">More</button></td>
+             </tr>
+              <tr>
+                 <td>Portsmouth to Caen</td>
+                 <td>6h 0m</td>
+                 <td>6h 45m</td>
+                 <td><button class="control-btn" id="R0003">More</button></td>
+             </tr>
+         </table>
+         <br>
+         <p>Key:</p>
+         <p>h = hour(s)</p>
+         <p>m = minutes</p>
+     </div>
      <div class="display-card" id="alternatives" hidden>
         <h2>Alternative Options</h2>
          <p>Everyone's needs are unique, so if you don't quite agree with our choice or you can't find the availability you need then don't worry.</p>
@@ -139,8 +172,8 @@
             {
               "@type": "ListItem",
               "position": 4,
-              "name": "Best way to cross the channel with a car",
-              "item": "https://tools.travelbetter.co.uk/ferry-travel/best-way-to-cross-the-channel-with-a-car.html"
+              "name": "How long does it take to cross the english channel by ferry",
+              "item": "https://tools.travelbetter.co.uk/ferry-travel/how-long-does-it-take-to-cross-the-english-channel-by-ferry.html"
             }
           ]
         }
