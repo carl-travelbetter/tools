@@ -70,9 +70,9 @@ function loadResults()
       let sailings = document.createElement('p');
       sailings.textContent = "Sailings: "+route.sailings;
       results.appendChild(sailings);
-      let tagsList = document.create('ul');
+      let tagsList = document.createElement('ul');
       route.tags.forEach(tag => {
-        let tagListItem = document.create('li');
+        let tagListItem = document.createElement('li');
         tagList.textContent = tag;
         tagsList.appendChild(tagListItem);
       });
