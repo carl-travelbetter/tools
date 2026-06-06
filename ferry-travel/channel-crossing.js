@@ -64,9 +64,18 @@ function loadResults()
       let dayCrossingTime = document.createElement('p');
       dayCrossingTime.textContent = "Day Crossing Time: "+getHrsAndMinutes(route.dayCrossingTimeMins);
       results.appendChild(dayCrossingTime);
-      let nightCrossingTime = document.createElement('p');
-      nightCrossingTime.textContent = "Night Crossing Time: "+getHrsAndMinutes(route.nightCrossingTimeMins);
-      results.appendChild(nightCrossingTime);
+      if (route.nightCrossingTimeMins > 0)
+      {
+        let nightCrossingTime = document.createElement('p');
+        nightCrossingTime.textContent = "Night Crossing Time: "+getHrsAndMinutes(route.nightCrossingTimeMins);
+        results.appendChild(nightCrossingTime);
+      }
+      else
+      {
+        let nightCrossingTime = document.createElement('p');
+        nightCrossingTime.textContent = "Night Crossing Time: Night Crossing Not Available On This Route";
+        results.appendChild(nightCrossingTime);
+      }
       let sailings = document.createElement('p');
       sailings.textContent = "Sailings: "+route.sailings;
       results.appendChild(sailings);
