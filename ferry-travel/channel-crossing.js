@@ -62,8 +62,8 @@ function loadResults()
       routeName.textContent = "Route Name "+route.route;
       results.appendChild(routeName);   
       let dayCrossingTime = document.createElement('p');
-      crossingTime.textContent = "Crossing Time: "+getHrsAndMinutes(route.dayCrossingTimeMins);
-      results.appendChild(crossingTime);
+      dayCrossingTime.textContent = "Day Crossing Time: "+getHrsAndMinutes(route.dayCrossingTimeMins);
+      results.appendChild(dayCrossingTime);
     }
     );
     results.hidden = false;
