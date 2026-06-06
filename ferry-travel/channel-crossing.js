@@ -65,18 +65,20 @@ function loadResults()
       dayCrossingTime.textContent = "Day Crossing Time: "+getHrsAndMinutes(route.dayCrossingTimeMins);
       results.appendChild(dayCrossingTime);
       let nightCrossingTime = document.createElement('p');
-      nightCrossingTime.textContent = "Day Crossing Time: "+getHrsAndMinutes(route.nightCrossingTimeMins);
+      nightCrossingTime.textContent = "Night Crossing Time: "+getHrsAndMinutes(route.nightCrossingTimeMins);
       results.appendChild(nightCrossingTime);
       let sailings = document.createElement('p');
       sailings.textContent = "Sailings: "+route.sailings;
       results.appendChild(sailings);
-      let tagsList = "";
+      let tagsList = document.create('ul');
       route.tags.forEach(tag => {
-        tagsList = tagsList + tag +", ";
+        let tagListItem = document.create('li');
+        tagList.textContent = tag;
+        tagsList.appendChild(tagListItem);
       });
       const routeOptions = document.createElement('div');
-      routeOptions.innerHTML = `<p><strong>Route Options:</strong></p>
-                                <p>${tagsList}</p>
+      routeOptions.innerHTML = `<h4>Route Options:</h4>
+                                <br>${tagsList}
                                 `;
       results.appendChild(routeOptions);
 
