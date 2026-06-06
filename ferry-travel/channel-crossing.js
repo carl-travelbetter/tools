@@ -155,7 +155,7 @@ function showFastestRoute()
     
     routeLookup.forEach(route => {
       let routeName = document.createElement('h3');
-      routeName.textContent = "Route: "+route.route;
+      routeName.textContent = "Fatest Channel Crossing: "+route.route;
       results.appendChild(routeName);
       let dayRouteCheck = route.dayCrossingTimeMins;
       if (dayRouteCheck > 0)
