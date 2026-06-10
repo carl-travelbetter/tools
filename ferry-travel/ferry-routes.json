@@ -188,5 +188,43 @@
    "rating": 3,
    "tags": ["quiet-friendly", "cabins", "priority-boarding", "pet-friendly", "motor-homes", "accessible"],
    "notes": "Overnight only, good for Mont Saint-Michel"
+ },
+ {
+   "id": "R0011",
+   "route": "Plymouth to Santander",
+   "startPort": "Plymouth",
+   "destinationPort": "Santander",
+   "startRegion": "Devon",
+   "destinationRegion": "Cantabria",
+   "startCountry": "England",
+   "destinationCountry": "Spain",
+   "dayCrossingTimeMins": 1215,
+   "nightCrossingTimeMins": null,
+   "distance": "414 miles",
+   "operators": ["Brittany Ferries"],
+   "pricesFrom": "£165.00",
+   "sailings": "Twice a week - Wednesday and Sunday",
+   "rating": 4,
+   "tags": ["quiet-friendly", "cabins", "priority-boarding", "priority-disembarkation", "pet-friendly", "motor-homes", "accessible", "swimming-pool", "cinema"],
+   "notes": "Crossing is a day and a night, sold as a mini-cruise to start your holiday."
+ },
+ {
+   "id": "R0012",
+   "route": "Portsmouth to Santander",
+   "startPort": "Portsmouth",
+   "destinationPort": "Santander",
+   "startRegion": "Hampshire",
+   "destinationRegion": "Cantabria",
+   "startCountry": "England",
+   "destinationCountry": "Spain",
+   "dayCrossingTimeMins": 1980,
+   "nightCrossingTimeMins": null,
+   "distance": "541 miles",
+   "operators": ["Brittany Ferries"],
+   "pricesFrom": "£165.00",
+   "sailings": "Twice a week - Monday and Friday",
+   "rating": 4,
+   "tags": ["quiet-friendly", "cabins", "priority-boarding", "priority-disembarkation", "pet-friendly", "motor-homes", "accessible", "Video on-demand", "cinema", "wellness room", "kids play area"],
+   "notes": "Crossing is a day and a night, sold as a mini-cruise to start your holiday."
  }
 ]
