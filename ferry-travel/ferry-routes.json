@@ -226,5 +226,24 @@
    "rating": 4,
    "tags": ["quiet-friendly", "cabins", "priority-boarding", "priority-disembarkation", "pet-friendly", "motor-homes", "accessible", "Video on-demand", "cinema", "wellness room", "kids play area"],
    "notes": "Crossing is a day and a night, sold as a mini-cruise to start your holiday."
+ },
+ {
+   "id": "R0013",
+   "route": "Portsmouth to Bilbao",
+   "startPort": "Portsmouth",
+   "destinationPort": "Bilbao",
+   "startRegion": "Hampshire",
+   "destinationRegion": "Basque Country",
+   "startCountry": "England",
+   "destinationCountry": "Spain",
+   "dayCrossingTimeMins": 2160,
+   "nightCrossingTimeMins": null,
+   "distance": "533 miles",
+   "operators": ["Brittany Ferries"],
+   "pricesFrom": "£165.00",
+   "sailings": "Twice a week - Thursday and Sunday",
+   "rating": 4,
+   "tags": ["quiet-friendly", "cabins", "priority-boarding", "priority-disembarkation", "pet-friendly", "motor-homes", "accessible", "Video on-demand", "cinema", "wellness room", "kids play area"],
+   "notes": "Crossing is a day and a night, sold as a mini-cruise to start your holiday."
  }
 ]
