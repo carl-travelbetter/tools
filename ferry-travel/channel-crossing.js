@@ -33,6 +33,7 @@ fetch('ferry-operators.json')
 function bindEvents() {
   getEl('crossings')?.addEventListener("change", loadResults); 
   getEl('load-table')?.addEventListener("click", showTable);
+  getEl('load-spain-route-table')?.addEventListener("click", showSpainRouteTable);
 }
 
 //Ensure html bindings are not applied until the html structure is built
@@ -230,4 +231,13 @@ function showTable()
   getEl('alternatives').hidden = true;
   getEl('comparison-table').hidden = false;
   
+}
+
+//function to display the route comparison table
+function showSpainRouteTable()
+{
+  console.log('Channel Crossing: show Spain Route Table');
+  getEl('results').hidden = true;
+  getEl('alternatives').hidden = true;
+  getEl('spain-route-table').hidden = false; 
 }
