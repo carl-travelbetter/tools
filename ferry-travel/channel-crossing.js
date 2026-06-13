@@ -50,7 +50,7 @@ function loadResults()
   {
     showFastestRoute();
   }
-  else if (selectedRouteIt === "FSPAENG")
+  else if (selectedRouteID === "FSPAENG")
   {
     showFSPAENG();
   }
