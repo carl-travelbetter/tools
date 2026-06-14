@@ -99,7 +99,7 @@ function loadResults()
       let additionalNotes = document.createElement('p');
       let noteText = route.notes || "NULL";
       //if note text is present and not NULL
-      if (noteText <> "NULL")
+      if (noteText != "NULL")
       {
         additionalNotes.textContent = "Notes: "+noteText;
         results.appendChild(additionalNotes);
