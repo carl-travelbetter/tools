@@ -137,6 +137,7 @@ function loadResults()
     );
     results.hidden = false;
     getEl('alternatives').hidden = false;
+    getEl('comparison-table').hidden = true;
   }
 }
 
