@@ -97,7 +97,7 @@ function loadResults()
       sailings.textContent = "Sailings: "+route.sailings;
       results.appendChild(sailings);
       let additionalNotes = document.createElement('p');
-      noteText = route.notes || "Nonotes";
+      let noteText = route.notes || "Nonotes";
       additionalNotes.textContent = "Notes: "+noteText;
       results.appendChild(additionalNotes);
       let tagsList = document.createElement('ul');
