@@ -245,5 +245,24 @@
    "rating": 4,
    "tags": ["quiet-friendly", "cabins", "priority-boarding", "priority-disembarkation", "pet-friendly", "motor-homes", "accessible", "Video on-demand", "cinema", "wellness room", "kids play area"],
    "notes": "Crossing is a day and a night, sold as a mini-cruise to start your holiday."
+ },
+ {
+   "id": "R0014",
+   "route": "Rosslare to Bilbao",
+   "startPort": "Rosslare",
+   "destinationPort": "Bilbao",
+   "startRegion": "County Wexford",
+   "destinationRegion": "Basque Country",
+   "startCountry": "Republic of Ireland",
+   "destinationCountry": "Spain",
+   "dayCrossingTimeMins": 1650,
+   "nightCrossingTimeMins": 1860,
+   "distance": "653 miles",
+   "operators": ["Brittany Ferries"],
+   "pricesFrom": "£165.00",
+   "sailings": "Twice a week - Wednesday and Friday",
+   "rating": 4,
+   "tags": ["quiet-friendly", "cabins", "priority-boarding", "priority-disembarkation", "pet-friendly", "motor-homes", "accessible", "Video on-demand", "cinema", "wellness room", "kids play area", "games room"],
+   "notes": "The Friday crossing option is two nights at sea so we strongly recommend you get a cabin."
  }
 ]
