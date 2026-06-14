@@ -97,9 +97,13 @@ function loadResults()
       sailings.textContent = "Sailings: "+route.sailings;
       results.appendChild(sailings);
       let additionalNotes = document.createElement('p');
-      let noteText = route.notes || "Nonotes";
-      additionalNotes.textContent = "Notes: "+noteText;
-      results.appendChild(additionalNotes);
+      let noteText = route.notes || "NULL";
+      //if note text is present and not NULL
+      if (noteText <> "NULL")
+      {
+        additionalNotes.textContent = "Notes: "+noteText;
+        results.appendChild(additionalNotes);
+      }
       let tagsList = document.createElement('ul');
       route.tags.forEach(tag => {
         let tagListItem = document.createElement('li');
