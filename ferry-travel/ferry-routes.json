@@ -264,5 +264,24 @@
    "rating": 4,
    "tags": ["quiet-friendly", "cabins", "priority-boarding", "priority-disembarkation", "pet-friendly", "motor-homes", "accessible", "Video on-demand", "cinema", "wellness room", "kids play area", "games room"],
    "notes": "The Friday crossing option is two nights at sea so we strongly recommend you get a cabin."
+ },
+ {
+   "id": "R0015",
+   "route": "Cork to Roscoff",
+   "startPort": "Cork",
+   "destinationPort": "Roscoff",
+   "startRegion": "Cork",
+   "destinationRegion": "Brittany",
+   "startCountry": "Republic of Ireland",
+   "destinationCountry": "France",
+   "dayCrossingTimeMins": null,
+   "nightCrossingTimeMins": 900,
+   "distance": "369 miles",
+   "operators": ["Brittany Ferries"],
+   "pricesFrom": "£165.00",
+   "sailings": "Twice a week - Wednesday and Saturday",
+   "rating": 4,
+   "tags": ["quiet-friendly", "cabins", "priority-boarding", "priority-disembarkation", "pet-friendly", "motor-homes", "accessible", "cinema", "children's entertainment", "games room"],
+   "notes": "Both sailings go late afternoon around 4pm, and arrive in France around 8am so a cabin is recommended to provide a comfortable place to sleep."
  }
 ]
