@@ -66,7 +66,7 @@ function loadResult()
         {
           console.log('Route Operator '+routeOperator);
           const matchingOperators = operators.filter(item => 
-          item.operatorName.includes(routeOperator)
+          item.operatorID.includes(routeOperator)
           );
           matchingOperators.forEach(item =>
             {
