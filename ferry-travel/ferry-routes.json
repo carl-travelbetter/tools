@@ -283,5 +283,24 @@
    "rating": 4,
    "tags": ["quiet-friendly", "cabins", "priority-boarding", "priority-disembarkation", "pet-friendly", "motor-homes", "accessible", "cinema", "children's entertainment", "games room"],
    "notes": "Both sailings go late afternoon around 4pm, and arrive in France around 8am so a cabin is recommended to provide a comfortable place to sleep."
+ },
+  {
+   "id": "R0016",
+   "route": "Rosslare to Santander",
+   "startPort": "Rosslare",
+   "destinationPort": "Santander",
+   "startRegion": "County Wexford",
+   "destinationRegion": "Cantabria",
+   "startCountry": "Republic of Ireland",
+   "destinationCountry": "Spain",
+   "dayCrossingTimeMins": 1650,
+   "nightCrossingTimeMins": null,
+   "distance": "653 miles",
+   "operators": ["Brittany Ferries"],
+   "pricesFrom": "£165.00",
+   "sailings": "Once a week on a Tuesday",
+   "rating": 4,
+   "tags": ["quiet-friendly", "cabins", "priority-boarding", "priority-disembarkation", "pet-friendly", "motor-homes", "accessible", "Video on-demand", "cinema", "wellness room", "kids play area", "games room"],
+   "notes": "This route is only scheduled to run between November 2026 and March 2027 currently. The boat sails at 9am and arrive in Spain at 1pm the next day so a cabin is recommended."
  }
 ]
