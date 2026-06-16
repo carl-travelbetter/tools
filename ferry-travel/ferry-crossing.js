@@ -123,7 +123,7 @@ function loadResults()
       route.operators.forEach(operatorName => {
         //Filter the operator file by the operator name, this should only return one result
         const operatorData = operators.filter(item =>
-          item.operatorName.includes(operatorName)
+          item.operatorID.includes(operatorName)
           );
         //Although only one result, go through the result list and create an operator output
         operatorData.forEach(operator => {
