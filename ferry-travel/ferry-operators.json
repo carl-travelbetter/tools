@@ -82,5 +82,17 @@
    "footPassengers": true,
    "dogFriendly": true,
    "accessibilitySupport": true
+ },
+  {
+   "operatorID": "O0008",
+   "operatorName": "Brittany Ferries",
+   "amendmentPolicy": "Free changes up to 24 hours before departure with a flexible ticket.",
+   "cancellationPolicy": "Full refund if canceled 24+ hours in advance.",
+   "link": "https://tidd.ly/3QvCiPk",
+   "travelbetterRating": 4,
+   "moreInfoLink": "https://travelbetter.co.uk",
+   "footPassengers": true,
+   "dogFriendly": true,
+   "accessibilitySupport": true
  }
 ]
