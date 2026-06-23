@@ -350,8 +350,12 @@ function allFranceEngland()
       let sailDays = document.createElement('p');
       sailDays.textContent = "Sails on: "+route.sailDays;
       compareAllRoutes.appendChild(sailDays);
+      let sailingsPerDay = document.createElement('p');
+      sailingsPerDay.textContent = "Sailings p/day: "+route.sailingsPerDay;
+      compareAllRoutes.appendChild(sailingsPerDay);
       });
-         
+
+    getEl('results').hidden = true;
     compareAllRoutes.hidden = false;
   
 }
