@@ -34,6 +34,7 @@ function bindEvents() {
   getEl('crossings')?.addEventListener("change", loadResults); 
   getEl('load-table')?.addEventListener("click", showTable);
   getEl('load-spain-route-table')?.addEventListener("click", showSpainRouteTable);
+  getEl('all-france-england')?.addEventListener("click", allFranceEngland);
 }
 
 //Ensure html bindings are not applied until the html structure is built
