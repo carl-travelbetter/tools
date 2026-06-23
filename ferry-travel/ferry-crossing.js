@@ -345,7 +345,7 @@ function allFranceEngland()
   //Go through and create output
   fromEnglandFerries.forEach(route => {
       let routeName = document.createElement('p');
-      routeName.textContent = "⭐ "+route.route;
+      routeName.textContent = "⭐ "+route.route+" ⭐";
       compareAllRoutes.appendChild(routeName);
       });
          
