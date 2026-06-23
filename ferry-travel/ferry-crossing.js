@@ -325,6 +325,32 @@ function showTable()
   
 }
 
+function allFranceEngland()
+{
+  console.log("Ferry Crossing: All France from England Routes");
+  //Get all to-France ferries
+  let compareAllRoutes = getEl('compare-results');
+  compareAllRoutes.innerHTML = "";
+  const toFranceFerries = ferryRoutes.filter(route => 
+       route.destinationCounty.includes("France")
+  );
+
+  //Get all those from england
+ const fromEnglandFerries = toFranceFerries.filter(route =>
+    route.startCountry.includes("England");
+ );
+
+  //Go through and create output
+  fromEnglandFerries.forEach(route => {
+      let routeName = document.createElement('h3');
+      routeName.textContent = "Route: "+route.route;
+      compareAllRoutes.appendChild(routeName);
+      });
+         
+    compareAllRoutes.hidden = false;
+  
+}
+
 //function to display the route comparison table
 function showSpainRouteTable()
 {
