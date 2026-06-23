@@ -347,6 +347,9 @@ function allFranceEngland()
       let routeName = document.createElement('p');
       routeName.textContent = "⭐ "+route.route+" ⭐";
       compareAllRoutes.appendChild(routeName);
+      let sailDays = document.createElement('p');
+      sailDays.textContent = "Sails on: "+route.sailDays;
+      compareAllRoutes.appendChild(sailDays);
       });
          
     compareAllRoutes.hidden = false;
