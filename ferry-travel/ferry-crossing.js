@@ -344,15 +344,15 @@ function allFranceEngland()
 
   //Go through and create output
   fromEnglandFerries.forEach(route => {
-      let routeName = document.createElement('p');
-      routeName.textContent = "⭐ "+route.route+" ⭐";
-      compareAllRoutes.appendChild(routeName);
-      let sailDays = document.createElement('p');
-      sailDays.textContent = "Sails on: "+route.sailDays;
-      compareAllRoutes.appendChild(sailDays);
-      let sailingsPerDay = document.createElement('p');
-      sailingsPerDay.textContent = "Sailings p/day: "+route.sailingsPerDay;
-      compareAllRoutes.appendChild(sailingsPerDay);
+
+      const card = document.createElement("div");
+      //card.classList.add("ferryCard");
+      card.innerHTML = `
+      <h3>⛴️ ${route.route} ⛴️</h3>
+      <p><strong>Sails on:</strong> ${route.sailDays}</p>
+      <p><strong>Sailings p/day:</strong> ${route.sailingsPerDay}</p>
+      `;
+      compareAllRoutes.appendChild(card);
       });
 
     getEl('results').hidden = true;
