@@ -333,7 +333,7 @@ function allFranceEngland()
   let compareAllRoutes = getEl('compare-results');
   compareAllRoutes.innerHTML = "";
   const toFranceFerries = ferryRoutes.filter(route => 
-       route.destinationCounty.includes("France")
+       route.destinationCountry.includes("France")
   );
 
   //Get all those from england
