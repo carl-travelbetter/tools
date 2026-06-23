@@ -344,13 +344,14 @@ function allFranceEngland()
 
   //Go through and create output
   fromEnglandFerries.forEach(route => {
-
+      let crossingTime = getHrsAndMinutes(route.dayCrossingTimeMins);
       const card = document.createElement("div");
       //card.classList.add("ferryCard");
       card.innerHTML = `
       <h3>⛴️ ${route.route} ⛴️</h3>
       <p><strong>Sails on:</strong> ${route.sailDays}</p>
       <p><strong>Sailings p/day:</strong> ${route.sailingsPerDay}</p>
+      <p><strong>Crossing Time:</strong> ${crossingTime}</p>
       `;
       compareAllRoutes.appendChild(card);
       });
