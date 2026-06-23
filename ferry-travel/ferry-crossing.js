@@ -338,7 +338,7 @@ function allFranceEngland()
 
   //Get all those from england
  const fromEnglandFerries = toFranceFerries.filter(route =>
-    route.startCountry.includes("England");
+    route.startCountry.includes("England")
  );
 
   //Go through and create output
