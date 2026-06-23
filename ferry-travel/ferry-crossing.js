@@ -354,6 +354,20 @@ function allFranceEngland()
       <p><strong>Crossing Time:</strong> ${crossingTime}</p>
       `;
       compareAllRoutes.appendChild(card);
+
+      route.operators.forEach(operatorName => {
+        //Filter the operator file by the operator name, this should only return one result
+          const operatorData = operators.filter(item =>
+          item.operatorID.includes(operatorName)
+          );
+            //Although only one result, go through the result list and create an operator output
+            operatorData.forEach(operator => {
+              let operatorDiv = document.createElement('div');
+              operatorDiv.innerHTML = `<p>⛴️ <strong>${operator.operatorName}</strong> <a href="${operator.link}" target="_blank" rel="noopener noreferrer">Check Availability</a></p>`
+              compareAllRoutes.appendChild(operatorDiv);
+            });
+      });
+    
       });
 
     getEl('results').hidden = true;
