@@ -352,10 +352,12 @@ function allFranceEngland()
       <p><strong>Sails on:</strong> ${route.sailDays}</p>
       <p><strong>Sailings p/day:</strong> ${route.sailingsPerDay}</p>
       <p><strong>Crossing Time:</strong> ${crossingTime}</p>
+      <h4>Operators</h4>
       `;
       compareAllRoutes.appendChild(card);
 
       route.operators.forEach(operatorName => {
+        
         //Filter the operator file by the operator name, this should only return one result
           const operatorData = operators.filter(item =>
           item.operatorID.includes(operatorName)
