@@ -6,7 +6,7 @@ console.log('Country Lookup');
 //Import Dom utils
 import {getWrittenDate, getDuration, addDays} from "/lib/date-helper.js";
 import { getEl, getText, getDate} from "/lib/dom.js";
-import {getFlag} from "lib/country-helper.js";
+import {getFlag} from "/lib/country-helper.js";
 
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
