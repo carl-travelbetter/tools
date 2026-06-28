@@ -2,67 +2,192 @@
  {
    "iso-alpha-two": "AD",
    "iso-alpha-three": "",
-   "name": "Andorra",
+   "name": "Andorra"
  },
  {
    "iso-alpha-two": "AE",
    "iso-alpha-three": "",
-   "name": "United Arab Emirates",
+   "name": "United Arab Emirates"
  },
  {
    "iso-alpha-two": "AF",
    "iso-alpha-three": "",
-   "name": "Afghanistan",
+   "name": "Afghanistan"
  },
  {
    "iso-alpha-two": "AG",
    "iso-alpha-three": "",
-   "name": "Antigua and Barbuda",
+   "name": "Antigua and Barbuda"
  },
  { 
    "iso-alpha-two": "AI",
    "iso-alpha-three": "",
-   "name": "Anguilla",
+   "name": "Anguilla"
  },
  { 
    "iso-alpha-two": "AL",
    "iso-alpha-three": "",
-   "name": "Albania",
+   "name": "Albania"
+ },
+ { 
+   "iso-alpha-two": "AM",
+   "iso-alpha-three": "",
+   "name": "Armenia"
+ },
+ { 
+   "iso-alpha-two": "AO",
+   "iso-alpha-three": "",
+   "name": "Angola"
+ },
+ { 
+   "iso-alpha-two": "AQ",
+   "iso-alpha-three": "",
+   "name": "Antarctica"
+ },
+ { 
+   "iso-alpha-two": "AR",
+   "iso-alpha-three": "",
+   "name": "Argentina"
+ },
+ { 
+   "iso-alpha-two": "AS",
+   "iso-alpha-three": "",
+   "name": "American Samoa"
+ },
+ { 
+   "iso-alpha-two": "AT",
+   "iso-alpha-three": "",
+   "name": "Austria"
+ },
+ { 
+   "iso-alpha-two": "AU",
+   "iso-alpha-three": "",
+   "name": "Australia"
+ },
+ { 
+   "iso-alpha-two": "AW",
+   "iso-alpha-three": "",
+   "name": "Aruba"
+ },
+ { 
+   "iso-alpha-two": "AX",
+   "iso-alpha-three": "",
+   "name": "Åland Islands"
+ },
+ { 
+   "iso-alpha-two": "AZ",
+   "iso-alpha-three": "",
+   "name": "Azerbaijan"
+ },
+ { 
+   "iso-alpha-two": "BA",
+   "iso-alpha-three": "",
+   "name": "Bosnia and Herzegovina"
+ },
+ { 
+   "iso-alpha-two": "BB",
+   "iso-alpha-three": "",
+   "name": "Barbados"
+ },
+ { 
+   "iso-alpha-two": "BD",
+   "iso-alpha-three": "",
+   "name": "Bangladesh"
+ },
+ { 
+   "iso-alpha-two": "BE",
+   "iso-alpha-three": "",
+   "name": "Belgium"
+ },
+ { 
+   "iso-alpha-two": "BF",
+   "iso-alpha-three": "",
+   "name": "Burkina Faso"
+ },
+ { 
+   "iso-alpha-two": "BG",
+   "iso-alpha-three": "",
+   "name": "Bulgaria"
+ },
+ { 
+   "iso-alpha-two": "BH",
+   "iso-alpha-three": "",
+   "name": "Bahrain"
+ },
+ { 
+   "iso-alpha-two": "BI",
+   "iso-alpha-three": "",
+   "name": "Burundi"
+ },
+ { 
+   "iso-alpha-two": "BJ",
+   "iso-alpha-three": "",
+   "name": "Benin"
+ },
+ { 
+   "iso-alpha-two": "BL",
+   "iso-alpha-three": "",
+   "name": "Saint Barthélemy"
+ },
+ { 
+   "iso-alpha-two": "BM",
+   "iso-alpha-three": "",
+   "name": "Bermuda"
+ },
+ { 
+   "iso-alpha-two": "BN",
+   "iso-alpha-three": "",
+   "name": "Brunei Darussalam"
+ },
+ { 
+   "iso-alpha-two": "BO",
+   "iso-alpha-three": "",
+   "name": "Bolivia, Plurinational State of"
+ },
+ { 
+   "iso-alpha-two": "BQ",
+   "iso-alpha-three": "",
+   "name": "Caribbean Netherlands"
+ },
+ { 
+   "iso-alpha-two": "BR",
+   "iso-alpha-three": "",
+   "name": "Brazil"
+ },
+ { 
+   "iso-alpha-two": "BS",
+   "iso-alpha-three": "",
+   "name": "Bahamas"
+ },
+ { 
+   "iso-alpha-two": "BT",
+   "iso-alpha-three": "",
+   "name": "Bhutan"
+ },
+ { 
+   "iso-alpha-two": "BV",
+   "iso-alpha-three": "",
+   "name": "Bouvet Island"
+ },
+ { 
+   "iso-alpha-two": "BW",
+   "iso-alpha-three": "",
+   "name": "Botswana"
+ },
+ { 
+   "iso-alpha-two": "BY",
+   "iso-alpha-three": "",
+   "name": "Belarus"
+ },
+ { 
+   "iso-alpha-two": "BZ",
+   "iso-alpha-three": "",
+   "name": "Belize"
  },
   {
 
-    
-    "AM": "Armenia",
-    "AO": "Angola",
-    "AQ": "Antarctica",
-    "AR": "Argentina",
-    "AS": "American Samoa",
-    "AT": "Austria",
-    "AU": "Australia",
-    "AW": "Aruba",
-    "AX": "\u00c5land Islands",
-    "AZ": "Azerbaijan",
-    "BA": "Bosnia and Herzegovina",
-    "BB": "Barbados",
-    "BD": "Bangladesh",
-    "BE": "Belgium",
-    "BF": "Burkina Faso",
-    "BG": "Bulgaria",
-    "BH": "Bahrain",
-    "BI": "Burundi",
-    "BJ": "Benin",
-    "BL": "Saint Barthélemy",
-    "BM": "Bermuda",
-    "BN": "Brunei Darussalam",
-    "BO": "Bolivia, Plurinational State of",
-    "BQ": "Caribbean Netherlands",
-    "BR": "Brazil",
-    "BS": "Bahamas",
-    "BT": "Bhutan",
-    "BV": "Bouvet Island",
-    "BW": "Botswana",
-    "BY": "Belarus",
-    "BZ": "Belize",
+   
+  
     "CA": "Canada",
     "CC": "Cocos (Keeling) Islands",
     "CD": "Congo, the Democratic Republic of the",
