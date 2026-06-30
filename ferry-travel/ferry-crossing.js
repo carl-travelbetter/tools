@@ -95,8 +95,11 @@ function loadResults()
         results.appendChild(nightCrossingTime);
       }
       let sailings = document.createElement('p');
-      sailings.textContent = "Sailings: "+route.sailings;
+      sailings.textContent = "Sails: "+route.sailDays;
       results.appendChild(sailings);
+      let crossings = document.createElement('p');
+      crossings.textContent = "Crossings Per Day: "+route.sailingsPerDay;
+      results.appendChild(crossings);
       let additionalNotes = document.createElement('p');
       let noteText = route.notes || "NULL";
       //if note text is present and not NULL
