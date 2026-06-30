@@ -312,5 +312,24 @@
    "rating": 4,
    "tags": ["quiet-friendly", "cabins", "priority-boarding", "priority-disembarkation", "pet-friendly", "motor-homes", "accessible", "Video on-demand", "cinema", "wellness room", "kids play area", "games room"],
    "notes": "This route is currently only scheduled to run between November 2026 and March 2027. The boat sails at 9am and arrives in Spain at 1pm the next day so a cabin is recommended."
+ },
+ {
+   "id": "R0017",
+   "route": "Harwich to Hook of Holland",
+   "startPort": "Harwich - Folkstone",
+   "destinationPort": "Hook of Holland - Amsterdam",
+   "startRegion": "Essex",
+   "destinationRegion": "North Holland",
+   "startCountry": "England",
+   "destinationCountry": "Netherlands",
+   "dayCrossingTimeMins": 360,
+   "nightCrossingTimeMins": 400,
+   "distance": "653 miles",
+   "operators": ["O0004"],
+   "pricesFrom": "£165.00",
+   "sailings": "twice a day, seven days a week",
+   "rating": 4,
+   "tags": ["quiet-friendly", "cabins", "priority-boarding", "priority-disembarkation", "pet-friendly", "motor-homes", "accessible", "Video on-demand", "cinema", "wellness room", "kids play area", "games room"],
+   "notes": "This is the fastest ferry route to Holland (Netherlands) from the UK."
  }
 ]
