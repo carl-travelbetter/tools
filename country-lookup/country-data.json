@@ -279,10 +279,18 @@
    "iso-alpha-three": "",
    "name": "Czech Republic"
  },
+  { 
+   "iso-alpha-two": "DE",
+   "iso-alpha-three": "",
+   "name": "Germany"
+ },
+  { 
+   "iso-alpha-two": "DJ",
+   "iso-alpha-three": "",
+   "name": "Djibouti"
+ },
   {
 
-    "DE": "Germany",
-    "DJ": "Djibouti",
     "DK": "Denmark",
     "DM": "Dominica",
     "DO": "Dominican Republic",
