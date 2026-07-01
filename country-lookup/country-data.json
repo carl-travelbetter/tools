@@ -224,16 +224,27 @@
    "iso-alpha-three": "",
    "name": "Cook Islands"
  },
-  { 
+ { 
    "iso-alpha-two": "CL",
    "iso-alpha-three": "",
    "name": "Chile"
  },
+ { 
+   "iso-alpha-two": "CM",
+   "iso-alpha-three": "",
+   "name": "Cameroon"
+ },
+ { 
+   "iso-alpha-two": "CN",
+   "iso-alpha-three": "",
+   "name": "China (People's Republic of China)"
+ },
+ { 
+   "iso-alpha-two": "CO",
+   "iso-alpha-three": "",
+   "name": "Colombia"
+ },
   {
-
-    "CM": "Cameroon",
-    "CN": "China (People's Republic of China)",
-    "CO": "Colombia",
     "CR": "Costa Rica",
     "CU": "Cuba",
     "CV": "Cape Verde",
