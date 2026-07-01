@@ -244,10 +244,23 @@
    "iso-alpha-three": "",
    "name": "Colombia"
  },
+ { 
+   "iso-alpha-two": "CR",
+   "iso-alpha-three": "",
+   "name": "Costa Rica"
+ },
+ { 
+   "iso-alpha-two": "CU",
+   "iso-alpha-three": "",
+   "name": "Cuba"
+ },
+  { 
+   "iso-alpha-two": "CV",
+   "iso-alpha-three": "",
+   "name": ""Cape Verde"
+ },
   {
-    "CR": "Costa Rica",
-    "CU": "Cuba",
-    "CV": "Cape Verde",
+ 
     "CW": "Cura\u00e7ao",
     "CX": "Christmas Island",
     "CY": "Cyprus",
