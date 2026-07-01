@@ -184,17 +184,43 @@
    "iso-alpha-three": "",
    "name": "Belize"
  },
+ { 
+   "iso-alpha-two": "CA",
+   "iso-alpha-three": "",
+   "name": "Canada"
+ },
+ { 
+   "iso-alpha-two": "CC",
+   "iso-alpha-three": "",
+   "name": "Cocos (Keeling) Islands"
+ },
+ { 
+   "iso-alpha-two": "CD",
+   "iso-alpha-three": "",
+   "name": "Congo, the Democratic Republic of the"
+ },
+ { 
+   "iso-alpha-two": "CF",
+   "iso-alpha-three": "",
+   "name": "Central African Republic"
+ },
+  { 
+   "iso-alpha-two": "CG",
+   "iso-alpha-three": "",
+   "name": "Republic of the Congo"
+ },
+ { 
+   "iso-alpha-two": "CH",
+   "iso-alpha-three": "",
+   "name": "Switzerland"
+ },
+ { 
+   "iso-alpha-two": "CI",
+   "iso-alpha-three": "",
+   "name": "C\u00f4te d'Ivoire"
+ },
   {
 
-   
-  
-    "CA": "Canada",
-    "CC": "Cocos (Keeling) Islands",
-    "CD": "Congo, the Democratic Republic of the",
-    "CF": "Central African Republic",
-    "CG": "Republic of the Congo",
-    "CH": "Switzerland",
-    "CI": "C\u00f4te d'Ivoire",
     "CK": "Cook Islands",
     "CL": "Chile",
     "CM": "Cameroon",
