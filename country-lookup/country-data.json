@@ -289,9 +289,12 @@
    "iso-alpha-three": "",
    "name": "Djibouti"
  },
+  { 
+   "iso-alpha-two": "DK",
+   "iso-alpha-three": "",
+   "name": "Denmark"
+ },
   {
-
-    "DK": "Denmark",
     "DM": "Dominica",
     "DO": "Dominican Republic",
     "DZ": "Algeria",
