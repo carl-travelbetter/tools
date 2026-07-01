@@ -264,12 +264,23 @@
    "iso-alpha-three": "",
    "name": "Cura\u00e7ao"
  },
+ { 
+   "iso-alpha-two": "CX",
+   "iso-alpha-three": "",
+   "name": "Christmas Island"
+ },
+ { 
+   "iso-alpha-two": "CY",
+   "iso-alpha-three": "",
+   "name": "Cyprus"
+ },
+  { 
+   "iso-alpha-two": "CZ",
+   "iso-alpha-three": "",
+   "name": "Czech Republic"
+ },
   {
- 
-    
-    "CX": "Christmas Island",
-    "CY": "Cyprus",
-    "CZ": "Czech Republic",
+
     "DE": "Germany",
     "DJ": "Djibouti",
     "DK": "Denmark",
