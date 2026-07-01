@@ -257,11 +257,16 @@
   { 
    "iso-alpha-two": "CV",
    "iso-alpha-three": "",
-   "name": ""Cape Verde"
+   "name": "Cape Verde"
+ },
+ { 
+   "iso-alpha-two": "CW",
+   "iso-alpha-three": "",
+   "name": "Cura\u00e7ao"
  },
   {
  
-    "CW": "Cura\u00e7ao",
+    
     "CX": "Christmas Island",
     "CY": "Cyprus",
     "CZ": "Czech Republic",
