@@ -294,10 +294,23 @@
    "iso-alpha-three": "",
    "name": "Denmark"
  },
+ { 
+   "iso-alpha-two": "DM",
+   "iso-alpha-three": "",
+   "name": "Dominica"
+ },
+ { 
+   "iso-alpha-two": "DO",
+   "iso-alpha-three": "",
+   "name": "Dominican Republic"
+ },
+ { 
+   "iso-alpha-two": "DZ",
+   "iso-alpha-three": "",
+   "name": "Algeria"
+ },
   {
-    "DM": "Dominica",
-    "DO": "Dominican Republic",
-    "DZ": "Algeria",
+    
     "EC": "Ecuador",
     "EE": "Estonia",
     "EG": "Egypt",
