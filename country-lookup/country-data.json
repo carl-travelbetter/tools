@@ -314,11 +314,24 @@
    "iso-alpha-three": "",
    "name": "Ecuador"
  },
+ { 
+   "iso-alpha-two": "EE",
+   "iso-alpha-three": "",
+   "name": "Estonia"
+ },
+ { 
+   "iso-alpha-two": "EG",
+   "iso-alpha-three": "",
+   "name": "Egypt"
+ },
+ { 
+   "iso-alpha-two": "EH",
+   "iso-alpha-three": "",
+   "name": "Western Sahara"
+ },
   {
   
-    "EE": "Estonia",
-    "EG": "Egypt",
-    "EH": "Western Sahara",
+ 
     "ER": "Eritrea",
     "ES": "Spain",
     "ET": "Ethiopia",
