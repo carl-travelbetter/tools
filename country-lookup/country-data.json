@@ -309,9 +309,13 @@
    "iso-alpha-three": "",
    "name": "Algeria"
  },
+  { 
+   "iso-alpha-two": "EC",
+   "iso-alpha-three": "",
+   "name": "Ecuador"
+ },
   {
-    
-    "EC": "Ecuador",
+  
     "EE": "Estonia",
     "EG": "Egypt",
     "EH": "Western Sahara",
