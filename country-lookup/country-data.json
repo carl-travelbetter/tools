@@ -349,10 +349,18 @@
    "iso-alpha-three": "",
    "name": "Europe"
  },
+ { 
+   "iso-alpha-two": "FI",
+   "iso-alpha-three": "",
+   "name": "Finland"
+ },
+ { 
+   "iso-alpha-two": "FJ",
+   "iso-alpha-three": "",
+   "name": "Fiji"
+ },
   {
  
-    "FI": "Finland",
-    "FJ": "Fiji",
     "FK": "Falkland Islands (Malvinas)",
     "FM": "Micronesia, Federated States of",
     "FO": "Faroe Islands",
