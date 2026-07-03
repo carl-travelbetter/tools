@@ -329,13 +329,28 @@
    "iso-alpha-three": "",
    "name": "Western Sahara"
  },
+ { 
+   "iso-alpha-two": "ER",
+   "iso-alpha-three": "",
+   "name": "Eritrea"
+ },
+ { 
+   "iso-alpha-two": "ES",
+   "iso-alpha-three": "",
+   "name": "Spain"
+ },
+ { 
+   "iso-alpha-two": "ET",
+   "iso-alpha-three": "",
+   "name": "Ethiopia"
+ },
+  { 
+   "iso-alpha-two": "EU",
+   "iso-alpha-three": "",
+   "name": "Europe"
+ },
   {
-  
  
-    "ER": "Eritrea",
-    "ES": "Spain",
-    "ET": "Ethiopia",
-    "EU": "Europe",
     "FI": "Finland",
     "FJ": "Fiji",
     "FK": "Falkland Islands (Malvinas)",
