@@ -689,10 +689,18 @@
    "iso-alpha-three": "",
    "name": "Saint Lucia"
  },
+  { 
+   "iso-alpha-two": "LI",
+   "iso-alpha-three": "",
+   "name": "Liechtenstein"
+ },
+ { 
+   "iso-alpha-two": "LK",
+   "iso-alpha-three": "",
+   "name": "Sri Lanka"
+ },
  {
 
-    "LI": "Liechtenstein",
-    "LK": "Sri Lanka",
     "LR": "Liberia",
     "LS": "Lesotho",
     "LT": "Lithuania",
