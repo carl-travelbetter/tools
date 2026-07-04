@@ -359,18 +359,58 @@
    "iso-alpha-three": "",
    "name": "Fiji"
  },
+ { 
+   "iso-alpha-two": "FK",
+   "iso-alpha-three": "",
+   "name": "Falkland Islands (Malvinas)"
+ },
+ { 
+   "iso-alpha-two": "FM",
+   "iso-alpha-three": "",
+   "name": "Micronesia, Federated States of"
+ },
+ { 
+   "iso-alpha-two": "FO",
+   "iso-alpha-three": "",
+   "name": "Faroe Islands"
+ },
+ { 
+   "iso-alpha-two": "FR",
+   "iso-alpha-three": "",
+   "name": "France"
+ },
+ { 
+   "iso-alpha-two": "GA",
+   "iso-alpha-three": "",
+   "name": "Gabon"
+ },
+ { 
+   "iso-alpha-two": "GB-ENG",
+   "iso-alpha-three": "",
+   "name": "England"
+ },
+ { 
+   "iso-alpha-two": "GB-NIR",
+   "iso-alpha-three": "",
+   "name": "Northern Ireland"
+ },
+ { 
+   "iso-alpha-two": "GB-SCT",
+   "iso-alpha-three": "",
+   "name": "Scotland"
+ },
+ { 
+   "iso-alpha-two": "GB-WLS",
+   "iso-alpha-three": "",
+   "name": "Wales"
+ },
+ { 
+   "iso-alpha-two": "GB",
+   "iso-alpha-three": "",
+   "name": "United Kingdom"
+ },
   {
- 
-    "FK": "Falkland Islands (Malvinas)",
-    "FM": "Micronesia, Federated States of",
-    "FO": "Faroe Islands",
-    "FR": "France",
-    "GA": "Gabon",
-    "GB-ENG": "England",
-    "GB-NIR": "Northern Ireland",
-    "GB-SCT": "Scotland",
-    "GB-WLS": "Wales",
-    "GB": "United Kingdom",
+
     "GD": "Grenada",
     "GE": "Georgia",
     "GF": "French Guiana",
