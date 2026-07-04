@@ -409,9 +409,13 @@
    "iso-alpha-three": "",
    "name": "United Kingdom"
  },
+ { 
+   "iso-alpha-two": "GD",
+   "iso-alpha-three": "",
+   "name": "Grenada"
+ },
   {
 
-    "GD": "Grenada",
     "GE": "Georgia",
     "GF": "French Guiana",
     "GG": "Guernsey",
