@@ -414,25 +414,118 @@
    "iso-alpha-three": "",
    "name": "Grenada"
  },
-  {
+ { 
+   "iso-alpha-two": "GE",
+   "iso-alpha-three": "",
+   "name": "Georgia"
+ },
+ { 
+   "iso-alpha-two": "GF",
+   "iso-alpha-three": "",
+   "name": "French Guiana"
+ },
+ { 
+   "iso-alpha-two": "GG",
+   "iso-alpha-three": "",
+   "name": "Guernsey"
+ },
+ { 
+   "iso-alpha-two": "GH",
+   "iso-alpha-three": "",
+   "name": "Ghana"
+ },
+ { 
+   "iso-alpha-two": "GI",
+   "iso-alpha-three": "",
+   "name": "Gibraltar"
+ },
+ { 
+   "iso-alpha-two": "GL",
+   "iso-alpha-three": "",
+   "name": "Greenland"
+ },
+ { 
+   "iso-alpha-two": "GM",
+   "iso-alpha-three": "",
+   "name": "Gambia"
+ },
+ { 
+   "iso-alpha-two": "GN",
+   "iso-alpha-three": "",
+   "name": "Guinea"
+ },
+ { 
+   "iso-alpha-two": "GP",
+   "iso-alpha-three": "",
+   "name": "Guadeloupe"
+ },
+ { 
+   "iso-alpha-two": "GI",
+   "iso-alpha-three": "",
+   "name": "Gibraltar"
+ },
+ { 
+   "iso-alpha-two": "GL",
+   "iso-alpha-three": "",
+   "name": "Greenland"
+ },
+  { 
+   "iso-alpha-two": "GM",
+   "iso-alpha-three": "",
+   "name": "Gambia"
+ },
+  { 
+   "iso-alpha-two": "GN",
+   "iso-alpha-three": "",
+   "name": "Guinea"
+ },
+ { 
+   "iso-alpha-two": "GP",
+   "iso-alpha-three": "",
+   "name": "Guadeloupe"
+ },
+ { 
+   "iso-alpha-two": "GQ",
+   "iso-alpha-three": "",
+   "name": "Equatorial Guinea"
+ },
+ { 
+   "iso-alpha-two": "GR",
+   "iso-alpha-three": "",
+   "name": "Greece"
+ },
+ { 
+   "iso-alpha-two": "GS",
+   "iso-alpha-three": "",
+   "name": "South Georgia and the South Sandwich Islands"
+ },
+ { 
+   "iso-alpha-two": "GT",
+   "iso-alpha-three": "",
+   "name": "Guatemala"
+ },
+ { 
+   "iso-alpha-two": "GU",
+   "iso-alpha-three": "",
+   "name": "Guam"
+ },
+ { 
+   "iso-alpha-two": "GW",
+   "iso-alpha-three": "",
+   "name": "Guinea-Bissau"
+ },
+ { 
+   "iso-alpha-two": "GY",
+   "iso-alpha-three": "",
+   "name": "Guyana"
+ },
+ { 
+   "iso-alpha-two": "HK",
+   "iso-alpha-three": "",
+   "name": "Hong Kong"
+ },
+ {
 
-    "GE": "Georgia",
-    "GF": "French Guiana",
-    "GG": "Guernsey",
-    "GH": "Ghana",
-    "GI": "Gibraltar",
-    "GL": "Greenland",
-    "GM": "Gambia",
-    "GN": "Guinea",
-    "GP": "Guadeloupe",
-    "GQ": "Equatorial Guinea",
-    "GR": "Greece",
-    "GS": "South Georgia and the South Sandwich Islands",
-    "GT": "Guatemala",
-    "GU": "Guam",
-    "GW": "Guinea-Bissau",
-    "GY": "Guyana",
-    "HK": "Hong Kong",
     "HM": "Heard Island and McDonald Islands",
     "HN": "Honduras",
     "HR": "Croatia",
