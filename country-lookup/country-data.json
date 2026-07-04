@@ -619,19 +619,63 @@
    "iso-alpha-three": "",
    "name": "Japan"
  },
+ { 
+   "iso-alpha-two": "KE",
+   "iso-alpha-three": "",
+   "name": "Kenya"
+ },
+ { 
+   "iso-alpha-two": "KG",
+   "iso-alpha-three": "",
+   "name": "Kyrgyzstan"
+ },
+ { 
+   "iso-alpha-two": "KH",
+   "iso-alpha-three": "",
+   "name": "Cambodia"
+ },
+ { 
+   "iso-alpha-two": "KI",
+   "iso-alpha-three": "",
+   "name": "Kiribati"
+ },
+ { 
+   "iso-alpha-two": "KM",
+   "iso-alpha-three": "",
+   "name": "Comoros"
+ },
+ { 
+   "iso-alpha-two": "KN",
+   "iso-alpha-three": "",
+   "name": "Saint Kitts and Nevis"
+ },
+ { 
+   "iso-alpha-two": "KP",
+   "iso-alpha-three": "",
+   "name": "Korea, Democratic People's Republic of"
+ },
+ { 
+   "iso-alpha-two": "KR",
+   "iso-alpha-three": "",
+   "name": "Korea, Republic of"
+ },
+ { 
+   "iso-alpha-two": "KW",
+   "iso-alpha-three": "",
+   "name": "Kuwait"
+ },
+ { 
+   "iso-alpha-two": "KY",
+   "iso-alpha-three": "",
+   "name": "Cayman Islands"
+ },
+ { 
+   "iso-alpha-two": "KZ",
+   "iso-alpha-three": "",
+   "name": "Kazakhstan"
+ },
  {
 
-    "KE": "Kenya",
-    "KG": "Kyrgyzstan",
-    "KH": "Cambodia",
-    "KI": "Kiribati",
-    "KM": "Comoros",
-    "KN": "Saint Kitts and Nevis",
-    "KP": "Korea, Democratic People's Republic of",
-    "KR": "Korea, Republic of",
-    "KW": "Kuwait",
-    "KY": "Cayman Islands",
-    "KZ": "Kazakhstan",
     "LA": "Laos (Lao People's Democratic Republic)",
     "LB": "Lebanon",
     "LC": "Saint Lucia",
