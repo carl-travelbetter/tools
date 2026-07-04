@@ -524,13 +524,33 @@
    "iso-alpha-three": "",
    "name": "Hong Kong"
  },
+ { 
+   "iso-alpha-two": "HM",
+   "iso-alpha-three": "",
+   "name": "Heard Island and McDonald Islands"
+ },
+ { 
+   "iso-alpha-two": "HN",
+   "iso-alpha-three": "",
+   "name": "Honduras"
+ },
+ { 
+   "iso-alpha-two": "HR",
+   "iso-alpha-three": "",
+   "name": "Croatia"
+ },
+ { 
+   "iso-alpha-two": "HT",
+   "iso-alpha-three": "",
+   "name": "Haiti"
+ },
+ { 
+   "iso-alpha-two": "HU",
+   "iso-alpha-three": "",
+   "name": "Hungary"
+ },
  {
 
-    "HM": "Heard Island and McDonald Islands",
-    "HN": "Honduras",
-    "HR": "Croatia",
-    "HT": "Haiti",
-    "HU": "Hungary",
     "ID": "Indonesia",
     "IE": "Ireland",
     "IL": "Israel",
