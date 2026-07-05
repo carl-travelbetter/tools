@@ -78,11 +78,6 @@ function loadCountryData(countryID)
   results.hidden = false;
 }
 
-function foreignOfficeAdvice(countryName)
-{
-  https://www.gov.uk/api/content/foreign-travel-advice/[country]
-}
-
 async function foreignOfficeAdvice(countryName) {
   const url = `https://www.gov.uk/api/content/foreign-travel-advice/${countryName}`;
 
