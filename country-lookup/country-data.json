@@ -1115,43 +1115,188 @@
    "name": "Kingdom of Eswatini"
  },
  { 
- 
- 
-    "TC": "Turks and Caicos Islands",
-    "TD": "Chad",
-    "TF": "French Southern Territories",
-    "TG": "Togo",
-    "TH": "Thailand",
-    "TJ": "Tajikistan",
-    "TK": "Tokelau",
-    "TL": "Timor-Leste",
-    "TM": "Turkmenistan",
-    "TN": "Tunisia",
-    "TO": "Tonga",
-    "TR": "Republic of Türkiye",
-    "TT": "Trinidad and Tobago",
-    "TV": "Tuvalu",
-    "TW": "Taiwan (Republic of China)",
-    "TZ": "Tanzania, United Republic of",
-    "UA": "Ukraine",
-    "UG": "Uganda",
-    "UM": "US Minor Outlying Islands",
-    "US": "United States",
-    "UY": "Uruguay",
-    "UZ": "Uzbekistan",
-    "VA": "Holy See (Vatican City State)",
-    "VC": "Saint Vincent and the Grenadines",
-    "VE": "Venezuela, Bolivarian Republic of",
-    "VG": "Virgin Islands, British",
-    "VI": "Virgin Islands, U.S.",
-    "VN": "Vietnam",
-    "VU": "Vanuatu",
-    "WF": "Wallis and Futuna Islands",
-    "WS": "Samoa",
-    "XK": "Kosovo",
-    "YE": "Yemen",
-    "YT": "Mayotte",
-    "ZA": "South Africa",
-    "ZM": "Zambia",
-    "ZW": "Zimbabwe"
-}
+   "iso-alpha-two": "TC",
+   "iso-alpha-three": "",
+   "name": "Turks and Caicos Islands"
+ },
+ { 
+   "iso-alpha-two": "TD",
+   "iso-alpha-three": "",
+   "name": "Chad"
+ },
+ { 
+   "iso-alpha-two": "TF",
+   "iso-alpha-three": "",
+   "name": "French Southern Territories"
+ },
+ { 
+   "iso-alpha-two": "TG",
+   "iso-alpha-three": "",
+   "name": "Togo"
+ },
+ { 
+   "iso-alpha-two": "TH",
+   "iso-alpha-three": "",
+   "name": "Thailand"
+ },
+ { 
+   "iso-alpha-two": "TJ",
+   "iso-alpha-three": "",
+   "name": "Tajikistan"
+ },
+ { 
+   "iso-alpha-two": "TK",
+   "iso-alpha-three": "",
+   "name": "Tokelau"
+ },
+ { 
+   "iso-alpha-two": "TL",
+   "iso-alpha-three": "",
+   "name": "Timor-Leste"
+ },
+ { 
+   "iso-alpha-two": "TM",
+   "iso-alpha-three": "",
+   "name": "Turkmenistan"
+ },
+ { 
+   "iso-alpha-two": "TN",
+   "iso-alpha-three": "",
+   "name": "Tunisia"
+ },
+ { 
+   "iso-alpha-two": "TO",
+   "iso-alpha-three": "",
+   "name": "Tonga"
+ },
+ { 
+   "iso-alpha-two": "TR",
+   "iso-alpha-three": "",
+   "name": "Republic of Türkiye"
+ },
+ { 
+   "iso-alpha-two": "TT",
+   "iso-alpha-three": "",
+   "name": "Trinidad and Tobago"
+ },
+ { 
+   "iso-alpha-two": "TV",
+   "iso-alpha-three": "",
+   "name": "Tuvalu"
+ },
+ { 
+   "iso-alpha-two": "TW",
+   "iso-alpha-three": "",
+   "name": "Taiwan (Republic of China)"
+ },
+ { 
+   "iso-alpha-two": "TZ",
+   "iso-alpha-three": "",
+   "name": "Tanzania, United Republic of"
+ },
+ { 
+   "iso-alpha-two": "UA",
+   "iso-alpha-three": "",
+   "name": "Ukraine"
+ },
+ { 
+   "iso-alpha-two": "UG",
+   "iso-alpha-three": "",
+   "name": "Uganda"
+ },
+ { 
+   "iso-alpha-two": "UM",
+   "iso-alpha-three": "",
+   "name": "US Minor Outlying Islands"
+ },
+ { 
+   "iso-alpha-two": "US",
+   "iso-alpha-three": "",
+   "name": "United States"
+ },
+ { 
+   "iso-alpha-two": "UY",
+   "iso-alpha-three": "",
+   "name": "Uruguay"
+ },
+ { 
+   "iso-alpha-two": "UZ",
+   "iso-alpha-three": "",
+   "name": "Uzbekistan"
+ },
+ { 
+   "iso-alpha-two": "VA",
+   "iso-alpha-three": "",
+   "name": "Holy See (Vatican City State)"
+ },
+ { 
+   "iso-alpha-two": "VC",
+   "iso-alpha-three": "",
+   "name": "Saint Vincent and the Grenadines"
+ },
+ { 
+   "iso-alpha-two": "VE",
+   "iso-alpha-three": "",
+   "name": "Venezuela, Bolivarian Republic of"
+ },
+ { 
+   "iso-alpha-two": "VG",
+   "iso-alpha-three": "",
+   "name": "Virgin Islands, British"
+ },
+ { 
+   "iso-alpha-two": "VI",
+   "iso-alpha-three": "",
+   "name": "Virgin Islands, U.S."
+ },
+ { 
+   "iso-alpha-two": "VN",
+   "iso-alpha-three": "",
+   "name": "Vietnam"
+ },
+ { 
+   "iso-alpha-two": "VU",
+   "iso-alpha-three": "",
+   "name": "Vanuatu"
+ },
+ { 
+   "iso-alpha-two": "WF",
+   "iso-alpha-three": "",
+   "name": "Wallis and Futuna Islands"
+ },
+ { 
+   "iso-alpha-two": "WS",
+   "iso-alpha-three": "",
+   "name": "Samoa"
+ },
+ { 
+   "iso-alpha-two": "XK",
+   "iso-alpha-three": "",
+   "name": "Kosovo"
+ },
+  { 
+   "iso-alpha-two": "YE",
+   "iso-alpha-three": "",
+   "name": "Yemen"
+ },
+  { 
+   "iso-alpha-two": "YT",
+   "iso-alpha-three": "",
+   "name": "Mayotte"
+ },
+  { 
+   "iso-alpha-two": "ZA",
+   "iso-alpha-three": "",
+   "name": "South Africa"
+ },
+ { 
+   "iso-alpha-two": "ZM",
+   "iso-alpha-three": "",
+   "name": "Zambia"
+ },
+ { 
+   "iso-alpha-two": "ZW",
+   "iso-alpha-three": "",
+   "name": "Zimbabwe"
+ }
+]
