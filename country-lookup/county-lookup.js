@@ -48,6 +48,7 @@ function createCountrySelector()
   selector.appendChild(option2);
   countrySelectorDiv.innerHTML = "";
   countrySelectorDiv.appendChild(selector);
+  console.log('Country Lookup: End Country Selector ');
 }
 
 function loadCountryData()
