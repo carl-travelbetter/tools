@@ -40,7 +40,7 @@ function createCountrySelector()
   const selector = document.createElement('select');
   selector.className = 'option-selection';
   selector.addEventListener("change", (event) => {
-    outputSelection(event.target.value);
+    loadCountryData(event.target.value);
   });
   let placeHolder = document.createElement('option');
   placeHolder.value = 'Placeholder';
@@ -63,11 +63,10 @@ function outputSelection(countryID)
   console.log('Country Lookup: Country ID '+countryID);
 }
   
-function loadCountryData()
+function loadCountryData(countryID)
 {
   console.log('Country Lookup: Load Country Data ');
-  const selectedCountryID = getEl('country').value;
-  let flagLocation = getFlag(selectedCountryID);
+  let flagLocation = getFlag(countryID);
   console.log('flag location '+flagLocation);
   const results = getEl('results');
   results.innerHTML = "";
