@@ -845,10 +845,67 @@
    "name": "Mozambique"
  },
  { 
+   "iso-alpha-two": "NA",
+   "iso-alpha-three": "",
+   "name": "Namibia"
+ },
+ { 
+   "iso-alpha-two": "NC",
+   "iso-alpha-three": "",
+   "name": "New Caledonia"
+ },
+ { 
+   "iso-alpha-two": "NE",
+   "iso-alpha-three": "",
+   "name": "Niger"
+ },
+ { 
+   "iso-alpha-two": "NF",
+   "iso-alpha-three": "",
+   "name": "Norfolk Island"
+ },
+ { 
+   "iso-alpha-two": "NG",
+   "iso-alpha-three": "",
+   "name": "Nigeria"
+ },
+ { 
+   "iso-alpha-two": "NI",
+   "iso-alpha-three": "",
+   "name": "Nicaragua"
+ },
+ { 
+   "iso-alpha-two": "NL",
+   "iso-alpha-three": "",
+   "name": "Netherlands"
+ },
+ { 
+   "iso-alpha-two": "NO",
+   "iso-alpha-three": "",
+   "name": "Norway"
+ },
+ { 
+   "iso-alpha-two": "NP",
+   "iso-alpha-three": "",
+   "name": "Nepal"
+ },
+ { 
+   "iso-alpha-two": "NR",
+   "iso-alpha-three": "",
+   "name": "Nauru"
+ },
+ { 
+   "iso-alpha-two": "NU",
+   "iso-alpha-three": "",
+   "name": "Niue"
+ },
+ { 
+   "iso-alpha-two": "NZ",
+   "iso-alpha-three": "",
+   "name": "New Zealand"
+ },
+ { 
    
-    "MX": "Mexico",
-    "MY": "Malaysia",
-    "MZ": "Mozambique",
     "NA": "Namibia",
     "NC": "New Caledonia",
     "NE": "Niger",
