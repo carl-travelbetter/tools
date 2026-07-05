@@ -980,21 +980,102 @@
    "name": "Paraguay"
  },
  { 
-   
-    "QA": "Qatar",
-    "RE": "Réunion",
-    "RO": "Romania",
-    "RS": "Serbia",
-    "RU": "Russian Federation",
-    "RW": "Rwanda",
-    "SA": "Saudi Arabia",
-    "SB": "Solomon Islands",
-    "SC": "Seychelles",
-    "SD": "Sudan",
-    "SE": "Sweden",
-    "SG": "Singapore",
-    "SH": "Saint Helena, Ascension and Tristan da Cunha",
-    "SI": "Slovenia",
+   "iso-alpha-two": "QA",
+   "iso-alpha-three": "",
+   "name": "Qatar"
+ },
+ { 
+   "iso-alpha-two": "RE",
+   "iso-alpha-three": "",
+   "name": "Réunion"
+ },
+ { 
+   "iso-alpha-two": "RO",
+   "iso-alpha-three": "",
+   "name": "Romania"
+ },
+ { 
+   "iso-alpha-two": "RS",
+   "iso-alpha-three": "",
+   "name": "Serbia"
+ },
+ { 
+   "iso-alpha-two": "RU",
+   "iso-alpha-three": "",
+   "name": "Russian Federation"
+ },
+ { 
+   "iso-alpha-two": "RW",
+   "iso-alpha-three": "",
+   "name": "Rwanda"
+ },
+ { 
+   "iso-alpha-two": "SA",
+   "iso-alpha-three": "",
+   "name": "Saudi Arabia"
+ },
+ { 
+   "iso-alpha-two": "SB",
+   "iso-alpha-three": "",
+   "name": "Solomon Islands"
+ },
+ { 
+   "iso-alpha-two": "SC",
+   "iso-alpha-three": "",
+   "name": "Seychelles"
+ },
+ { 
+   "iso-alpha-two": "SD",
+   "iso-alpha-three": "",
+   "name": "Sudan"
+ },
+ { 
+   "iso-alpha-two": "SE",
+   "iso-alpha-three": "",
+   "name": "Sweden"
+ },
+ { 
+   "iso-alpha-two": "SG",
+   "iso-alpha-three": "",
+   "name": "Singapore"
+ },
+ { 
+   "iso-alpha-two": "SH",
+   "iso-alpha-three": "",
+   "name": "Saint Helena, Ascension and Tristan da Cunha"
+ },
+ { 
+   "iso-alpha-two": "SI",
+   "iso-alpha-three": "",
+   "name": "Slovenia"
+ },
+ { 
+   "iso-alpha-two": "SJ",
+   "iso-alpha-three": "",
+   "name": "Svalbard and Jan Mayen Islands"
+ },
+ { 
+   "iso-alpha-two": "SK",
+   "iso-alpha-three": "",
+   "name": "Slovakia"
+ },
+ { 
+   "iso-alpha-two": "SL",
+   "iso-alpha-three": "",
+   "name": "Sierra Leone"
+ },
+ { 
+   "iso-alpha-two": "SM",
+   "iso-alpha-three": "",
+   "name": "San Marino"
+ },
+ { 
+   "iso-alpha-two": "SN",
+   "iso-alpha-three": "",
+   "name": "Senegal"
+ },
+ { 
+ 
     "SJ": "Svalbard and Jan Mayen Islands",
     "SK": "Slovakia",
     "SL": "Sierra Leone",
