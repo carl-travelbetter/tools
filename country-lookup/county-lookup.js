@@ -71,6 +71,7 @@ function loadCountryData(countryID)
   const results = getEl('results');
   results.innerHTML = "";
   let flag = document.createElement('div');
+  flag.className = 'flag-card';
   flag.innerHTML = `<h3>Flag</h3> 
                     <img src="${flagLocation}" width="200px" />
                     `;
