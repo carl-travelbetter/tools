@@ -905,34 +905,82 @@
    "name": "New Zealand"
  },
  { 
+   "iso-alpha-two": "OM",
+   "iso-alpha-three": "",
+   "name": "Oman"
+ },
+ { 
+   "iso-alpha-two": "PA",
+   "iso-alpha-three": "",
+   "name": "Panama"
+ },
+ { 
+   "iso-alpha-two": "PE",
+   "iso-alpha-three": "",
+   "name": "Peru"
+ },
+ { 
+   "iso-alpha-two": "PF",
+   "iso-alpha-three": "",
+   "name": "French Polynesia"
+ },
+ { 
+   "iso-alpha-two": "PG",
+   "iso-alpha-three": "",
+   "name": "Papua New Guinea"
+ },
+ { 
+   "iso-alpha-two": "PH",
+   "iso-alpha-three": "",
+   "name": "Philippines"
+ },
+ { 
+   "iso-alpha-two": "PK",
+   "iso-alpha-three": "",
+   "name": "Pakistan"
+ },
+ { 
+   "iso-alpha-two": "PL",
+   "iso-alpha-three": "",
+   "name": "Poland"
+ },
+ { 
+   "iso-alpha-two": "PM",
+   "iso-alpha-three": "",
+   "name": "Saint Pierre and Miquelon"
+ },
+ { 
+   "iso-alpha-two": "PN",
+   "iso-alpha-three": "",
+   "name": "Pitcairn"
+ },
+ { 
+   "iso-alpha-two": "PR",
+   "iso-alpha-three": "",
+   "name": "Puerto Rico"
+ },
+ { 
+   "iso-alpha-two": "PS",
+   "iso-alpha-three": "",
+   "name": "Palestine"
+ },
+ { 
+   "iso-alpha-two": "PT",
+   "iso-alpha-three": "",
+   "name": "Portugal"
+ },
+ { 
+   "iso-alpha-two": "PW",
+   "iso-alpha-three": "",
+   "name": "Palau"
+ },
+ { 
+   "iso-alpha-two": "PY",
+   "iso-alpha-three": "",
+   "name": "Paraguay"
+ },
+ { 
    
-    "NA": "Namibia",
-    "NC": "New Caledonia",
-    "NE": "Niger",
-    "NF": "Norfolk Island",
-    "NG": "Nigeria",
-    "NI": "Nicaragua",
-    "NL": "Netherlands",
-    "NO": "Norway",
-    "NP": "Nepal",
-    "NR": "Nauru",
-    "NU": "Niue",
-    "NZ": "New Zealand",
-    "OM": "Oman",
-    "PA": "Panama",
-    "PE": "Peru",
-    "PF": "French Polynesia",
-    "PG": "Papua New Guinea",
-    "PH": "Philippines",
-    "PK": "Pakistan",
-    "PL": "Poland",
-    "PM": "Saint Pierre and Miquelon",
-    "PN": "Pitcairn",
-    "PR": "Puerto Rico",
-    "PS": "Palestine",
-    "PT": "Portugal",
-    "PW": "Palau",
-    "PY": "Paraguay",
     "QA": "Qatar",
     "RE": "Réunion",
     "RO": "Romania",
