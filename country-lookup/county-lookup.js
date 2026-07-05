@@ -40,7 +40,7 @@ function createCountrySelector()
   const selector = document.createElement('select');
   selector.className = 'option-selection';
   selector.addEventListener("change", outputSelection(selector.value)); 
-  countryData.forEach{country =>
+  countryData.forEach(country =>
     {
       console.log('Country Lookup '+country.name);
     });
