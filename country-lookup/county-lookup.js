@@ -21,7 +21,7 @@ fetch('country-data.json')
     getEl('country-lookup').hidden = false;
     getEl('load-comparison-table').hidden = false;
   })
-  .catch(error => console.error("Error loading Ferry Routes:", error));
+  .catch(error => console.error("Error loading Country Data:", error));
 
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
