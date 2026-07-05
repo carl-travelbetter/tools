@@ -19,7 +19,6 @@ fetch('country-data.json')
     getEl('data-loading').hidden = true;
     createCountrySelector();
     getEl('country-lookup').hidden = false;
-    getEl('load-comparison-table').hidden = false;
   })
   .catch(error => console.error("Error loading Country Data:", error));
 
