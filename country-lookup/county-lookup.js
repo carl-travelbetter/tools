@@ -77,3 +77,55 @@ function loadCountryData(countryID)
   results.appendChild(flag);
   results.hidden = false;
 }
+
+function foreignOfficeAdvice(countryName)
+{
+  https://www.gov.uk/api/content/foreign-travel-advice/[country]
+}
+
+async function foreignOfficeAdvice(countryName) {
+  const url = `https://www.gov.uk/api/content/foreign-travel-advice/${countryName}`;
+
+  const controller = new AbortController();
+
+  // Timeout after 5 seconds
+  const timeoutId = setTimeout(() => {
+    controller.abort();
+  }, 5000);
+
+  try {
+    const res = await fetch(url, {
+      signal: controller.signal
+    });
+
+    if (!res.ok) {
+      throw new Error(`HTTP error: ${res.status}`);
+      lookupError();
+    }
+
+    const data = await res.json();
+
+    return data.products || [];
+
+  } catch (error) {
+
+    if (error.name === "AbortError") {
+      console.error("Request timed out");
+    } else {
+      console.error("API error:", error);
+    }
+    lookupError
+    return [];
+
+  } finally {
+    clearTimeout(timeoutId);
+  }
+}
+
+//food lookup error
+function lookupError()
+{
+  alert('Apologies, someting has gone wrong with the lookup. Sorry for the inconvienance');
+  //getEl('searching').hidden = true;
+  //openFoodLookup();
+}
