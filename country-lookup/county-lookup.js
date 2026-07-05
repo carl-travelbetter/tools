@@ -38,6 +38,11 @@ function createCountrySelector()
   console.log('Country Lookup: Create Country Selector ');
   const countrySelectorDiv = getEl('country-lookup');
   const selector = document.createElement('select');
+  selector.className = 'option-selection';
+  countryData.forEach{country =>
+    {
+      console.log('Country Lookup '+country.name);
+    });
   let option1 = document.createElement('option');
   option1.textContent = "Option 1";
   option1.value = "option1";
