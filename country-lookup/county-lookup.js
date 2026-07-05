@@ -8,6 +8,21 @@ import {getWrittenDate, getDuration, addDays} from "/lib/date-helper.js";
 import { getEl, getText, getDate} from "/lib/dom.js";
 import {getFlag} from "/lib/country-helper.js";
 
+//Load Data
+let countryData = [];
+
+fetch('country-data.json')
+  .then(response => response.json())
+  .then(data => {
+    countryData = data;
+    console.log("Country Data Loaded:", countryData);
+    getEl('data-loading').hidden = true;
+    createCountrySelector();
+    getEl('country-lookup').hidden = false;
+    getEl('load-comparison-table').hidden = false;
+  })
+  .catch(error => console.error("Error loading Ferry Routes:", error));
+
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
   getEl('country')?.addEventListener("change", loadCountryData); 
@@ -18,6 +33,11 @@ function bindEvents() {
 
 //Ensure html bindings are not applied until the html structure is built
 document.addEventListener("DOMContentLoaded", bindEvents);
+
+function createCountrySelector()
+{
+  console.log('Country Lookup: Create Country Selector ');
+}
 
 function loadCountryData()
 {
