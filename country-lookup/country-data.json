@@ -769,21 +769,83 @@
    "iso-alpha-three": "",
    "name": "North Macedonia"
  },
- {
-
- 
-    "ML": "Mali",
-    "MM": "Myanmar",
-    "MN": "Mongolia",
-    "MO": "Macao",
-    "MP": "Northern Mariana Islands",
-    "MQ": "Martinique",
-    "MR": "Mauritania",
-    "MS": "Montserrat",
-    "MT": "Malta",
-    "MU": "Mauritius",
-    "MV": "Maldives",
-    "MW": "Malawi",
+ { 
+   "iso-alpha-two": "ML",
+   "iso-alpha-three": "",
+   "name": "Mali"
+ },
+ { 
+   "iso-alpha-two": "MM",
+   "iso-alpha-three": "",
+   "name": "Myanmar"
+ },
+ { 
+   "iso-alpha-two": "MN",
+   "iso-alpha-three": "",
+   "name": "Mongolia"
+ },
+ { 
+   "iso-alpha-two": "MO",
+   "iso-alpha-three": "",
+   "name": "Macao"
+ },
+ { 
+   "iso-alpha-two": "MP",
+   "iso-alpha-three": "",
+   "name": "Northern Mariana Islands"
+ },
+ { 
+   "iso-alpha-two": "MQ",
+   "iso-alpha-three": "",
+   "name": "Martinique"
+ },
+ { 
+   "iso-alpha-two": "MR",
+   "iso-alpha-three": "",
+   "name": "Mauritania"
+ },
+ { 
+   "iso-alpha-two": "MS",
+   "iso-alpha-three": "",
+   "name": "Montserrat"
+ },
+ { 
+   "iso-alpha-two": "MT",
+   "iso-alpha-three": "",
+   "name": "Malta"
+ },
+ { 
+   "iso-alpha-two": "MU",
+   "iso-alpha-three": "",
+   "name": "Mauritius"
+ },
+ { 
+   "iso-alpha-two": "MV",
+   "iso-alpha-three": "",
+   "name": "Maldives"
+ },
+ { 
+   "iso-alpha-two": "MW",
+   "iso-alpha-three": "",
+   "name": "Malawi"
+ },
+ { 
+   "iso-alpha-two": "MX",
+   "iso-alpha-three": "",
+   "name": "Mexico"
+ },
+ { 
+   "iso-alpha-two": "MY",
+   "iso-alpha-three": "",
+   "name": "Malaysia"
+ },
+ { 
+   "iso-alpha-two": "MZ",
+   "iso-alpha-three": "",
+   "name": "Mozambique"
+ },
+ { 
+   
     "MX": "Mexico",
     "MY": "Malaysia",
     "MZ": "Mozambique",
