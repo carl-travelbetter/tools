@@ -39,7 +39,7 @@ function createCountrySelector()
   const countrySelectorDiv = getEl('country-lookup');
   const selector = document.createElement('select');
   selector.className = 'option-selection';
-  selector.addEventListener("change", outputSelection(selector.value); 
+  selector.addEventListener("change", outputSelection(selector.value)); 
   countryData.forEach{country =>
     {
       console.log('Country Lookup '+country.name);
