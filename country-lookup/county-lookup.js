@@ -42,19 +42,14 @@ function createCountrySelector()
   selector.addEventListener("change", outputSelection(selector.value)); 
   countryData.forEach(country =>
     {
-      console.log('Country Lookup '+country.name);
+      let option = document.createElement('option');
+      option.value = country.isoAlphaTwo;
+      option.textContent = country.name;
+      selector.appendChild(option);
     });
-  let option1 = document.createElement('option');
-  option1.textContent = "Option 1";
-  option1.value = "option1";
-  selector.appendChild(option1);
-  let option2 = document.createElement('option');
-  option2.textContent = "Option 2";
-  option2.value = "option2";
-  selector.appendChild(option2);
   countrySelectorDiv.innerHTML = "";
   countrySelectorDiv.appendChild(selector);
-  console.log('Country Lookup: End Country Selector ');
+  console.log('Country Lookup: End Country Selector From JSON ');
 }
 
 function outputSelection(countryID)
