@@ -699,22 +699,79 @@
    "iso-alpha-three": "",
    "name": "Sri Lanka"
  },
+ { 
+   "iso-alpha-two": "LR",
+   "iso-alpha-three": "",
+   "name": "Liberia"
+ },
+ { 
+   "iso-alpha-two": "LS",
+   "iso-alpha-three": "",
+   "name": "Lesotho"
+ },
+ { 
+   "iso-alpha-two": "LT",
+   "iso-alpha-three": "",
+   "name": "Lithuania"
+ },
+ { 
+   "iso-alpha-two": "LU",
+   "iso-alpha-three": "",
+   "name": "Luxembourg"
+ },
+ { 
+   "iso-alpha-two": "LV",
+   "iso-alpha-three": "",
+   "name": "Latvia"
+ },
+ { 
+   "iso-alpha-two": "LY",
+   "iso-alpha-three": "",
+   "name": "Libya"
+ },
+ { 
+   "iso-alpha-two": "MA",
+   "iso-alpha-three": "",
+   "name": "Morocco"
+ },
+  { 
+   "iso-alpha-two": "MC",
+   "iso-alpha-three": "",
+   "name": "Monaco"
+ },
+  { 
+   "iso-alpha-two": "MD",
+   "iso-alpha-three": "",
+   "name": "Moldova, Republic of"
+ },
+  { 
+   "iso-alpha-two": "ME",
+   "iso-alpha-three": "",
+   "name": "Montenegro"
+ },
+ { 
+   "iso-alpha-two": "MF",
+   "iso-alpha-three": "",
+   "name": "Saint Martin"
+ },
+ { 
+   "iso-alpha-two": "MG",
+   "iso-alpha-three": "",
+   "name": "Madagascar"
+ },
+ { 
+   "iso-alpha-two": "MH",
+   "iso-alpha-three": "",
+   "name": "Marshall Islands"
+ },
+ { 
+   "iso-alpha-two": "MK",
+   "iso-alpha-three": "",
+   "name": "North Macedonia"
+ },
  {
 
-    "LR": "Liberia",
-    "LS": "Lesotho",
-    "LT": "Lithuania",
-    "LU": "Luxembourg",
-    "LV": "Latvia",
-    "LY": "Libya",
-    "MA": "Morocco",
-    "MC": "Monaco",
-    "MD": "Moldova, Republic of",
-    "ME": "Montenegro",
-    "MF": "Saint Martin",
-    "MG": "Madagascar",
-    "MH": "Marshall Islands",
-    "MK": "North Macedonia",
+ 
     "ML": "Mali",
     "MM": "Myanmar",
     "MN": "Mongolia",
