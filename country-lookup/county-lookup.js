@@ -36,6 +36,18 @@ document.addEventListener("DOMContentLoaded", bindEvents);
 function createCountrySelector()
 {
   console.log('Country Lookup: Create Country Selector ');
+  const countrySelectorDiv = getEl('country-lookup');
+  const selector = document.createElement('select');
+  let option1 = document.createElement('option');
+  option1.textContent = "Option 1";
+  option1.value = "option1";
+  selector.appendChild(option1);
+  let option2 = document.createElement('option');
+  option2.textContent = "Option 2";
+  option2.value = "option2";
+  selector.appendChild(option2);
+  countrySelectorDiv.innerHTML = "";
+  countrySelectorDiv.appendChild(selector);
 }
 
 function loadCountryData()
