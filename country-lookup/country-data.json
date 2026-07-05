@@ -1075,20 +1075,48 @@
    "name": "Senegal"
  },
  { 
+   "iso-alpha-two": "SO",
+   "iso-alpha-three": "",
+   "name": "Somalia"
+ },
+ { 
+   "iso-alpha-two": "SR",
+   "iso-alpha-three": "",
+   "name": "Suriname"
+ },
+ { 
+   "iso-alpha-two": "SS",
+   "iso-alpha-three": "",
+   "name": "South Sudan"
+ },
+ { 
+   "iso-alpha-two": "ST",
+   "iso-alpha-three": "",
+   "name": "Sao Tome and Principe"
+ },
+ { 
+   "iso-alpha-two": "SV",
+   "iso-alpha-three": "",
+   "name": "El Salvador"
+ },
+ { 
+   "iso-alpha-two": "SX",
+   "iso-alpha-three": "",
+   "name": "Sint Maarten (Dutch part)"
+ },
+ { 
+   "iso-alpha-two": "SY",
+   "iso-alpha-three": "",
+   "name": "Syrian Arab Republic"
+ },
+ { 
+   "iso-alpha-two": "SZ",
+   "iso-alpha-three": "",
+   "name": "Kingdom of Eswatini"
+ },
+ { 
  
-    "SJ": "Svalbard and Jan Mayen Islands",
-    "SK": "Slovakia",
-    "SL": "Sierra Leone",
-    "SM": "San Marino",
-    "SN": "Senegal",
-    "SO": "Somalia",
-    "SR": "Suriname",
-    "SS": "South Sudan",
-    "ST": "Sao Tome and Principe",
-    "SV": "El Salvador",
-    "SX": "Sint Maarten (Dutch part)",
-    "SY": "Syrian Arab Republic",
-    "SZ": "Kingdom of Eswatini",
+ 
     "TC": "Turks and Caicos Islands",
     "TD": "Chad",
     "TF": "French Southern Territories",
