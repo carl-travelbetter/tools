@@ -35,6 +35,9 @@ function bindEvents() {
   getEl('load-table')?.addEventListener("click", showTable);
   getEl('load-spain-route-table')?.addEventListener("click", showSpainRouteTable);
   getEl('all-france-england')?.addEventListener("click", allFranceEngland);
+  getEl('all-portsmouth')?.addEventListener("click", allPortsmouth);
+  getEl('pompey-france')?.addEventListener("click", pompeyFrance);
+  getEl('pompey-spain')?.addEventListener("click", pompeySpain);
 }
 
 //Ensure html bindings are not applied until the html structure is built
@@ -379,6 +382,63 @@ function allFranceEngland()
     compareAllRoutes.hidden = false;
   
 }
+
+function allPortsmouth()
+{
+    console.log("Ferry Crossing: All France from England Routes");
+  //Get all to-France ferries
+  let compareAllRoutes = getEl('compare-results');
+  compareAllRoutes.innerHTML = "";
+  
+  //Get all ferries from Portsmouth
+ const fromPortsmouth = ferryRoutes.filter(route =>
+    route.startPort.includes("Portsmouth")
+ );
+
+  //Go through and create output
+  fromPortsmouth.forEach(route => {
+      let crossingTime = getHrsAndMinutes(route.dayCrossingTimeMins);
+      const card = document.createElement("div");
+      //card.classList.add("ferryCard");
+      card.innerHTML = `
+      <h3>⛴️ ${route.route} ⛴️</h3>
+      <p><strong>Sails on:</strong> ${route.sailDays}</p>
+      <p><strong>Sailings p/day:</strong> ${route.sailingsPerDay}</p>
+      <p><strong>Crossing Time:</strong> ${crossingTime}</p>
+      <h4>Operators</h4>
+      `;
+      compareAllRoutes.appendChild(card);
+
+      route.operators.forEach(operatorName => {
+        
+        //Filter the operator file by the operator name, this should only return one result
+          const operatorData = operators.filter(item =>
+          item.operatorID.includes(operatorName)
+          );
+            //Although only one result, go through the result list and create an operator output
+            operatorData.forEach(operator => {
+              let operatorDiv = document.createElement('div');
+              operatorDiv.innerHTML = `<p>⭐ <strong><a href="${operator.link}" target="_blank" rel="noopener noreferrer">${operator.operatorName}</a></strong></p>`
+              compareAllRoutes.appendChild(operatorDiv);
+            });
+      });
+    
+      });
+
+    getEl('results').hidden = true;
+    compareAllRoutes.hidden = false;
+}
+
+function pompeyFrance()
+{
+
+}
+
+function pompeySpain()
+{
+
+}
+
 
 //function to display the route comparison table
 function showSpainRouteTable()
