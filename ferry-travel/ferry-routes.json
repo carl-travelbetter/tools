@@ -352,5 +352,25 @@
    "rating": 4,
    "tags": ["quiet-friendly", "cabins", "pet-friendly", "motor-homes", "accessible", "kids play area"],
    "notes": "Small ferry"
+ },
+ {
+   "id": "R0019",
+   "route": "Portsmouth to Jersey",
+   "startPort": "Portsmouth",
+   "destinationPort": "Jersey",
+   "startRegion": "Hampshire",
+   "destinationRegion": "Jersey - Channel Islands",
+   "startCountry": "England",
+   "destinationCountry": "Channel Islands",
+   "dayCrossingTimeMins": 660,
+   "nightCrossingTimeMins": null,
+   "distance": "653 miles",
+   "operators": ["O0005"],
+   "pricesFrom": "£165.00",
+   "sailDays": "Mo, Tu, We, Th, Fr, Sa",
+   "sailingsPerDay": "1",
+   "rating": 4,
+   "tags": ["quiet-friendly", "cabins", "pet-friendly", "motor-homes", "accessible", "kids play area"],
+   "notes": "Small ferry"
  }
 ]
