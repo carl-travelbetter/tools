@@ -61,11 +61,11 @@ function processOption()
     );
 
   const destinationCountry = startPort.filter(route =>
-    route.destinationCountry.includes(routeElements[3])
+    route.destinationCountry.includes(routeElements[2])
     );
 
   const destinationPort = destinationCountry.filter(route =>
-    route.destinationPort.includes(routeElements[4]);
+    route.destinationPort.includes(routeElements[3])
   );
   displayResults(destinationPort);
   
