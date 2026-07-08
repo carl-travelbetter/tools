@@ -38,10 +38,21 @@ function bindEvents() {
   getEl('all-portsmouth')?.addEventListener("click", allPortsmouth);
   getEl('pompey-france')?.addEventListener("click", pompeyFrance);
   getEl('pompey-spain')?.addEventListener("click", pompeySpain);
+  getEl('ferry-option')?.addEventListener("change", processOption);
 }
 
 //Ensure html bindings are not applied until the html structure is built
 document.addEventListener("DOMContentLoaded", bindEvents);
+
+function processOption()
+{
+  console.log('Ferry Crossings: Process Option');
+  let optionSelected = getEl('ferry-option').value;
+  console.log('Process Option: Value selected = '+optionSelected);
+  let routeElements = optionsSelected.split(",");
+  console.log('Process Options: routeElements = '+routeElements);
+  
+}
 
 //Function to display the key route details (including corssing times) and provider information
 function loadResults()
