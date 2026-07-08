@@ -14,7 +14,6 @@ fetch('ferry-routes.json')
     console.log("Ferry Route Data Loaded:", ferryRoutes);
     getEl('data-loading').hidden = true;
     getEl('crossing-options').hidden = false;
-    getEl('load-comparison-table').hidden = false;
   })
   .catch(error => console.error("Error loading Ferry Routes:", error));
 
