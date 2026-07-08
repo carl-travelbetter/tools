@@ -214,6 +214,8 @@
    "operators": ["O0001"],
    "pricesFrom": "£165.00",
    "sailings": "Twice a week - Wednesday and Sunday",
+   "sailDays": "We, Su",
+   "sailingsPerDay": "1",
    "rating": 4,
    "tags": ["quiet-friendly", "cabins", "priority-boarding", "priority-disembarkation", "pet-friendly", "motor-homes", "accessible", "swimming-pool", "cinema"],
    "notes": "Crossing is a day and a night, sold as a mini-cruise to start your holiday."
@@ -232,7 +234,8 @@
    "distance": "541 miles",
    "operators": ["O0001"],
    "pricesFrom": "£165.00",
-   "sailings": "Twice a week - Monday and Friday",
+   "sailDays": "Mo, Fr",
+   "sailingsPerDay": "1",
    "rating": 4,
    "tags": ["quiet-friendly", "cabins", "priority-boarding", "priority-disembarkation", "pet-friendly", "motor-homes", "accessible", "Video on-demand", "cinema", "wellness room", "kids play area"],
    "notes": "Crossing is a day and a night, sold as a mini-cruise to start your holiday."
@@ -251,7 +254,8 @@
    "distance": "533 miles",
    "operators": ["O0001"],
    "pricesFrom": "£165.00",
-   "sailings": "Twice a week - Thursday and Sunday",
+   "sailDays": "Th, Su",
+   "sailingsPerDay": "1",
    "rating": 4,
    "tags": ["quiet-friendly", "cabins", "priority-boarding", "priority-disembarkation", "pet-friendly", "motor-homes", "accessible", "Video on-demand", "cinema", "wellness room", "kids play area"],
    "notes": "Crossing is a day and a night, sold as a mini-cruise to start your holiday."
@@ -270,7 +274,8 @@
    "distance": "653 miles",
    "operators": ["O0008"],
    "pricesFrom": "£165.00",
-   "sailings": "Twice a week - Wednesday and Friday",
+   "sailDays": "We, Fr",
+   "sailingsPerDay": "1",
    "rating": 4,
    "tags": ["quiet-friendly", "cabins", "priority-boarding", "priority-disembarkation", "pet-friendly", "motor-homes", "accessible", "Video on-demand", "cinema", "wellness room", "kids play area", "games room"],
    "notes": "The Friday crossing option is two nights at sea so we strongly recommend you get a cabin."
@@ -289,7 +294,8 @@
    "distance": "369 miles",
    "operators": ["O0008"],
    "pricesFrom": "£165.00",
-   "sailings": "Twice a week - Wednesday and Saturday",
+   "sailDays": "We, Sa",
+   "sailingsPerDay": "1",
    "rating": 4,
    "tags": ["quiet-friendly", "cabins", "priority-boarding", "priority-disembarkation", "pet-friendly", "motor-homes", "accessible", "cinema", "children's entertainment", "games room"],
    "notes": "Both sailings go late afternoon around 4pm, and arrive in France around 8am so a cabin is recommended to provide a comfortable place to sleep."
@@ -308,7 +314,8 @@
    "distance": "653 miles",
    "operators": ["O0008"],
    "pricesFrom": "£165.00",
-   "sailings": "Once a week on a Tuesday",
+   "sailDays": "Tu",
+   "sailingsPerDay": "1",
    "rating": 4,
    "tags": ["quiet-friendly", "cabins", "priority-boarding", "priority-disembarkation", "pet-friendly", "motor-homes", "accessible", "Video on-demand", "cinema", "wellness room", "kids play area", "games room"],
    "notes": "This route is currently only scheduled to run between November 2026 and March 2027. The boat sails at 9am and arrives in Spain at 1pm the next day so a cabin is recommended."
