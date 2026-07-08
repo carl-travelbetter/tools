@@ -31,14 +31,8 @@ fetch('ferry-operators.json')
 
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
-  getEl('crossings')?.addEventListener("change", loadResults); 
-  getEl('load-table')?.addEventListener("click", showTable);
-  getEl('load-spain-route-table')?.addEventListener("click", showSpainRouteTable);
-  getEl('all-france-england')?.addEventListener("click", allFranceEngland);
-  getEl('all-portsmouth')?.addEventListener("click", allPortsmouth);
-  getEl('pompey-france')?.addEventListener("click", pompeyFrance);
-  getEl('pompey-spain')?.addEventListener("click", pompeySpain);
   getEl('route-option')?.addEventListener("change", processOption);
+  getEl('time-option')?.addEventListener("change", processTimeOption);
 }
 
 //Ensure html bindings are not applied until the html structure is built
@@ -73,6 +67,39 @@ function processOption()
     route.destinationPort.includes(destinationPort)
   );
   displayResults(destinationPortRoutes);
+  
+}
+
+//Process Time Comparison Options
+function processTimeOption()
+{
+  console.log('Ferry Crossings: Process Option');
+  const optionSelected = getEl('route-option').value;
+  console.log('Process Option: Value selected = '+optionSelected);
+  let routeElements = optionSelected.split(",");
+  console.log('Process Options: routeElements = '+routeElements);
+
+  let startCountry = routeElements[0];
+  let startPort = routeElements[1];
+  let destinationCountry = routeElements[2];
+  let destinationPort = routeElements[3];
+ 
+  const startCountryRoutes = ferryRoutes.filter(route => 
+       route.startCountry.includes(startCountry)
+    );
+
+  const startPortRoutes = startCountryRoutes.filter(route =>
+    route.startPort.includes(startPort)
+    );
+
+  const destinationCountryRoutes = startPortRoutes.filter(route =>
+    route.destinationCountry.includes(destinationCountry)
+    );
+
+  const destinationPortRoutes = destinationCountryRoutes.filter(route =>
+    route.destinationPort.includes(destinationPort)
+  );
+  displayTimeResults(destinationPortRoutes);
   
 }
 
@@ -142,6 +169,77 @@ function displayResults(routes)
       routeCard.appendChild(routeOptions);
       routeCard.appendChild(tagsList);
 
+      const operatorHeader = document.createElement('h4');
+      operatorHeader.textContent = "Route Operators:";
+      routeCard.appendChild(operatorHeader);
+      //load the operators for this route
+      //Go through each operator against the route
+      route.operators.forEach(operatorName => {
+        //Filter the operator file by the operator name, this should only return one result
+        const operatorData = operators.filter(item =>
+          item.operatorID.includes(operatorName)
+          );
+        //Although only one result, go through the result list and create an operator output
+        operatorData.forEach(operator => {
+          let operatorDiv = document.createElement('div');
+          operatorDiv.innerHTML = `<p>⛴️ <strong>${operator.operatorName}</strong> <a href="${operator.link}" target="_blank" rel="noopener noreferrer">Check Availability</a></p>`;
+          routeCard.appendChild(operatorDiv);
+        });
+      });
+    results.appendChild(routeCard);
+    results.hidden = false;
+    getEl('alternatives').hidden = false;
+    getEl('comparison-table').hidden = true;
+  });
+}
+
+//
+function displayTimeResults(routes)
+{
+  console.log('Display Results ');
+
+  const results = getEl('results');
+  results.innerHTML = "";
+
+   routes.forEach(route => {
+      const routeCard = document.createElement('div');
+      routeCard.className = 'display-card';
+      let routeName = document.createElement('h3');
+      routeName.textContent = "Route: "+route.route;
+      routeCard.appendChild(routeName);
+      let dayRouteCheck = route.dayCrossingTimeMins;
+      if (dayRouteCheck > 0)
+      {
+        let dayCrossingTime = document.createElement('p');
+        dayCrossingTime.textContent = "Day Crossing Time: "+getHrsAndMinutes(route.dayCrossingTimeMins);
+        routeCard.appendChild(dayCrossingTime);
+      }
+      else
+      {
+        let dayCrossingTime = document.createElement('p');
+        dayCrossingTime.textContent = "Day Crossing Time: Day crossing not available on this route";
+        routeCard.appendChild(dayCrossingTime);
+      }
+      let nightRouteCheck = route.nightCrossingTimeMins;
+      console.log('Night Route Check '+nightRouteCheck);
+      if (nightRouteCheck > 0)
+      {
+        let nightCrossingTime = document.createElement('p');
+        nightCrossingTime.textContent = "Night Crossing Time: "+getHrsAndMinutes(route.nightCrossingTimeMins);
+        routeCard.appendChild(nightCrossingTime);
+      }
+      else
+      {
+        let nightCrossingTime = document.createElement('p');
+        nightCrossingTime.textContent = "Night Crossing Time: Night crossing not available on this route";
+        routeCard.appendChild(nightCrossingTime);
+      }
+      let sailings = document.createElement('p');
+      sailings.textContent = "Sails: "+route.sailDays;
+      routeCard.appendChild(sailings);
+      let crossings = document.createElement('p');
+      crossings.textContent = "Crossings Per Day: "+route.sailingsPerDay;
+      routeCard.appendChild(crossings);
       const operatorHeader = document.createElement('h4');
       operatorHeader.textContent = "Route Operators:";
       routeCard.appendChild(operatorHeader);
