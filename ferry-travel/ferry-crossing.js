@@ -52,22 +52,27 @@ function processOption()
   let routeElements = optionSelected.split(",");
   console.log('Process Options: routeElements = '+routeElements);
 
-  const startCountry = ferryRoutes.filter(route => 
-       route.startCountry.includes(routeElements[0])
+  let startCountry = routeElements[0];
+  let startPort = routeElements[1];
+  let destinationCountry = routeElements[2];
+  let destinationPort = routeElements[3];
+ 
+  const startCountryRoutes = ferryRoutes.filter(route => 
+       route.startCountry.includes(startCountry)
     );
 
-  const startPort = startCountry.filter(route =>
-    route.startPort.includes(routeElements[1])
+  const startPortRoutes = startCountryRoutes.filter(route =>
+    route.startPort.includes(startPort)
     );
 
-  const destinationCountry = startPort.filter(route =>
-    route.destinationCountry.includes(routeElements[2])
+  const destinationCountryRoutes = startPortRoutes.filter(route =>
+    route.destinationCountry.includes(destinationCountry)
     );
 
-  const destinationPort = destinationCountry.filter(route =>
-    route.destinationPort.includes(routeElements[3])
+  const destinationPortRoutes = destinationCountryRoutes.filter(route =>
+    route.destinationPort.includes(destinationPort)
   );
-  displayResults(destinationPort);
+  displayResults(destinationPortRoutes);
   
 }
 
