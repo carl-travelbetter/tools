@@ -25,17 +25,18 @@
         <p>Loading the Latest Ferry To Spain Data - This may take a small moment</p>
     </div>
     <div class="controls-card" id="crossing-options" hidden>
-           <select class="option-selection" id="crossings">
-                <option value="pick">-- Pick An Option --</option>
-                <option value="R0014">Rosslare to Bilbao</option>
-                <option value="R0016">Rosslare to Santander</option>
+           <select class="option-selection" id="route-option">
+                <option value="pick">-- Select Route(s) --</option>
+                <option value="Ireland,,Spain,">All Ireland To Spain Ferry Options</option>
+                <option value="Ireland,Rosslare,Spain,Bilbao">Rosslare to Bilbao</option>
+                <option value="Ireland,Rosslare,Spain,Santander">Rosslare to Santander</option>
             </select>
      </div>
     <div class="controls-card" id="load-comparison-table" hidden>
          <button class="control-btn" id="load-table">See All Ferries To Spain From Ireland</button>
      </div>   
      
-     <div class="display-card" id="results" hidden></div>
+     <div id="results" hidden></div>
      <div class="display-card" id="comparison-table" hidden>
          <h2>Ferries To Spain From Ireland</h2>
          <table>
