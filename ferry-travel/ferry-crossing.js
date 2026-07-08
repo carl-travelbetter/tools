@@ -145,7 +145,7 @@ function displayResults(routes)
     results.hidden = false;
     getEl('alternatives').hidden = false;
     getEl('comparison-table').hidden = true;
-  }
+  });
 }
 
 //Function to display the key route details (including corssing times) and provider information
