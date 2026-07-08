@@ -11,7 +11,7 @@ fetch('ferry-routes.json')
   .then(response => response.json())
   .then(data => {
     ferryRoutes = data;
-    console.log("Cross The Channel With A Car data loaded:", ferryRoutes);
+    console.log("Ferry Route Data Loaded:", ferryRoutes);
     getEl('data-loading').hidden = true;
     getEl('crossing-options').hidden = false;
     getEl('load-comparison-table').hidden = false;
