@@ -49,7 +49,7 @@ function processOption()
   console.log('Ferry Crossings: Process Option');
   const optionSelected = getEl('route-option').value;
   console.log('Process Option: Value selected = '+optionSelected);
-  let routeElements = optionsSelected.split(",");
+  let routeElements = optionSelected.split(",");
   console.log('Process Options: routeElements = '+routeElements);
   
 }
