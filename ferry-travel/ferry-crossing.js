@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", bindEvents);
 function processOption()
 {
   console.log('Ferry Crossings: Process Option');
-  let optionSelected = getEl('ferry-option').value;
+  const optionSelected = getEl('route-option').value;
   console.log('Process Option: Value selected = '+optionSelected);
   let routeElements = optionsSelected.split(",");
   console.log('Process Options: routeElements = '+routeElements);
