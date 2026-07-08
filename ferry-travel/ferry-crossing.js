@@ -59,7 +59,15 @@ function processOption()
   const startPort = startCountry.filter(route =>
     route.startPort.includes(routeElements[1])
     );
-  displayResults(startPort);
+
+  const destinationCountry = startPort.filter(route =>
+    route.destinationCountry.includes(routeElements[3])
+    );
+
+  const destinationPort = destinationCountry.filter(route =>
+    route.destinationPort.includes(routeElements[4]);
+  );
+  displayResults(destinationPort);
   
 }
 
