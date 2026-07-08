@@ -25,19 +25,20 @@
         <p>Loading the Latest Ferry To Spain Data - This may take a small moment</p>
     </div>
     <div class="controls-card" id="crossing-options" hidden>
-           <select class="option-selection" id="crossings">
-                <option value="pick">-- Pick An Option --</option>
-                <option value="FSPAENG">Fastest Crossing</option>
-                <option value="R0011">Plymouth to Santander</option>
-                <option value="R0012">Portsmouth to Santander</option>
-                <option value="R0013">Portsmouth to Bilbao</option>
+           <select class="option-selection" id="route-option">
+                <option value="pick">-- Select Route(s) --</option>
+                <option value="England,Plymouth,Spain,Santander">Fastest Route</option>
+                <option value="England,,Spain,">All Ferries to Spain</option>
+                <option value="England,Plymouth,Spain,Santander">Plymouth to Santander</option>
+                <option value="England,Portsmouth,Spain,Santander">Portsmouth to Santander</option>
+                <option value="England,Portsmouth,Spain,Bilbao">Portsmouth to Bilbao</option>
             </select>
      </div>
     <div class="controls-card" id="load-comparison-table" hidden>
          <button class="control-btn" id="load-table">See All Ferries To Spain From England</button>
      </div>   
      
-     <div class="display-card" id="results" hidden></div>
+     <div id="results" hidden></div>
      <div class="display-card" id="comparison-table" hidden>
          <h2>Ferries To Spain From England</h2>
          <table>
