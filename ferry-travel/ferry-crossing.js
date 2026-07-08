@@ -85,21 +85,23 @@ function displayResults(routes)
   results.innerHTML = "";
 
    routes.forEach(route => {
+      const routeCard = document.createElement('div');
+      routeCard.className = 'display-card';
       let routeName = document.createElement('h3');
       routeName.textContent = "Route: "+route.route;
-      results.appendChild(routeName);
+      routeCard.appendChild(routeName);
       let dayRouteCheck = route.dayCrossingTimeMins;
       if (dayRouteCheck > 0)
       {
         let dayCrossingTime = document.createElement('p');
         dayCrossingTime.textContent = "Day Crossing Time: "+getHrsAndMinutes(route.dayCrossingTimeMins);
-        results.appendChild(dayCrossingTime);
+        routeCard.appendChild(dayCrossingTime);
       }
       else
       {
         let dayCrossingTime = document.createElement('p');
         dayCrossingTime.textContent = "Day Crossing Time: Day crossing not available on this route";
-        results.appendChild(dayCrossingTime);
+        routeCard.appendChild(dayCrossingTime);
       }
       let nightRouteCheck = route.nightCrossingTimeMins;
       console.log('Night Route Check '+nightRouteCheck);
@@ -107,27 +109,27 @@ function displayResults(routes)
       {
         let nightCrossingTime = document.createElement('p');
         nightCrossingTime.textContent = "Night Crossing Time: "+getHrsAndMinutes(route.nightCrossingTimeMins);
-        results.appendChild(nightCrossingTime);
+        routeCard.appendChild(nightCrossingTime);
       }
       else
       {
         let nightCrossingTime = document.createElement('p');
         nightCrossingTime.textContent = "Night Crossing Time: Night crossing not available on this route";
-        results.appendChild(nightCrossingTime);
+        routeCard.appendChild(nightCrossingTime);
       }
       let sailings = document.createElement('p');
       sailings.textContent = "Sails: "+route.sailDays;
-      results.appendChild(sailings);
+      routeCard.appendChild(sailings);
       let crossings = document.createElement('p');
       crossings.textContent = "Crossings Per Day: "+route.sailingsPerDay;
-      results.appendChild(crossings);
+      routeCard.appendChild(crossings);
       let additionalNotes = document.createElement('p');
       let noteText = route.notes || "NULL";
       //if note text is present and not NULL
       if (noteText != "NULL")
       {
         additionalNotes.textContent = "Notes: "+noteText;
-        results.appendChild(additionalNotes);
+        routeCard.appendChild(additionalNotes);
       }
       let tagsList = document.createElement('ul');
       route.tags.forEach(tag => {
@@ -137,12 +139,12 @@ function displayResults(routes)
       });
       const routeOptions = document.createElement('h4');
       routeOptions.textContent = "Route Options:"                               
-      results.appendChild(routeOptions);
-      results.appendChild(tagsList);
+      routeCard.appendChild(routeOptions);
+      routeCard.appendChild(tagsList);
 
       const operatorHeader = document.createElement('h4');
       operatorHeader.textContent = "Route Operators:";
-      results.appendChild(operatorHeader);
+      routeCard.appendChild(operatorHeader);
       //load the operators for this route
       //Go through each operator against the route
       route.operators.forEach(operatorName => {
@@ -154,10 +156,10 @@ function displayResults(routes)
         operatorData.forEach(operator => {
           let operatorDiv = document.createElement('div');
           operatorDiv.innerHTML = `<p>⛴️ <strong>${operator.operatorName}</strong> <a href="${operator.link}" target="_blank" rel="noopener noreferrer">Check Availability</a></p>`;
-          results.appendChild(operatorDiv);
+          routeCard.appendChild(operatorDiv);
         });
       });
-
+    results.appendChild(routeCard);
     results.hidden = false;
     getEl('alternatives').hidden = false;
     getEl('comparison-table').hidden = true;
