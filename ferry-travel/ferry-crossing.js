@@ -56,7 +56,10 @@ function processOption()
        route.startCountry.includes(routeElements[0])
     );
 
-  displayResults(startCountry);
+  const startPort = startCountry.filter(route =>
+    route.startPort.includes(routeElements[1])
+    );
+  displayResults(startPort);
   
 }
 
