@@ -137,7 +137,7 @@ function displayResults(routes)
         //Although only one result, go through the result list and create an operator output
         operatorData.forEach(operator => {
           let operatorDiv = document.createElement('div');
-          operatorDiv.innerHTML = `<p>⛴️ <strong>${operator.operatorName}</strong> <a href="${operator.link}" target="_blank" rel="noopener noreferrer">Check Availability</a></p>`
+          operatorDiv.innerHTML = `<p>⛴️ <strong>${operator.operatorName}</strong> <a href="${operator.link}" target="_blank" rel="noopener noreferrer">Check Availability</a></p>`;
           results.appendChild(operatorDiv);
         });
       });
