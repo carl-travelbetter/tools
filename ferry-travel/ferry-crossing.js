@@ -38,7 +38,7 @@ function bindEvents() {
   getEl('all-portsmouth')?.addEventListener("click", allPortsmouth);
   getEl('pompey-france')?.addEventListener("click", pompeyFrance);
   getEl('pompey-spain')?.addEventListener("click", pompeySpain);
-  getEl('ferry-option')?.addEventListener("change", processOption);
+  getEl('route-option')?.addEventListener("change", processOption);
 }
 
 //Ensure html bindings are not applied until the html structure is built
