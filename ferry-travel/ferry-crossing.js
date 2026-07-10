@@ -186,9 +186,9 @@ function displayResults(routes)
         });
       });
     results.appendChild(routeCard);
+    getEl('intro').hidden = true;
     results.hidden = false;
     getEl('alternatives').hidden = false;
-    getEl('comparison-table').hidden = true;
   });
 }
 
