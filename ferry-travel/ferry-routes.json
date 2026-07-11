@@ -379,5 +379,25 @@
    "rating": 4,
    "tags": ["quiet-friendly", "cabins", "pet-friendly", "motor-homes", "accessible", "kids play area"],
    "notes": "Small ferry"
+ },
+ {
+   "id": "R0020",
+   "route": "Portsmouth to Fishbourne",
+   "startPort": "Gunwharf - Portsmouth",
+   "destinationPort": "Fishbourne",
+   "startRegion": "Hampshire",
+   "destinationRegion": "Isle of Wight",
+   "startCountry": "England",
+   "destinationCountry": "England",
+   "dayCrossingTimeMins": 45,
+   "nightCrossingTimeMins": 45,
+   "distance": "653 miles",
+   "operators": ["O0009"],
+   "pricesFrom": "£165.00",
+   "sailDays": "Mo, Tu, We, Th, Fr, Sa, Su",
+   "sailingsPerDay": "23",
+   "rating": 4,
+   "tags": ["cars", "pet-friendly", "motor-homes", "accessible"],
+   "notes": "Sails from Gunwharf Quay across the Solent to the Isle of Wight"
  }
 ]
