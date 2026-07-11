@@ -94,5 +94,17 @@
    "footPassengers": true,
    "dogFriendly": true,
    "accessibilitySupport": true
+ },
+ {
+   "operatorID": "O0009",
+   "operatorName": "Wightlink - Isle of Wight Ferries",
+   "amendmentPolicy": "Amendments to a standard ticket can be made up to 1 hour before sailing, any ticket increases must be paid for and any decreases will be refunded.",
+   "cancellationPolicy": "For a £5 fee you can get a full refund on a standard ticket  as long as you cancel more than 24 hours in advance of your outbound sailing.",
+   "link": "https://fave.co/4vTOMjn",
+   "travelbetterRating": 4,
+   "moreInfoLink": "https://travelbetter.co.uk",
+   "footPassengers": true,
+   "dogFriendly": true,
+   "accessibilitySupport": true
  }
 ]
