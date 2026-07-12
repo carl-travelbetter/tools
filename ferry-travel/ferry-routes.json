@@ -440,4 +440,24 @@
    "tags": ["quiet-friendly", "cabins", "priority-boarding", "priority-disembarkation", "pet-friendly", "motor-homes", "accessible", "Video on-demand", "cinema", "wellness room", "kids play area", "games room"],
    "notes": "A great option for Normandy from Ireland."
  },
+ {
+   "id": "R0023",
+   "route": "Rosslare to Dunkirk",
+   "startPort": "Rosslare",
+   "destinationPort": "Dunkirk",
+   "startRegion": "County Wexford",
+   "destinationRegion": "Hauts-de-France",
+   "startCountry": "Republic of Ireland",
+   "destinationCountry": "France",
+   "dayCrossingTimeMins": 1380,
+   "nightCrossingTimeMins": 1380,
+   "distance": "653 miles",
+   "operators": ["O0005"],
+   "pricesFrom": "£165.00",
+   "sailDays": "Mo, Tu, Th, Fr, Su",
+   "sailingsPerDay": "1",
+   "rating": 4,
+   "tags": ["quiet-friendly", "cabins", "priority-boarding", "priority-disembarkation", "pet-friendly", "motor-homes", "accessible", "Video on-demand", "cinema", "wellness room", "kids play area", "games room"],
+   "notes": "A great option for getting to Northern France, and onwards to Northern Europe, from Ireland. Note, this ferry route leaves late in the evening/very early in the morning and arrives at a similar time in France."
+ },
 ]
