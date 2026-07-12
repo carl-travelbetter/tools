@@ -382,8 +382,8 @@
  },
  {
    "id": "R0020",
-   "route": "Portsmouth to Fishbourne",
-   "startPort": "Gunwharf - Portsmouth",
+   "route": "Gunwharf Quay to Fishbourne",
+   "startPort": "Gunwharf",
    "destinationPort": "Fishbourne",
    "startRegion": "Hampshire",
    "destinationRegion": "Isle of Wight",
@@ -398,6 +398,6 @@
    "sailingsPerDay": "23",
    "rating": 4,
    "tags": ["cars", "pet-friendly", "motor-homes", "accessible"],
-   "notes": "Sails from Gunwharf Quay across the Solent to the Isle of Wight"
+   "notes": "Sails from Gunwharf Quay in Portsmouth to the Isle of Wight"
  }
 ]
