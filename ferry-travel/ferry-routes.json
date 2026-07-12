@@ -457,7 +457,27 @@
    "sailDays": "Mo, Tu, Th, Fr, Su",
    "sailingsPerDay": "1",
    "rating": 4,
-   "tags": ["quiet-friendly", "cabins", "priority-boarding", "priority-disembarkation", "pet-friendly", "motor-homes", "accessible", "Video on-demand", "cinema", "wellness room", "kids play area", "games room"],
+   "tags": ["quiet-friendly", "cabins", "priority-boarding", "priority-disembarkation", "pet-friendly", "motor-homes", "accessible"],
    "notes": "A great option for getting to Northern France, and onwards to Northern Europe, from Ireland. Note, this ferry route leaves late in the evening/very early in the morning and arrives at a similar time in France."
+ },
+ {
+   "id": "R0024",
+   "route": "Cork to Boulogne-sur-Mer",
+   "startPort": "Cork",
+   "destinationPort": "Boulogne-sur-Mer",
+   "startRegion": "County Cork",
+   "destinationRegion": "Hauts-de-France",
+   "startCountry": "Republic of Ireland",
+   "destinationCountry": "France",
+   "dayCrossingTimeMins": 1350,
+   "nightCrossingTimeMins": 1350,
+   "distance": "653 miles",
+   "operators": ["O0005"],
+   "pricesFrom": "£165.00",
+   "sailDays": "Mo, Tu, We, Th, Fr, Sa",
+   "sailingsPerDay": "1",
+   "rating": 4,
+   "tags": ["quiet-friendly", "cabins", "pet-friendly", "motor-homes", "accessible"],
+   "notes": "A great option for getting to Northern France, and onwards to Northern Europe, from Ireland. Note, departure and arrival times vary by day so be sure to check their website for a day and time that suit you and your family."
  },
 ]
