@@ -419,5 +419,25 @@
    "rating": 4,
    "tags": ["cars", "pet-friendly", "motor-homes", "accessible"],
    "notes": "This ferry leaves around 6:30pm and arrives the next day at 3.30pm in Cherbourg so a cabin is recommended. This ferry only runs in the spring and summer."
- }
+ },
+ {
+   "id": "R0022",
+   "route": "Rosslare to Cherbourg",
+   "startPort": "Rosslare",
+   "destinationPort": "Cherbourg",
+   "startRegion": "County Wexford",
+   "destinationRegion": "Normandy",
+   "startCountry": "Republic of Ireland",
+   "destinationCountry": "France",
+   "dayCrossingTimeMins": 1140,
+   "nightCrossingTimeMins": null,
+   "distance": "653 miles",
+   "operators": ["O0008"],
+   "pricesFrom": "£165.00",
+   "sailDays": "Mo, We, Fr, Su",
+   "sailingsPerDay": "1",
+   "rating": 4,
+   "tags": ["quiet-friendly", "cabins", "priority-boarding", "priority-disembarkation", "pet-friendly", "motor-homes", "accessible", "Video on-demand", "cinema", "wellness room", "kids play area", "games room"],
+   "notes": "A great option for Normandy from Ireland."
+ },
 ]
