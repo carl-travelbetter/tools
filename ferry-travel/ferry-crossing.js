@@ -46,16 +46,18 @@ function processOption()
   console.log('Process Options: routeElements = '+routeElements);
 
   let startCountry = routeElements[0];
-  let startPort = routeElements[1];
-  let destinationCountry = routeElements[2];
-  let destinationPort = routeElements[3];
+  let startRegion = routeElements[1];
+  let startPort = routeElements[2];
+  let destinationCountry = routeElements[3];
+  let destinationRegion = routeElements[4];
+  let destinationPort = routeElements[5];
  
   const startCountryRoutes = ferryRoutes.filter(route => 
        route.startCountry.includes(startCountry)
     );
 
   const startRegionRoutes = startCountryRoutes.filter(route =>
-    route.startRegion.includes(startPort)
+    route.startRegion.includes(startRegion)
     );
 
   const startPortRoutes = startRegionRoutes.filter(route =>
@@ -67,7 +69,7 @@ function processOption()
     );
 
   const destinationRegionsRoutes = destinationCountryRoutes.filter(route =>
-    route.destinationRegion.includes(destinationCountry)
+    route.destinationRegion.includes(destinationRegion)
     );
 
   const destinationPortRoutes = destinationRegionsRoutes.filter(route =>
