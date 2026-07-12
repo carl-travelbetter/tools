@@ -113,8 +113,23 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tools.travelbetter.co.uk/ferry-travel/ferries-from-portsmouth.html</loc>
+    <loc>https://tools.travelbetter.co.uk/ferry-travel/ferries-from-portsmouth</loc>
     <lastmod>2026-07-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tools.travelbetter.co.uk/ferry-travel/ferries-from-dover</loc>
+    <lastmod>2026-07-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tools.travelbetter.co.uk/ferry-travel/ferries-to-france-from-ireland</loc>
+    <lastmod>2026-07-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+   <url>
+    <loc>https://tools.travelbetter.co.uk/ferry-travel/ferries-to-normandy-from-england.html</loc>
+    <lastmod>2026-07-12</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>
