@@ -399,5 +399,25 @@
    "rating": 4,
    "tags": ["cars", "pet-friendly", "motor-homes", "accessible"],
    "notes": "Sails from Gunwharf Quay in Portsmouth to the Isle of Wight"
+ },
+ {
+   "id": "R0021",
+   "route": "Dublin to Cherbourg",
+   "startPort": "Dublin",
+   "destinationPort": "Cherbourg",
+   "startRegion": "County Dublin",
+   "destinationRegion": "Normandy",
+   "startCountry": "Ireland",
+   "destinationCountry": "France",
+   "dayCrossingTimeMins": 1260,
+   "nightCrossingTimeMins": 1260,
+   "distance": "653 miles",
+   "operators": ["O0003"],
+   "pricesFrom": "£165.00",
+   "sailDays": "Mo, Tu, We, Th, Fr, Sa, Su",
+   "sailingsPerDay": "1",
+   "rating": 4,
+   "tags": ["cars", "pet-friendly", "motor-homes", "accessible"],
+   "notes": "This ferry leaves around 6:30pm and arrives the next day at 3.30pm in Cherbourg so a cabin is recommended. This ferry only runs in the spring and summer."
  }
 ]
