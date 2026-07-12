@@ -106,5 +106,17 @@
    "footPassengers": true,
    "dogFriendly": true,
    "accessibilitySupport": true
+ },
+  {
+   "operatorID": "O0010",
+   "operatorName": "Hibernia Line",
+   "amendmentPolicy": "Amendments free of charge up to 48 hours before departure.",
+   "cancellationPolicy": "Passenger bookings can be cancelled free of charge up to 48 hours before departure.",
+   "link": "https://hibernia-line.com/",
+   "travelbetterRating": 4,
+   "moreInfoLink": "https://travelbetter.co.uk",
+   "footPassengers": true,
+   "dogFriendly": true,
+   "accessibilitySupport": true
  }
 ]
