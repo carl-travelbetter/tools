@@ -472,7 +472,7 @@
    "dayCrossingTimeMins": 1350,
    "nightCrossingTimeMins": 1350,
    "distance": "653 miles",
-   "operators": ["O0005"],
+   "operators": ["O0010"],
    "pricesFrom": "£165.00",
    "sailDays": "Mo, Tu, We, Th, Fr, Sa",
    "sailingsPerDay": "1",
