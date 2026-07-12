@@ -54,7 +54,11 @@ function processOption()
        route.startCountry.includes(startCountry)
     );
 
-  const startPortRoutes = startCountryRoutes.filter(route =>
+  const startRegionRoutes = startCountryRoutes.filter(route =>
+    route.startRegion.includes(startPort)
+    );
+
+  const startPortRoutes = startRegionRoutes.filter(route =>
     route.startPort.includes(startPort)
     );
 
@@ -62,7 +66,11 @@ function processOption()
     route.destinationCountry.includes(destinationCountry)
     );
 
-  const destinationPortRoutes = destinationCountryRoutes.filter(route =>
+  const destinationRegionsRoutes = destinationCountryRoutes.filter(route =>
+    route.destinationRegion.includes(destinationCountry)
+    );
+
+  const destinationPortRoutes = destinationRegionsRoutes.filter(route =>
     route.destinationPort.includes(destinationPort)
   );
   displayResults(destinationPortRoutes);
