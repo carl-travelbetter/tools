@@ -128,8 +128,13 @@
     <priority>0.8</priority>
   </url>
    <url>
-    <loc>https://tools.travelbetter.co.uk/ferry-travel/ferries-to-normandy-from-england.html</loc>
+    <loc>https://tools.travelbetter.co.uk/ferry-travel/ferries-to-normandy-from-england</loc>
     <lastmod>2026-07-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+   <url>
+    <loc>https://tools.travelbetter.co.uk/ferry-travel/ferries-to-guernsey-from-england</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>
