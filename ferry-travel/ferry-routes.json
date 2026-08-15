@@ -479,5 +479,26 @@
    "rating": 4,
    "tags": ["quiet-friendly", "cabins", "pet-friendly", "motor-homes", "accessible"],
    "notes": "A great option for getting to Northern France, and onwards to Northern Europe, from Ireland. Note, departure and arrival times vary by day so be sure to check their website for a day and time that suit you and your family."
+ },
+  {
+   "id": "R0025",
+   "route": "Poole to Guernsey",
+   "startPort": "Poole",
+   "destinationPort": "",
+   "destinationPort": "St. Peter",
+   "startRegion": "Dorset",
+   "destinationRegion": "Channel Islands",
+   "startCountry": "England",
+   "destinationCountry": "Guernsey",
+   "dayCrossingTimeMins": 180,
+   "nightCrossingTimeMins": null,
+   "distance": "653 miles",
+   "operators": ["O0006"],
+   "pricesFrom": "£165.00",
+   "sailDays": "Mo, Tu, We, Fr, Su",
+   "sailingsPerDay": "1",
+   "rating": 4,
+   "tags": ["quiet-friendly", "pet-friendly", "accessible"],
+   "notes": "This route uses the high-speed catamaran - Voyager - carrying to 850 passengers, 235 cars and it can travel as fast as 42 knots"
  }
 ]
