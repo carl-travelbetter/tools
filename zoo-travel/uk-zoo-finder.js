@@ -80,5 +80,13 @@ function loadZooSearchOptions()
 function loadZoosByCounty(county)
 {
   console.log('UK Zoo Finder: Load Zoos By County');
-  
+  //filter data by county value
+  let zoosByCounty = zooData.flter(item =>
+    zooData.County.includes(county)
+    );
+  zoosByCounty.forEach(zoo =>
+   {
+      console.log("UK Zoo Finder: By County "+zoosByCounty.ZooName);  
+  });
+   
 }
