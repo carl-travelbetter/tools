@@ -57,7 +57,7 @@ function loadZooSearchOptions()
   searchOptionsArea.appendChild(searchOptionsInstructions);
   const countySelector = document.createElement('select');
   countySelector.className = 'option-selection';
-  countySelector.addEventListner("change", (event) => {
+  countySelector.addEventListener("change", (event) => {
     loadZoosByCounty(event.target.value);
   });
   let countyPlaceHolder = document.createElement('option');
