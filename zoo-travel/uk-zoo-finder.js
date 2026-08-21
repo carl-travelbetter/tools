@@ -76,30 +76,6 @@ function loadZooSearchOptions()
   getEl('zoo-look-county').appendChild(searchOptionsArea);  
 }
 
-function createCountrySelector()
-{
-  console.log('Country Lookup: Create Country Selector ');
-  const countrySelectorDiv = getEl('country-lookup');
-  const selector = document.createElement('select');
-  selector.className = 'option-selection';
-  selector.addEventListener("change", (event) => {
-    loadCountryData(event.target.value);
-  });
-  let placeHolder = document.createElement('option');
-  placeHolder.value = 'Placeholder';
-  placeHolder.textContent = 'Select a country';
-  selector.appendChild(placeHolder);
-  countryData.forEach(country =>
-    {
-      let option = document.createElement('option');
-      option.value = country.isoAlphaTwo;
-      option.textContent = country.name;
-      selector.appendChild(option);
-    });
-  countrySelectorDiv.innerHTML = "";
-  countrySelectorDiv.appendChild(selector);
-  console.log('Country Lookup: End Country Selector From JSON ');
-}
 
 function loadZoosByCounty(county)
 {
