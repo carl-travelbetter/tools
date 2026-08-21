@@ -51,11 +51,58 @@ function loadZooSearchOptions()
 {
   console.log('UK Zoo Finder: Load Zoo Search Options');
   const searchOptionsArea = document.createElement('div');
+  searchOptionsArea.innderHTML = "";
   const searchOptionsInstructions = document.createElement('p');
   searchOptionsInstructions.textContent = "Select A Search Option To Find a UK Zoo";
   searchOptionsArea.appendChild(searchOptionsInstructions);
-  getEl('zoo-look-county').appendChild(searchOptionsArea);
+  const countySelector = document.createElement('select');
+  countySelector.className = 'option-selection';
+  countySelector.addEventListner("change", (event) => {
+    loadZoosByCounty(event.target.value);
+  });
+  let countyPlaceHolder = document.createElement('option');
+  countyPlaceHolder.value = 'Placeholder';
+  countyPlaceHolder.textContent = 'Search By County';
+  countySelector.appendChild(countyPlaceholder);
+  countyData.forEach(county =>
+    {
+      let countyOption = document.createElement('option');
+      countyOption.value = county.CountyName;
+      countyOption.textContent = county.CountyName;
+      countySelector.appendChild(countyOption);
+    }
+  searchOptionsArea.appendChild(countySelector);
+  
+  getEl('zoo-look-county').appendChild(searchOptionsArea);  
+}
 
-  //Create a drop down with every county name on it
+function createCountrySelector()
+{
+  console.log('Country Lookup: Create Country Selector ');
+  const countrySelectorDiv = getEl('country-lookup');
+  const selector = document.createElement('select');
+  selector.className = 'option-selection';
+  selector.addEventListener("change", (event) => {
+    loadCountryData(event.target.value);
+  });
+  let placeHolder = document.createElement('option');
+  placeHolder.value = 'Placeholder';
+  placeHolder.textContent = 'Select a country';
+  selector.appendChild(placeHolder);
+  countryData.forEach(country =>
+    {
+      let option = document.createElement('option');
+      option.value = country.isoAlphaTwo;
+      option.textContent = country.name;
+      selector.appendChild(option);
+    });
+  countrySelectorDiv.innerHTML = "";
+  countrySelectorDiv.appendChild(selector);
+  console.log('Country Lookup: End Country Selector From JSON ');
+}
+
+function loadZoosByCounty(county)
+{
+  console.log('UK Zoo Finder: Load Zoos By County');
   
 }
