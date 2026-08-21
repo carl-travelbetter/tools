@@ -17,7 +17,6 @@ fetch('uk_zoos.json')
     zooData = data;
     console.log("Zoo Data Loaded:", zooData);
     getEl('data-loading').hidden = true;
-    createCountrySelector();
     getEl('zoo-lookup-county').hidden = false;
   })
   .catch(error => console.error("Error loading Zoo Data:", error));
