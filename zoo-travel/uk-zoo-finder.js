@@ -17,6 +17,7 @@ fetch('uk_zoos.json')
     zooData = data;
     console.log("Zoo Data Loaded:", zooData);
     getEl('data-loading').hidden = true;
+    loadCountyData();
     getEl('zoo-lookup-county').hidden = false;
   })
   .catch(error => console.error("Error loading Zoo Data:", error));
@@ -31,3 +32,19 @@ function bindEvents() {
 
 //Ensure html bindings are not applied until the html structure is built
 document.addEventListener("DOMContentLoaded", bindEvents);
+
+function loadCountyData()
+{
+  console.log('UK Zoo Finder: Load County Data');
+  
+}
+
+function loadZooSearchOptions()
+{
+  console.log('UK Zoo Finder: Load Zoo Search Options');
+  const searchOptionsArea = document.createElement('div');
+  const searchOptionsInstructions = document.createElement('p');
+  searchOptionsInstructions.textContent = "Select A Search Option To Find a UK Zoo";
+  searchOptionsArea.appendChild(searchOptionsInstructions);
+  getEl('zoo-look-county').appendChild(searchOptionsArea);
+}
