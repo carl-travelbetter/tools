@@ -14,7 +14,7 @@ let zooData = [];
 fetch('uk_zoos.json')
   .then(response => response.json())
   .then(data => {
-    countryData = data;
+    zooData = data;
     console.log("Zoo Data Loaded:", zooData);
     getEl('data-loading').hidden = true;
     createCountrySelector();
