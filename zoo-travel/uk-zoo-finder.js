@@ -63,7 +63,7 @@ function loadZooSearchOptions()
   let countyPlaceHolder = document.createElement('option');
   countyPlaceHolder.value = 'Placeholder';
   countyPlaceHolder.textContent = 'Search By County';
-  countySelector.appendChild(countyPlaceholder);
+  countySelector.appendChild(countyPlaceHolder);
   countyData.forEach(county =>
     {
       let countyOption = document.createElement('option');
