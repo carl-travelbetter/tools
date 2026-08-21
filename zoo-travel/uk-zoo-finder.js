@@ -10,15 +10,14 @@ import {getFlag} from "/lib/country-helper.js";
 
 //Load Data
 let zooData = [];
+let countyData = [];
 
 fetch('uk_zoos.json')
   .then(response => response.json())
   .then(data => {
     zooData = data;
     console.log("Zoo Data Loaded:", zooData);
-    getEl('data-loading').hidden = true;
     loadCountyData();
-    getEl('zoo-lookup-county').hidden = false;
   })
   .catch(error => console.error("Error loading Zoo Data:", error));
 
@@ -36,7 +35,16 @@ document.addEventListener("DOMContentLoaded", bindEvents);
 function loadCountyData()
 {
   console.log('UK Zoo Finder: Load County Data');
-  
+  fetch('https://tools.travelbetter.co.uk/uk-travel/uk_counties.json')
+  .then(response => response.json())
+  .then(data => {
+    countyData = data;
+    console.log("County Data Loaded:", countyData);
+    loadZooSearchOptions();
+    getEl('data-loading').hidden = true;
+    getEl('zoo-lookup-county').hidden = false;
+  })
+  .catch(error => console.error("Error loading County Data:", error));
 }
 
 function loadZooSearchOptions()
@@ -47,4 +55,7 @@ function loadZooSearchOptions()
   searchOptionsInstructions.textContent = "Select A Search Option To Find a UK Zoo";
   searchOptionsArea.appendChild(searchOptionsInstructions);
   getEl('zoo-look-county').appendChild(searchOptionsArea);
+
+  //Create a drop down with every county name on it
+  
 }
