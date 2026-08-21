@@ -93,9 +93,7 @@ function loadZoosByAccommodation()
   const results = getEl('results');
   results.innerHTML = "";
   //filter data by county value
-  let zoosWithStays = zooData.filter(item =>
-    item.Accommodation.includes("true");
-    );
+  let zoosWithStays = zooData.filter(item => item.Accommodation);
 
   zoosWithStays.forEach(zoo =>
    {
