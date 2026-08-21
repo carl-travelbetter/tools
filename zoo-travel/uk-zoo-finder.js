@@ -42,7 +42,7 @@ function loadCountyData()
     console.log("County Data Loaded:", countyData);
     loadZooSearchOptions();
     getEl('data-loading').hidden = true;
-    getEl('zoo-lookup-county').hidden = false;
+    getEl('zoo-search').hidden = false;
   })
   .catch(error => console.error("Error loading County Data:", error));
 }
@@ -73,7 +73,7 @@ function loadZooSearchOptions()
     });
   searchOptionsArea.appendChild(countySelector);
   
-  getEl('zoo-look-county').appendChild(searchOptionsArea);  
+  getEl('zoo-search').appendChild(searchOptionsArea);  
 }
 
 
