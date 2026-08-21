@@ -70,7 +70,7 @@ function loadZooSearchOptions()
       countyOption.value = county.CountyName;
       countyOption.textContent = county.CountyName;
       countySelector.appendChild(countyOption);
-    }
+    });
   searchOptionsArea.appendChild(countySelector);
   
   getEl('zoo-look-county').appendChild(searchOptionsArea);  
