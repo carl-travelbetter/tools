@@ -52,8 +52,8 @@ function loadZooSearchOptions()
   console.log('UK Zoo Finder: Load Zoo Search Options');
   const searchOptionsArea = document.createElement('div');
   searchOptionsArea.innderHTML = "";
-  const searchOptionsInstructions = document.createElement('p');
-  searchOptionsInstructions.textContent = "Select A Search Option To Find a UK Zoo";
+  const searchOptionsInstructions = document.createElement('h2');
+  searchOptionsInstructions.textContent = "Select An Option To Find a UK Zoo";
   searchOptionsArea.appendChild(searchOptionsInstructions);
   const countySelector = document.createElement('select');
   countySelector.className = 'option-selection';
@@ -72,17 +72,18 @@ function loadZooSearchOptions()
       countySelector.appendChild(countyOption);
     });
   searchOptionsArea.appendChild(countySelector);
-
+  const spacer = document.createElement('br');
+  searchOptionsArea.appendChild(spacer);
   const accommodationSelector = document.createElement('select');
   accommodationSelector.className = 'option-selection';
   accommodationSelector.addEventListener("change", (event) => {
     loadZoosByAccommodation();
   });
   const accommodationPlaceHolder = document.createElement('option');
-  accommodationPlaceHolder.textContent = "Zoo's with accommodation";                                                       
+  accommodationPlaceHolder.textContent = "Zoo's With accommodation";                                                       
   accommodationSelector.appendChild(accommodationPlaceHolder);
   const accommodationOption = document.createElement('option');
-  accommodationOption.textContent = "View all Zoo's with accommodation";
+  accommodationOption.textContent = "All Zoo's with accommodation";
   accommodationSelector.appendChild(accommodationOption);
   searchOptionsArea.appendChild(accommodationSelector);
   getEl('zoo-search').appendChild(searchOptionsArea);  
