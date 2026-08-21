@@ -74,6 +74,9 @@ function loadZooSearchOptions()
   searchOptionsArea.appendChild(countySelector);
   const spacer = document.createElement('br');
   searchOptionsArea.appendChild(spacer);
+  searchOptionsArea.appendChild(spacer);
+  searchOptionsArea.appendChild(spacer);
+  searchOptionsArea.appendChild(spacer);
   const accommodationSelector = document.createElement('select');
   accommodationSelector.className = 'option-selection';
   accommodationSelector.addEventListener("change", (event) => {
