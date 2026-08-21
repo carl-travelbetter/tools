@@ -72,10 +72,46 @@ function loadZooSearchOptions()
       countySelector.appendChild(countyOption);
     });
   searchOptionsArea.appendChild(countySelector);
-  
+
+  const accommodationSelector = document.createElement('select');
+  accommodationSelector.className = 'option-selection';
+  accommodationSelector.addEventListener("change", (event) => {
+    loadZoosByAccommodation();
+  });
+  const accommodationPlaceHolder = document.createElement('option');
+  accommodationPlaceHolder.textContent = "Zoo's with accommodation";                                                       
+  accommodationSelector.appendChild(accommodationPlaceHolder);
+  const accommodationOption = document.createElement('option');
+  accommodationOption.textContent = "View all Zoo's with accommodation";
+  accommodationSelector.appendChild(accommodationOption);
   getEl('zoo-search').appendChild(searchOptionsArea);  
 }
 
+function loadZoosByAccommodation()
+{
+  console.log('UK Zoo Finder: Load Zoos With Accommodation');
+  const results = getEl('results');
+  results.innerHTML = "";
+  //filter data by county value
+  let zoosWithStays = zooData.filter(item =>
+    item.Accommodation = true;
+    );
+
+  zoosWithStays.forEach(zoo =>
+   {
+      const zooCard = document.createElement('div');
+      zooCard.className = 'card';
+      let output = `<p><strong>${zoo.ZooName}</strong></p>`+
+                   `<p><a href="${zoo.url}">Zoo Website</a></p>`;
+      zooCard.innerHTML = output;
+      results.appendChild(zooCard);
+     
+      
+      console.log("UK Zoo Finder: With Stay "+zoo.ZooName);  
+  });
+
+  results.hidden = false;
+}
 
 function loadZoosByCounty(county)
 {
