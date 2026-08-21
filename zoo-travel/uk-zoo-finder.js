@@ -80,13 +80,25 @@ function loadZooSearchOptions()
 function loadZoosByCounty(county)
 {
   console.log('UK Zoo Finder: Load Zoos By County');
+  const results = getEl('results');
+  results.innerHTML = "";
   //filter data by county value
   let zoosByCounty = zooData.filter(item =>
     item.County.includes(county)
     );
   zoosByCounty.forEach(zoo =>
    {
+      const zooCard = document.createElement('div');
+      zooCard.className = 'card';
+      let output = `<p><strong>${zoo.ZooName}</strong></p>`+
+                   `<p><a href="${zoo.url}">Zoo Website</a></p>`;
+      zooCard.innerHTML = output;
+      results.appendChild(zooCard);
+     
+      
       console.log("UK Zoo Finder: By County "+zoo.ZooName);  
   });
+
+  results.hidden = false;
    
 }
