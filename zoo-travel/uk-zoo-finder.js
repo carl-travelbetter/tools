@@ -84,6 +84,7 @@ function loadZooSearchOptions()
   const accommodationOption = document.createElement('option');
   accommodationOption.textContent = "View all Zoo's with accommodation";
   accommodationSelector.appendChild(accommodationOption);
+  searchOptionsArea.appendChild(accommodationSelector);
   getEl('zoo-search').appendChild(searchOptionsArea);  
 }
 
