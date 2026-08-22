@@ -66,6 +66,15 @@ function loadZooSearchOptions()
       countyOption.textContent = county.CountyName;
       countySelector.appendChild(countyOption);
     });
+
+  //load zoo names lists
+  const zooNameList = getEl('zoo-list');
+  zooData.forEach(zoo => 
+  {
+    const name = document.createElement('option');
+    option.value = zoo.ZooName;
+    zooNameList.appendChild(name);
+  });
   getEl('zoo-search').hidden = false;
 }
 
