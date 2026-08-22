@@ -75,6 +75,14 @@ function loadZooSearchOptions()
     name.value = zoo.ZooName;
     zooNameList.appendChild(name);
   });
+  const zooNameSearch = getEl('zoo-name-search');
+  zooNameSearch.addEventListener("change", () => {
+  const selectedZoo = zooData.find(
+    zoo => zoo.ZooName === zooNameSearch.value
+  );
+
+  console.log(selectedZoo);
+});
   getEl('zoo-search').hidden = false;
 }
 
