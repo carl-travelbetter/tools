@@ -125,7 +125,7 @@ function loadZoosByCounty(county)
       let output = `<p><strong>${zoo.ZooName}</strong></p>`+
                    `<p> 🚗 Safari Drive: ${safariDrive}</p>`+
                    `<p> 🐘 Featured Animals: ${animals}</p>`+
-                   `<p><a href="${zoo.url}">Zoo Website</a></p>`;
+                   `<p><a href="${zoo.url}">${zoo.ZooName} Website</a></p>`;
       zooCard.innerHTML = output;
       results.appendChild(zooCard);
      
