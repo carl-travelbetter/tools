@@ -23,7 +23,7 @@ fetch('uk_zoos.json')
 
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
-  //getEl('country')?.addEventListener("change", loadCountryData); 
+  getEl('accommodation-button')?.addEventListener("click", loadZoosWithAccommodation); 
   //getEl('load-table')?.addEventListener("click", showTable);
   //getEl('load-spain-route-table')?.addEventListener("click", showSpainRouteTable);
   //getEl('all-france-england')?.addEventListener("click", allFranceEngland);
@@ -49,20 +49,15 @@ function loadCountyData()
 
 function loadZooSearchOptions()
 {
-  console.log('UK Zoo Finder: Load Zoo Search Options');
-  const searchOptionsArea = document.createElement('div');
-  searchOptionsArea.innderHTML = "";
-  const searchOptionsInstructions = document.createElement('h2');
-  searchOptionsInstructions.textContent = "Select An Option To Find a UK Zoo";
-  searchOptionsArea.appendChild(searchOptionsInstructions);
-  const countySelector = document.createElement('select');
+  console.log('UK Zoo Finder: Load Zoo Search Options');  
+  const countySelector = getEl('county-selector');
   countySelector.className = 'option-selection';
   countySelector.addEventListener("change", (event) => {
     loadZoosByCounty(event.target.value);
   });
   let countyPlaceHolder = document.createElement('option');
   countyPlaceHolder.value = 'Placeholder';
-  countyPlaceHolder.textContent = 'Search By County';
+  countyPlaceHolder.textContent = 'Select a County';
   countySelector.appendChild(countyPlaceHolder);
   countyData.forEach(county =>
     {
@@ -71,13 +66,7 @@ function loadZooSearchOptions()
       countyOption.textContent = county.CountyName;
       countySelector.appendChild(countyOption);
     });
-  searchOptionsArea.appendChild(countySelector);
-  const accommodationButton = document.createElement('button');
-  accommodationButton.className = 'control-btn';
-  accommodationButton.addEventListener("click", loadZoosWithAccommodation);
-  accommodationButton.textContent = 'Zoos with Accommodation';
-  searchOptionsArea.appendChild(accommodationButton);
-  getEl('zoo-search').appendChild(searchOptionsArea);  
+  getEl('zoo-search').hidden = false;
 }
 
 function loadZoosWithAccommodation()
