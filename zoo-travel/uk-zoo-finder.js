@@ -97,6 +97,9 @@ function loadZoosWithAccommodation()
   console.log('UK Zoo Finder: Load Zoos With Accommodation');
   const results = getEl('results');
   results.innerHTML = "";
+  const header = document.createElement('h2');
+  header.textContent = 'All UK Zoos with Accommodation';
+  results.appendChild(header);
   //filter data by county value
   let zoosWithStays = zooData.filter(item => item.Accommodation);
 
