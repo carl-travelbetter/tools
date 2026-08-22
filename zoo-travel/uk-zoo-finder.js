@@ -72,7 +72,7 @@ function loadZooSearchOptions()
   zooData.forEach(zoo => 
   {
     const name = document.createElement('option');
-    option.value = zoo.ZooName;
+    name.value = zoo.ZooName;
     zooNameList.appendChild(name);
   });
   getEl('zoo-search').hidden = false;
