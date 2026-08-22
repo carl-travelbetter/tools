@@ -76,18 +76,6 @@ function loadZooSearchOptions()
   accommodationButton.className = 'control-btn';
   accommodationButton.addEventListener("click", loadZoosWithAccommodation);
   accommodationButton.textContent = 'Zoos with Accommodation';
- /* const accommodationSelector = document.createElement('select');
-  accommodationSelector.className = 'option-selection';
-  accommodationSelector.addEventListener("change", (event) => {
-    loadZoosByAccommodation();
-  });
-  const accommodationPlaceHolder = document.createElement('option');
-  accommodationPlaceHolder.textContent = "Zoo's With accommodation";                                                       
-  accommodationSelector.appendChild(accommodationPlaceHolder);
-  const accommodationOption = document.createElement('option');
-  accommodationOption.textContent = "All Zoo's with accommodation";
-  accommodationSelector.appendChild(accommodationOption);
-  searchOptionsArea.appendChild(accommodationSelector);*/
   searchOptionsArea.appendChild(accommodationButton);
   getEl('zoo-search').appendChild(searchOptionsArea);  
 }
@@ -98,7 +86,7 @@ function loadZoosWithAccommodation()
   const results = getEl('results');
   results.innerHTML = "";
   const header = document.createElement('h2');
-  header.textContent = 'All UK Zoos with Accommodation';
+  header.textContent = 'All UK Zoos Offering Accommodation';
   results.appendChild(header);
   //filter data by county value
   let zoosWithStays = zooData.filter(item => item.Accommodation);
@@ -130,9 +118,13 @@ function loadZoosByCounty(county)
     );
   zoosByCounty.forEach(zoo =>
    {
+      const safariDrive = zoo.SafariDrive ? "Yes" : "No";
+      const animals = zoo.StarAnimals;
       const zooCard = document.createElement('div');
       zooCard.className = 'card';
       let output = `<p><strong>${zoo.ZooName}</strong></p>`+
+                   `<p> 🚗 Safari Drive: ${safariDrive}</p>`+
+                   `<p> 🐘 Featured Animals: ${animals}</p>`+
                    `<p><a href="${zoo.url}">Zoo Website</a></p>`;
       zooCard.innerHTML = output;
       results.appendChild(zooCard);
