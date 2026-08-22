@@ -24,9 +24,18 @@
     <div class="display-card" id="data-loading">
         <p>Loading the Latest Country Data - This may take a small moment</p>
     </div>
-    <div class="card" id="zoo-search" hidden>
-          
-     </div>
+    <div class="control-card" id="zoo-search" hidden>
+        <h2>Find a UK Zoo</h2>
+        <p>Search by name, county, accommodation or safari drives.</p>
+        <input type="text" id="zoo-name-search" list="zoo-list" placeholder="Start typing a zoo name...">
+        <datalist id="zoo-list"></datalist>
+        <br>
+        <select id="county-selector"></select>
+        <br>
+        <button class="control-btn" id="accommodation-button">Zoos with Accommodation</button>
+        <br>
+        <button class="control-btn" id="safari-drive">Zoos with a safari drive</button>
+    </div>
     
      
      <div class="display-card" id="results" hidden></div>
