@@ -81,7 +81,7 @@ function loadZooSearchOptions()
     zoo => zoo.ZooName === zooNameSearch.value
   );
 
-  console.log(selectedZoo);
+  displayZoo(selectedZoo);
 });
   getEl('zoo-search').hidden = false;
 }
@@ -141,4 +141,23 @@ function loadZoosByCounty(county)
 
   results.hidden = false;
    
+}
+
+function displayZoo(zoo)
+{
+  console.log("Display Zoo: "+zoo);
+   const results = getEl('results');
+  results.innerHTML = "";
+  const safariDrive = zoo.SafariDrive ? "Yes" : "No";
+  const animals = zoo.StarAnimals;
+  const zooCard = document.createElement('div');
+  zooCard.className = 'card';
+  let output = `<p><strong>${zoo.ZooName}</strong></p>`+
+               `<p> 🚗 Safari Drive: ${safariDrive}</p>`+
+               `<p> 🐘 Featured Animals: ${animals}</p>`+
+               `<p><a href="${zoo.url}">${zoo.ZooName} Website</a></p>`;
+  zooCard.innerHTML = output;
+  results.appendChild(zooCard);
+    
+  results.hidden = false;
 }
