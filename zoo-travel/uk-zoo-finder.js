@@ -72,12 +72,11 @@ function loadZooSearchOptions()
       countySelector.appendChild(countyOption);
     });
   searchOptionsArea.appendChild(countySelector);
-  const spacer = document.createElement('br');
-  searchOptionsArea.appendChild(spacer);
-  searchOptionsArea.appendChild(spacer);
-  searchOptionsArea.appendChild(spacer);
-  searchOptionsArea.appendChild(spacer);
-  const accommodationSelector = document.createElement('select');
+  const accommodationButton = document.createElement('button');
+  accommodationButton.className = 'control-btn';
+  accommodationButton.addEventListener("click", loadZoosWithAccommodation);
+  accommodationButton.textContent = 'Zoos with Accommodation';
+ /* const accommodationSelector = document.createElement('select');
   accommodationSelector.className = 'option-selection';
   accommodationSelector.addEventListener("change", (event) => {
     loadZoosByAccommodation();
@@ -88,11 +87,12 @@ function loadZooSearchOptions()
   const accommodationOption = document.createElement('option');
   accommodationOption.textContent = "All Zoo's with accommodation";
   accommodationSelector.appendChild(accommodationOption);
-  searchOptionsArea.appendChild(accommodationSelector);
+  searchOptionsArea.appendChild(accommodationSelector);*/
+  searchOptionsArea.appendChild(accommodationButton);
   getEl('zoo-search').appendChild(searchOptionsArea);  
 }
 
-function loadZoosByAccommodation()
+function loadZoosWithAccommodation()
 {
   console.log('UK Zoo Finder: Load Zoos With Accommodation');
   const results = getEl('results');
