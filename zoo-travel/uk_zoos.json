@@ -606,7 +606,7 @@
       "Lions",
       "Red pandas"
     ],
-    "TBVisited": false
+    "TBVisited": true
   },
   {
     "ZooID": "ZID0030",
@@ -1425,7 +1425,7 @@
       "Rhinos",
       "Macaques"
     ],
-    "TBVisited": false
+    "TBVisited": true
   },
   {
     "ZooID": "ZID0069",
@@ -1509,7 +1509,7 @@
       "Rhinos",
       "Zebras"
     ],
-    "TBVisited": false
+    "TBVisited": true
   },
   {
     "ZooID": "ZID0073",
@@ -2013,7 +2013,7 @@
       "Jellyfish",
       "Tropical fish"
     ],
-    "TBVisited": false
+    "TBVisited": true
   },
   {
     "ZooID": "ZID0097",
@@ -2388,7 +2388,7 @@
       "Giraffes",
       "Elephants"
     ],
-    "TBVisited": false
+    "TBVisited": true
   },
   {
     "ZooID": "ZID0115",
