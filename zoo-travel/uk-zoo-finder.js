@@ -23,7 +23,8 @@ fetch('uk_zoos.json')
 
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
-  getEl('accommodation-button')?.addEventListener("click", loadZoosWithAccommodation); 
+  getEl('accommodation-button')?.addEventListener("click", loadZoosWithAccommodation);
+  getEl('safari-drive')?.addEventListener("click", loadSafariDrives);
   //getEl('load-table')?.addEventListener("click", showTable);
   //getEl('load-spain-route-table')?.addEventListener("click", showSpainRouteTable);
   //getEl('all-france-england')?.addEventListener("click", allFranceEngland);
@@ -108,6 +109,30 @@ function loadZoosWithAccommodation()
      
       
       console.log("UK Zoo Finder: With Stay "+zoo.ZooName);  
+  });
+
+  results.hidden = false;
+}
+
+function loadSafariDrives()
+{
+  console.log('UK Zoo Finder: Load Zoos With A Safari Drive');
+  const results = getEl('results');
+  results.innerHTML = "";
+  const header = document.createElement('h2');
+  header.textContent = 'All UK Zoos With A Safari Drive';
+  results.appendChild(header);
+  //filter data by county value
+  let zoosWithSafari = zooData.filter(item => item.SafariDrive);
+
+  zoosWithSafari.forEach(zoo =>
+   {
+      const zooCard = document.createElement('div');
+      zooCard.className = 'card';
+      let output = `<p><strong>${zoo.ZooName}</strong></p>`+
+                   `<p><a href="${zoo.url}">Zoo Website</a></p>`;
+      zooCard.innerHTML = output;
+      results.appendChild(zooCard);
   });
 
   results.hidden = false;
