@@ -112,6 +112,7 @@ function loadZoosWithAccommodation()
   });
 
   results.hidden = false;
+  getEl('authority').hidden = false;
 }
 
 function loadSafariDrives()
@@ -136,6 +137,7 @@ function loadSafariDrives()
   });
 
   results.hidden = false;
+  getEl('authority').hidden = false;
 }
 
 function loadZoosByCounty(county)
@@ -165,6 +167,7 @@ function loadZoosByCounty(county)
   });
 
   results.hidden = false;
+  getEl('authority').hidden = false;
    
 }
 
@@ -185,4 +188,5 @@ function displayZoo(zoo)
   results.appendChild(zooCard);
     
   results.hidden = false;
+  getEl('authority').hidden = false;
 }
