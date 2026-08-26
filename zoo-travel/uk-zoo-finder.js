@@ -149,26 +149,31 @@ function loadZoosByCounty(county)
   let zoosByCounty = zooData.filter(item =>
     item.County.includes(county)
     );
-  zoosByCounty.forEach(zoo =>
-   {
-      const safariDrive = zoo.SafariDrive ? "Yes" : "No";
-      const animals = zoo.StarAnimals;
-      const zooCard = document.createElement('div');
-      zooCard.className = 'card';
-      let output = `<p><strong>${zoo.ZooName}</strong></p>`+
-                   `<p> 🚗 Safari Drive: ${safariDrive}</p>`+
-                   `<p> 🐘 Featured Animals: ${animals}</p>`+
-                   `<p><a href="${zoo.url}">${zoo.ZooName} Website</a></p>`;
-      zooCard.innerHTML = output;
-      results.appendChild(zooCard);
-     
-      
-      console.log("UK Zoo Finder: By County "+zoo.ZooName);  
-  });
-
-  results.hidden = false;
-  getEl('authority').hidden = false;
-   
+  if (zoosByCounty.length > 0)
+  {
+      zoosByCounty.forEach(zoo =>
+       {
+          const safariDrive = zoo.SafariDrive ? "Yes" : "No";
+          const animals = zoo.StarAnimals;
+          const zooCard = document.createElement('div');
+          zooCard.className = 'card';
+          let output = `<p><strong>${zoo.ZooName}</strong></p>`+
+                       `<p> 🚗 Safari Drive: ${safariDrive}</p>`+
+                       `<p> 🐘 Featured Animals: ${animals}</p>`+
+                       `<p><a href="${zoo.url}">${zoo.ZooName} Website</a></p>`;
+          zooCard.innerHTML = output;
+          results.appendChild(zooCard);
+         
+          
+          console.log("UK Zoo Finder: By County "+zoo.ZooName);  
+      });
+      results.hidden = false;
+      getEl('authority').hidden = false;
+  }
+  else
+  {
+    noResultsFound();
+  }   
 }
 
 function displayZoo(zoo)
@@ -184,6 +189,24 @@ function displayZoo(zoo)
                `<p> 🚗 Safari Drive: ${safariDrive}</p>`+
                `<p> 🐘 Featured Animals: ${animals}</p>`+
                `<p><a href="${zoo.url}">${zoo.ZooName} Website</a></p>`;
+  zooCard.innerHTML = output;
+  results.appendChild(zooCard);
+    
+  results.hidden = false;
+  getEl('authority').hidden = false;
+}
+
+//Display this when no results are found.
+function noResultsFound()
+{
+  console.log("UK Zoo Finder: No Results");
+  const results = getEl('results');
+  results.innerHTML = "";
+  const zooCard = document.createElement('div');
+  zooCard.className = 'card';
+  let output = `<p><strong>No Results</strong></p>`+
+               `<p>Sorry, we haven't been able to find any results for that search.</p>` +
+               `<p>Maybe try a different name, or neighbouring county?</p>`;
   zooCard.innerHTML = output;
   results.appendChild(zooCard);
     
