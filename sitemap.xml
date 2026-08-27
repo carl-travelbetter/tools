@@ -137,4 +137,14 @@
     <lastmod>2026-08-15</lastmod>
     <priority>0.8</priority>
   </url>
+   <url>
+    <loc>https://tools.travelbetter.co.uk/zoo-travel/uk-zoo-finder</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tools.travelbetter.co.uk/zoo-travel</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.8</priority>
+  </url>
 </urlset>
