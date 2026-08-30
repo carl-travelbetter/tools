@@ -121,7 +121,7 @@ function loadSafariDrives()
   const results = getEl('results');
   results.innerHTML = "";
   const header = document.createElement('h2');
-  header.textContent = 'All UK Zoos With A Safari Drive';
+  header.textContent = 'UK Zoos With A Drive-Through Safari';
   results.appendChild(header);
   //filter data by county value
   let zoosWithSafari = zooData.filter(item => item.SafariDrive);
@@ -131,6 +131,8 @@ function loadSafariDrives()
       const zooCard = document.createElement('div');
       zooCard.className = 'card';
       let output = `<p><strong>${zoo.ZooName}</strong></p>`+
+                   `<p>Location: ${zoo.County}</p>`+
+                   `<p> 🐘 Featured Animals: ${zoo.StarAnimals}</p>`+
                    `<p><a href="${zoo.url}">Zoo Website</a></p>`;
       zooCard.innerHTML = output;
       results.appendChild(zooCard);
