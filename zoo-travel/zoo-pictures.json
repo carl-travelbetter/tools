@@ -1,0 +1,16 @@
+[
+ {
+   "picID": "O0001",
+   "animal": "Tiger",
+   "zooName": "West Midlands Safari Park",
+   "zooID": "1234",
+   "picURL": "https://travelbetter.co.uk",
+ },
+ {
+   "picID": "O0002",
+   "animal": "Tiger",
+   "zooName": "West Midlands Safari Park",
+   "zooID": "1234",
+   "picURL": "https://travelbetter.co.uk",
+ }
+]
