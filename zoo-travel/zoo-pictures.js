@@ -9,15 +9,15 @@ import { getEl, getText, getDate} from "/lib/dom.js";
 import {getFlag} from "/lib/country-helper.js";
 
 //Load Data
-let zooData = [];
+let zooPicList = [];
 let countyData = [];
 
-fetch('uk_zoos.json')
+fetch('zoos-pictures.json')
   .then(response => response.json())
   .then(data => {
-    zooData = data;
-    console.log("Zoo Data Loaded:", zooData);
-    loadCountyData();
+    zooPicList = data;
+    console.log("Zoo Data Loaded:", zooPicList);
+    enableOptions();
   })
   .catch(error => console.error("Error loading Zoo Data:", error));
 
@@ -32,3 +32,9 @@ function bindEvents() {
 
 //Ensure html bindings are not applied until the html structure is built
 document.addEventListener("DOMContentLoaded", bindEvents);
+
+function enableOptions()
+{
+  console.log('Zoo Pics: Enable Options');
+  
+}
