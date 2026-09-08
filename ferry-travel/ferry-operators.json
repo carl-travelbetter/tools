@@ -118,5 +118,17 @@
    "footPassengers": true,
    "dogFriendly": true,
    "accessibilitySupport": true
+ },
+  {
+   "operatorID": "O0011",
+   "operatorName": "Red Funnel",
+   "amendmentPolicy": "Amendments free of charge with a Flexi Fare booking.",
+   "cancellationPolicy": "Flexi Fare bookings can be cancelled up to 24 hours before your sailing for a full reimbursement.",
+   "link": "https://www.redfunnel.co.uk/",
+   "travelbetterRating": 4,
+   "moreInfoLink": "https://travelbetter.co.uk",
+   "footPassengers": true,
+   "dogFriendly": true,
+   "accessibilitySupport": true
  }
 ]
