@@ -519,5 +519,25 @@
    "rating": 4,
    "tags": ["quiet-friendly", "pet-friendly", "accessible"],
    "notes": "Excellent arrival point in the Isle of Wight to start your adventure."
+ },
+ {
+   "id": "R0027",
+   "route": "Southampton to Isle of Wight Red Jet",
+   "startPort": "Southampton",
+   "destinationPort": "West Cowes",
+   "startRegion": "Hampshire",
+   "destinationRegion": "Isle of Wight",
+   "startCountry": "England",
+   "destinationCountry": "England",
+   "dayCrossingTimeMins": 60,
+   "nightCrossingTimeMins": 60,
+   "distance": "25 miles",
+   "operators": ["O0011"],
+   "pricesFrom": "£40.00",
+   "sailDays": "Mo, Tu, We, Fr, Su",
+   "sailingsPerDay": "1",
+   "rating": 4,
+   "tags": ["quiet-friendly", "pet-friendly", "accessible"],
+   "notes": "Foot passengers only."
  }
 ]
