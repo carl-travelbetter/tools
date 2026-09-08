@@ -484,7 +484,6 @@
    "id": "R0025",
    "route": "Poole to Guernsey",
    "startPort": "Poole",
-   "destinationPort": "",
    "destinationPort": "St. Peter",
    "startRegion": "Dorset",
    "destinationRegion": "Channel Islands",
@@ -500,5 +499,25 @@
    "rating": 4,
    "tags": ["quiet-friendly", "pet-friendly", "accessible"],
    "notes": "This route uses the high-speed catamaran - Voyager - carrying to 850 passengers, 235 cars and it can travel as fast as 42 knots"
+ },
+  {
+   "id": "R0026",
+   "route": "Southampton to Isle of Wight",
+   "startPort": "Southampton",
+   "destinationPort": "East Cowes",
+   "startRegion": "Hampshire",
+   "destinationRegion": "Isle of Wight",
+   "startCountry": "England",
+   "destinationCountry": "England",
+   "dayCrossingTimeMins": 60,
+   "nightCrossingTimeMins": 60,
+   "distance": "25 miles",
+   "operators": ["O0011"],
+   "pricesFrom": "£40.00",
+   "sailDays": "Mo, Tu, We, Fr, Su",
+   "sailingsPerDay": "1",
+   "rating": 4,
+   "tags": ["quiet-friendly", "pet-friendly", "accessible"],
+   "notes": "Excellent arrival point in the Isle of Wight to start your adventure."
  }
 ]
