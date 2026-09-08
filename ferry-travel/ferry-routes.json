@@ -539,5 +539,25 @@
    "rating": 4,
    "tags": ["quiet-friendly", "pet-friendly", "accessible"],
    "notes": "Foot passengers only."
- }
+ },
+ {
+   "id": "R0028",
+   "route": "Portsmouth Harbour to Ryde",
+   "startPort": "Portsmouth Harbour",
+   "destinationPort": "Ryde",
+   "startRegion": "Hampshire",
+   "destinationRegion": "Isle of Wight",
+   "startCountry": "England",
+   "destinationCountry": "England",
+   "dayCrossingTimeMins": 45,
+   "nightCrossingTimeMins": 45,
+   "distance": "20 miles",
+   "operators": ["O0009"],
+   "pricesFrom": "£40.00",
+   "sailDays": "Mo, Tu, We, Th, Fr, Sa, Su",
+   "sailingsPerDay": "23",
+   "rating": 4,
+   "tags": ["cars", "pet-friendly", "motor-homes", "accessible"],
+   "notes": "Foot passengers only."
+ },
 ]
