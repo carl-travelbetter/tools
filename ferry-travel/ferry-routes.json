@@ -549,8 +549,8 @@
    "destinationRegion": "Isle of Wight",
    "startCountry": "England",
    "destinationCountry": "England",
-   "dayCrossingTimeMins": 45,
-   "nightCrossingTimeMins": 45,
+   "dayCrossingTimeMins": 22,
+   "nightCrossingTimeMins": 22,
    "distance": "20 miles",
    "operators": ["O0009"],
    "pricesFrom": "£40.00",
@@ -558,6 +558,6 @@
    "sailingsPerDay": "23",
    "rating": 4,
    "tags": ["cars", "pet-friendly", "motor-homes", "accessible"],
-   "notes": "Foot passengers only."
+   "notes": "FastCat catamaran for foot passengers only."
  },
 ]
