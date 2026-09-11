@@ -32,6 +32,7 @@ fetch('ferry-operators.json')
 function bindEvents() {
   getEl('route-option')?.addEventListener("change", processOption);
   getEl('time-option')?.addEventListener("change", processTimeOption);
+  getEl('learn-more')?.addEventListener("click", learnMore);
 }
 
 //Ensure html bindings are not applied until the html structure is built
@@ -273,7 +274,11 @@ function displayTimeResults(routes)
   });
 }
 
-
+//Display the help pane to explain the options
+function learnMore()
+{
+  getEl('options-explained').hidden = false;
+}
 
 //function to return the hours and minutes from total minutes
 function getHrsAndMinutes(totalMinutes)
