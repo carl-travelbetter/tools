@@ -502,7 +502,7 @@
  },
   {
    "id": "R0026",
-   "route": "Southampton to Isle of Wight",
+   "route": "Southampton to East Cowes Isle of Wight",
    "startPort": "Southampton",
    "destinationPort": "East Cowes",
    "startRegion": "Hampshire",
@@ -522,7 +522,7 @@
  },
  {
    "id": "R0027",
-   "route": "Southampton to Isle of Wight Red Jet",
+   "route": "Southampton to West Cowes Isle of Wight Red Jet",
    "startPort": "Southampton",
    "destinationPort": "West Cowes",
    "startRegion": "Hampshire",
