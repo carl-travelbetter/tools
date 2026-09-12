@@ -199,7 +199,7 @@ function displayResults(routes)
       });
     results.appendChild(routeCard);
     getEl('intro').hidden = true;
-    getEl('options-explained;).hidden = true;
+    getEl('options-explained').hidden = true;
     results.hidden = false;
     getEl('alternatives').hidden = false;
   });
