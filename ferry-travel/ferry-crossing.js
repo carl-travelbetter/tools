@@ -33,6 +33,7 @@ function bindEvents() {
   getEl('route-option')?.addEventListener("change", processOption);
   getEl('time-option')?.addEventListener("change", processTimeOption);
   getEl('learn-more')?.addEventListener("click", learnMore);
+  getEl('hide-explainer')?.addEventListener("click", hideHelp);
 }
 
 //Ensure html bindings are not applied until the html structure is built
@@ -198,6 +199,7 @@ function displayResults(routes)
       });
     results.appendChild(routeCard);
     getEl('intro').hidden = true;
+    getEl('options-explained;).hidden = true;
     results.hidden = false;
     getEl('alternatives').hidden = false;
   });
@@ -278,6 +280,12 @@ function displayTimeResults(routes)
 function learnMore()
 {
   getEl('options-explained').hidden = false;
+}
+
+//Display the help pane to explain the options
+function hideHelp()
+{
+  getEl('options-explained').hidden = true;
 }
 
 //function to return the hours and minutes from total minutes
