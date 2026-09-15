@@ -22,17 +22,24 @@ function convertCelcius()
   let c = getEl('celcius').value;
   let f = ((c/5)*9)+32;
   getEl('fahrenheit').value = f;
-  console.log('A Change Has Taken Place');
+  let k = c + 273.15;
+  getEl('kelvin').value = k;
 }
 
 function convertFahrenheit()
 {
   console.log('Converting Fahrenheit');
+   let f = getEl('fahrenheit').value;
+   let c = ((f-32)*5)/9;
+   getEl('celcius').value = c;
 }
 
 function convertKelvin()
 {
   console.log('Converting Kelvin');
+  let k = getEl('kelvin').value;
+  let c = k - 273.15;
+  getEl('celcius').value = c;
 }
 
 function clearValues()
