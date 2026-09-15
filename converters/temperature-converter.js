@@ -21,9 +21,9 @@ function convertCelcius()
   console.log('Converting Celcius');
   let c = getEl('celcius').value;
   let f = ((c/5)*9)+32;
-  getEl('fahrenheit').value = f;
+  getEl('fahrenheit').value = f.toFixed(2);
   let k = (c*1) + 273.15;
-  getEl('kelvin').value = k;
+  getEl('kelvin').value = k.toFixed(2);
 }
 
 function convertFahrenheit()
@@ -32,8 +32,8 @@ function convertFahrenheit()
    let f = getEl('fahrenheit').value;
    let c = ((f-32)*5)/9;
    let k = (c*1) + 273.15;
-   getEl('celcius').value = c;
-   getEl('kelvin').value = k;
+   getEl('celcius').value = c.toFixed(2);
+   getEl('kelvin').value = k.toFixed(2);
 }
 
 function convertKelvin()
@@ -42,8 +42,8 @@ function convertKelvin()
   let k = getEl('kelvin').value;
   let c = (k*1) - 273.15;
   let f = ((c/5)*9)+32;
-  getEl('celcius').value = c;
-  getEl('fahrenheit').value = f;
+  getEl('celcius').value = c.toFixed(2);
+  getEl('fahrenheit').value = f.toFixed(2);
 }
 
 function clearValues()
