@@ -9,6 +9,7 @@ function bindEvents() {
   getEl('celcius')?.addEventListener("keyup", convertCelcius);
   getEl('fahrenheit')?.addEventListener("keyup", convertFahrenheit);
   getEl('kelvin')?.addEventListener("keyup", convertKelvin);
+  getEl('clear-btn')?.addEventListener("click", clearValues);
 }
 
 //Ensure html bindings are not applied until the html structure is built
@@ -27,5 +28,13 @@ function convertFahrenheit()
 function convertKelvin()
 {
   console.log('Converting Kelvin');
+}
+
+function clearValues()
+{
+  console.log('Clear Values');
+  getEl('celcius').value = "";
+  getEl('fahrenheit').value = "";
+  getEl('kelvin').value = "";
 }
           
