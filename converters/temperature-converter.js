@@ -17,8 +17,11 @@ document.addEventListener("DOMContentLoaded", bindEvents);
 
 function convertCelcius()
 {
+  //Formula F = ((C/5)*9)+32
   console.log('Converting Celcius');
-  getEl('fahrenheit').value = 8;
+  let c = getEl('celcius').value;
+  let f = ((c/5)*9)+32;
+  getEl('fahrenheit').value = f;
   console.log('A Change Has Taken Place');
 }
 
