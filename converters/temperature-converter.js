@@ -31,7 +31,9 @@ function convertFahrenheit()
   console.log('Converting Fahrenheit');
    let f = getEl('fahrenheit').value;
    let c = ((f-32)*5)/9;
+   let k = (c*1) + 273.15;
    getEl('celcius').value = c;
+   getEl('kelvin').value = k;
 }
 
 function convertKelvin()
@@ -39,7 +41,9 @@ function convertKelvin()
   console.log('Converting Kelvin');
   let k = getEl('kelvin').value;
   let c = (k*1) - 273.15;
+  let f = ((c/5)*9)+32;
   getEl('celcius').value = c;
+  getEl('fahrenheit').value = f;
 }
 
 function clearValues()
