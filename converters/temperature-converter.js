@@ -19,6 +19,7 @@ function convertCelcius()
 {
   console.log('Converting Celcius');
   getEl('fahrenheit').value = 8;
+  console.log('A Change Has Taken Place');
 }
 
 function convertFahrenheit()
