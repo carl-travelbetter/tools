@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", bindEvents);
 function convertCelcius()
 {
   console.log('Converting Celcius');
+  getEl('fahrenheit').value = 8;
 }
 
 function convertFahrenheit()
