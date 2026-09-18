@@ -10,6 +10,7 @@ function bindEvents() {
   getEl('fahrenheit')?.addEventListener("keyup", convertFahrenheit);
   getEl('kelvin')?.addEventListener("keyup", convertKelvin);
   getEl('clear-btn')?.addEventListener("click", clearValues);
+  getEl('formula-btn')?.addEventListener("click", showFormulas);
 }
 
 //Ensure html bindings are not applied until the html structure is built
@@ -52,5 +53,10 @@ function clearValues()
   getEl('celcius').value = "";
   getEl('fahrenheit').value = "";
   getEl('kelvin').value = "";
+}
+
+function showFormulas()
+{
+  getEl('formulas').hidden = false;
 }
           
