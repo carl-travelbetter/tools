@@ -142,9 +142,9 @@ function displayRecords()
   if (walkRecords.records.length > 0) //If we already have a running total
   {  
     let currentProgress = walkRecords.records[0];
-    let currentDistanceProgress = Number(currentProgress.distance);
-    let currentTimeProgress = Number(currentProgress.time);
-    let currentWalkCount = Number(currentProgress.walks);
+    let currentDistanceProgress = Number(currentProgress.distance).toFixed(2);
+    let currentTimeProgress = Number(currentProgress.time).toFixed(2);
+    let currentWalkCount = Number(currentProgress.walks).toFixed(0);
     const recordsHeader = document.createElement('h2');
     recordsHeader.textContent = "Walking Records";
     walkRecordsPane.appendChild(recordsHeader);
