@@ -32,7 +32,7 @@ let lastSevenDays = JSON.parse(localStorage.getItem(LAST_SEVEN_DAYS)) || {lsd: [
 const daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 let d = new Date();
 let day = daysOfTheWeek[d.getDay()];
-console.log('Today is '+day); 
+console.log("Today is "+day); 
 
 const dayOfYear = getDayOfYear();
 
