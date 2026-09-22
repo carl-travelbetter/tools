@@ -35,6 +35,11 @@ let d = new Date();
 let day = daysOfTheWeek[d.getDay()];
 console.log("Today is "+day); 
 
+if (lastSevenDays.lsd.length == 0)
+{
+  createSevenDayRecords();
+}
+
 const dayOfYear = getDayOfYear();
 
 let dayCheck  = walkTrackingDay.trackingDay[0] || 0;
@@ -69,6 +74,19 @@ if (walkList.walks.length > 0)
   displayLog();
   updateTracker();
   displayRecords();
+}
+
+function createSevenDayRecords()
+{
+  console.log("Creating Seven Day Records");
+  daysOfTheWeek.forEach(d =>
+    {
+      let record = {};
+      record.day = d;
+      lastSevenDays.lsd.push(record);
+    });
+
+  saveData();
 }
 
 //Ensure html bindings are not applied until the html structure is built
