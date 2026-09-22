@@ -29,6 +29,7 @@ let walkRecords = JSON.parse(localStorage.getItem(WALK_RECORDS)) || {records: []
 const LAST_SEVEN_DAYS = "last-seven-days";
 let lastSevenDays = JSON.parse(localStorage.getItem(LAST_SEVEN_DAYS)) || {lsd: []};
 
+//Get the day of the week
 const daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 let d = new Date();
 let day = daysOfTheWeek[d.getDay()];
@@ -139,7 +140,22 @@ function updateProgress(distance, time, operand)
  {
     console.log('Update Progress: Progress not updated as no recognised operand passed');
  }
+
+//update last 7 days progress
+updateLastSevenDays()  
+  
  displayRecords();
+}
+
+function updateLastSevenDays()
+{
+  console.log('Walk Tracker: Update Last Seven Days');
+
+  
+  let workingDay = {}
+  workingDay.day = day;
+  lastSevenDays.lsd.push(workingDay);
+  
 }
 
 //Display the progress bat showing progress to date
@@ -344,6 +360,7 @@ function saveData()
   localStorage.setItem(WALK_TARGET_KEY, JSON.stringify(targetData));
   //localStorage.setItem(WALK_TOTAL_KEY, JSON.stringify(walkTotal));
   localStorage.setItem(WALK_RECORDS, JSON.stringify(walkRecords));
+  localStorage.setItem(LAST_SEVEN_DAYS, JSON.stringify(lastSevenDays));
 }
 
 //close all option cards
