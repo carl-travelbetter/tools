@@ -29,6 +29,11 @@ let walkRecords = JSON.parse(localStorage.getItem(WALK_RECORDS)) || {records: []
 const LAST_SEVEN_DAYS = "last-seven-days";
 let lastSevenDays = JSON.parse(localStorage.getItem(LAST_SEVEN_DAYS)) || {lsd: []};
 
+const daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+let d = new Date();
+let day = daysOfTheWeek[d.getDay()];
+console.log('Today is "+day); 
+
 const dayOfYear = getDayOfYear();
 
 let dayCheck  = walkTrackingDay.trackingDay[0] || 0;
