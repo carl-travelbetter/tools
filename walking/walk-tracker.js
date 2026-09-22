@@ -83,6 +83,8 @@ function createSevenDayRecords()
     {
       let record = {};
       record.day = d;
+      record.totalDistance = 0;
+      record.totalKM = 0;
       lastSevenDays.lsd.push(record);
     });
 
