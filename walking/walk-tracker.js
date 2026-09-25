@@ -176,18 +176,18 @@ function updateProgress(distance, time, operand)
     console.log('Update Progress: Progress not updated as no recognised operand passed');
  }
 
-
+ saveData();
  displayRecords();
 }
 
 function updateLastSevenDays()
 {
-  console.log('Walk Tracker: Update Last Seven Days'); 
+ /* console.log('Walk Tracker: Update Last Seven Days'); 
   const today = {};
   today.day = day;
   today.totalDistance = 100;
   today.totalMins = 100;
-  lastSevenDays.lsd.push(today);
+  lastSevenDays.lsd.push(today);*/
   
   
 }
