@@ -35,10 +35,10 @@ let d = new Date();
 let day = daysOfTheWeek[d.getDay()];
 console.log("Today is "+day); 
 
-if (lastSevenDays.lsd.length == 0)
+/*if (lastSevenDays.lsd.length == 0)
 {
   createSevenDayRecords();
-}
+}*/
 
 const dayOfYear = getDayOfYear();
 
@@ -125,7 +125,15 @@ function updateProgress(distance, time, operand)
       today.day = day;
       today.totalDistance = newRecords.distance;
       today.totalMins = newRecords.time;
-      lastSevenDays.lsd[6];
+      if(lastSevenDays.lsd.length < 7)
+      {
+        lastSevenDays.lsd.push(today);
+      }
+      else 
+      {
+        lastSevenDays.lsd.slice(0,1);
+        lastSevenDays.lsd.push(today);
+      }
       localStorage.setItem(WALK_RECORDS, JSON.stringify(walkRecords));
   }
   else //if we don't have a running total then start one
@@ -139,7 +147,15 @@ function updateProgress(distance, time, operand)
       today.day = day;
       today.totalDistance = newRecords.distance;
       today.totalMins = newRecords.time;
-      lastSevenDays.lsd[6];
+      if(lastSevenDays.lsd.length < 7)
+      {
+        lastSevenDays.lsd.push(today);
+      }
+      else 
+      {
+        lastSevenDays.lsd.slice(0,1);
+        lastSevenDays.lsd.push(today);
+      }
       localStorage.setItem(WALK_RECORDS, JSON.stringify(walkRecords));
   }
  }
@@ -168,7 +184,15 @@ function updateProgress(distance, time, operand)
       today.day = day;
       today.totalDistance = newRecords.distance;
       today.totalMins = newRecords.time;
-      lastSevenDays.lsd[6];
+      if(lastSevenDays.lsd.length < 7)
+      {
+        lastSevenDays.lsd.push(today);
+      }
+      else 
+      {
+        lastSevenDays.lsd.slice(0,1);
+        lastSevenDays.lsd.push(today);
+      }
       localStorage.setItem(WALK_RECORDS, JSON.stringify(walkRecords));
  }
  else
