@@ -127,7 +127,9 @@ function updateProgress(distance, time, operand)
       today.totalMins = newRecords.time;
       if(lastSevenDays.lsd.length < 7)
       {
-        lastSevenDays.lsd.push(today);
+        //Take away 1 from the final position to 
+        let pos  = lastSevenDays.lsd.length - 1;
+        lastSevenDays.lsd.[pos] = today;
       }
       else 
       {
