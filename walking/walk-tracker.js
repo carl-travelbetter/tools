@@ -161,20 +161,19 @@ function updateProgress(distance, time, operand)
     console.log('Update Progress: Progress not updated as no recognised operand passed');
  }
 
-//update last 7 days progress
-updateLastSevenDays()  
-  
+
  displayRecords();
 }
 
 function updateLastSevenDays()
 {
-  console.log('Walk Tracker: Update Last Seven Days');
+  console.log('Walk Tracker: Update Last Seven Days'); 
+  
+  lastSevenDays.lsd.filter(d => {
+    d.day.includes(day)
+  });
 
   
-  let workingDay = {}
-  workingDay.day = day;
-  lastSevenDays.lsd.push(workingDay);
   
 }
 
@@ -251,6 +250,7 @@ function submitWalk()
   updateProgress(walk.distance, walk.minutes, "addition");
   saveData();
  // displayProgressBar();
+  updateLastSevenDays();
   displayLog();
   updateTracker();
   addWalk();
