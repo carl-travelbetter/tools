@@ -128,13 +128,18 @@ function updateProgress(distance, time, operand)
       if(lastSevenDays.lsd.length < 7)
       {
         //Take away 1 from the final position to 
-        let pos  = lastSevenDays.lsd.length - 1;
+        let pos  = lastSevenDays.lsd.length;
         lastSevenDays.lsd[pos] = today;
       }
       else 
       {
-        lastSevenDays.lsd.slice(0,1);
-        lastSevenDays.lsd.push(today);
+        let start = lastSevenDays.lsd[0];
+        //If the first item in the array is the same day as today
+        if (start.day == day)
+        {
+          lastSevenDays.lsd.slice(0,1);
+        }
+        lastSevenDays.lsd[6] = today;
       }
       localStorage.setItem(WALK_RECORDS, JSON.stringify(walkRecords));
   }
@@ -151,12 +156,19 @@ function updateProgress(distance, time, operand)
       today.totalMins = newRecords.time;
       if(lastSevenDays.lsd.length < 7)
       {
-        lastSevenDays.lsd.push(today);
+        //Take away 1 from the final position to 
+        let pos  = lastSevenDays.lsd.length;
+        lastSevenDays.lsd[pos] = today;
       }
       else 
       {
-        lastSevenDays.lsd.slice(0,1);
-        lastSevenDays.lsd.push(today);
+        let start = lastSevenDays.lsd[0];
+        //If the first item in the array is the same day as today
+        if (start.day == day)
+        {
+          lastSevenDays.lsd.slice(0,1);
+        }
+        lastSevenDays.lsd[6] = today;
       }
       localStorage.setItem(WALK_RECORDS, JSON.stringify(walkRecords));
   }
@@ -188,12 +200,19 @@ function updateProgress(distance, time, operand)
       today.totalMins = newRecords.time;
       if(lastSevenDays.lsd.length < 7)
       {
-        lastSevenDays.lsd.push(today);
+        //Take away 1 from the final position to 
+        let pos  = lastSevenDays.lsd.length;
+        lastSevenDays.lsd[pos] = today;
       }
       else 
       {
-        lastSevenDays.lsd.slice(0,1);
-        lastSevenDays.lsd.push(today);
+        let start = lastSevenDays.lsd[0];
+        //If the first item in the array is the same day as today
+        if (start.day == day)
+        {
+          lastSevenDays.lsd.slice(0,1);
+        }
+        lastSevenDays.lsd[6] = today;
       }
       localStorage.setItem(WALK_RECORDS, JSON.stringify(walkRecords));
  }
