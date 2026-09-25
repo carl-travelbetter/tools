@@ -172,7 +172,7 @@ function updateProgress(distance, time, operand)
       {
         let start = lastSevenDays.lsd[0];
         //If the first item in the array is the same day as today
-        if (start.day == day)
+        if (start.day === day)
         {
           lastSevenDays.lsd.slice(0,1);
         }
@@ -216,7 +216,7 @@ function updateProgress(distance, time, operand)
       {
         let start = lastSevenDays.lsd[0];
         //If the first item in the array is the same day as today
-        if (start.day == day)
+        if (start.day === day)
         {
           lastSevenDays.lsd.slice(0,1);
         }
