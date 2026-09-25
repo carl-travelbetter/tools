@@ -84,7 +84,7 @@ function createSevenDayRecords()
       let record = {};
       record.day = d;
       record.totalDistance = 0;
-      record.totalKM = 0;
+      record.totalMins = 0;
       lastSevenDays.lsd.push(record);
     });
 
@@ -169,11 +169,10 @@ function updateLastSevenDays()
 {
   console.log('Walk Tracker: Update Last Seven Days'); 
   
- const today = lastSevenDays.lsd.filter(d => {
-    d.day.includes(day)
-  });
-
-today.totalDistance = 100;
+  today.day = day;
+  today.totalDistance = 100;
+  today.totalMins = 100;
+  lastSevenDays.lsd.push(today);
   
   
 }
