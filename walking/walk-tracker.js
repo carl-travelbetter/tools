@@ -169,10 +169,11 @@ function updateLastSevenDays()
 {
   console.log('Walk Tracker: Update Last Seven Days'); 
   
-  lastSevenDays.lsd.filter(d => {
+ const today = lastSevenDays.lsd.filter(d => {
     d.day.includes(day)
   });
 
+today.totalDistance = 100;
   
   
 }
