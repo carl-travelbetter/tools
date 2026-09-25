@@ -168,7 +168,7 @@ function updateProgress(distance, time, operand)
 function updateLastSevenDays()
 {
   console.log('Walk Tracker: Update Last Seven Days'); 
-  
+  const today = {};
   today.day = day;
   today.totalDistance = 100;
   today.totalMins = 100;
