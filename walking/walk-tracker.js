@@ -129,7 +129,7 @@ function updateProgress(distance, time, operand)
       {
         //Take away 1 from the final position to 
         let pos  = lastSevenDays.lsd.length - 1;
-        lastSevenDays.lsd.[pos] = today;
+        lastSevenDays.lsd[pos] = today;
       }
       else 
       {
