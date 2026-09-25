@@ -121,6 +121,11 @@ function updateProgress(distance, time, operand)
       newRecords.time = currentTimeRecord;
       newRecords.walks = currentWalkRecord;
       walkRecords.records[0] = newRecords;
+      let today = {}
+      today.day = day;
+      today.totalDistance = newRecords.distance;
+      today.totalMins = newRecords.time;
+      lastSevenDays.lsd[6];
       localStorage.setItem(WALK_RECORDS, JSON.stringify(walkRecords));
   }
   else //if we don't have a running total then start one
@@ -130,6 +135,11 @@ function updateProgress(distance, time, operand)
       newRecords.time = Number(time);
       newRecords.walks = 1;
       walkRecords.records[0] = newRecords;
+      let today = {}
+      today.day = day;
+      today.totalDistance = newRecords.distance;
+      today.totalMins = newRecords.time;
+      lastSevenDays.lsd[6];
       localStorage.setItem(WALK_RECORDS, JSON.stringify(walkRecords));
   }
  }
@@ -154,6 +164,11 @@ function updateProgress(distance, time, operand)
       newRecords.time = currentTimeRecord;
       newRecords.walks = currentWalkRecord;
       walkRecords.records[0] = newRecords;
+      let today = {}
+      today.day = day;
+      today.totalDistance = newRecords.distance;
+      today.totalMins = newRecords.time;
+      lastSevenDays.lsd[6];
       localStorage.setItem(WALK_RECORDS, JSON.stringify(walkRecords));
  }
  else
