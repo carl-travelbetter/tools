@@ -209,9 +209,9 @@ function displayLastSevenDays()
   output.innerHTML = `<h3>Last Seven Days</h3>`+
                       `<p>Here is how your walks have gone over the last seven days</p>`;
   sevenDaysPane.appendChild(output);
-  const list = document.createElement('li');
+  const list = document.createElement('ul');
   sevenDays.forEach(d => {
-    const listItem = document.createElement('ul');
+    const listItem = document.createElement('li');
     if (d.day == day)
     {
       listItem.innerHTML = `<strong>Today - Total Minutes ${d.totalMins}, Total Distance ${d.totalDistance}km`;
