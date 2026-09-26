@@ -121,9 +121,6 @@ function updateProgress(distance, time, operand)
       newRecords.time = currentTimeRecord;
       newRecords.walks = currentWalkRecord;
       walkRecords.records[0] = newRecords;
-  
-                                
-   
       localStorage.setItem(WALK_RECORDS, JSON.stringify(walkRecords));
   }
   else //if we don't have a running total then start one
@@ -206,7 +203,25 @@ function displayLastSevenDays()
 {
   console.log('Display Last Seven Days');
   const sevenDaysPane = getEl('seven-days');
-  
+  const sevenDays = lastSevenDays.lsd;
+  const output = document.createElement('div');
+  output.innerHTML = `<h3>Last Seven Days</h3> +
+                      <p>Here is how your walks have gone over the last seven days</p>`;
+  sevenDaysPane.appendChild(output);
+  const list = document.createElement('li');
+  sevenDays.forEach(d => {
+    const listItem = document.createElement('ul');
+    if (d.day == day)
+    {
+      listItem.innerHTML = `<strong>Today - Total Minutes ${d.totalMins}, Total Distance ${d.totalDistance}km`;
+    }
+    else
+    {
+      listItem.innerHTML = `${d.day} - Total Minutes ${d.totalMins}, Total Distance ${d.totalDistance}km`;
+    }
+    list.appendChild(listItem);
+  });
+  sevenDaysPane.hidden = false;
 }
 
 //set daily target
