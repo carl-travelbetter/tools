@@ -35,10 +35,10 @@ let d = new Date();
 let day = daysOfTheWeek[d.getDay()];
 console.log("Today is "+day); 
 
-/*if (lastSevenDays.lsd.length == 0)
+if (lastSevenDays.lsd.length == 0)
 {
   createSevenDayRecords();
-}*/
+}
 
 const dayOfYear = getDayOfYear();
 
@@ -125,6 +125,24 @@ function updateProgress(distance, time, operand)
       today.day = day;
       today.totalDistance = newRecords.distance;
       today.totalMins = newRecords.time;
+
+      let pos = 0;
+      lastSevenDays.lsd.forEach(d => {
+        console.log('Last Seven Days Loop : '+d.day);
+        if (d.day == day)
+        {
+          console.log('Match Found');
+          lastSevenDays.lsd[pos] = today;
+        }
+        else
+        {
+          console.log('Match Not Found');
+        }
+        pos++;
+        
+      });
+                                
+    /*
       if(lastSevenDays.lsd.length < 7)
       {
         let pos  = lastSevenDays.lsd.length;
@@ -148,7 +166,7 @@ function updateProgress(distance, time, operand)
           lastSevenDays.lsd.slice(0,1);
         }
         lastSevenDays.lsd[6] = today;
-      }
+      }*/
       localStorage.setItem(WALK_RECORDS, JSON.stringify(walkRecords));
   }
   else //if we don't have a running total then start one
@@ -162,7 +180,23 @@ function updateProgress(distance, time, operand)
       today.day = day;
       today.totalDistance = newRecords.distance;
       today.totalMins = newRecords.time;
-      if(lastSevenDays.lsd.length < 7)
+      let pos = 0;
+      lastSevenDays.lsd.forEach(d => {
+        console.log('Last Seven Days Loop : '+d.day);
+        if (d.day == day)
+        {
+          console.log('Match Found');
+          lastSevenDays.lsd[pos] = today;
+        }
+        else
+        {
+          console.log('Match Not Found');
+        }
+        pos++;
+        
+      });
+    
+    /*if(lastSevenDays.lsd.length < 7)
       {
         //Take away 1 from the final position to 
         let pos  = lastSevenDays.lsd.length;
@@ -177,7 +211,7 @@ function updateProgress(distance, time, operand)
           lastSevenDays.lsd.slice(0,1);
         }
         lastSevenDays.lsd[6] = today;
-      }
+      }*/
       localStorage.setItem(WALK_RECORDS, JSON.stringify(walkRecords));
   }
  }
@@ -206,7 +240,22 @@ function updateProgress(distance, time, operand)
       today.day = day;
       today.totalDistance = newRecords.distance;
       today.totalMins = newRecords.time;
-      if(lastSevenDays.lsd.length < 7)
+     let pos = 0;
+      lastSevenDays.lsd.forEach(d => {
+        console.log('Last Seven Days Loop : '+d.day);
+        if (d.day == day)
+        {
+          console.log('Match Found');
+          lastSevenDays.lsd[pos] = today;
+        }
+        else
+        {
+          console.log('Match Not Found');
+        }
+        pos++;
+        
+      });  
+   /* if(lastSevenDays.lsd.length < 7)
       {
         //Take away 1 from the final position to 
         let pos  = lastSevenDays.lsd.length;
@@ -221,7 +270,7 @@ function updateProgress(distance, time, operand)
           lastSevenDays.lsd.slice(0,1);
         }
         lastSevenDays.lsd[6] = today;
-      }
+      }*/
       localStorage.setItem(WALK_RECORDS, JSON.stringify(walkRecords));
  }
  else
