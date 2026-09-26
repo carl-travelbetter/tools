@@ -121,7 +121,7 @@ function updateProgress(distance, time, operand)
       newRecords.time = currentTimeRecord;
       newRecords.walks = currentWalkRecord;
       walkRecords.records[0] = newRecords;
-      let today = {}
+    /*  let today = {}
       today.day = day;
       today.totalDistance = newRecords.distance;
       today.totalMins = newRecords.time;
@@ -140,33 +140,9 @@ function updateProgress(distance, time, operand)
         }
         pos++;
         
-      });
+      });*/
                                 
-    /*
-      if(lastSevenDays.lsd.length < 7)
-      {
-        let pos  = lastSevenDays.lsd.length;
-        let end = lastSevenDays.lsd[pos-1];
-        
-        if (end.day == day)
-        {
-          lastSevenDays.lsd[pos-1] = today;
-        }
-        else
-        {
-          lastSevenDays.lsd[pos] = today;
-        }
-      }
-      else 
-      {
-        let start = lastSevenDays.lsd[0];
-        //If the first item in the array is the same day as today
-        if (start.day == day)
-        {
-          lastSevenDays.lsd.slice(0,1);
-        }
-        lastSevenDays.lsd[6] = today;
-      }*/
+   
       localStorage.setItem(WALK_RECORDS, JSON.stringify(walkRecords));
   }
   else //if we don't have a running total then start one
@@ -176,7 +152,7 @@ function updateProgress(distance, time, operand)
       newRecords.time = Number(time);
       newRecords.walks = 1;
       walkRecords.records[0] = newRecords;
-      let today = {}
+     /* let today = {}
       today.day = day;
       today.totalDistance = newRecords.distance;
       today.totalMins = newRecords.time;
@@ -194,24 +170,9 @@ function updateProgress(distance, time, operand)
         }
         pos++;
         
-      });
+      });*/
     
-    /*if(lastSevenDays.lsd.length < 7)
-      {
-        //Take away 1 from the final position to 
-        let pos  = lastSevenDays.lsd.length;
-        lastSevenDays.lsd[pos] = today;
-      }
-      else 
-      {
-        let start = lastSevenDays.lsd[0];
-        //If the first item in the array is the same day as today
-        if (start.day === day)
-        {
-          lastSevenDays.lsd.slice(0,1);
-        }
-        lastSevenDays.lsd[6] = today;
-      }*/
+    
       localStorage.setItem(WALK_RECORDS, JSON.stringify(walkRecords));
   }
  }
@@ -236,7 +197,8 @@ function updateProgress(distance, time, operand)
       newRecords.time = currentTimeRecord;
       newRecords.walks = currentWalkRecord;
       walkRecords.records[0] = newRecords;
-      let today = {}
+      
+     /*let today = {}
       today.day = day;
       today.totalDistance = newRecords.distance;
       today.totalMins = newRecords.time;
@@ -254,23 +216,8 @@ function updateProgress(distance, time, operand)
         }
         pos++;
         
-      });  
-   /* if(lastSevenDays.lsd.length < 7)
-      {
-        //Take away 1 from the final position to 
-        let pos  = lastSevenDays.lsd.length;
-        lastSevenDays.lsd[pos] = today;
-      }
-      else 
-      {
-        let start = lastSevenDays.lsd[0];
-        //If the first item in the array is the same day as today
-        if (start.day === day)
-        {
-          lastSevenDays.lsd.slice(0,1);
-        }
-        lastSevenDays.lsd[6] = today;
-      }*/
+      }); */ 
+   
       localStorage.setItem(WALK_RECORDS, JSON.stringify(walkRecords));
  }
  else
@@ -468,11 +415,35 @@ function updateTracker()
   const progressCard = getEl('progress-check');
   progressCard.innerHTML = "";
   let totalWalkTime = 0;
+  let totalDistance = 0;
   //add up the minutes in the walk list
   walkList.walks.forEach(walk => {
     totalWalkTime += parseFloat(walk.minutes);
+    totalDistance += parseFloat(walk.distance);
   });
 
+   let today = {}
+   today.day = day;
+   today.totalDistance = totalDistance;
+   today.totalMins = totalWalkTime;
+
+      let pos = 0;
+      lastSevenDays.lsd.forEach(d => {
+        console.log('Last Seven Days Loop : '+d.day);
+        if (d.day == day)
+        {
+          console.log('Match Found');
+          lastSevenDays.lsd[pos] = today;
+        }
+        else
+        {
+          console.log('Match Not Found');
+        }
+        pos++;
+        
+      });
+
+  
   const progressStatement = document.createElement('p');
   if (totalWalkTime < walkTarget)
   {
