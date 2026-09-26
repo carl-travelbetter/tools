@@ -203,10 +203,11 @@ function displayLastSevenDays()
 {
   console.log('Display Last Seven Days');
   const sevenDaysPane = getEl('seven-days');
+  sevenDaysPane.innerHTML = "";
   const sevenDays = lastSevenDays.lsd;
   const output = document.createElement('div');
-  output.innerHTML = `<h3>Last Seven Days</h3> +
-                      <p>Here is how your walks have gone over the last seven days</p>`;
+  output.innerHTML = `<h3>Last Seven Days</h3>`+
+                      `<p>Here is how your walks have gone over the last seven days</p>`;
   sevenDaysPane.appendChild(output);
   const list = document.createElement('li');
   sevenDays.forEach(d => {
@@ -221,6 +222,7 @@ function displayLastSevenDays()
     }
     list.appendChild(listItem);
   });
+  sevenDaysPane.appendChild(list);
   sevenDaysPane.hidden = false;
 }
 
