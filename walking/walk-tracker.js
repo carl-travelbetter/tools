@@ -121,26 +121,7 @@ function updateProgress(distance, time, operand)
       newRecords.time = currentTimeRecord;
       newRecords.walks = currentWalkRecord;
       walkRecords.records[0] = newRecords;
-    /*  let today = {}
-      today.day = day;
-      today.totalDistance = newRecords.distance;
-      today.totalMins = newRecords.time;
-
-      let pos = 0;
-      lastSevenDays.lsd.forEach(d => {
-        console.log('Last Seven Days Loop : '+d.day);
-        if (d.day == day)
-        {
-          console.log('Match Found');
-          lastSevenDays.lsd[pos] = today;
-        }
-        else
-        {
-          console.log('Match Not Found');
-        }
-        pos++;
-        
-      });*/
+  
                                 
    
       localStorage.setItem(WALK_RECORDS, JSON.stringify(walkRecords));
@@ -152,27 +133,6 @@ function updateProgress(distance, time, operand)
       newRecords.time = Number(time);
       newRecords.walks = 1;
       walkRecords.records[0] = newRecords;
-     /* let today = {}
-      today.day = day;
-      today.totalDistance = newRecords.distance;
-      today.totalMins = newRecords.time;
-      let pos = 0;
-      lastSevenDays.lsd.forEach(d => {
-        console.log('Last Seven Days Loop : '+d.day);
-        if (d.day == day)
-        {
-          console.log('Match Found');
-          lastSevenDays.lsd[pos] = today;
-        }
-        else
-        {
-          console.log('Match Not Found');
-        }
-        pos++;
-        
-      });*/
-    
-    
       localStorage.setItem(WALK_RECORDS, JSON.stringify(walkRecords));
   }
  }
@@ -197,27 +157,6 @@ function updateProgress(distance, time, operand)
       newRecords.time = currentTimeRecord;
       newRecords.walks = currentWalkRecord;
       walkRecords.records[0] = newRecords;
-      
-     /*let today = {}
-      today.day = day;
-      today.totalDistance = newRecords.distance;
-      today.totalMins = newRecords.time;
-     let pos = 0;
-      lastSevenDays.lsd.forEach(d => {
-        console.log('Last Seven Days Loop : '+d.day);
-        if (d.day == day)
-        {
-          console.log('Match Found');
-          lastSevenDays.lsd[pos] = today;
-        }
-        else
-        {
-          console.log('Match Not Found');
-        }
-        pos++;
-        
-      }); */ 
-   
       localStorage.setItem(WALK_RECORDS, JSON.stringify(walkRecords));
  }
  else
@@ -443,7 +382,7 @@ function updateTracker()
         
       });
 
-  
+  saveData();
   const progressStatement = document.createElement('p');
   if (totalWalkTime < walkTarget)
   {
