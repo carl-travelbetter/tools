@@ -168,17 +168,6 @@ function updateProgress(distance, time, operand)
  displayRecords();
 }
 
-function updateLastSevenDays()
-{
- /* console.log('Walk Tracker: Update Last Seven Days'); 
-  const today = {};
-  today.day = day;
-  today.totalDistance = 100;
-  today.totalMins = 100;
-  lastSevenDays.lsd.push(today);*/
-  
-  
-}
 
 //Display the progress bat showing progress to date
 function displayRecords()
@@ -210,6 +199,13 @@ function displayRecords()
   {
     console.log('Display Records: No records to show');
   }
+   displayLastSevenDays(); 
+}
+
+function displayLastSevenDays()
+{
+  console.log('Display Last Seven Days');
+  const sevenDaysPane = getEl('seven-days');
   
 }
 
