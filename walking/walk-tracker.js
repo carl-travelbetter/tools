@@ -35,7 +35,7 @@ let d = new Date();
 let day = daysOfTheWeek[d.getDay()];
 console.log("Today is "+day); 
 
-if (lastSevenDays.lsd.length == 0)
+if ((lastSevenDays.lsd.length == 0) || (lastSevenDays.lsd.length > 7))
 {
   createSevenDayRecords();
 }
@@ -79,6 +79,7 @@ if (walkList.walks.length > 0)
 function createSevenDayRecords()
 {
   console.log("Creating Seven Day Records");
+  lastSevenDays.lsd = [];
   daysOfTheWeek.forEach(d =>
     {
       let record = {};
