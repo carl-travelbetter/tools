@@ -162,7 +162,7 @@ function updateProgress(distance, time, operand)
  }
 
  saveData();
- displayRecords();
+// displayRecords();
 }
 
 
@@ -264,11 +264,11 @@ function submitWalk()
   walkList.walks.push(walk);
   walkTrackingDay.trackingDay[0] = dayOfYear;
   updateProgress(walk.distance, walk.minutes, "addition");
-  saveData();
- // displayProgressBar();
-  updateLastSevenDays();
-  displayLog();
+  //saveData();
+  //updateLastSevenDays();  
   updateTracker();
+  saveData();
+  displayLog();
   addWalk();
 }
 
@@ -381,18 +381,13 @@ function updateTracker()
 
       let pos = 0;
       lastSevenDays.lsd.forEach(d => {
-        console.log('Last Seven Days Loop : '+d.day);
+        //console.log('Last Seven Days Loop : '+d.day);
         if (d.day == day)
         {
-          console.log('Match Found');
+          //console.log('Match Found');
           lastSevenDays.lsd[pos] = today;
-        }
-        else
-        {
-          console.log('Match Not Found');
-        }
+        }   
         pos++;
-        
       });
 
   saveData();
