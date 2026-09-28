@@ -74,6 +74,7 @@ if (walkList.walks.length > 0)
   displayLog();
   updateTracker();
   displayRecords();
+  displayLastSevenDays();
 }
 
 function createSevenDayRecords()
