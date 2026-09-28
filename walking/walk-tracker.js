@@ -352,6 +352,7 @@ function displayLog()
       saveData();  
       displayLog();
       updateTracker();
+      displayLastSevenDays();
       });
       listDeleteControl.appendChild(deleteButton);
       listItem.appendChild(listDeleteControl);
@@ -429,6 +430,7 @@ function closeAll()
   getEl('set-target').hidden = true;
   getEl('progress-check').hidden = true;
   getEl('daily-log').hidden = true;
+  getEl('seven-days').hidden = true;
 }
 
 //Start a new day
@@ -441,6 +443,7 @@ function startNewDay()
   getEl('set-target').hidden = true;
   getEl('progress-check').hidden = true;
   getEl('daily-log').hidden = true;
+  getEl('seven-days').hidden = true;
 }
 
 //Exit to the main menu
