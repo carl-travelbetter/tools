@@ -196,7 +196,7 @@ function displayRecords()
   {
     console.log('Display Records: No records to show');
   }
-   displayLastSevenDays(); 
+  
 }
 
 function displayLastSevenDays()
@@ -235,6 +235,7 @@ function setDailyTarget()
   saveData();
   closeAll();
   displayLog();
+  displayLastSevenDays();
   updateTracker();
 }
 
@@ -269,6 +270,7 @@ function submitWalk()
   updateTracker();
   saveData();
   displayLog();
+  displayLastSevenDays();
   addWalk();
 }
 
