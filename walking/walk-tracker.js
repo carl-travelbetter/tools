@@ -212,18 +212,37 @@ function displayLastSevenDays()
                       `<p>Here is how your walks have gone over the last seven days</p>`;
   sevenDaysPane.appendChild(output);
   const list = document.createElement('ul');
+  let count = 0;
+  let startPosition = 0;
+  let currentPos = 0;
   sevenDays.forEach(d => {
-    const listItem = document.createElement('li');
+    //const listItem = document.createElement('li');
     if (d.day == day)
     {
-      listItem.innerHTML = `<strong>Today - Total Minutes ${d.totalMins}, Total Distance ${d.totalDistance}km`;
+     // listItem.innerHTML = `<strong>Today - Total Minutes ${d.totalMins}, Total Distance ${d.totalDistance}km`;
+      startPosition = currentPosition;
     }
-    else
+    /*else
     {
       listItem.innerHTML = `${d.day} - Total Minutes ${d.totalMins}, Total Distance ${d.totalDistance}km`;
+    }*/
+    //list.appendChild(listItem);
+    currentPos++;
+  });
+
+  for (let i = 0; i < 7 ; i++) 
+  {
+    const listItem = document.createElement('li');
+    let d = sevenDays[startPosition];
+    listItem.innerHTML = `<strong>${d.day} - Total Minutes ${d.totalMins}, Total Distance ${d.totalDistance}km`;
+    startPosition++;
+    if (startPosition == 7)
+    {  
+      startPosition = 0;
     }
     list.appendChild(listItem);
-  });
+  }
+  
   sevenDaysPane.appendChild(list);
   sevenDaysPane.hidden = false;
 }
