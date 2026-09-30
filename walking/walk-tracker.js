@@ -220,7 +220,7 @@ function displayLastSevenDays()
     if (d.day == day)
     {
      // listItem.innerHTML = `<strong>Today - Total Minutes ${d.totalMins}, Total Distance ${d.totalDistance}km`;
-      startPosition = currentPosition;
+      startPosition = currentPos;
     }
     /*else
     {
