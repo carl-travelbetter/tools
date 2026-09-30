@@ -222,7 +222,7 @@ function displayLastSevenDays()
     {
       startPosition = currentPos;   
     }
-    sevenDayTotalMinutes = sevenDayTotalMinutes + d.totalMinutes;
+    sevenDayTotalMinutes = sevenDayTotalMinutes + Number(d.totalMinutes).toFixed(2);
     currentPos++;
   });
 
