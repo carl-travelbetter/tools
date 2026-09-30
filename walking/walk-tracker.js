@@ -215,18 +215,14 @@ function displayLastSevenDays()
   let count = 0;
   let startPosition = 0;
   let currentPos = 0;
+  let sevenDayTotalMinutes = 0;
   sevenDays.forEach(d => {
     //const listItem = document.createElement('li');
     if (d.day == day)
     {
-     // listItem.innerHTML = `<strong>Today - Total Minutes ${d.totalMins}, Total Distance ${d.totalDistance}km`;
-      startPosition = currentPos;
+      startPosition = currentPos;   
     }
-    /*else
-    {
-      listItem.innerHTML = `${d.day} - Total Minutes ${d.totalMins}, Total Distance ${d.totalDistance}km`;
-    }*/
-    //list.appendChild(listItem);
+    sevenDayTotalMinutes = sevenDayTotalMinutes + d.totalMinutes;
     currentPos++;
   });
 
@@ -251,6 +247,12 @@ function displayLastSevenDays()
   }
   
   sevenDaysPane.appendChild(list);
+
+  let averageMinsPerDay = (sevenDaysTotalMinutes / 7).toFixed(0);
+  totalsOutput = document.createElement('div');
+  totalsOutput.innerHTML = `<p>Total Minutes in the last seven days = ${sevenDayTotalMinutes}</p>`+
+                           `<p>Average minutes walked per day = ${averageMinsPerDay}</p>`;
+  sevenDaysPane.appendChild(totalsOutput);                        
   sevenDaysPane.hidden = false;
 }
 
