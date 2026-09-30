@@ -235,10 +235,10 @@ function displayLastSevenDays()
     const listItem = document.createElement('li');
     let d = sevenDays[startPosition];
     listItem.innerHTML = `<strong>${d.day}</strong> - Total Minutes ${d.totalMins}, Total Distance ${d.totalDistance}km`;
-    startPosition++;
-    if (startPosition == 7)
+    startPosition--;
+    if (startPosition < 0)
     {  
-      startPosition = 0;
+      startPosition = 6;
     }
     list.appendChild(listItem);
   }
