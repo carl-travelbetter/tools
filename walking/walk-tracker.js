@@ -215,7 +215,7 @@ function displayLastSevenDays()
   let count = 0;
   let startPosition = 0;
   let currentPos = 0;
-  let sevenDayTotalMinutes = 0;
+  let sevenDayTotalMinutes = 100;
   sevenDays.forEach(d => {
     //const listItem = document.createElement('li');
     if (d.day == day)
