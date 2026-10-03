@@ -215,14 +215,15 @@ function displayLastSevenDays()
   let count = 0;
   let startPosition = 0;
   let currentPos = 0;
-  let sevenDayTotalMinutes;
+  let sevenDayTotalMinutes = 0;
   sevenDays.forEach(d => {
     //const listItem = document.createElement('li');
     if (d.day == day)
     {
       startPosition = currentPos;   
     }
-    //sevenDayTotalMinutes = Number(sevenDayTotalMinutes) + Number(d.totalMins).toFixed(2);
+    let minutes = Number(d.totalMins).toFixed(2);
+    console.log('Minutes = '+minutes);
     sevenDayTotalMinutes = sevenDayTotalMinutes + 5;
     console.log('Seven Day Total '+sevenDayTotalMinutes);
     currentPos++;
