@@ -201,6 +201,7 @@ function displayRecords()
   
 }
 
+//Build and show the last seven days of walks
 function displayLastSevenDays()
 {
   console.log('Display Last Seven Days');
@@ -244,11 +245,11 @@ function displayLastSevenDays()
     let d = sevenDays[startPosition];
     if (i == 0)
     {
-      listItem.innerHTML = `<strong>Today</strong> - Total Minutes ${d.totalMins}, Total Distance ${d.totalDistance}km`;
+      listItem.innerHTML = `<strong>Today</strong> - Total Minutes ${d.totalMins}.toFixed(2), Total Distance ${d.totalDistance}.toFixed(2) km`;
     }
     else
     {
-      listItem.innerHTML = `<strong>${d.day}</strong> - Total Minutes ${d.totalMins}, Total Distance ${d.totalDistance}km`;
+      listItem.innerHTML = `<strong>${d.day}</strong> - Total Minutes ${d.totalMins}.toFixed(2), Total Distance ${d.totalDistance}.toFixed(2) km`;
     }
     startPosition--;
     if (startPosition < 0)
