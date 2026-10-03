@@ -222,7 +222,7 @@ function displayLastSevenDays()
     {
       startPosition = currentPos;   
     }
-    let minutes = Number(d.totalMins).toFixed(0);
+    let minutes = Math.round(Number(d.totalMins));
     if (isNaN(minutes))
     {
       console.log('Minutes Not a Number');
