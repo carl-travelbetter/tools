@@ -222,9 +222,9 @@ function displayLastSevenDays()
     {
       startPosition = currentPos;   
     }
-    let minutes = Number(d.totalMins).toFixed(2);
+    let minutes = Number(d.totalMins).toFixed(0);
     console.log('Minutes = '+minutes);
-    sevenDayTotalMinutes = sevenDayTotalMinutes + 5;
+    sevenDayTotalMinutes = sevenDayTotalMinutes + minutes;
     console.log('Seven Day Total '+sevenDayTotalMinutes);
     currentPos++;
   });
