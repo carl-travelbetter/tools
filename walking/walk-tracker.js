@@ -250,7 +250,7 @@ function displayLastSevenDays()
   
   sevenDaysPane.appendChild(list);
 
-  let averageMinsPerDay = 0+(sevenDayTotalMinutes / 7).toFixed(0);
+  let averageMinsPerDay = Number(sevenDayTotalMinutes / 7).toFixed(0);
   const totalsOutput = document.createElement("div");
   totalsOutput.innerHTML = `<p>Total Minutes in the last seven days = ${sevenDayTotalMinutes}</p>`+
                            `<p>Average minutes walked per day = ${averageMinsPerDay}</p>`;
