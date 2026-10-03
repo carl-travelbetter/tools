@@ -262,8 +262,8 @@ function displayLastSevenDays()
 
   let averageMinsPerDay = Number(sevenDayTotalMinutes / 7).toFixed(0);
   const totalsOutput = document.createElement("div");
-  totalsOutput.innerHTML = `<center><p>🚶 Total minutes walked in the last seven days = ${sevenDayTotalMinutes} 🚶</p></center>`+
-                           `<center><p>🚶 Average minutes walked per day = ${averageMinsPerDay} 🚶</p></center>`;
+  totalsOutput.innerHTML = `<center><p>🚶 ${sevenDayTotalMinutes} minutes walked in the last 7 days 🚶</p></center>`+
+                           `<center><p>📅 ${averageMinsPerDay} minutes per day on average 📅</p></center>`;
   sevenDaysPane.appendChild(totalsOutput);                        
   sevenDaysPane.hidden = false;
 }
