@@ -222,7 +222,7 @@ function displayLastSevenDays()
     {
       startPosition = currentPos;   
     }
-    sevenDayTotalMinutes += Number(d.totalMinutes).toFixed(2);
+    sevenDayTotalMinutes = sevenDayTotalMinutes + Number(d.totalMinutes).toFixed(2);
     currentPos++;
   });
 
@@ -248,7 +248,7 @@ function displayLastSevenDays()
   
   sevenDaysPane.appendChild(list);
 
-  let averageMinsPerDay = (sevenDayTotalMinutes / 7).toFixed(0);
+  let averageMinsPerDay = 0+(sevenDayTotalMinutes / 7).toFixed(0);
   const totalsOutput = document.createElement("div");
   totalsOutput.innerHTML = `<p>Total Minutes in the last seven days = ${sevenDayTotalMinutes}</p>`+
                            `<p>Average minutes walked per day = ${averageMinsPerDay}</p>`;
