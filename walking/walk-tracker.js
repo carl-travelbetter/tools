@@ -223,6 +223,7 @@ function displayLastSevenDays()
       startPosition = currentPos;   
     }
     sevenDayTotalMinutes = Number(sevenDayTotalMinutes) + Number(d.totalMins).toFixed(2);
+    console.log('Seven Day Total '+sevenDayTotalMinutes);
     currentPos++;
   });
 
