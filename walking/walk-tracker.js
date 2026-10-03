@@ -223,6 +223,15 @@ function displayLastSevenDays()
       startPosition = currentPos;   
     }
     let minutes = Number(d.totalMins).toFixed(0);
+    if (isNaN(minutes))
+    {
+      console.log('Minutes Not a Number');
+    }
+    else 
+    {
+      console.log('Minutes is a number');
+    }
+    
     console.log('Minutes = '+minutes);
     sevenDayTotalMinutes = sevenDayTotalMinutes + minutes;
     console.log('Seven Day Total '+sevenDayTotalMinutes);
