@@ -243,8 +243,8 @@ function displayLastSevenDays()
   {
     const listItem = document.createElement('li');
     let d = sevenDays[startPosition];
-    let minutesPerDay = Maths.round(Number(d.totalMins));
-    let distancePerDay = Maths.round(Number(d.totalDistance));
+    let minutesPerDay = Math.round(Number(d.totalMins));
+    let distancePerDay = Math.round(Number(d.totalDistance));
     if (i == 0)
     {
       listItem.innerHTML = `<strong>Today</strong> - 🚶 ${minutesPerDay} minutes walked, 📏 ${distancePerDay} km walked`;
