@@ -17,5 +17,6 @@ console.log(answer.result);
 const output = document.getElementById("results");
 output.innerHTML = "";
 output.innerHTML = `<p>Answer is ${answer.result} </p>`;
+output.hidden = false;
 
 
