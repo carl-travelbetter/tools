@@ -8,7 +8,7 @@ console.log('Double Numbers JS');
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
   console.log('Bind Events');
-  getEl('submit-btn')?.addEventListener("click", doubleNumbers);
+  document.getElementById('submit-btn')?.addEventListener("click", doubleNumbers);
 }
 
 //Ensure html bindings are not applied until the html structure is built
