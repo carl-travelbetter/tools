@@ -1,9 +1,9 @@
-const response = await fetch("https://travelbetter-api-mv8e.onrender.com/");
+/*const response = await fetch("https://travelbetter-api-mv8e.onrender.com/");
 
 const data = await response.json();
 
-console.log(data.message);
-
+console.log(data.message);*/
+console.log('Double Numbers JS');
 
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
