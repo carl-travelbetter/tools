@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", bindEvents);
 
 
 //Double the numbers and return the result
-function doubleNumbers()
+async function doubleNumbers()
 {
     let number = Number(document.getElementById("num").value);
 
@@ -26,7 +26,6 @@ function doubleNumbers()
     console.log(answer.result);
     
     const output = document.getElementById("results");
-    output.innerHTML = "";
     output.innerHTML = `<p>Answer is ${answer.result} </p>`;
     output.hidden = false;    
 }
