@@ -13,3 +13,9 @@ const doublenumber = await fetch(
 const answer = await doublenumber.json();
 
 console.log(answer.result);
+
+const output = document.getElementById('result');
+output.innerHTML = "";
+output.innerHTML = `<p>Answer is ${answer.result} </p>`;
+
+
