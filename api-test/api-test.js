@@ -14,7 +14,7 @@ const answer = await doublenumber.json();
 
 console.log(answer.result);
 
-const output = document.getElementById('result');
+const output = document.getElementById("results");
 output.innerHTML = "";
 output.innerHTML = `<p>Answer is ${answer.result} </p>`;
 
