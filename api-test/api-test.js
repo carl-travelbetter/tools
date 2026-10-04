@@ -7,6 +7,7 @@ console.log(data.message);
 
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
+  console.log('Bind Events');
   getEl('submit-btn')?.addEventListener("click", doubleNumbers);
 }
 
