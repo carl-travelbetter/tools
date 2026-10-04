@@ -247,11 +247,11 @@ function displayLastSevenDays()
     let distancePerDay = Math.round(Number(d.totalDistance));
     if (i == 0)
     {
-      listItem.innerHTML = `<strong>Today</strong> - 🚶 ${minutesPerDay} minutes walked, 📏 ${distancePerDay} km walked`;
+      listItem.innerHTML = `<strong>Today</strong> - 🚶 ${minutesPerDay} minutes & ${distancePerDay} km walked`;
     }
     else
     {
-      listItem.innerHTML = `<strong>${d.day}</strong> - 🚶 ${minutesPerDay} minutes walked, 📏 ${distancePerDay} km walked`;
+      listItem.innerHTML = `<strong>${d.day}</strong> - 🚶 ${minutesPerDay} minutes & ${distancePerDay} km walked`;
     }
     startPosition--;
     if (startPosition < 0)
