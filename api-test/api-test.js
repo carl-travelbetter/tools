@@ -19,9 +19,7 @@ function doubleNumbers()
 {
     let number = Number(document.getElementById("num").value);
 
-    const doublenumber = await fetch(
-    `https://travelbetter-api-mv8e.onrender.com/double?number=${number}`
-    );
+    const doublenumber = await fetch(`https://travelbetter-api-mv8e.onrender.com/double?number=${number}`);
 
     const answer = await doublenumber.json();
 
