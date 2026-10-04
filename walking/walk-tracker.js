@@ -243,13 +243,15 @@ function displayLastSevenDays()
   {
     const listItem = document.createElement('li');
     let d = sevenDays[startPosition];
+    let minutesPerDay = Maths.round(Number(d.totalMins));
+    let distancePerDay = Maths.round(Number(d.totalDistance));
     if (i == 0)
     {
-      listItem.innerHTML = `<strong>Today</strong> - Total Minutes ${d.totalMins}, Total Distance ${d.totalDistance} km`;
+      listItem.innerHTML = `<strong>Today</strong> - 🚶 ${minutesPerDay} minutes walked, 📏 ${distancePerDay} km walked`;
     }
     else
     {
-      listItem.innerHTML = `<strong>${d.day}</strong> - Total Minutes ${d.totalMins}, Total Distance ${d.totalDistance} km`;
+      listItem.innerHTML = `<strong>${d.day}</strong> - 🚶 ${minutesPerDay} minutes walked, 📏 ${distancePerDay} km walked`;
     }
     startPosition--;
     if (startPosition < 0)
