@@ -17,8 +17,9 @@ document.addEventListener("DOMContentLoaded", bindEvents);
 //Double the numbers and return the result
 async function doubleNumbers()
 {
+    console.log('Double Numbers');
     let number = Number(document.getElementById("num").value);
-
+    concole.log('Number Entered = '+number);
     const doublenumber = await fetch(`https://travelbetter-api-mv8e.onrender.com/double?number=${number}`);
 
     const answer = await doublenumber.json();
