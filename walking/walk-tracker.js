@@ -315,6 +315,7 @@ function submitWalk()
   //saveData();
   displayLog();
   displayLastSevenDays();
+  getEl('progress-check').hidden = true;
   addWalk();
 }
 
