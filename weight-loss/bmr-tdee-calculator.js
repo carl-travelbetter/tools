@@ -26,14 +26,14 @@ function calculateBMRTDEE()
   if (sexatbirth == "Female")
   {
     console.log('Calculating BMR and TDEE for a Female');
-    BMR = (weight*10) + (6.25 * height) - (5 * age) - 161; 
-    TDEE = BMR * activityLevel;
+    BMR = Math.round((weight*10) + (6.25 * height) - (5 * age) - 161); 
+    TDEE = Math.round(BMR * activityLevel);
   }
   else if (sexatbirth == "Male")
   {
     console.log('Caulcating BMR and TDEE for a Male');
-    BMR = (weight*10) + (6.25 * height) - (5 * age) + 5;
-    TDEE = BMR * activityLevel;
+    BMR = Math.round((weight*10) + (6.25 * height) - (5 * age) + 5);
+    TDEE = Math.round(BMR * activityLevel);
   }
   else
   {
