@@ -18,21 +18,25 @@ let TDEE = 0;
 function calculateBMRTDEE()
 {
   console.log('Calculating BMR and TDEE');
+  let weight = Number(getEl('weight').value);
+  let weight = Number(getEl('height').value);
+  let age = Number(getEl('age').value);
   let sexatbirth = getEl('sexatbirth').value;
   if (sexatbirth == "Female")
   {
     console.log('Calculating BMR and TDEE for a Female');
+    BMR = (weight*10) + (6.25 * height) - (5 * age) - 161; 
   }
   else if (sexatbirth == "Male")
   {
     console.log('Caulcating BMR and TDEE for a Male');
+    BMR = (weight*10) + (6.25 * height) - (5 * age) + 5;
   }
   else
   {
     console.log('No Sex Selected');
   }
   
-  BMR = 1600; 
   TDEE = 2500;
   displayResults();
 }
