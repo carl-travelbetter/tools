@@ -19,7 +19,7 @@ function calculateBMRTDEE()
 {
   console.log('Calculating BMR and TDEE');
   let weight = Number(getEl('weight').value);
-  let weight = Number(getEl('height').value);
+  let height = Number(getEl('height').value);
   let age = Number(getEl('age').value);
   let sexatbirth = getEl('sexatbirth').value;
   if (sexatbirth == "Female")
