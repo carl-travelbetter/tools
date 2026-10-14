@@ -31,4 +31,5 @@ function displayResults()
   results.innerHTML = `<h2>Results</h2>`+
                       `<p>BMR = ${BMR}</p>`+
                       `<p>TDEE = ${TDEE}</p>`;
+  results.hidden = false;
 }
