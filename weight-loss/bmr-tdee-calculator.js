@@ -54,7 +54,7 @@ function displayResults()
   results.innerHTML = `<h2>Results</h2>`+
                       `<p><center><strong>BMR = ${BMR}</strong></center></p>`+
                       `<p><center><strong>TDEE = ${TDEE}</strong></center></p>`+
-                      `<p>If you were to take an average of the two values to work out approximate daily need - this is ${averageCalorieIntake}</p>`+
-                      `<p>If you then wanted a 10% reduction in daily calories to support weight loss then set your daily limit to ${tenPercentAverage}</p>`;
+                      `<p>If you were to take an average of the two values to work out approximate daily need - this is <strong> ${averageCalorieIntake}</strong> Calories</p>`+
+                      `<p>If you then wanted to target a 10% reduction in daily calories to support weight loss then set your daily limit to<strong> ${tenPercentAverage}</strong> Calories</p>`;
   results.hidden = false;
 }
