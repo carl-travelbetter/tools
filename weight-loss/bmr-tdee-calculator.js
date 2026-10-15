@@ -46,10 +46,15 @@ function calculateBMRTDEE()
 //Display the results
 function displayResults()
 {
+  //calculate some reduction values to display
+  let averageCalorieIntake = Math.round((BMR + TDEE) / 2);
+  let tenPercentAverage = Math.round(averageCalorieIntake - (averageCalorieIntake*01));  
   console.log('Display Results');
   const results = getEl('results');
   results.innerHTML = `<h2>Results</h2>`+
-                      `<p>BMR = ${BMR}</p>`+
-                      `<p>TDEE = ${TDEE}</p>`;
+                      `<p><center><strong>BMR = ${BMR}</strong></center></p>`+
+                      `<p><center><strong>TDEE = ${TDEE}</strong></center></p>`+
+                      `<p>If you were to take an average of the two values to work out approximate daily need - this is ${averageCalorieIntake}</p>`+
+                      `<p>If you then wanted a 10% reduction in daily calories to support weight loss then set your daily limit to ${tenPercentAverage}</p>`;
   results.hidden = false;
 }
