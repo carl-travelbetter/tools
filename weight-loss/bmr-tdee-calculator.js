@@ -48,7 +48,7 @@ function displayResults()
 {
   //calculate some reduction values to display
   let averageCalorieIntake = Math.round((BMR + TDEE) / 2);
-  let tenPercentAverage = Math.round(averageCalorieIntake - (averageCalorieIntake*01));  
+  let tenPercentAverage = Math.round(averageCalorieIntake - (averageCalorieIntake*0.1));  
   console.log('Display Results');
   const results = getEl('results');
   results.innerHTML = `<h2>Results</h2>`+
