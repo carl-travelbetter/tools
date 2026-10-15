@@ -51,9 +51,10 @@ function displayResults()
   let tenPercentAverage = Math.round(averageCalorieIntake - (averageCalorieIntake*0.1));  
   console.log('Display Results');
   const results = getEl('results');
-  results.innerHTML = `<h2>Results</h2>`+
+  results.innerHTML = `<h2>BMR and TDEE Results</h2>`+
                       `<p><center><strong>BMR = ${BMR}</strong></center></p>`+
                       `<p><center><strong>TDEE = ${TDEE}</strong></center></p>`+
+                      `<h3>How to use this information for weight loss</h3>`+
                       `<p>If you were to take an average of the two values to work out approximate daily need - this is <strong> ${averageCalorieIntake}</strong> Calories</p>`+
                       `<p>If you then wanted to target a 10% reduction in daily calories to support weight loss then set your daily limit to<strong> ${tenPercentAverage}</strong> Calories</p>`;
   results.hidden = false;
