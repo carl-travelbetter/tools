@@ -1,0 +1,148 @@
+<DOCTYPE! html>
+  <html lang="en">
+    <head>
+      <title>TDEE Calculator | Weight Loss Tools | Travelbetter</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="Free TDEE calculator to find out how many calories your body burns each day, and advice on how to use this to reach your weight and fitness goals." />
+     <meta charset="UTF-8">
+     <link rel="stylesheet" href="https://tools.travelbetter.co.uk/lib/travelbetter-tools.css">
+     <link rel="icon" type="image/x-icon" href="https://travelbetter.co.uk/wp-content/uploads/2026/05/TB-Logo.png">
+     <link rel="canonical" href="https://tools.travelbetter.co.uk/travel-fit/tdee-calculator.html">
+     <script type="module" src="tdee-calculator.js" defer></script>
+    </head>
+    <body>
+       <div class="tb-navbar">
+        <ul>
+          <li><a href="https://travelbetter.co.uk">Travelbetter</a></li>
+          <li><a href="https://tools.travelbetter.co.uk/index.html">Tools</a></li>
+          <li><a href="https://tools.travelbetter.co.uk/travel-fit/">Daily Fit Tracker</a></li>
+          <li><a href="https://travelbetter.co.uk/travelbetter-travel-fit/">Get Travel Fit</a></li>
+        </ul>
+       </div>
+      <div class="intro" id="intro">
+        <h1>TDEE (Total Daily Energy Expenditure) Calculator</h1>
+        <p>Use our <strong>TDEE calculator</strong> to easily understand your Total Daily Energy Expenditure, or put more simply - how many calories your body burns every day.</p> 
+        <p>This number is key in helping you meet your weight and fitness goals.</p>
+      </div>
+      
+      <!-- Calculator -->
+      <div class="display-card" id="calculator">
+        <label for="sexatbirth">Sex At Birth </label>
+        <select class="form-input" id="sexatbirth" name="sexatbirth">
+          <option value="Female" selected>Female</option>
+          <option vlaue="Male">Male</option>
+        </select>
+        <p>This is required as there are two different calcualtions for BMR depending on sex.</p>
+        <label for="weight">Weight (kg):</label>
+        <input class="form-input" type="number" id="weight" name="weight" /><br>       
+        <label for="height">Height (cm):</label>
+        <input class="form-input" type="number" id="height" name="height" /><br>
+        <label for="age">Age:</label>
+        <input class="form-input" type="number" id="age" name="age" /><br>       
+        <label for="activity-level"">Activity Level</label>
+        <select class="form-input" name="activity-level" id="activity-level">
+          <option value="1.9">Extremely Active - You combine a very physical job with regular hard exercise, or train intensely twice a day.</option>
+          <option value="1.725">Very Active - You have a physically demanding daily routine or do hard exercise 6–7 days a week.</option>
+          <option value="1.55" selected>Moderately Active - You move regularly throughout the day or do moderate exercise 3–5 days a week.</option>
+          <option value="1.375">Gently Active - You do some walking and light movement each day, with light exercise 1–3 days a week.</option>
+          <option value="1.2">Sedentary - You spend most of the day sitting and do little walking or exercise.</option>
+        </select> 
+        <button class="control-btn" id="calculate-btn">Calculate TDEE</button>
+      </div>
+
+      <!--Calculator Results-->
+      <div class="display-card" id="results" hidden>
+        
+      </div>
+      
+     
+        <br><hr><center>
+      <!-- Simple Ad -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9165315921199540"
+     crossorigin="anonymous"></script>
+        <!-- Basic-Ad -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9165315921199540"
+             data-ad-slot="5810299649"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      <!-- End of Ad -->
+      <!-- Search for food -->
+        </center>
+        <hr> 
+      </div>
+      <div class="display-card" id="search-card" >
+        <h2>Search For Food</h2>
+        <p>Use this as a quick estimate if no data is available. Always check packaging for exact values and improved accuracy.</p>
+        <a href="food-lookup.html">Food Lookup</a>
+      </div>
+       <div class="display-card" id="gram-card" >
+        <h2>Calories Per Weight</h2>
+        <p>Use this eassy to use tool to work out calories to the nearest gram</p>
+        <a href="https://travelbetter.co.uk/calories-per-serving-calculator/">Calories Per Gram Calculator</a>
+      </div>
+      <div class="information-card" id="when" >
+        <h2>When to use this Calorie Tracker</h2>
+          <p>At the start of your day to set your limit</p>
+          <p>Everytime you eat - eat it, log it</p>
+          <p>When you feel off track</p>
+          <p>When you want to check on progress</p>
+          <p>When you need help to decide what to eat next</p>
+      </div>
+      <div class="display-card" id="tracker-card" >
+        <h2>Travel Fit Tracker</h2>
+        <p>Review your travel fit progress for today</p>
+        <a href="https://tools.travelbetter.co.uk/travel-fit/">Travel Fit Tracker</a>
+        <h2>Walk Tracker</h2>
+        <p>Enter your recent walk</p>
+        <a href="https://tools.travelbetter.co.uk/walking/">Walk Tracker</a>
+        </div>
+      <div class="controls-card" id="exit-menu" >
+       
+        <button class="control-btn" id="exit-btn">Exit Tracker</button>
+      </div>
+      <footer class="tb-footer">
+        <h3>About Travelbetter</h3>
+        <div class="tb-footer-inner">
+        <p>Travelbetter is a family travel project created to support quiet, anxious and neurodiverse travellers. We believe travel should feel calm, kind and accessible — not overwhelming. Through simple tools, thoughtful guides and lived experience, we help families plan trips that truly work for them.
+        </p>
+        <p class="tagline">Our mission is to help familes Explore More and Worry Less</p>
+        <p><a href="https://travelbetter.co.uk">Learn More</a></p>
+        </div>
+      </footer>
+      <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Travelbetter Calorie Tracker",
+  "url": "https://tools.travelbetter.co.uk/weight-loss/",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Any",
+  "description": "A free calorie tracker to log food, set a calorie limit, view progress, and monitor daily intake for weight loss and weight management.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Travelbetter",
+    "url": "https://travelbetter.co.uk"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "GBP"
+  },
+  "featureList": [
+    "Add food and calories",
+    "Set a daily calorie limit",
+    "View daily calorie progress",
+    "Show a daily food log",
+    "Reset for a new day",
+    "Search for food calorie estimates",
+    "Calculate calories per weight"
+  ]
+}
+</script>
+    </body>
+  </html>
