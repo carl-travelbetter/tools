@@ -16,10 +16,6 @@ let BMR = 0;
 
 
 
-
-  
-}
-
 function calculateBMR()
 {
   console.log('Calculating BMR');
