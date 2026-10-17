@@ -25,8 +25,8 @@ function setupActivityButtons()
   const veryActiveBtn = getEl('very-act-level');
   const modActiveBtn = getEl('mod-act-level');
   
-  extremeActivityBtn.addEventListener("click", () => {
-    extremeActivityBtn.classList.toggle("active");
+  extremeActiveBtn.addEventListener("click", () => {
+    extremeActiveBtn.classList.toggle("active");
     veryActiveBtn.classList.remove("active");
     modActiveBtn.classList.remove("active");
     activityLevel = 1.9;
@@ -35,7 +35,7 @@ function setupActivityButtons()
 
    veryActiveBtn.addEventListener("click", () => {
     veryActiveBtn.classList.toggle("active");
-    extremeActivityBtn.classList.remove("active");
+    extremeActiveBtn.classList.remove("active");
     modActiveBtn.classList.remove("active");
     activityLevel = 1.725;
     console.log('Activity Level Set To '+activityLevel);
@@ -43,7 +43,7 @@ function setupActivityButtons()
 
    modActiveBtn.addEventListener("click", () => {
     modActiveBtn.classList.toggle("active");
-    extremeActivityBtn.classList.remove("active");
+    extremeActiveBtn.classList.remove("active");
     veryActiveBtn.classList.remove("active");
     activityLevel = 1.55;
     console.log('Activity Level Set To '+activityLevel);
