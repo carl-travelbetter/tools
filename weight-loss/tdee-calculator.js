@@ -24,11 +24,15 @@ function setupActivityButtons()
   const extremeActiveBtn = getEl('ext-act-level');
   const veryActiveBtn = getEl('very-act-level');
   const modActiveBtn = getEl('mod-act-level');
+  const gentlActiveBtn = getEl('gentl-act-level');
+  const sedActiveBtn = getEl('sed-act-level');
   
   extremeActiveBtn.addEventListener("click", () => {
     extremeActiveBtn.classList.toggle("active");
     veryActiveBtn.classList.remove("active");
     modActiveBtn.classList.remove("active");
+    gentlActiveBtn.classList.remove("active");
+    sedActiveBtn.classList.remove("active");
     activityLevel = 1.9;
     console.log('Activity Level Set To '+activityLevel);
   });
@@ -37,6 +41,8 @@ function setupActivityButtons()
     veryActiveBtn.classList.toggle("active");
     extremeActiveBtn.classList.remove("active");
     modActiveBtn.classList.remove("active");
+    gentlActiveBtn.classList.remove("active");
+    sedActiveBtn.classList.remove("active");
     activityLevel = 1.725;
     console.log('Activity Level Set To '+activityLevel);
   });
@@ -45,7 +51,29 @@ function setupActivityButtons()
     modActiveBtn.classList.toggle("active");
     extremeActiveBtn.classList.remove("active");
     veryActiveBtn.classList.remove("active");
+    gentlActiveBtn.classList.remove("active");
+    sedActiveBtn.classList.remove("active");
     activityLevel = 1.55;
+    console.log('Activity Level Set To '+activityLevel);
+  });
+
+  gentlActiveBtn.addEventListener("click", () => {
+    gentlActiveBtn.classList.toggle("active");
+    extremeActiveBtn.classList.remove("active");
+    veryActiveBtn.classList.remove("active");
+    modActiveBtn.classList.remove("active");
+    sedActiveBtn.classList.remove("active");
+    activityLevel = 1.375;
+    console.log('Activity Level Set To '+activityLevel);
+  });
+
+  sedActiveBtn.addEventListener("click", () => {
+    sedActiveBtn.classList.toggle("active");
+    extremeActiveBtn.classList.remove("active");
+    veryActiveBtn.classList.remove("active");
+    modActiveBtn.classList.remove("active");
+    gentlActiveBtn.classList.remove("active");
+    activityLevel = 1.2;
     console.log('Activity Level Set To '+activityLevel);
   });
 
@@ -59,7 +87,7 @@ function calculateBMRTDEE()
   let height = Number(getEl('height').value);
   let age = Number(getEl('age').value);
   let sexatbirth = getEl('sexatbirth').value;
-  let activityLevel = Number(getEl('activity-level').value);
+ 
   if (sexatbirth == "Female")
   {
     console.log('Calculating BMR and TDEE for a Female');
