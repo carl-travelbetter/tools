@@ -63,6 +63,7 @@ function displayResults()
                       `<p>If you want to set your limit of your BMR then a 10% reduction would mean setting your limit to <strong> ${tenPercentBMR}</strong></p>`;
   results.hidden = false;
   getEl('save').hidden = false;
+  getEl('next-step').hidden = false;
 }
 
 //save the BMR data
