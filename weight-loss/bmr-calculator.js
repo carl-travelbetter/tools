@@ -4,15 +4,6 @@ console.log('BMR - Calculator');
 import {getWrittenDate, getDuration, addDays} from "/lib/date-helper.js";
 import { getEl, getText, getDate} from "/lib/dom.js";
 
-//Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
-function bindEvents() {
-  getEl('calculate-btn')?.addEventListener("click", calculateBMR);
-  getEl('save-button')?.addEventListener("click", saveBMR);
-}
-
-//Ensure html bindings are not applied until the html structure is built
-document.addEventListener("DOMContentLoaded", bindEvents);
-
 let BMR = 0;
 
 //Load Limit
@@ -24,6 +15,33 @@ let dailyCalorieLimit = limitData.limitList[0];
 const BMR_LIMIT_KEY = "current-bmr";
 let BMRData = JSON.parse(localStorage.getItem(BMR_LIMIT_KEY)) || {bmrList: []};
 let currentBMR = Number(BMRData.bmrList[0]);
+
+//Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
+function bindEvents() {
+  getEl('calculate-btn')?.addEventListener("click", calculateBMR);
+  getEl('save-button')?.addEventListener("click", saveBMR);
+  checkForCurrentBMR();
+}
+
+//Ensure html bindings are not applied until the html structure is built
+document.addEventListener("DOMContentLoaded", bindEvents);
+
+function checkForCurrentBMR()
+{
+  console.log('Current BMR Check');
+  if (isNaN(currentBMR))
+  {
+    console.log('No BMR Saved');
+  }
+  else
+  {
+    if (currentBMR > 0)
+    {
+      BMR = currentBMR;
+      displayResults();
+    }
+  }
+}
 
 function calculateBMR()
 {
