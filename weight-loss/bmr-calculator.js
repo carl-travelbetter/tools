@@ -69,6 +69,7 @@ function displayResults()
 function saveBMR()
 {
   console.log('Saving BMR data');
+  BMRData.bmrList[0] = BMR;
   saveData();
 }
 
