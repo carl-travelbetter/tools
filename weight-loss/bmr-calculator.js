@@ -7,6 +7,7 @@ import { getEl, getText, getDate} from "/lib/dom.js";
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
   getEl('calculate-btn')?.addEventListener("click", calculateBMR);
+  getEl('save-button')?.addEventListener("click", saveBMR);
 }
 
 //Ensure html bindings are not applied until the html structure is built
@@ -14,7 +15,15 @@ document.addEventListener("DOMContentLoaded", bindEvents);
 
 let BMR = 0;
 
+//Load Limit
+const CALORIE_LIMIT_KEY = "calorie-limit";
+let limitData = JSON.parse(localStorage.getItem(CALORIE_LIMIT_KEY)) || {limitList: []};
+let dailyCalorieLimit = limitData.limitList[0];
 
+//Load Limit
+const BMR_LIMIT_KEY = "current-bmr";
+let BMRData = JSON.parse(localStorage.getItem(BMR_LIMIT_KEY)) || {bmrList: []};
+let currentBMR = Number(BMRData.bmrList[0]);
 
 function calculateBMR()
 {
@@ -53,4 +62,20 @@ function displayResults()
                       `<h3>How to use this information for weight loss</h3>`+
                       `<p>If you want to set your limit of your BMR then a 10% reduction would mean setting your limit to <strong> ${tenPercentBMR}</strong></p>`;
   results.hidden = false;
+  getEl('save').hidden = false;
+}
+
+//save the BMR data
+function saveBMR()
+{
+  console.log('Saving BMR data');
+  saveData();
+}
+
+//Save data
+function saveData()
+{
+  console.log("Saving Data...");
+  localStorage.setItem(CALORIE_LIMIT_KEY, JSON.stringify(limitData));
+  localStorage.setItem(BMR_LIMIT_KEY, JSON.stringify(BMRData));
 }
