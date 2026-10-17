@@ -269,6 +269,21 @@ h3, h4, h5 {
   border-color: #0077cc;
 }
 
+.activity-level-btn {
+  background-color: #fff;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  width: 75%; 
+}
+
+.activity-level-btn.active {
+  background-color: #0077cc;
+  color: #fff;
+  border-color: #0077cc;
+}
+
 .control-btn {
   background-color: #004080;
   color: white;
