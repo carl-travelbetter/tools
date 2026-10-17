@@ -7,6 +7,7 @@ import { getEl, getText, getDate} from "/lib/dom.js";
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
   getEl('calculate-btn')?.addEventListener("click", calculateBMRTDEE);
+  setupActivityButtons();
 }
 
 //Ensure html bindings are not applied until the html structure is built
@@ -14,6 +15,42 @@ document.addEventListener("DOMContentLoaded", bindEvents);
 
 let BMR = 0;
 let TDEE = 0;
+let activityLevel = 1.2;
+
+//Setup the activity buttons with values and active controls
+function setupActivityButtons()
+{
+  console.log('Setup Activity Buttons');
+  const extremeActiveBtn = getEl('ext-act-level');
+  const veryActiveBtn = getEl('very-act-level');
+  const modActiveBtn = getEl('mod-act-level');
+  
+  extremeActivityBtn.addEventListener("click", () => {
+    extremeActivityBtn.classList.toggle("active");
+    veryActiveBtn.classList.remove("active");
+    modActiveBtn.classList.remove("active");
+    activityLevel = 1.9;
+    console.log('Activity Level Set To '+activityLevel);
+  });
+
+   veryActiveBtn.addEventListener("click", () => {
+    veryActiveBtn.classList.toggle("active");
+    extremeActivityBtn.classList.remove("active");
+    modActiveBtn.classList.remove("active");
+    activityLevel = 1.725;
+    console.log('Activity Level Set To '+activityLevel);
+  });
+
+   modActiveBtn.addEventListener("click", () => {
+    modActiveBtn.classList.toggle("active");
+    extremeActivityBtn.classList.remove("active");
+    veryActiveBtn.classList.remove("active");
+    activityLevel = 1.55;
+    console.log('Activity Level Set To '+activityLevel);
+  });
+
+  
+}
 
 function calculateBMRTDEE()
 {
