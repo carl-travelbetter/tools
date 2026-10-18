@@ -15,7 +15,7 @@ let BMRData = JSON.parse(localStorage.getItem(BMR_LIMIT_KEY)) || {bmrList: []};
 let currentBMR = Number(BMRData.bmrList[0]);
 
 //Load Limit
-const TDEE_LIMIT_KEY = "current-bmr";
+const TDEE_LIMIT_KEY = "current-tdee";
 let TDEEData = JSON.parse(localStorage.getItem(TDEE_LIMIT_KEY)) || {tdeeList: []};
 let currentTDEE = Number(TDEEData.tdeeList[0]);
 
