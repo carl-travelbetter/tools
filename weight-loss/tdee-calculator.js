@@ -17,7 +17,7 @@ let currentBMR = Number(BMRData.bmrList[0]);
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
   getEl('calculate-btn')?.addEventListener("click", calculateBMRTDEE);
-  getEl('used-saved-btn')?.addEventListener("click", usedSavedBMR);
+  getEl('used-saved-btn')?.addEventListener("click", useSavedBMR);
   getEl('calculate-tdee-btn')?.addEventListener("click", calculateTDEE);
   setupActivityButtons();
   checkForCurrentBMRTDEE();
