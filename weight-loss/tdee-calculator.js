@@ -24,6 +24,8 @@ function bindEvents() {
   getEl('calculate-btn')?.addEventListener("click", calculateBMRTDEE);
   getEl('used-saved-btn')?.addEventListener("click", useSavedBMR);
   getEl('calculate-tdee-btn')?.addEventListener("click", calculateTDEE);
+  getEl('save-button')?.addEventListener("click", saveBMRTDEE);
+  getEl('set-calorie-limit')?.addEventListener("click", setCalorieLimit);
   setupActivityButtons();
   checkForCurrentBMRTDEE();
 }
