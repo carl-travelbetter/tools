@@ -186,8 +186,8 @@ function displayResults()
   deficitPane.innerHTML = `<p>Now you know your Total Daily Energy Expenditure (TDEE), you can use it to set a daily calorie target for weight loss.</p>`+
                           `<p>A common starting point is to subtract 500 calories from your TDEE as your target.</p>`+
                           `<p>A 500 per day calorie reduction will result in approximately 1lb (roughly half a kilogram) weight loss per week.</p>`+
-                          `<p>Based on your TDEE of ${TDEE} your calorie limit should be set to ${calorieDeficit}.</p>`+
-                          `<p>Note: This is an estimated start point rather than a guarantee, and your calorie needs will change as you lose weight so revisit this calculation throughout your weight loss journey</p>`;
+                          `<p>Based on your <strong>TDEE of ${TDEE}</strong> your calorie limit should be set to <strong>${calorieDeficit}</strong>.</p>`+
+                          `<p><i>Note: This is an estimated start point rather than a guarantee, and your calorie needs will change as you lose weight so revisit this calculation throughout your weight loss journey</i></p>`;
   deficitPane.hidden = false;
   getEl('more-options').hidden = false;
   
