@@ -4,10 +4,23 @@ console.log('TDEE - Calculator');
 import {getWrittenDate, getDuration, addDays} from "/lib/date-helper.js";
 import { getEl, getText, getDate} from "/lib/dom.js";
 
+//Load Limit
+const CALORIE_LIMIT_KEY = "calorie-limit";
+let limitData = JSON.parse(localStorage.getItem(CALORIE_LIMIT_KEY)) || {limitList: []};
+let dailyCalorieLimit = limitData.limitList[0];
+
+//Load Limit
+const BMR_LIMIT_KEY = "current-bmr";
+let BMRData = JSON.parse(localStorage.getItem(BMR_LIMIT_KEY)) || {bmrList: []};
+let currentBMR = Number(BMRData.bmrList[0]);
+
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
   getEl('calculate-btn')?.addEventListener("click", calculateBMRTDEE);
+  getEl('used-saved-btn')?.addEventListener("click", usedSavedBMR);
+  getEl('calculate-tdee-btn')?.addEventListener("click", calculateTDEE);
   setupActivityButtons();
+  checkForCurrentBMRTDEE();
 }
 
 //Ensure html bindings are not applied until the html structure is built
@@ -16,6 +29,26 @@ document.addEventListener("DOMContentLoaded", bindEvents);
 let BMR = 0;
 let TDEE = 0;
 let activityLevel = 1.2;
+
+//Check for a saved BMR and TDEE
+function checkForCurrentBMRTDEE()
+{
+  console.log('Current BMR Check');
+  if (isNaN(currentBMR))
+  {
+    console.log('No BMR Saved');
+  }
+  else
+  {
+    if (currentBMR > 0)
+    {
+      BMR = currentBMR;
+      let usedBMR = getEl('saved-value');
+      usedBMR.innerHTML = `<p>Saved BMR: <strong>${BMR}</strong></p>`;
+      getEl('use-saved').hidden = false;
+    }
+  }
+}
 
 //Setup the activity buttons with values and active controls
 function setupActivityButtons()
@@ -80,6 +113,24 @@ function setupActivityButtons()
   
 }
 
+//change the layout to use saved BMR
+function useSavedBMR()
+{
+  console.log('Using Saved BMR');
+  getEl('calculator').hidden = true;
+  getEl('used-saved-calculator').hidden = false;
+}
+
+//Calculate TDEE only - using saved BMR
+function calculateTDEE()
+{
+  console.log('Calculating TDEE');
+  TDEE = Math.round(BMR * activityLevel);
+  displayResults();
+}
+
+
+//Calculate BMR and TDEE
 function calculateBMRTDEE()
 {
   console.log('Calculating BMR and TDEE');
