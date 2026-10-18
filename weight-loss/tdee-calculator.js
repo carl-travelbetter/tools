@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", bindEvents);
 
 let BMR = 0;
 let TDEE = 0;
+let calorieDeficit = 0;
 let activityLevel = 1.2;
 
 //Check for a saved BMR and TDEE
@@ -126,6 +127,7 @@ function calculateTDEE()
 {
   console.log('Calculating TDEE');
   TDEE = Math.round(BMR * activityLevel);
+  calorieDeficit = TDEE - 500;
   displayResults();
 }
 
@@ -144,12 +146,14 @@ function calculateBMRTDEE()
     console.log('Calculating BMR and TDEE for a Female');
     BMR = Math.round((weight*10) + (6.25 * height) - (5 * age) - 161); 
     TDEE = Math.round(BMR * activityLevel);
+    calorieDeficit = TDEE - 500;
   }
   else if (sexatbirth == "Male")
   {
     console.log('Caulcating BMR and TDEE for a Male');
     BMR = Math.round((weight*10) + (6.25 * height) - (5 * age) + 5);
     TDEE = Math.round(BMR * activityLevel);
+    calorieDeficit = TDEE - 500;
   }
   else
   {
@@ -158,6 +162,8 @@ function calculateBMRTDEE()
   
   displayResults();
 }
+
+
 
 //Display the results
 function displayResults()
@@ -176,4 +182,13 @@ function displayResults()
                       `<p>If you then wanted to target a 10% reduction in daily calories to support weight loss then set your daily limit to<strong> ${tenPercentAverage}</strong> Calories</p>`+
                       `<p>Alternatively, if you just wanted to set your limit of your BMR then a 10% reduction would mean setting your limit to <strong> ${tenPercentBMR}</strong></p>`;
   results.hidden = false;
+  const deficitPane = getEl('deficit');
+  deficitPane.innerHTML = `<p>Now you know your Total Daily Energy Expenditure (TDEE), you can use it to set a daily calorie target for weight loss.</p>`+
+                          `<p>A common starting point is to subtract 500 calories from your TDEE as your target.</p>`+
+                          `<p>A 500 per day calorie reduction will result in approximately 1lb (roughly half a kilogram) weight loss per week.</p>`+
+                          `<p>Based on your TDEE of ${TDEE} your calorie limit should be set to ${calorieDeficit}.</p>`+
+                          `<p>Note: This is an estimated start point rather than a guarantee, and your calorie needs will change as you lose weight so revisit this calculation throughout your weight loss journey</p>`;
+  deficitPane.hidden = false;
+  moreOptions.hidden = false;
+  
 }
