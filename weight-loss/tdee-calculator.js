@@ -225,7 +225,7 @@ function saveData()
 function setCalorieLimit()
 {
   console.log("Setting Calorie Limit...");
-  limitData.limitList[0] = deficit;  
+  limitData.limitList[0] = calorieDeficit;  
   localStorage.setItem(CALORIE_LIMIT_KEY, JSON.stringify(limitData));
   getEl('set-calories').hidden = true;
   getEl('calories-set').hidden = false;
