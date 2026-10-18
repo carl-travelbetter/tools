@@ -189,6 +189,6 @@ function displayResults()
                           `<p>Based on your TDEE of ${TDEE} your calorie limit should be set to ${calorieDeficit}.</p>`+
                           `<p>Note: This is an estimated start point rather than a guarantee, and your calorie needs will change as you lose weight so revisit this calculation throughout your weight loss journey</p>`;
   deficitPane.hidden = false;
-  moreOptions.hidden = false;
+  getEl('more-options').hidden = false;
   
 }
