@@ -17,7 +17,7 @@ let currentBMR = Number(BMRData.bmrList[0]);
 //Load Limit
 const TDEE_LIMIT_KEY = "current-bmr";
 let TDEEData = JSON.parse(localStorage.getItem(TDEE_LIMIT_KEY)) || {tdeeList: []};
-let currentTDEE = Number(TDEEData.bmrList[0]);
+let currentTDEE = Number(TDEEData.tdeeList[0]);
 
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
