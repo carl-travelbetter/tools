@@ -26,6 +26,23 @@
       </div>
       
       <!-- Calculator -->
+      <div class="display-card" id="use-saved" hidden>
+        <p>Do you want to use your saved BMR value (to save time)</p>
+        <div id="saved-value"></div>
+        <button class="control-btn" id="used-saved-btn">Use Saved BMR</button>
+      </div>
+      <div class="display-card" id="used-saved-calculator" hidden>
+        <div id="saved-bmr"></div>
+        <div id="activity-buttons">
+          <p>Select Your Activity Level:</p>
+          <button class="activity-level-btn" id="ext-act-level"><strong>Extremely Active</strong><p>You combine a very physical job with regular hard exercise, or train intensely twice a day.</p></button>
+          <button class="activity-level-btn" id="very-act-level"><strong>Very Active</strong><p>You have a physically demanding daily routine or do hard exercise 6–7 days a week.</p></button>
+          <button class="activity-level-btn" id="mod-act-level"><strong>Moderately Active</strong><p>You move regularly throughout the day or do moderate exercise 3–5 days a week.</p></button>
+          <button class="activity-level-btn" id="gentl-act-level"><strong>Gently Active</strong><p>You do some walking and light movement each day, with light exercise 1–3 days a week.</p></button>
+          <button class="activity-level-btn" id="sed-act-level"><strong>Sedentary</strong><p>You spend most of the day sitting and do little walking or exercise.</p></button>
+        </div>
+        <button class="control-btn" id="calculate-tdee-btn">Calculate TDEE</button>
+      </div>
       <div class="display-card" id="calculator">
         <label for="sexatbirth">Sex At Birth </label>
         <select class="form-input" id="sexatbirth" name="sexatbirth">
@@ -40,14 +57,14 @@
         <label for="age">Age:</label>
         <input class="form-input" type="number" id="age" name="age" /><br>       
         <div id="activity-buttons">
-          <p>Your Activity Level:</p>
+          <p>Select Your Activity Level:</p>
           <button class="activity-level-btn" id="ext-act-level"><strong>Extremely Active</strong><p>You combine a very physical job with regular hard exercise, or train intensely twice a day.</p></button>
           <button class="activity-level-btn" id="very-act-level"><strong>Very Active</strong><p>You have a physically demanding daily routine or do hard exercise 6–7 days a week.</p></button>
           <button class="activity-level-btn" id="mod-act-level"><strong>Moderately Active</strong><p>You move regularly throughout the day or do moderate exercise 3–5 days a week.</p></button>
           <button class="activity-level-btn" id="gentl-act-level"><strong>Gently Active</strong><p>You do some walking and light movement each day, with light exercise 1–3 days a week.</p></button>
           <button class="activity-level-btn" id="sed-act-level"><strong>Sedentary</strong><p>You spend most of the day sitting and do little walking or exercise.</p></button>
         </div>
-        <button class="control-btn" id="calculate-btn">Calculate TDEE</button>
+        <button class="control-btn" id="calculate-btn">Calculate BMR and TDEE</button>
       </div>
 
       <!--Calculator Results-->
