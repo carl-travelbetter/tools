@@ -41,6 +41,11 @@ else
 if (isNaN(dailyCalorieLimit))
 {
   dailyCalorieLimit = 1600;
+  updateTracker();
+}
+else
+{
+  updateTracker();
 }
  
 //Load Running Total
