@@ -14,6 +14,11 @@ const BMR_LIMIT_KEY = "current-bmr";
 let BMRData = JSON.parse(localStorage.getItem(BMR_LIMIT_KEY)) || {bmrList: []};
 let currentBMR = Number(BMRData.bmrList[0]);
 
+//Load Limit
+const TDEE_LIMIT_KEY = "current-bmr";
+let TDEEData = JSON.parse(localStorage.getItem(TDEE_LIMIT_KEY)) || {tdeeList: []};
+let currentTDEE = Number(TDEEData.bmrList[0]);
+
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
   getEl('calculate-btn')?.addEventListener("click", calculateBMRTDEE);
@@ -163,8 +168,6 @@ function calculateBMRTDEE()
   displayResults();
 }
 
-
-
 //Display the results
 function displayResults()
 {
@@ -190,5 +193,41 @@ function displayResults()
                           `<p><i>Note: This is an estimated start point rather than a guarantee, and your calorie needs will change as you lose weight so revisit this calculation throughout your weight loss journey</i></p>`;
   deficitPane.hidden = false;
   getEl('more-options').hidden = false;
-  
+  getEl('save-bmr-tdee').hidden = false;
+  getEl('set-calories').hidden = false;
+  getEl('saved-bmr-tdee').hidden = true;
+  getEl('calories-set').hidden = true;
+}
+
+//function to save the BMR and TDEE
+function saveBMRTDEE()
+{
+
+  console.log('Saving BMR & TDEE data');
+  BMRData.bmrList[0] = BMR;
+  TDEEData.tdeeList[0] = TDEE;
+  saveData();
+}
+
+
+}
+
+//Save data
+function saveData()
+{
+  console.log("Saving Data...");
+  localStorage.setItem(BMR_LIMIT_KEY, JSON.stringify(BMRData));
+  localStorage.setItem(TDEE_LIMIT_KEY, JSON.stringify(TDEEData)); 
+  getEl('save-bmr-tdee').hidden = true;
+  getEl('saved-bmr-tdee').hidden = false;
+}
+
+//Save data
+function setCalorieLimit()
+{
+  console.log("Saving Data...");
+  limitData.limitList[0] = deficit;  
+  localStorage.setItem(CALORIE_LIMIT_KEY, JSON.stringify(limitData));
+  getEl('set-calories').hidden = true;
+  getEl('calories-set').hidden = false;
 }
