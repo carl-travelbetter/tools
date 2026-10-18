@@ -209,9 +209,6 @@ function saveBMRTDEE()
   saveData();
 }
 
-
-}
-
 //Save data
 function saveData()
 {
