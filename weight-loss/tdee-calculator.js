@@ -26,8 +26,8 @@ function bindEvents() {
   getEl('calculate-tdee-btn')?.addEventListener("click", calculateTDEE);
   getEl('save-button')?.addEventListener("click", saveBMRTDEE);
   getEl('set-calorie-limit')?.addEventListener("click", setCalorieLimit);
-  setupActivityButtons();
   checkForCurrentBMRTDEE();
+  setupActivityButtons();
 }
 
 //Ensure html bindings are not applied until the html structure is built
