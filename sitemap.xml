@@ -54,17 +54,12 @@
   </url>
    <url>
     <loc>https://tools.travelbetter.co.uk/weight-loss/</loc>
-    <lastmod>2026-05-03</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tools.travelbetter.co.uk/walking/</loc>
     <lastmod>2026-10-04</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tools.travelbetter.co.uk/weight-loss/food-lookup/index.html</loc>
-    <lastmod>2026-05-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -165,6 +160,11 @@
   <url>
     <loc>https://tools.travelbetter.co.uk/weight-loss/tdee-calculator</loc>
     <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tools.travelbetter.co.uk/weight-loss/calorie-tracker</loc>
+    <lastmod>2026-10-19</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>
