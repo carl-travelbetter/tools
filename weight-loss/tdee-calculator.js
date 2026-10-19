@@ -61,7 +61,7 @@ function checkForCurrentBMRTDEE()
 //Setup the activity buttons with values and active controls
 function setupActivityButtons()
 {
-  console.log('Setup Activity Buttons');
+  console.log('Setup Activity Buttons Monday');
   const extremeActiveBtn = getEl('ext-act-level');
   const veryActiveBtn = getEl('very-act-level');
   const modActiveBtn = getEl('mod-act-level');
@@ -118,7 +118,7 @@ function setupActivityButtons()
     console.log('Activity Level Set To '+activityLevel);
   });
 
-  
+  console.log('Event Listeners SetUp');
 }
 
 //change the layout to use saved BMR
