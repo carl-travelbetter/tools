@@ -240,14 +240,11 @@ function displayResults()
   const results = getEl('results');
   results.innerHTML = `<h2>BMR and TDEE Results</h2>`+
                       `<p><center><strong>BMR = ${BMR}</strong></center></p>`+
-                      `<p><center><strong>TDEE = ${TDEE}</strong></center></p>`+
-                      `<h3>How to use this information for weight loss</h3>`+
-                      `<p>If you were to take an average of the two values to work out approximate daily need - this is <strong> ${averageCalorieIntake}</strong> Calories</p>`+
-                      `<p>If you then wanted to target a 10% reduction in daily calories to support weight loss then set your daily limit to<strong> ${tenPercentAverage}</strong> Calories</p>`+
-                      `<p>Alternatively, if you just wanted to set your limit of your BMR then a 10% reduction would mean setting your limit to <strong> ${tenPercentBMR}</strong></p>`;
+                      `<p><center><strong>TDEE = ${TDEE}</strong></center></p>`;
   results.hidden = false;
   const deficitPane = getEl('deficit');
-  deficitPane.innerHTML = `<p>Now you know your Total Daily Energy Expenditure (TDEE), you can use it to set a daily calorie target for weight loss.</p>`+
+  deficitPane.innerHTML = `<h2>How to use your TDEE</h2>`+
+                          `<p>Now you know your Total Daily Energy Expenditure (TDEE), you can use it to set a daily calorie target for weight loss.</p>`+
                           `<p>A common starting point is to subtract 500 calories from your TDEE as your target.</p>`+
                           `<p>A 500 per day calorie reduction will result in approximately 1lb (roughly half a kilogram) weight loss per week.</p>`+
                           `<p>Based on your <strong>TDEE of ${TDEE}</strong> your calorie limit should be set to <strong>${calorieDeficit}</strong>.</p>`+
