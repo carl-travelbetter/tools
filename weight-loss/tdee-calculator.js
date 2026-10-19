@@ -62,6 +62,7 @@ function checkForCurrentBMRTDEE()
 function setupActivityButtons()
 {
   console.log('Setup Activity Buttons Monday');
+  //Setup Activity Buttons for non previous BMR
   const extremeActiveBtn = getEl('ext-act-level');
   const veryActiveBtn = getEl('very-act-level');
   const modActiveBtn = getEl('mod-act-level');
@@ -117,6 +118,64 @@ function setupActivityButtons()
     activityLevel = 1.2;
     console.log('Activity Level Set To '+activityLevel);
   });
+
+  //Setup Activity Buttons for previous BMR used
+  const UscExtremeActiveBtn = getEl('usc-ext-act-level');
+  const UscVeryActiveBtn = getEl('usc-very-act-level');
+  const UscModActiveBtn = getEl('usc-mod-act-level');
+  const UscGentlActiveBtn = getEl('usc-gentl-act-level');
+  const UscSedActiveBtn = getEl('usc-sed-act-level');
+  
+  UscExtremeActiveBtn.addEventListener("click", () => {
+    UscExtremeActiveBtn.classList.toggle("active");
+    UscVeryActiveBtn.classList.remove("active");
+    UscModActiveBtn.classList.remove("active");
+    UscGentlActiveBtn.classList.remove("active");
+    UscSedActiveBtn.classList.remove("active");
+    activityLevel = 1.9;
+    console.log('Activity Level Set To '+activityLevel);
+  });
+
+   UscVeryActiveBtn.addEventListener("click", () => {
+    UscVeryActiveBtn.classList.toggle("active");
+    UscExtremeActiveBtn.classList.remove("active");
+    UscModActiveBtn.classList.remove("active");
+    UscGentlActiveBtn.classList.remove("active");
+    UscSedActiveBtn.classList.remove("active");
+    activityLevel = 1.725;
+    console.log('Activity Level Set To '+activityLevel);
+  });
+
+   UscModActiveBtn.addEventListener("click", () => {
+    UscModActiveBtn.classList.toggle("active");
+    UscExtremeActiveBtn.classList.remove("active");
+    UscVeryActiveBtn.classList.remove("active");
+    UscGentlActiveBtn.classList.remove("active");
+    UscSedActiveBtn.classList.remove("active");
+    activityLevel = 1.55;
+    console.log('Activity Level Set To '+activityLevel);
+  });
+
+  UscGentlActiveBtn.addEventListener("click", () => {
+    UscGentlActiveBtn.classList.toggle("active");
+    UscExtremeActiveBtn.classList.remove("active");
+    UscVeryActiveBtn.classList.remove("active");
+    UscModActiveBtn.classList.remove("active");
+    UscSedActiveBtn.classList.remove("active");
+    activityLevel = 1.375;
+    console.log('Activity Level Set To '+activityLevel);
+  });
+
+  UscSedActiveBtn.addEventListener("click", () => {
+    UscSedActiveBtn.classList.toggle("active");
+    UscExtremeActiveBtn.classList.remove("active");
+    UscVeryActiveBtn.classList.remove("active");
+    UscModActiveBtn.classList.remove("active");
+    UscGentlActiveBtn.classList.remove("active");
+    activityLevel = 1.2;
+    console.log('Activity Level Set To '+activityLevel);
+  });
+
 
   console.log('Event Listeners SetUp');
 }
