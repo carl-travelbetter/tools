@@ -8,6 +8,9 @@ import { getEl, getText, getDate} from "/lib/dom.js";
 let countryTipData = [];
 
 let countrySelected = "UK";
+let split = 2;
+let amount = 0;
+
 
 fetch('country-tip-list.json')
   .then(response => response.json())
@@ -30,6 +33,8 @@ document.addEventListener("DOMContentLoaded", bindEvents);
 function calculateTip()
 {
   console.log('Calculate Tip');
+  split = Number(getEl('split').value);
+  amount = Number(getEl('amount').value);
   displayResult();
 }
 
@@ -37,8 +42,9 @@ function displayResult()
 {
   console.log('Display Log');
   const results = getEl('results');
+  let tip = amount*0.2;
   results.innerHTML = `<h2>Suggested Tip</h2>`+
-                      `<p>Tipping Result</p>`;
+                      `<p>20% Tip = ${tip}</p>`;
   results.hidden = false;
 }
 
