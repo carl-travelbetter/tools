@@ -7,7 +7,7 @@ import { getEl, getText, getDate} from "/lib/dom.js";
 //Load Data
 let countryTipData = [];
 
-countrySelected = "UK";
+let countrySelected = "UK";
 
 fetch('country-tip-list.json')
   .then(response => response.json())
