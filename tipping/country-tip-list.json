@@ -1,0 +1,21 @@
+[
+  {
+  "country": "United States",
+  "code": "US",
+  "currency": "USD",
+  "recommendedTip": 20,
+  "minimumTip": 15,
+  "maximumTip": 25,
+  "guidance": "Tipping is customary at sit-down restaurants."
+},
+ {
+  "country": "United Kingdom",
+  "code": "UK",
+  "currency": "GBP",
+  "recommendedTip": 10,
+  "minimumTip": 10,
+  "maximumTip": 25,
+  "guidance": "Check your bill before paying a tip as service charges may have already been adding to your bill."
+}
+]
+  
