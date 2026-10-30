@@ -7,6 +7,8 @@ import { getEl, getText, getDate} from "/lib/dom.js";
 //Load Data
 let countryTipData = [];
 
+countrySelected = "UK";
+
 fetch('country-tip-list.json')
   .then(response => response.json())
   .then(data => {
@@ -19,6 +21,7 @@ fetch('country-tip-list.json')
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
   getEl('calculate-btn')?.addEventListener("click", calculateTip);
+  getEl('country')?.addEventListener("change", selectCountry);
 }
 
 //Ensure html bindings are not applied until the html structure is built
@@ -37,4 +40,11 @@ function displayResult()
   results.innerHTML = `<h2>Suggested Tip</h2>`+
                       `<p>Tipping Result</p>`;
   results.hidden = false;
+}
+
+function selectCountry()
+{
+  console.log('Select Country');
+  countrySelected = getEl('country').value;
+  console.log('Country Selected '+countrySelected);
 }
