@@ -3,7 +3,7 @@
     <head>
       <title>How Much Should I Tip | Travel Tool | Travelbetter</title>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta name="description" content="Easy to use tool to get a recommended resturant tip amount per country." />
+     <meta name="description" content="Easy to use tool to get a recommended resturant tip by country." />
      <meta charset="UTF-8">
      <link rel="stylesheet" href="https://tools.travelbetter.co.uk/lib/travelbetter-tools.css">
      <link rel="icon" type="image/x-icon" href="https://travelbetter.co.uk/wp-content/uploads/2026/05/TB-Logo.png">
@@ -21,8 +21,8 @@
        </div>
       <div class="intro" id="intro">
         <h1>🧮 How Much Should I Tip</h1>
-        <p>Easy to use tip calculator to get a recommended resturant tip amount per country.</p> 
-        <p>*The recommendation from this tool is for guidance only and you are free to tip more or less based in your experience. </p>
+        <p>Easy to use tip calculator providing a recommended resturant tip for a given country.</p> 
+        <p>*The recommendation from this tool is for guidance only and you are free to tip more or less based on your dinning experience. </p>
       </div>
       
      
@@ -35,7 +35,7 @@
         <button class="control-btn" id="calculate-tdee-btn">Calculate TDEE</button>
       </div>
      
-        <p id="bill-amount">Bill Amount:</p>
+        <p id="bill-amount">Bill Amount: <span id="currency">(GBP)</span></p>
         <input class="form-input" type="number" id="amount" name="amount" /><br>       
         <p id="bill-amount">Split Between:</p>
         <input class="form-input" type="number" id="split" name="split" /><br>
@@ -101,10 +101,10 @@
           {
             "@type": "WebApplication",
             "name": "TDEE Calculator",
-            "url": "https://tools.travelbetter.co.uk/weight-loss/tdee-calculator",
+            "url": "https://tools.travelbetter.co.uk/tipping/how-much-should-i-tip",
             "applicationCategory": "HealthApplication",
             "operatingSystem": "Any",
-            "description": "Free TDEE calculator to find out how many calories your body burns each day, and advice on how to use this to reach your weight and fitness goals.",
+            "description": "Easy to use tool to get a recommended resturant tip by country.",
             "publisher": {
               "@type": "Organization",
               "name": "Travelbetter",
@@ -116,17 +116,14 @@
               "priceCurrency": "GBP"
             },
             "featureList": [
-              "BMR Calculation",
-              "TDEE Calculation",
-              "Basal Metabolic Rate (BMR)",
-              "Total Daily Energy Expenditure (TDEE)",
-              "Calorie Deficit Calculations",
-              "Daily Calorie Limit Calculations"
+              "Tip Calculation",
+              "Meal Bill Splitting",
+              "Country Tips Recommendation"
             ]
           },
         {
         "@type": "BreadcrumbList",
-          "@id": "https://tools.travelbetter.co.uk/weight-loss/tdee-calculator/#breadcrumbs",
+          "@id": "https://tools.travelbetter.co.uk/tipping/how-much-should-i-tip/#breadcrumbs",
           "itemListElement": [
             {
               "@type": "ListItem",
@@ -143,14 +140,14 @@
             {
               "@type": "ListItem",
               "position": 3,
-              "name": "Weight Loss",
-              "item": "https://tools.travelbetter.co.uk/weight-loss/"
+              "name": "Tipping",
+              "item": "https://tools.travelbetter.co.uk/tipping/"
             },
             {
               "@type": "ListItem",
               "position": 4,
-              "name": "TDEE Calculator",
-              "item": "https://tools.travelbetter.co.uk/weight-loss/tdee-calculator"
+              "name": "How much should I tip",
+              "item": "https://tools.travelbetter.co.uk/tipping/how-much-should-i-tip"
             }
           ]
         }
