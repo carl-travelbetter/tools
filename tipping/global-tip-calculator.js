@@ -57,7 +57,7 @@ function selectCountry()
        country.code.includes(countrySelected)
   );
 
-  let countrySelected = countryData[0];
+  let country = countryData[0];
   const currencyFlag = getEl('currency');
-  currencyFlag.innerHTML = `(${countrySelected.currency})`;
+  currencyFlag.innerHTML = `(${country.currency})`;
 }
