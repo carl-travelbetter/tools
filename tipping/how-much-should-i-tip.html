@@ -29,17 +29,27 @@
       </div>
      
       <div class="display-card" id="tip-calculator">
-       <label for="country">Select Country </label>
-       <select class="form-input" id="country" name="country">
-          <option value="UK" selected>United Kingdom</option>
-          <option value="US">United States</option>
-          <option value="FR">France</option>
-        </select>
-        <p id="bill-amount">Bill Amount: <span id="currency">(GBP)</span></p>
-        <input class="form-input" type="number" id="amount" name="amount" /><br>       
-        <p id="bill-amount">Split Between:</p>
-        <input class="form-input" type="number" id="split" name="split" /><br>
-        <button class="control-btn" id="calculate-btn">Calculate Tip</button>
+       <div id="select-country">
+         <h3>Step 1 of 3</h3>
+         <label for="country">Select Country </label>
+         <select class="form-input" id="country" name="country">
+            <option value="UK" selected>United Kingdom</option>
+            <option value="US">United States</option>
+            <option value="FR">France</option>
+          </select>
+        </div>
+        <div id="enter-amount" hidden>
+          <h3>Step 2 of 3</h3>
+          <p id="bill-amount">Enter Bill Amount: <span id="currency"></span></p>
+          <input class="form-input" type="number" id="amount" name="amount" /><br>
+          <button class="control-btn" id="enter-amount">Enter Amount</button>
+        </div>
+        <div id="split-between" hidden>
+          <h3>Step 3 of 3</h3>
+          <p id="bill-amount">(optional) Enter Number of People To Split the Bill and Tip:</p>
+          <input class="form-input" type="number" id="split" name="split" /><br>
+          <button class="control-btn" id="calculate-btn">Calculate Tip</button>
+        </div>
       </div>
 
       <!--Calculator Results-->
