@@ -60,6 +60,9 @@ function displayResult()
   let tipAmount = Math.round(amount*(recommendedTip/100));
   let maxTipAmount = Math.round(amount*(maximumTip/100));
   let minTipAmount = Math.round(amount*(minimalTip/100));
+  let totalBill = amount + tipAmount;
+  let maxTotalBill = amount + maxTipAmount;
+  let minTotalBill = amount + minTipAmount;
   getEl('split-between').hidden = true;
   getEl('tip-calculator').hidden = true;
   if (split > 1)
@@ -75,16 +78,17 @@ function displayResult()
                         `<p>Additional Guidance: ${guidance}</p>`;
   }
   else
-  {
-    let totalBill = amount + tipAmount;
+  { 
   results.innerHTML = `<h2>Tip Recommendation For ${countryName}</h2>`+
                       `<h3>Recommended Tip</h3>`+
-                      `<p>Recommended Tip is ${recommendedTip}% which is ${symbol}${tipAmount}</strong> </p>`+
+                      `<p><strong>Recommended Tip is ${recommendedTip}% which is ${symbol}${tipAmount}</strong> </p>`+
                       `<p>This makes your total bill ${symbol}${totalBill} (${symbol}${amount} + ${symbol}${tipAmount})</p>`+
                       `<h3>Maximum Tip</h3>`+
                       `<p>Maximum Tip would be ${maximumTip}% which is ${symbol}${maxTipAmount}</p>`+
+                      `<p>This makes your total bill ${symbol}${maxTotalBill} (${symbol}${amount} + ${symbol}${maxTipAmount})</p>`+
                       `<h3>Minimum Tip</h3>`+
                       `<p>Minimum Tip would be ${minimalTip}% which is ${symbol}${minTipAmount}</p>`+
+                      `<p>This makes your total bill ${symbol}${minTotalBill} (${symbol}${amount} + ${symbol}${minTipAmount})</p>`+
                       `<h3>Additional Guidance</h3>`+
                       `<p>${guidance}</p>`;
   }
