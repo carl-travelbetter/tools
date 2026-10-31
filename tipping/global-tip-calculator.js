@@ -71,7 +71,7 @@ function displayResult()
     let billPerPerson = Math.round((amount / split)*100)/100;
     let totalPerPerson = tipPerPerson + billPerPerson;
     let maxTipPerPerson = Math.round((maxTipAmount / split)*100)/100;
-    let minTipPerPerson = Math.round(minTipAmount / split)*100)/100;
+    let minTipPerPerson = Math.round((minTipAmount / split)*100)/100;
     let maxTotalPerPerson = billPerPerson + maxTipPerPerson;
     let minTotalPerPerson = billPerPerson + minTipPerPerson;
     results.innerHTML = `<h2>Tip Recommendation For ${countryName}</h2>`+
