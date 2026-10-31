@@ -94,14 +94,14 @@ function displayResult()
   { 
   results.innerHTML = `<h2>Tip Recommendation For ${countryName}</h2>`+
                       `<h3>Recommended Tip</h3>`+
-                      `<p><strong>Recommended Tip is ${recommendedTip}% which is ${symbol}${tipAmount}</strong> </p>`+
-                      `<p>This makes your total bill ${symbol}${totalBill} (${symbol}${amount} + ${symbol}${tipAmount})</p>`+
+                      `<p><strong>Recommended Tip is ${recommendedTip}% which is ${symbol}${tipAmount.toFixed(2)}</strong> </p>`+
+                      `<p>This makes your total bill ${symbol}${totalBill.toFixed(2)} (${symbol}${amount} + ${symbol}${tipAmount.toFixed(2)})</p>`+
                       `<h3>Maximum Tip</h3>`+
                       `<p>Maximum Tip would be ${maximumTip}% which is ${symbol}${maxTipAmount}</p>`+
-                      `<p>This makes your total bill ${symbol}${maxTotalBill} (${symbol}${amount} + ${symbol}${maxTipAmount})</p>`+
+                      `<p>This makes your total bill ${symbol}${maxTotalBill.toFixed(2)} (${symbol}${amount} + ${symbol}${maxTipAmount.toFixed(2)})</p>`+
                       `<h3>Minimum Tip</h3>`+
-                      `<p>Minimum Tip would be ${minimalTip}% which is ${symbol}${minTipAmount}</p>`+
-                      `<p>This makes your total bill ${symbol}${minTotalBill} (${symbol}${amount} + ${symbol}${minTipAmount})</p>`+
+                      `<p>Minimum Tip would be ${minimalTip}% which is ${symbol}${minTipAmount.toFixed(2)}</p>`+
+                      `<p>This makes your total bill ${symbol}${minTotalBill.toFixed(2)} (${symbol}${amount} + ${symbol}${minTipAmount.toFixed(2)})</p>`+
                       `<h3>Additional Guidance</h3>`+
                       `<p>${guidance}</p>`;
   }
