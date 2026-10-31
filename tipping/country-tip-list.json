@@ -16,6 +16,24 @@
   "minimumTip": 10,
   "maximumTip": 25,
   "guidance": "Check your bill before paying a tip as service charges may have already been adding to your bill."
+},
+  {
+  "country": "France",
+  "code": "FR",
+  "currency": "EUR",
+  "recommendedTip": 10,
+  "minimumTip": 10,
+  "maximumTip": 25,
+  "guidance": "Check your bill before paying a tip as service charges may have already been adding to your bill."
+},
+  {
+  "country": "Germany",
+  "code": "DU",
+  "currency": "EUR",
+  "recommendedTip": 10,
+  "minimumTip": 10,
+  "maximumTip": 25,
+  "guidance": "Check your bill before paying a tip as service charges may have already been adding to your bill."
 }
 ]
   
