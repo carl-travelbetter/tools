@@ -25,16 +25,24 @@ fetch('country-tip-list.json')
 function bindEvents() {
   getEl('calculate-btn')?.addEventListener("click", calculateTip);
   getEl('country')?.addEventListener("change", selectCountry);
+  getEl('submit-amount')?.addEventListener("click", enterAmount);
 }
 
 //Ensure html bindings are not applied until the html structure is built
 document.addEventListener("DOMContentLoaded", bindEvents);
 
+function enterAmount()
+{
+  console.log('Enter Amount');
+  amount = Number(getEl('amount').value);
+  getEl('enter-amount').hidden = true;
+  getEl('split-between').hidden = false;
+}
+
 function calculateTip()
 {
   console.log('Calculate Tip');
   split = Number(getEl('split').value);
-  amount = Number(getEl('amount').value);
   displayResult();
 }
 
@@ -43,6 +51,7 @@ function displayResult()
   console.log('Display Log');
   const results = getEl('results');
   let tip = amount*0.2;
+  getEl('split-between').hidden = true;
   results.innerHTML = `<h2>Suggested Tip</h2>`+
                       `<p>20% Tip = ${tip}</p>`;
   results.hidden = false;
@@ -60,4 +69,6 @@ function selectCountry()
   let country = countryData[0];
   const currencyFlag = getEl('currency');
   currencyFlag.innerHTML = `(${country.currency})`;
+  getEl('select-country').hidden = true;
+  getEl('enter-amount').hidden = false;
 }
