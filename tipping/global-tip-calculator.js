@@ -70,12 +70,23 @@ function displayResult()
     let tipPerPerson = tipAmount / split;
     let billPerPerson = amount / split;
     let totalPerPerson = tipPerPerson + billPerPerson;
+    let maxTipPerPerson = maxTipAmount / split;
+    let minTipPerPerson = minTipAmount / split;
+    let maxTotalPerPerson = billPerPerson + maxTipPerPerson;
+    let minTotalPerPerson = billPerPerson + minTipPerPerson;
     results.innerHTML = `<h2>Tip Recommendation For ${countryName}</h2>`+
                         `<h3>Recommended Tip</h3>`+
-                        `<p>Recommended Tip is ${recommendedTip}% which is ${symbol}${tipAmount}</p>`+
+                        `<p><strong>Recommended Tip is ${recommendedTip}% which is ${symbol}${tipAmount}</strong></p>`+
                         `<p>This is ${symbol}${tipPerPerson} per person`+
                         `<p>When the bill (${symbol}${amount}) is also split and added to the tip this is a total payment of ${symbol}${totalPerPerson} per person</p>`+
-                        `<p>Additional Guidance: ${guidance}</p>`;
+                        `<h3>Maximum Tip</h3>`+
+                        `<p>This is ${symbol}${maxTipPerPerson} per person`+
+                        `<p>When the bill (${symbol}${amount}) is also split and added to the tip this is a total payment of ${symbol}${maxTotalPerPerson} per person</p>`+
+                        `<h3>Minimum Tip</h3>`+
+                        `<p>This is ${symbol}${minTipPerPerson} per person`+
+                        `<p>When the bill (${symbol}${amount}) is also split and added to the tip this is a total payment of ${symbol}${minTotalPerPerson} per person</p>`+
+                        `<h3>Additional Guidance</h3>`+
+                        `<p>${guidance}</p>`;
   }
   else
   { 
