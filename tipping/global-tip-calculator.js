@@ -58,6 +58,8 @@ function displayResult()
   console.log('Display Log');
   const results = getEl('results');
   let tipAmount = Math.round(amount*(recommendedTip/100));
+  let maxTipAmount = Math.round(amount*(maximiumTip/100));
+  let minTipAmount = Math.round(amount*(minimalTip/100));
   getEl('split-between').hidden = true;
   getEl('tip-calculator').hidden = true;
   if (split > 1)
@@ -65,17 +67,19 @@ function displayResult()
     let tipPerPerson = tipAmount / split;
     let billPerPerson = amount / split;
     let totalPerPerson = tipPerPerson + billPerPerson;
-    results.innerHTML = `<h2>Tip Recommendations For ${countryName}</h2>`+
+    results.innerHTML = `<h2>Tip Recommendation For ${countryName}</h2>`+
                         `<p>Recommended Tip is ${recommendedTip}% which is ${symbol}${tipAmount}</p>`+
                         `<p>This is ${symbol}${tipPerPerson} per person`+
                         `<p>When the bill (${symbol}${amount}) is also split and added to the tip this is a total payment of ${symbol}${totalPerPerson} per person</p>`+
-                        `<p>Guidance: ${guidance}</p>`;
+                        `<p>Additional Guidance: ${guidance}</p>`;
   }
   else
   {
-  results.innerHTML = `<h2>Suggested Tip</h2>`+
-                      `<p>Recommended Tip is ${recommendedTip}% which is ${symbol}${tipAmount}</p>`+
-                      `<p>Guidance: ${guidance}</p>`;
+  results.innerHTML = `<h2>Tip Recommendation For ${countryName}</h2>`+
+                      `<p><strong>Recommended Tip is ${recommendedTip}% which is ${symbol}${tipAmount}</strong></p>`+
+                      `<p>Maximum Tip would be ${maximumTip}% which is ${symbol}${maxTipAmount}</p>`+
+                      `<p>Minimum Tip would be ${minimalTip}% which is ${symbol}${minTipAmount}</p>`+
+                      `<p>Additional Guidance: ${guidance}</p>`;
   }
   results.hidden = false;
   getEl('go-again').hidden = false;
