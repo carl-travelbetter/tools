@@ -26,6 +26,7 @@ function bindEvents() {
   getEl('calculate-btn')?.addEventListener("click", calculateTip);
   getEl('country')?.addEventListener("change", selectCountry);
   getEl('submit-amount')?.addEventListener("click", enterAmount);
+  getEl('go-again')?.addEventListener("click", goAgain);
 }
 
 //Ensure html bindings are not applied until the html structure is built
@@ -52,9 +53,11 @@ function displayResult()
   const results = getEl('results');
   let tip = amount*0.2;
   getEl('split-between').hidden = true;
+  getEl('tip-calculator').hidden = true;
   results.innerHTML = `<h2>Suggested Tip</h2>`+
                       `<p>20% Tip = ${tip}</p>`;
   results.hidden = false;
+  getEl('go-again').hidden = false;
 }
 
 function selectCountry()
@@ -71,4 +74,12 @@ function selectCountry()
   currencyFlag.innerHTML = `(${country.currency})`;
   getEl('select-country').hidden = true;
   getEl('enter-amount').hidden = false;
+}
+
+function goAgain()
+{
+  getEl('results').hidden = true;
+  getEl('go-again').hidden = true;
+  getEl('select-country').hidden = false;
+  
 }
