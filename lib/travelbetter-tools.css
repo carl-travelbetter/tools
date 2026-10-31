@@ -31,6 +31,10 @@ select {
   width: 150px; 
 }
 
+.center-text {
+    text-align: center;
+ }
+
 h1 {
   color:#0170b9;
   font-size: 1.75em;
