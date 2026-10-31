@@ -67,13 +67,13 @@ function displayResult()
   getEl('tip-calculator').hidden = true;
   if (split > 1)
   {
-    let tipPerPerson = (tipAmount / split).toFixed(2);
-    let billPerPerson = (amount / split).toFixed(2);
+    let tipPerPerson = Math.round((tipAmount / split)*100)/100;
+    let billPerPerson = Math.round((amount / split)*100)/100;
     let totalPerPerson = tipPerPerson + billPerPerson;
-    let maxTipPerPerson = (maxTipAmount / split).toFixed(2);
-    let minTipPerPerson = (minTipAmount / split).toFixed(2);
-    let maxTotalPerPerson = Math.round(billPerPerson + maxTipPerPerson);
-    let minTotalPerPerson = Math.round(billPerPerson + minTipPerPerson);
+    let maxTipPerPerson = Math.round((maxTipAmount / split)*100)/100;
+    let minTipPerPerson = Math.round(minTipAmount / split)*100)/100;
+    let maxTotalPerPerson = billPerPerson + maxTipPerPerson;
+    let minTotalPerPerson = billPerPerson + minTipPerPerson;
     results.innerHTML = `<h2>Tip Recommendation For ${countryName}</h2>`+
                         `<h3>Recommended Tip</h3>`+
                         `<p><strong>Recommended Tip is ${recommendedTip}% which is ${symbol}${tipAmount}</strong></p>`+
