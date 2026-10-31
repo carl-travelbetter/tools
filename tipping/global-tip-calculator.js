@@ -81,5 +81,5 @@ function goAgain()
   getEl('results').hidden = true;
   getEl('go-again').hidden = true;
   getEl('select-country').hidden = false;
-  
+  getEl('tip-calculator').hidden = false;
 }
