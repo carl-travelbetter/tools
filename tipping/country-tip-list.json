@@ -14,7 +14,7 @@
   "code": "UK",
   "currency": "GBP",
   "recommendedTip": 10,
-  "minimumTip": 10,
+  "minimumTip": 5,
   "maximumTip": 25,
   "symbol": "£",
   "guidance": "Check your bill before paying a tip as service charges may have already been adding to your bill."
