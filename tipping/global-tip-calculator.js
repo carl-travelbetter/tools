@@ -80,9 +80,11 @@ function displayResult()
                         `<p>This is ${symbol}${tipPerPerson} per person`+
                         `<p>When the bill (${symbol}${amount}) is also split and added to the tip this is a total payment of ${symbol}${totalPerPerson} per person</p>`+
                         `<h3>Maximum Tip</h3>`+
+                        `<p>Maximum Tip is ${maximumTip}% which is ${symbol}${maxTipAmount}</strong></p>`+
                         `<p>This is ${symbol}${maxTipPerPerson} per person`+
                         `<p>When the bill (${symbol}${amount}) is also split and added to the tip this is a total payment of ${symbol}${maxTotalPerPerson} per person</p>`+
                         `<h3>Minimum Tip</h3>`+
+                        `<p>Minimum Tip is ${minimalTip}% which is ${symbol}${minTipAmount}</strong></p>`+
                         `<p>This is ${symbol}${minTipPerPerson} per person`+
                         `<p>When the bill (${symbol}${amount}) is also split and added to the tip this is a total payment of ${symbol}${minTotalPerPerson} per person</p>`+
                         `<h3>Additional Guidance</h3>`+
