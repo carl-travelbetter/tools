@@ -56,7 +56,7 @@ function selectCountry()
   countryData = countryTipData.filter(country => 
        country.code.includes(countrySelected)
   );
-
+  console.log("countryData.length");
   let country = countryData[0];
   const currencyFlag = getEl('currency');
   currencyFlag.innerHTML = `(${country.currency})`;
