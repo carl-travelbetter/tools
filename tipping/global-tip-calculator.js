@@ -60,9 +60,9 @@ function displayResult()
   let tipAmount = Math.round((amount*(recommendedTip/100))*100)/100;
   let maxTipAmount = Math.round((amount*(maximumTip/100))*100)/100;
   let minTipAmount = Math.round((amount*(minimalTip/100))*100)/100;
-  let totalBill = Math.round(amount + tipAmount);
-  let maxTotalBill = Math.round(amount + maxTipAmount);
-  let minTotalBill = Math.round(amount + minTipAmount);
+  let totalBill = amount + tipAmount;
+  let maxTotalBill = amount + maxTipAmount;
+  let minTotalBill = amount + minTipAmount;
   getEl('split-between').hidden = true;
   getEl('tip-calculator').hidden = true;
   if (split > 1)
