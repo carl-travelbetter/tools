@@ -78,15 +78,15 @@ function displayResult()
                         `<h3>Recommended Tip</h3>`+
                         `<p><strong>Recommended Tip is ${recommendedTip}% which is ${symbol}${tipAmount}</strong></p>`+
                         `<p>This is ${symbol}${tipPerPerson} per person`+
-                        `<p>When the bill (${symbol}${amount}) is also split and added to the tip this is a total payment of ${symbol}${totalPerPerson} per person</p>`+
+                        `<p>When the bill (${symbol}${amount}) is also split and added to the tip this is a total payment of ${symbol}${totalPerPerson.toFixed(2)} per person</p>`+
                         `<h3>Maximum Tip</h3>`+
                         `<p>Maximum Tip is ${maximumTip}% which is ${symbol}${maxTipAmount}</strong></p>`+
                         `<p>This is ${symbol}${maxTipPerPerson} per person`+
-                        `<p>When the bill (${symbol}${amount}) is also split and added to the tip this is a total payment of ${symbol}${maxTotalPerPerson} per person</p>`+
+                        `<p>When the bill (${symbol}${amount}) is also split and added to the tip this is a total payment of ${symbol}${maxTotalPerPerson.toFixed(2)} per person</p>`+
                         `<h3>Minimum Tip</h3>`+
                         `<p>Minimum Tip is ${minimalTip}% which is ${symbol}${minTipAmount}</strong></p>`+
                         `<p>This is ${symbol}${minTipPerPerson} per person`+
-                        `<p>When the bill (${symbol}${amount}) is also split and added to the tip this is a total payment of ${symbol}${minTotalPerPerson} per person</p>`+
+                        `<p>When the bill (${symbol}${amount}) is also split and added to the tip this is a total payment of ${symbol}${minTotalPerPerson.toFixed(2)} per person</p>`+
                         `<h3>Additional Guidance</h3>`+
                         `<p>${guidance}</p>`;
   }
