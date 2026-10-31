@@ -85,7 +85,8 @@ function displayResult()
                       `<p>Maximum Tip would be ${maximumTip}% which is ${symbol}${maxTipAmount}</p>`+
                       `<h3>Minimum Tip</h3>`+
                       `<p>Minimum Tip would be ${minimalTip}% which is ${symbol}${minTipAmount}</p>`+
-                      `<p>Additional Guidance: ${guidance}</p>`;
+                      `<h3>Additional Guidance</h3>`+
+                      `<p>${guidance}</p>`;
   }
   results.hidden = false;
   getEl('go-again').hidden = false;
