@@ -6,6 +6,7 @@
   "recommendedTip": 20,
   "minimumTip": 15,
   "maximumTip": 25,
+  "symbol": "$",  
   "guidance": "Tipping is customary at sit-down restaurants."
 },
  {
@@ -15,6 +16,7 @@
   "recommendedTip": 10,
   "minimumTip": 10,
   "maximumTip": 25,
+  "symbol": "£",
   "guidance": "Check your bill before paying a tip as service charges may have already been adding to your bill."
 },
   {
@@ -24,6 +26,7 @@
   "recommendedTip": 10,
   "minimumTip": 10,
   "maximumTip": 25,
+  "symbol": "€",
   "guidance": "Check your bill before paying a tip as service charges may have already been adding to your bill."
 },
   {
@@ -33,6 +36,7 @@
   "recommendedTip": 10,
   "minimumTip": 10,
   "maximumTip": 25,
+  "symbol": "€",
   "guidance": "Check your bill before paying a tip as service charges may have already been adding to your bill."
 }
 ]
