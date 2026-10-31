@@ -56,7 +56,7 @@ function displayResult()
 {
   console.log('Display Log');
   const results = getEl('results');
-  let tipAmount = amount*(recommendedTip/100);
+  let tipAmount = Math.round(amount*(recommendedTip/100));
   getEl('split-between').hidden = true;
   getEl('tip-calculator').hidden = true;
   results.innerHTML = `<h2>Suggested Tip</h2>`+
