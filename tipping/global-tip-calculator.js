@@ -77,7 +77,7 @@ function selectCountry()
   let country = countryData[0];
   recommendedTip = Number(country.recommendedTip);
   maximumTip = Number(country.maximumTip);
-  minimumTip = Number(country.minimumTip);
+  minimalTip = Number(country.minimumTip);
   guidance = country.guidance;
   const currencyFlag = getEl('currency');
   currencyFlag.innerHTML = `(${country.currency})`;
