@@ -31,13 +31,23 @@
 },
   {
   "country": "Germany",
-  "code": "DU",
+  "code": "DE",
   "currency": "EUR",
   "recommendedTip": 10,
   "minimumTip": 10,
   "maximumTip": 25,
   "symbol": "€",
   "guidance": "Check your bill before paying a tip as service charges may have already been adding to your bill."
+},
+  {
+  "country": "Japan",
+  "code": "JP",
+  "currency": "YEN",
+  "recommendedTip": 0,
+  "minimumTip": 0,
+  "maximumTip": 0,
+  "symbol": "¥",
+  "guidance": "It is not customary to leave a tip in Japan."
 }
 ]
   
