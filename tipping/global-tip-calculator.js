@@ -89,6 +89,9 @@ function selectCountry()
 
 function goAgain()
 {
+  getEl('amount').value = "";
+  getEl('split').value = "";
+  getEl('country').value = "Select Country";
   getEl('results').hidden = true;
   getEl('go-again').hidden = true;
   getEl('select-country').hidden = false;
