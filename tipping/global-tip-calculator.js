@@ -57,23 +57,23 @@ function displayResult()
 {
   console.log('Display Log');
   const results = getEl('results');
-  let tipAmount = Math.round(amount*(recommendedTip/100));
-  let maxTipAmount = Math.round(amount*(maximumTip/100));
-  let minTipAmount = Math.round(amount*(minimalTip/100));
-  let totalBill = amount + tipAmount;
-  let maxTotalBill = amount + maxTipAmount;
-  let minTotalBill = amount + minTipAmount;
+  let tipAmount = Math.round((amount*(recommendedTip/100))*100)/100;
+  let maxTipAmount = Math.round((amount*(maximumTip/100))*100)/100;
+  let minTipAmount = Math.round((amount*(minimalTip/100))*100)/100;
+  let totalBill = (amount + tipAmount).toFixed(2);
+  let maxTotalBill = (amount + maxTipAmount).toFixed(2);
+  let minTotalBill = (amount + minTipAmount).toFixed(2);
   getEl('split-between').hidden = true;
   getEl('tip-calculator').hidden = true;
   if (split > 1)
   {
-    let tipPerPerson = tipAmount / split;
-    let billPerPerson = amount / split;
-    let totalPerPerson = tipPerPerson + billPerPerson;
-    let maxTipPerPerson = maxTipAmount / split;
-    let minTipPerPerson = minTipAmount / split;
-    let maxTotalPerPerson = billPerPerson + maxTipPerPerson;
-    let minTotalPerPerson = billPerPerson + minTipPerPerson;
+    let tipPerPerson = (tipAmount / split).toFixed(2);
+    let billPerPerson = (amount / split;).toFixed(2)
+    let totalPerPerson = (tipPerPerson + billPerPerson).toFixed(2);
+    let maxTipPerPerson = (maxTipAmount / split).toFixed(2);
+    let minTipPerPerson = (minTipAmount / split).toFixed(2);
+    let maxTotalPerPerson = (billPerPerson + maxTipPerPerson).toFixed(2);
+    let minTotalPerPerson = (billPerPerson + minTipPerPerson).toFixed(2);
     results.innerHTML = `<h2>Tip Recommendation For ${countryName}</h2>`+
                         `<h3>Recommended Tip</h3>`+
                         `<p><strong>Recommended Tip is ${recommendedTip}% which is ${symbol}${tipAmount}</strong></p>`+
