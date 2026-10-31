@@ -68,7 +68,7 @@ function displayResult()
   if (split > 1)
   {
     let tipPerPerson = (tipAmount / split).toFixed(2);
-    let billPerPerson = (amount / split;).toFixed(2)
+    let billPerPerson = (amount / split).toFixed(2)
     let totalPerPerson = (tipPerPerson + billPerPerson).toFixed(2);
     let maxTipPerPerson = (maxTipAmount / split).toFixed(2);
     let minTipPerPerson = (minTipAmount / split).toFixed(2);
