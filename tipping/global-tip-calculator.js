@@ -68,12 +68,12 @@ function displayResult()
   if (split > 1)
   {
     let tipPerPerson = (tipAmount / split).toFixed(2);
-    let billPerPerson = (amount / split).toFixed(2)
-    let totalPerPerson = (tipPerPerson + billPerPerson).toFixed(2);
+    let billPerPerson = (amount / split).toFixed(2);
+    let totalPerPerson = tipPerPerson + billPerPerson;
     let maxTipPerPerson = (maxTipAmount / split).toFixed(2);
     let minTipPerPerson = (minTipAmount / split).toFixed(2);
-    let maxTotalPerPerson = (billPerPerson + maxTipPerPerson).toFixed(2);
-    let minTotalPerPerson = (billPerPerson + minTipPerPerson).toFixed(2);
+    let maxTotalPerPerson = billPerPerson + maxTipPerPerson;
+    let minTotalPerPerson = billPerPerson + minTipPerPerson;
     results.innerHTML = `<h2>Tip Recommendation For ${countryName}</h2>`+
                         `<h3>Recommended Tip</h3>`+
                         `<p><strong>Recommended Tip is ${recommendedTip}% which is ${symbol}${tipAmount}</strong></p>`+
