@@ -53,7 +53,7 @@ function selectCountry()
   console.log('Select Country');
   countrySelected = getEl('country').value;
   console.log('Country Selected '+countrySelected);
-  countryData = countryTripData.filter(country => 
+  countryData = countryTipData.filter(country => 
        country.code.includes(countrySelected)
   );
 
