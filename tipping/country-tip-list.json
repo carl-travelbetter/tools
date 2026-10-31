@@ -3,9 +3,9 @@
   "country": "United States",
   "code": "US",
   "currency": "USD",
-  "recommendedTip": 0.2,
-  "minimumTip": 0.15,
-  "maximumTip": 0.25,
+  "recommendedTip": 20,
+  "minimumTip": 15,
+  "maximumTip": 25,
   "guidance": "Tipping is customary at sit-down restaurants."
 },
  {
