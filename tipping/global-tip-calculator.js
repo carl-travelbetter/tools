@@ -15,6 +15,7 @@ let recommendedTip = 10;
 let minimalTip = 0;
 let maximumTip = 25;
 let guidance = "Check if a service charge has already been added";
+let symbol = "£";
 
 fetch('country-tip-list.json')
   .then(response => response.json())
@@ -59,7 +60,7 @@ function displayResult()
   getEl('split-between').hidden = true;
   getEl('tip-calculator').hidden = true;
   results.innerHTML = `<h2>Suggested Tip</h2>`+
-                      `<p>Recommended Tip is ${recommendedTip}% which is ${tipAmount}</p>`+
+                      `<p>Recommended Tip is ${recommendedTip}% which is ${symbol}${tipAmount}</p>`+
                       `<p>Guidance: ${guidance}</p>`;
   results.hidden = false;
   getEl('go-again').hidden = false;
@@ -79,6 +80,7 @@ function selectCountry()
   maximumTip = Number(country.maximumTip);
   minimalTip = Number(country.minimumTip);
   guidance = country.guidance;
+  symbol = country.symbol;
   const currencyFlag = getEl('currency');
   currencyFlag.innerHTML = `(${country.currency})`;
   getEl('select-country').hidden = true;
