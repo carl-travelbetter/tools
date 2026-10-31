@@ -10,7 +10,7 @@ let countryTipData = [];
 let countrySelected = "UK";
 let split = 2;
 let amount = 0;
-
+let countryData = [];
 
 fetch('country-tip-list.json')
   .then(response => response.json())
@@ -53,4 +53,11 @@ function selectCountry()
   console.log('Select Country');
   countrySelected = getEl('country').value;
   console.log('Country Selected '+countrySelected);
+  countryData = countryTripData.filter(country => 
+       country.code.includes(countrySelected)
+  );
+
+  countryInfo = countryData[0];
+  const currencyFlag = getEl('currency');
+  currencyFlag.innerHTML = `(${countryInfo.currency})`;
 }
