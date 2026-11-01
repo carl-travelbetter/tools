@@ -123,7 +123,7 @@ function calculateAndDisplayResult()
                         `<h3>Minimum Tip</h3>`+
                         `<p>Minimum Tip is ${minimalTip}% which is ${formatMoney(minTipAmount,currency)}</strong></p>`+
                         `<p>This is ${formatMoney(minTipPerPerson,currency)} per person`+
-                        `<p>When the bill (${formatMoney(amount,currency)}) is also split and added to the tip this is a total payment of ${formatMoney(minTotalPerPerson,currency} per person</p>`+
+                        `<p>When the bill (${formatMoney(amount,currency)}) is also split and added to the tip this is a total payment of ${formatMoney(minTotalPerPerson,currency)} per person</p>`+
                         `<h3>Additional Guidance</h3>`+
                         `<p>${guidance}</p>`;
   }
