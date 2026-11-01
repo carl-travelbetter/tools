@@ -33,7 +33,6 @@
       <div class="display-card center-text" id="tip-calculator" hidden>
         <h2>Global Tip Calculator</h2>
        <div id="select-country">
-         <h3>Step 1 of 3</h3>
          <select class="form-input" id="country" name="country">
             <option value="NN" selected>Select Country</option>
             <option value="UK">United Kingdom</option>
@@ -43,23 +42,25 @@
             <option value="JP">Japan</option>
           </select>
         </div>
-        <div id="enter-amount" hidden>
-          <h3>Step 2 of 3</h3>
-          <p>Enter bill amount: <span id="currency"></span></p>
+        <div id="country-guidance">
+          <div id="guidance"></div>
+          <button class="control-btn" id="carry-on-btn">Go To Calculator</button>
+        </div>
+        <div id="tip-caculator" hidden>
+          <h3>Tip Calculator</h3>
+          <p>Bill <span id="currency"></span></p>
           <input class="form-input" type="number" id="amount" name="amount" /><br>
-          <button class="control-btn" id="submit-amount">Submit</button>
-        </div>
-        <div id="split-between" hidden>
-          <h3>Step 3 of 3</h3>
-          <p>(optional) Enter number of people to split the bill and tip:</p>
+          <p>Tip Percentage <span id="recommended"></span></p>
+          <input class="form-input" type="number" id="percentage" name="percentage" /><br>
+          <button class="tag-btn" id="percent-btn" value="5">5%</button><button class="tag-btn" id="percent-btn" value="10">10%</button><button class="tag-btn" id="percent-btn" value="15">15</button>
+          <button class="tag-btn" id="percent-btn" value="20">20%</button><button class="tag-btn" id="percent-btn" value="25">25%</button>
+          <p>Number of people paying</p>
           <input class="form-input" type="number" id="split" name="split" /><br>
-          <button class="control-btn" id="split-btn">Submit</button>
-          <button class="control-btn" id="skip-and-calc-btn">Skip this step</button>
         </div>
+        <div class="display-card" id="results" hidden></div>
       </div>
 
-      <!--Calculator Results-->
-      <div class="display-card" id="results" hidden></div>
+     
       <div class="display-card" id="go-again" hidden>
         <button class="control-btn" id="go-again-btn">Go Again</button>
       </div>
