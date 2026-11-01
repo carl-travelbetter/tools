@@ -35,7 +35,7 @@ fetch('country-tip-list.json')
 
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
-  getEl('calculate-btn')?.addEventListener("click", calculateTip);
+  getEl('split-btn')?.addEventListener("click", setSplitValue);
   getEl('country')?.addEventListener("change", selectCountry);
   getEl('submit-amount')?.addEventListener("click", enterAmount);
   getEl('go-again-btn')?.addEventListener("click", goAgain);
@@ -75,9 +75,10 @@ function skipAndCalc()
 {
   console.log('Skip and Calc');
   split = 1;
+  displayResult();
 }
 
-function calculateTip()
+function setSplitValue()
 {
   console.log('Calculate Tip');
   split = Number(getEl('split').value) || 1;
@@ -87,6 +88,17 @@ function calculateTip()
   }
   displayResult();
 }
+
+/*function calculateTip()
+{
+  console.log('Calculate Tip');
+  split = Number(getEl('split').value) || 1;
+  if (!Number.isInteger(split) || split < 1) {
+      alert("Please enter a valid number of people to split the bill with.");
+      return;
+  }
+  displayResult();
+}*/
 
 function displayResult()
 {
