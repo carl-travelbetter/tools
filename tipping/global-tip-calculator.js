@@ -17,6 +17,7 @@ let maximumTip = 25;
 let guidance = "Check if a service charge has already been added";
 let symbol = "£";
 let countryName = "United Kingdom";
+let currency = "GBP";
 
 fetch('country-tip-list.json')
   .then(response => response.json())
@@ -24,25 +25,48 @@ fetch('country-tip-list.json')
     countryTipData = data;
     console.log("Country Tip Data Loaded:", countryTipData);
     getEl('data-loading').hidden = true;
+    getEl('tip-calculator').hidden = false;
   })
-  .catch(error => console.error("Error loading Country Tip Data: ", error));
+  .catch(error => {
+    console.error("Error loading Country Tip Data: ", error);
+    const dataLoading = getEl('data-loading');
+    dataLoading.innerHTML = `<p>Apologies - the tipping guidance failed to load, please refresh the page to try again</p>`;
+  });
 
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
   getEl('calculate-btn')?.addEventListener("click", calculateTip);
   getEl('country')?.addEventListener("change", selectCountry);
   getEl('submit-amount')?.addEventListener("click", enterAmount);
-  getEl('go-again')?.addEventListener("click", goAgain);
+  getEl('go-again-btn')?.addEventListener("click", goAgain);
   getEl('skip-and-calc-btn')?.addEventListener("click", skipAndCalc);
 }
 
 //Ensure html bindings are not applied until the html structure is built
 document.addEventListener("DOMContentLoaded", bindEvents);
 
+function formatMoney(value, currency) {
+    return new Intl.NumberFormat('en-GB', {
+        style: 'currency',
+        currency: currency
+    }).format(value);
+}
+
 function enterAmount()
 {
   console.log('Enter Amount');
-  amount = Number(getEl('amount').value);
+  const input = getEl('amount');
+  amount = Number(input.value);
+
+  if (input.value.trim() === "" ||
+        !Number.isFinite(amount) ||
+        amount <= 0) {
+        alert("Please enter a valid bill amount.");
+        return;
+  }
+
+  const currencyCheck = formatMoney(amount, currency);
+  console.log('Currency Format Check '+currencyCheck);
   getEl('enter-amount').hidden = true;
   getEl('split-between').hidden = false;
 }
@@ -125,19 +149,23 @@ function selectCountry()
   console.log('Select Country');
   countrySelected = getEl('country').value;
   console.log('Country Selected '+countrySelected);
-  countryData = countryTipData.filter(country => 
-       country.code.includes(countrySelected)
+  const country = countryTipData.find(
+    item => item.code === countrySelected
   );
-  console.log("countryData.length");
-  let country = countryData[0];
+  
+  if (!country) {
+      return;
+  }
+  
   recommendedTip = Number(country.recommendedTip);
   maximumTip = Number(country.maximumTip);
   minimalTip = Number(country.minimumTip);
   guidance = country.guidance;
   symbol = country.symbol;
+  currency = country.currency;
   countryName = country.country;
   const currencyFlag = getEl('currency');
-  currencyFlag.innerHTML = `(${country.currency})`;
+  currencyFlag.innerHTML = `(${currency})`;
   getEl('select-country').hidden = true;
   getEl('enter-amount').hidden = false;
 }
@@ -146,7 +174,7 @@ function goAgain()
 {
   getEl('amount').value = "";
   getEl('split').value = "";
-  getEl('country').value = "Select Country";
+  getEl('country').value = "NN";
   getEl('results').hidden = true;
   getEl('go-again').hidden = true;
   getEl('select-country').hidden = false;
