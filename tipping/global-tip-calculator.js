@@ -231,19 +231,19 @@ function selectCountry()
   }
   
   recommendedTip = Number(country.recommendedTip);
-
   getEl('percentage').value = recommendedTip;
   maximumTip = Number(country.maximumTip);
   minimalTip = Number(country.minimumTip);
   guidance = country.guidance;
   currency = country.currency;
   countryName = country.country;
-  
   getEl('select-country').hidden = true;
   const guidanceOutput = getEl('guidance');
   guidanceOutput.innerHTML = `<h3>Tipping Guidance For ${country.country}</h3>`+
                        `<p>${guidance}</p>`;
   getEl('country-guidance').hidden = false;
+  getEl('split').value = 1;
+  getEl('amount').value = 100;
 }
 
 function goAgain()
