@@ -114,17 +114,17 @@ function calculateAndDisplayResult()
     let minTotalPerPerson = billPerPerson + minTipPerPerson;
     results.innerHTML = `<h2>Tip Recommendation For ${countryName}</h2>`+
                         `<h3>Recommended Tip</h3>`+
-                        `<p><strong>Recommended Tip is ${recommendedTip}% which is ${symbol}${tipAmount}</strong></p>`+
-                        `<p>This is ${symbol}${tipPerPerson} per person`+
-                        `<p>When the bill (${symbol}${amount}) is also split and added to the tip this is a total payment of ${formatMoney(totalPerPerson, currency)} per person</p>`+
+                        `<p><strong>Recommended Tip is ${recommendedTip}% which is ${formatMoney(tipAmount, currency)}</strong></p>`+
+                        `<p>This is ${formatMoney(tipPerPerson, currency)} per person`+
+                        `<p>When the bill (${formatMoney(amount,currency)}) is also split and added to the tip this is a total payment of ${formatMoney(totalPerPerson, currency)} per person</p>`+
                         `<h3>Maximum Tip</h3>`+
-                        `<p>Maximum Tip is ${maximumTip}% which is ${symbol}${maxTipAmount}</strong></p>`+
+                        `<p>Maximum Tip is ${maximumTip}% which is ${formatMoney(maxTipAmount, currency)}</strong></p>`+
                         `<p>This is ${symbol}${maxTipPerPerson} per person`+
-                        `<p>When the bill (${symbol}${amount}) is also split and added to the tip this is a total payment of ${symbol}${maxTotalPerPerson.toFixed(2)} per person</p>`+
+                        `<p>When the bill (${formatMoney(amount,currency)}) is also split and added to the tip this is a total payment of ${formatMoney(maxTotalPerPerson,currency)} per person</p>`+
                         `<h3>Minimum Tip</h3>`+
-                        `<p>Minimum Tip is ${minimalTip}% which is ${symbol}${minTipAmount}</strong></p>`+
-                        `<p>This is ${symbol}${minTipPerPerson} per person`+
-                        `<p>When the bill (${symbol}${amount}) is also split and added to the tip this is a total payment of ${symbol}${minTotalPerPerson.toFixed(2)} per person</p>`+
+                        `<p>Minimum Tip is ${minimalTip}% which is ${formatMoney(minTipAmount,currency)}</strong></p>`+
+                        `<p>This is ${formatMoney(minTipPerPerson,currency)} per person`+
+                        `<p>When the bill (${formatMoney(amount,currency)}) is also split and added to the tip this is a total payment of ${formatMoney(minTotalPerPerson,currency} per person</p>`+
                         `<h3>Additional Guidance</h3>`+
                         `<p>${guidance}</p>`;
   }
@@ -132,14 +132,14 @@ function calculateAndDisplayResult()
   { 
   results.innerHTML = `<h2>Tip Recommendation For ${countryName}</h2>`+
                       `<h3>Recommended Tip</h3>`+
-                      `<p><strong>Recommended Tip is ${recommendedTip}% which is ${symbol}${tipAmount.toFixed(2)}</strong> </p>`+
-                      `<p>This makes your total bill ${symbol}${totalBill.toFixed(2)} (${symbol}${amount} + ${symbol}${tipAmount.toFixed(2)})</p>`+
+                      `<p><strong>Recommended Tip is ${recommendedTip}% which is ${formatMoney(tipAmount, currency)}</strong> </p>`+
+                      `<p>This makes your total bill ${formatMoney(totalBill,currency)} (${formatMoney(amount,currency)} + ${formatMoney(tipAmount, currency)})</p>`+
                       `<h3>Maximum Tip</h3>`+
-                      `<p>Maximum Tip would be ${maximumTip}% which is ${symbol}${maxTipAmount}</p>`+
-                      `<p>This makes your total bill ${symbol}${maxTotalBill.toFixed(2)} (${symbol}${amount} + ${symbol}${maxTipAmount.toFixed(2)})</p>`+
+                      `<p>Maximum Tip would be ${maximumTip}% which is ${formatMoney(maxTipAmount,currency)}</p>`+
+                      `<p>This makes your total bill ${formatMoney(maxTotalBill,currency)} (${formatMoney(amount,currency)} + ${formatMoney(maxTipAmount,currency)})</p>`+
                       `<h3>Minimum Tip</h3>`+
-                      `<p>Minimum Tip would be ${minimalTip}% which is ${symbol}${minTipAmount.toFixed(2)}</p>`+
-                      `<p>This makes your total bill ${symbol}${minTotalBill.toFixed(2)} (${symbol}${amount} + ${symbol}${minTipAmount.toFixed(2)})</p>`+
+                      `<p>Minimum Tip would be ${minimalTip}% which is ${formatMoney(minTipAmount,currency)}</p>`+
+                      `<p>This makes your total bill ${formatMoney(minTotalBill,currency)} (${formatMoney(amount,currency)} + ${formatMoney(minTipAmount,currency)}</p>`+
                       `<h3>Additional Guidance</h3>`+
                       `<p>${guidance}</p>`;
   }
