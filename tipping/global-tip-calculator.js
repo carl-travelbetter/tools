@@ -36,6 +36,7 @@ fetch('country-tip-list.json')
 function bindEvents() {
   getEl('country')?.addEventListener("change", selectCountry);
   getEl('amount')?.addEventListener("input", enterBill);
+  getEl('percentage')?.addEventListener("input", setPercentage);
   getEl('go-again-btn')?.addEventListener("click", goAgain);
   getEl('split')?.addEventListener("input", setSplitValue);
   getEl('carry-on-btn')?.addEventListener("click", loadCalcultor);
@@ -121,6 +122,12 @@ function setupPercentageButtons()
   
 }
 
+function setPercentage()
+{
+  recommendedTip = Number(getEl('percentage');
+  calculateAndDisplayResult();
+}
+
 function loadCalcultor()
 {
   console.log('Load Calculator');
@@ -162,6 +169,7 @@ function setSplitValue()
   calculateAndDisplayResult();
 }
 
+function 
 
 
 function calculateAndDisplayResult()
