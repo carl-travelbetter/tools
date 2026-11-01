@@ -34,11 +34,12 @@ fetch('country-tip-list.json')
 
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
-  getEl('split-btn')?.addEventListener("click", setSplitValue);
   getEl('country')?.addEventListener("change", selectCountry);
-  getEl('submit-amount')?.addEventListener("click", enterAmount);
   getEl('go-again-btn')?.addEventListener("click", goAgain);
+  getEl('split')?.addEventListener("change", setSplitValue);
   getEl('skip-and-calc-btn')?.addEventListener("click", skipAndCalc);
+  getEl('carry-on-btn')?.addEventListener("click", loadCalcultor);
+  setupPercentageButtons();
 }
 
 //Ensure html bindings are not applied until the html structure is built
@@ -51,9 +52,80 @@ function formatMoney(value, currency) {
     }).format(value);
 }
 
-function enterAmount()
+function setupPercentageButtons()
 {
-  console.log('Enter Amount');
+  console.log('Setting Up Percentage Buttons');
+
+   console.log('Setup Activity Buttons Monday');
+  //Setup Activity Buttons for non previous BMR
+  const fivePercent = getEl('five-percent-btn');
+  const tenPercent = getEl('ten-percent-btn');
+  const fifteenPercent = getEl('fifteen-percent-btn');
+  const twentyPercent = getEl('twenty-percent-btn');
+  const twentyFivePercent = getEl('twenty-five-percent-btn');
+  
+  fivePercent.addEventListener("click", () => {
+    fivePercent.classList.toggle("active");
+    tenPercent.classList.remove("active");
+    fifteenPercent.classList.remove("active");
+    twentyPercent.classList.remove("active");
+    twentyFivePercent.classList.remove("active");
+    recommendedTip = 5;
+    getEl('percentage').value = recommendedTip;
+  });
+
+  tenPercent.addEventListener("click", () => {
+    tenPercent.classList.toggle("active");
+    fivePercent.classList.remove("active");
+    fifteenPercent.classList.remove("active");
+    twentyPercent.classList.remove("active");
+    twentyFivePercent.classList.remove("active");
+    recommendedTip = 10;
+    getEl('percentage').value = recommendedTip;
+  });
+
+  fifteenPercent.addEventListener("click", () => {
+    fifteenPercent.classList.toggle("active");
+    fivePercent.classList.remove("active");
+    tenPercent.classList.remove("active");
+    twentyPercent.classList.remove("active");
+    twentyFivePercent.classList.remove("active");
+    recommendedTip = 15;
+    getEl('percentage').value = recommendedTip;
+  });
+
+  twentyPercent.addEventListener("click", () => {
+    twentyPercent.classList.toggle("active");
+    fivePercent.classList.remove("active");
+    tenPercent.classList.remove("active");
+    fifteenPercent.classList.remove("active");
+    twentyFivePercent.classList.remove("active");
+    recommendedTip = 20;
+    getEl('percentage').value = recommendedTip;
+  });
+
+  twentyFivePercent.addEventListener("click", () => {
+    twentyFivePercent.classList.toggle("active");
+    fivePercent.classList.remove("active");
+    tenPercent.classList.remove("active");
+    fifteenPercent.classList.remove("active");
+    twentyPercent.classList.remove("active");
+    recommendedTip = 25;
+    getEl('percentage').value = recommendedTip;
+  });
+  
+}
+
+function loadCalcultor()
+{
+  console.log('Load Calculator');
+  getEl('country-guidance').hidden = true;
+  getEl('tip-calculator').hidden = false;
+}
+
+function enterBill()
+{
+  console.log('Enter Bill');
   const input = getEl('amount');
   amount = Number(input.value);
 
@@ -64,10 +136,7 @@ function enterAmount()
         return;
   }
 
-  const currencyCheck = formatMoney(amount, currency);
-  console.log('Currency Format Check '+currencyCheck);
-  getEl('enter-amount').hidden = true;
-  getEl('split-between').hidden = false;
+  calculateAndDisplayResult();
 }
 
 function skipAndCalc()
@@ -146,6 +215,7 @@ function calculateAndDisplayResult()
   getEl('go-again').hidden = false;
 }
 
+//First action by the user, selects a country and is than presented with the guidance
 function selectCountry()
 {
   console.log('Select Country');
@@ -165,10 +235,12 @@ function selectCountry()
   guidance = country.guidance;
   currency = country.currency;
   countryName = country.country;
-  const currencyFlag = getEl('currency');
-  currencyFlag.innerHTML = `(${currency})`;
+  
   getEl('select-country').hidden = true;
-  getEl('enter-amount').hidden = false;
+  const guidance = getEl('guidance');
+  guidance.innerHTML = `<h3>Tipping Guidance For ${country.country}</h3>`+
+                       `<p>${country.guidance}</p>`;
+  getEl('country-guidance').hidden = false;
 }
 
 function goAgain()
