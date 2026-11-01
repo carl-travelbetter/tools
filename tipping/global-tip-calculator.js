@@ -33,6 +33,7 @@ function bindEvents() {
   getEl('country')?.addEventListener("change", selectCountry);
   getEl('submit-amount')?.addEventListener("click", enterAmount);
   getEl('go-again')?.addEventListener("click", goAgain);
+  getEl('skip-and-calc-btn')?.addEventListener("click", skipAndCalc);
 }
 
 //Ensure html bindings are not applied until the html structure is built
@@ -46,10 +47,20 @@ function enterAmount()
   getEl('split-between').hidden = false;
 }
 
+function skipAndCalc()
+{
+  console.log('Skip and Calc');
+  split = 1;
+}
+
 function calculateTip()
 {
   console.log('Calculate Tip');
-  split = Number(getEl('split').value);
+  split = Number(getEl('split').value) || 1;
+  if (!Number.isInteger(split) || split < 1) {
+      alert("Please enter a valid number of people to split the bill with.");
+      return;
+  }
   displayResult();
 }
 
