@@ -73,6 +73,7 @@ function setupPercentageButtons()
     twentyFivePercent.classList.remove("active");
     recommendedTip = 5;
     getEl('percentage').value = recommendedTip;
+    calculateAndDisplayResult();
   });
 
   tenPercent.addEventListener("click", () => {
@@ -83,6 +84,7 @@ function setupPercentageButtons()
     twentyFivePercent.classList.remove("active");
     recommendedTip = 10;
     getEl('percentage').value = recommendedTip;
+    calculateAndDisplayResult();
   });
 
   fifteenPercent.addEventListener("click", () => {
@@ -93,6 +95,7 @@ function setupPercentageButtons()
     twentyFivePercent.classList.remove("active");
     recommendedTip = 15;
     getEl('percentage').value = recommendedTip;
+    calculateAndDisplayResult();
   });
 
   twentyPercent.addEventListener("click", () => {
@@ -103,6 +106,7 @@ function setupPercentageButtons()
     twentyFivePercent.classList.remove("active");
     recommendedTip = 20;
     getEl('percentage').value = recommendedTip;
+    calculateAndDisplayResult();
   });
 
   twentyFivePercent.addEventListener("click", () => {
@@ -113,6 +117,7 @@ function setupPercentageButtons()
     twentyPercent.classList.remove("active");
     recommendedTip = 25;
     getEl('percentage').value = recommendedTip;
+    calculateAndDisplayResult();
   });
   
 }
@@ -170,8 +175,7 @@ function calculateAndDisplayResult()
   let totalBill = amount + tipAmount;
   let maxTotalBill = amount + maxTipAmount;
   let minTotalBill = amount + minTipAmount;
-  getEl('split-between').hidden = true;
-  getEl('tip-calculator').hidden = true;
+
   if (split > 1)
   {
     let tipPerPerson = Math.round((tipAmount / split)*100)/100;
