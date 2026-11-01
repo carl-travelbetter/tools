@@ -118,7 +118,7 @@ function calculateAndDisplayResult()
                         `<p>When the bill (${formatMoney(amount,currency)}) is also split and added to the tip this is a total payment of ${formatMoney(totalPerPerson, currency)} per person</p>`+
                         `<h3>Maximum Tip</h3>`+
                         `<p>Maximum Tip is ${maximumTip}% which is ${formatMoney(maxTipAmount, currency)}</strong></p>`+
-                        `<p>This is ${symbol}${maxTipPerPerson} per person`+
+                        `<p>This is ${formatMoney(maxTipPerPerson,currency)} per person`+
                         `<p>When the bill (${formatMoney(amount,currency)}) is also split and added to the tip this is a total payment of ${formatMoney(maxTotalPerPerson,currency)} per person</p>`+
                         `<h3>Minimum Tip</h3>`+
                         `<p>Minimum Tip is ${minimalTip}% which is ${formatMoney(minTipAmount,currency)}</strong></p>`+
