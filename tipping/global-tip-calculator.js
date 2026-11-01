@@ -35,10 +35,9 @@ fetch('country-tip-list.json')
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
   getEl('country')?.addEventListener("change", selectCountry);
-  getEl('amount')?.addEventListener("change", enterBill);
+  getEl('amount')?.addEventListener("input", enterBill);
   getEl('go-again-btn')?.addEventListener("click", goAgain);
-  getEl('split')?.addEventListener("change", setSplitValue);
-  getEl('skip-and-calc-btn')?.addEventListener("click", skipAndCalc);
+  getEl('split')?.addEventListener("input", setSplitValue);
   getEl('carry-on-btn')?.addEventListener("click", loadCalcultor);
   setupPercentageButtons();
 }
