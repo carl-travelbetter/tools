@@ -124,7 +124,7 @@ function setupPercentageButtons()
 
 function setPercentage()
 {
-  recommendedTip = Number(getEl('percentage');
+  recommendedTip = Number(getEl('percentage'));
   calculateAndDisplayResult();
 }
 
