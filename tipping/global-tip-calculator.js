@@ -15,7 +15,6 @@ let recommendedTip = 10;
 let minimalTip = 0;
 let maximumTip = 25;
 let guidance = "Check if a service charge has already been added";
-let symbol = "£";
 let countryName = "United Kingdom";
 let currency = "GBP";
 
@@ -164,7 +163,6 @@ function selectCountry()
   maximumTip = Number(country.maximumTip);
   minimalTip = Number(country.minimumTip);
   guidance = country.guidance;
-  symbol = country.symbol;
   currency = country.currency;
   countryName = country.country;
   const currencyFlag = getEl('currency');
