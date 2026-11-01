@@ -120,7 +120,7 @@ function loadCalcultor()
 {
   console.log('Load Calculator');
   getEl('country-guidance').hidden = true;
-  getEl('tip-calculator').hidden = false;
+  getEl('calculator').hidden = false;
 }
 
 function enterBill()
