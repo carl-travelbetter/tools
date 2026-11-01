@@ -75,7 +75,7 @@ function skipAndCalc()
 {
   console.log('Skip and Calc');
   split = 1;
-  displayResult();
+  calculateAndDisplayResult();
 }
 
 function setSplitValue()
@@ -86,21 +86,12 @@ function setSplitValue()
       alert("Please enter a valid number of people to split the bill with.");
       return;
   }
-  displayResult();
+  calculateAndDisplayResult();
 }
 
-/*function calculateTip()
-{
-  console.log('Calculate Tip');
-  split = Number(getEl('split').value) || 1;
-  if (!Number.isInteger(split) || split < 1) {
-      alert("Please enter a valid number of people to split the bill with.");
-      return;
-  }
-  displayResult();
-}*/
 
-function displayResult()
+
+function calculateAndDisplayResult()
 {
   console.log('Display Log');
   const results = getEl('results');
@@ -125,7 +116,7 @@ function displayResult()
                         `<h3>Recommended Tip</h3>`+
                         `<p><strong>Recommended Tip is ${recommendedTip}% which is ${symbol}${tipAmount}</strong></p>`+
                         `<p>This is ${symbol}${tipPerPerson} per person`+
-                        `<p>When the bill (${symbol}${amount}) is also split and added to the tip this is a total payment of ${symbol}${totalPerPerson.toFixed(2)} per person</p>`+
+                        `<p>When the bill (${symbol}${amount}) is also split and added to the tip this is a total payment of ${formatMoney(totalPerPerson, currency)} per person</p>`+
                         `<h3>Maximum Tip</h3>`+
                         `<p>Maximum Tip is ${maximumTip}% which is ${symbol}${maxTipAmount}</strong></p>`+
                         `<p>This is ${symbol}${maxTipPerPerson} per person`+
