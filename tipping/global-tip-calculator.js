@@ -230,6 +230,7 @@ function selectCountry()
   }
   
   recommendedTip = Number(country.recommendedTip);
+  getEl('recommended').value = "Recommendation "+recommendedTip+"%";
   getEl('percentage').value = recommendedTip;
   maximumTip = Number(country.maximumTip);
   minimalTip = Number(country.minimumTip);
