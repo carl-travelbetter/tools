@@ -169,9 +169,6 @@ function setSplitValue()
   calculateAndDisplayResult();
 }
 
-function 
-
-
 function calculateAndDisplayResult()
 {
   console.log('Display Log');
