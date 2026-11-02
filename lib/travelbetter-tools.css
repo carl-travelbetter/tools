@@ -305,6 +305,22 @@ h3, h4, h5 {
   background-color: #0066cc;
 }
 
+.calculate-btn {
+  background-color: #0af03b;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.calculate-btn:hover {
+  background-color: #02731b;
+}
+
 .delete-btn {
   background-color: #a83234;
   color: white;
