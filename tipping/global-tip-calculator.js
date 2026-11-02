@@ -35,11 +35,9 @@ fetch('country-tip-list.json')
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() {
   getEl('country')?.addEventListener("change", selectCountry);
-  getEl('amount')?.addEventListener("input", enterBill);
-  getEl('percentage')?.addEventListener("input", setPercentage);
+  getEl('calculate-tip')?.addEventListener("click", calculateTip);
   getEl('go-again-btn')?.addEventListener("click", goAgain);
-  getEl('split')?.addEventListener("input", setSplitValue);
-  getEl('carry-on-btn')?.addEventListener("click", loadCalcultor);
+  getEl('carry-on-btn')?.addEventListener("click", loadCalculator);
   setupPercentageButtons();
 }
 
@@ -122,22 +120,10 @@ function setupPercentageButtons()
   
 }
 
-function setPercentage()
+//Grab the variables and calculate the tip - including error handling
+function calculateTip()
 {
-  recommendedTip = Number(getEl('percentage'));
-  calculateAndDisplayResult();
-}
-
-function loadCalcultor()
-{
-  console.log('Load Calculator');
-  getEl('country-guidance').hidden = true;
-  getEl('calculator').hidden = false;
-}
-
-function enterBill()
-{
-  console.log('Enter Bill');
+  console.log('Calculate Tip');
   const input = getEl('amount');
   amount = Number(input.value);
 
@@ -148,19 +134,13 @@ function enterBill()
         return;
   }
 
-  calculateAndDisplayResult();
-}
-
-function skipAndCalc()
-{
-  console.log('Skip and Calc');
-  split = 1;
-  calculateAndDisplayResult();
-}
-
-function setSplitValue()
-{
-  console.log('Calculate Tip');
+  const percentageEntered = getEl('percentage');
+  recommendedTip = Number(percentageEntered);
+  if (!Number.isInteger(recommendedTip) || split < 1) {
+      alert("Please enter a valid number for the tip.");
+      return;
+  }
+  
   split = Number(getEl('split').value) || 1;
   if (!Number.isInteger(split) || split < 1) {
       alert("Please enter a valid number of people to split the bill with.");
@@ -168,6 +148,20 @@ function setSplitValue()
   }
   calculateAndDisplayResult();
 }
+
+function setPercentage()
+{
+  recommendedTip = Number(getEl('percentage'));
+  calculateAndDisplayResult();
+}
+
+function loadCalculator()
+{
+  console.log('Load Calculator');
+  getEl('country-guidance').hidden = true;
+  getEl('calculator').hidden = false;
+}
+
 
 function calculateAndDisplayResult()
 {
@@ -261,6 +255,7 @@ function goAgain()
   getEl('country').value = "NN";
   getEl('results').hidden = true;
   getEl('go-again').hidden = true;
+  getEl('calculator').hidden = true;
   getEl('select-country').hidden = false;
   getEl('tip-calculator').hidden = false;
 }
