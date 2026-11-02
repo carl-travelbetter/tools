@@ -23,21 +23,21 @@
   "country": "France",
   "code": "FR",
   "currency": "EUR",
-  "recommendedTip": 10,
-  "minimumTip": 10,
-  "maximumTip": 25,
+  "recommendedTip": 0,
+  "minimumTip": 0,
+  "maximumTip": 10,
   "symbol": "€",
-  "guidance": "Check your bill before paying a tip as service charges may have already been adding to your bill."
+  "guidance": "By French law, a 15% service charge (service compris) is automatically included in the price of every menu item and therefore tipping is not expected. However, you can still award exceptional service with a small tip."
 },
   {
   "country": "Germany",
   "code": "DE",
   "currency": "EUR",
   "recommendedTip": 10,
-  "minimumTip": 10,
-  "maximumTip": 25,
+  "minimumTip": 5,
+  "maximumTip": 10,
   "symbol": "€",
-  "guidance": "Check your bill before paying a tip as service charges may have already been adding to your bill."
+  "guidance": "Tipping is expected in Germany for good service."
 },
   {
   "country": "Japan",
@@ -48,6 +48,16 @@
   "maximumTip": 0,
   "symbol": "¥",
   "guidance": "It is not customary to leave a tip in Japan."
+},
+   {
+  "country": "Switzerland",
+  "code": "CH",
+  "currency": "CHF",
+  "recommendedTip": 5,
+  "minimumTip": 0,
+  "maximumTip": 10,
+  "symbol": "¥",
+  "guidance": "Tipping isn't customary or expected in Switzerland and a service charge will be automatically added to your bill. If you do have exceptional service then you can apply the round up rule to your bill or leave a 5% to 10% tip."
 }
 ]
   
