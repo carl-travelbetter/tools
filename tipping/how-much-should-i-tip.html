@@ -52,14 +52,14 @@
         </div>
         <div class="display-card" id="results" aria-live="polite" hidden></div>
         <div id="calculator" hidden>
-          <p>Bill <span id="currency"></span></p>
-          <input class="form-input" type="number" id="amount" name="amount" /><br>
+          <p>Bill amount <span id="currency"></span></p>
+          <input class="form-input" type="number" id="amount" name="amount" min="0" step="0.01" inputmode="decimal"/><br>
           <p>Tip Percentage <span id="recommended"></span></p>
-          <input class="form-input" type="number" id="percentage" name="percentage" /><br>
+          <input class="form-input" type="number" id="percentage" name="percentage" min="0" max="100" step="0.5"/><br>
           <button class="tag-btn" id="five-percent-btn" >5%</button> <button class="tag-btn" id="ten-percent-btn" >10%</button> <button class="tag-btn" id="fifteen-percent-btn" value="15">15%</button>
           <button class="tag-btn" id="twenty-percent-btn" >20%</button> <button class="tag-btn" id="twenty-five-percent-btn" >25%</button>
           <p>Number of people paying</p>
-          <input class="form-input" type="number" id="split" name="split" /><br>
+          <input class="form-input" type="number" id="split" name="split" min="1" step="1" value="1"/><br>
            <div id="controls">
               <button class="calculate-btn" id="calculate-tip">Calculate ▶</button>
             </div>
