@@ -154,6 +154,7 @@ function loadCalculator()
 {
   console.log('Load Calculator');
   getEl('country-guidance').hidden = true;
+  getEl('intro').hidden = true;
   getEl('calculator').hidden = false;
 }
 
