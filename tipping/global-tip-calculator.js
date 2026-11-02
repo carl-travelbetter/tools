@@ -131,7 +131,7 @@ function calculateTip()
 
   const percentageEntered = getEl('percentage').value;
   recommendedTip = Number(percentageEntered);
-  if (!Number.isInteger(recommendedTip) || recommendedTip < 1) {
+  if (!Number.isInteger(recommendedTip) || recommendedTip < 0) {
       alert("Please enter a valid number for the tip.");
       return;
   }
