@@ -166,8 +166,6 @@ function calculateAndDisplayResult()
   const results = getEl('results');
   let tipAmount = Math.round((amount*(recommendedTip/100))*100)/100;
   let totalBill = amount + tipAmount;
-  let maxTotalBill = amount + maxTipAmount;
-  let minTotalBill = amount + minTipAmount;
 
   if (split > 1)
   {
