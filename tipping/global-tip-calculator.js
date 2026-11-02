@@ -222,7 +222,10 @@ function selectCountry()
   getEl('select-country').hidden = true;
   const guidanceOutput = getEl('guidance');
   guidanceOutput.innerHTML = `<h3>Tipping Guidance For ${country.country}</h3>`+
-                       `<p>${guidance}</p>`;
+                       `<p>${guidance}</p>`+
+                       `<p>Average recommended Tip ${recommendedTip}%</p>`+
+                       `<p>Average Maximum Tip ${maximumTip}%</p>`+
+                       `<p>Average Minimal Tip ${minimalTip}%</p>`;
   getEl('country-guidance').hidden = false;
 
 }
