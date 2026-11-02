@@ -10,7 +10,6 @@ let countryTipData = [];
 let countrySelected = "UK";
 let split = 1;
 let amount = 0;
-let countryData = [];
 let recommendedTip = 10;
 let minimalTip = 0;
 let maximumTip = 25;
@@ -131,10 +130,12 @@ function calculateTip()
 
   const percentageEntered = getEl('percentage').value;
   recommendedTip = Number(percentageEntered);
-  if (!Number.isInteger(recommendedTip) || recommendedTip < 0) {
-      alert("Please enter a valid number for the tip.");
-      return;
-  }
+  if (!Number.isFinite(recommendedTip) ||
+    recommendedTip < 0 ||
+    recommendedTip > 100) {
+    alert("Please enter a tip between 0% and 100%.");
+    return;
+}
   
   split = Number(getEl('split').value) || 1;
   if (!Number.isInteger(split) || split < 1) {
@@ -164,8 +165,6 @@ function calculateAndDisplayResult()
   console.log('Display Log');
   const results = getEl('results');
   let tipAmount = Math.round((amount*(recommendedTip/100))*100)/100;
-  let maxTipAmount = Math.round((amount*(maximumTip/100))*100)/100;
-  let minTipAmount = Math.round((amount*(minimalTip/100))*100)/100;
   let totalBill = amount + tipAmount;
   let maxTotalBill = amount + maxTipAmount;
   let minTotalBill = amount + minTipAmount;
@@ -173,12 +172,8 @@ function calculateAndDisplayResult()
   if (split > 1)
   {
     let tipPerPerson = Math.round((tipAmount / split)*100)/100;
-    let billPerPerson = Math.round((amount / split)*100)/100;
-    let totalPerPerson = tipPerPerson + billPerPerson;
-    let maxTipPerPerson = Math.round((maxTipAmount / split)*100)/100;
-    let minTipPerPerson = Math.round((minTipAmount / split)*100)/100;
-    let maxTotalPerPerson = billPerPerson + maxTipPerPerson;
-    let minTotalPerPerson = billPerPerson + minTipPerPerson;
+    let totalPerPerson = totalBill / split;
+   
     results.innerHTML = `<h2>Tip Calculation For ${countryName}</h2>`+
                         `<p><strong>Tip at ${recommendedTip}% is ${formatMoney(tipAmount, currency)}</strong></p>`+
                         `<p>This is ${formatMoney(tipPerPerson, currency)} per person`+
@@ -232,12 +227,21 @@ function selectCountry()
 
 function goAgain()
 {
-  getEl('amount').value = "";
-  getEl('split').value = "";
-  getEl('country').value = "NN";
-  getEl('results').hidden = true;
-  getEl('go-again').hidden = true;
-  getEl('calculator').hidden = true;
-  getEl('select-country').hidden = false;
-  getEl('tip-calculator').hidden = false;
+    getEl('amount').value = "";
+    getEl('split').value = "1";
+    getEl('percentage').value = "";
+
+    getEl('country').value = "NN";
+
+    getEl('results').hidden = true;
+    getEl('go-again').hidden = true;
+    getEl('calculator').hidden = true;
+    getEl('country-guidance').hidden = true;
+
+    getEl('select-country').hidden = false;
+    getEl('intro').hidden = false;
+
+    document.querySelectorAll('.tag-btn').forEach(button => {
+        button.classList.remove('active');
+    });
 }
