@@ -179,34 +179,18 @@ function calculateAndDisplayResult()
     let minTipPerPerson = Math.round((minTipAmount / split)*100)/100;
     let maxTotalPerPerson = billPerPerson + maxTipPerPerson;
     let minTotalPerPerson = billPerPerson + minTipPerPerson;
-    results.innerHTML = `<h2>Tip Recommendation For ${countryName}</h2>`+
-                        `<h3>Recommended Tip</h3>`+
-                        `<p><strong>Recommended Tip is ${recommendedTip}% which is ${formatMoney(tipAmount, currency)}</strong></p>`+
+    results.innerHTML = `<h2>Tip Calculation For ${countryName}</h2>`+
+                        `<p><strong>Tip at ${recommendedTip}% is ${formatMoney(tipAmount, currency)}</strong></p>`+
                         `<p>This is ${formatMoney(tipPerPerson, currency)} per person`+
                         `<p>When the bill (${formatMoney(amount,currency)}) is also split and added to the tip this is a total payment of ${formatMoney(totalPerPerson, currency)} per person</p>`+
-                        `<h3>Recommended Maximum Tip</h3>`+
-                        `<p>Recommended Maximum Tip is ${maximumTip}% which is ${formatMoney(maxTipAmount, currency)}</strong></p>`+
-                        `<p>This is ${formatMoney(maxTipPerPerson,currency)} per person`+
-                        `<p>When the bill (${formatMoney(amount,currency)}) is also split and added to the tip this is a total payment of ${formatMoney(maxTotalPerPerson,currency)} per person</p>`+
-                        `<h3>Recommended Minimum Tip</h3>`+
-                        `<p>Recommended Minimum Tip is ${minimalTip}% which is ${formatMoney(minTipAmount,currency)}</strong></p>`+
-                        `<p>This is ${formatMoney(minTipPerPerson,currency)} per person`+
-                        `<p>When the bill (${formatMoney(amount,currency)}) is also split and added to the tip this is a total payment of ${formatMoney(minTotalPerPerson,currency)} per person</p>`+
                         `<h3>Additional Guidance</h3>`+
                         `<p>${guidance}</p>`;
   }
   else
   { 
-  results.innerHTML = `<h2>Tip Recommendation For ${countryName}</h2>`+
-                      `<h3>Recommended Tip</h3>`+
-                      `<p><strong>Recommended Tip is ${recommendedTip}% which is ${formatMoney(tipAmount, currency)}</strong> </p>`+
+  results.innerHTML = `<h2>Tip Calculation For ${countryName}</h2>`+
+                      `<p><strong>Tip at ${recommendedTip}% is ${formatMoney(tipAmount, currency)}</strong> </p>`+
                       `<p>This makes your total bill ${formatMoney(totalBill,currency)} (${formatMoney(amount,currency)} + ${formatMoney(tipAmount, currency)})</p>`+
-                      `<h3>Recommended Maximum Tip</h3>`+
-                      `<p>Recommended Maximum Tip would be ${maximumTip}% which is ${formatMoney(maxTipAmount,currency)}</p>`+
-                      `<p>This makes your total bill ${formatMoney(maxTotalBill,currency)} (${formatMoney(amount,currency)} + ${formatMoney(maxTipAmount,currency)})</p>`+
-                      `<h3>Recommended Minimum Tip</h3>`+
-                      `<p>Recommended Minimum Tip would be ${minimalTip}% which is ${formatMoney(minTipAmount,currency)}</p>`+
-                      `<p>This makes your total bill ${formatMoney(minTotalBill,currency)} (${formatMoney(amount,currency)} + ${formatMoney(minTipAmount,currency)}</p>`+
                       `<h3>Additional Guidance</h3>`+
                       `<p>${guidance}</p>`;
   }
