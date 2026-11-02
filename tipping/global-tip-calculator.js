@@ -71,7 +71,6 @@ function setupPercentageButtons()
     twentyFivePercent.classList.remove("active");
     recommendedTip = 5;
     getEl('percentage').value = recommendedTip;
-    calculateAndDisplayResult();
   });
 
   tenPercent.addEventListener("click", () => {
@@ -82,7 +81,6 @@ function setupPercentageButtons()
     twentyFivePercent.classList.remove("active");
     recommendedTip = 10;
     getEl('percentage').value = recommendedTip;
-    calculateAndDisplayResult();
   });
 
   fifteenPercent.addEventListener("click", () => {
@@ -93,7 +91,6 @@ function setupPercentageButtons()
     twentyFivePercent.classList.remove("active");
     recommendedTip = 15;
     getEl('percentage').value = recommendedTip;
-    calculateAndDisplayResult();
   });
 
   twentyPercent.addEventListener("click", () => {
@@ -104,7 +101,6 @@ function setupPercentageButtons()
     twentyFivePercent.classList.remove("active");
     recommendedTip = 20;
     getEl('percentage').value = recommendedTip;
-    calculateAndDisplayResult();
   });
 
   twentyFivePercent.addEventListener("click", () => {
@@ -115,7 +111,6 @@ function setupPercentageButtons()
     twentyPercent.classList.remove("active");
     recommendedTip = 25;
     getEl('percentage').value = recommendedTip;
-    calculateAndDisplayResult();
   });
   
 }
@@ -136,7 +131,7 @@ function calculateTip()
 
   const percentageEntered = getEl('percentage');
   recommendedTip = Number(percentageEntered);
-  if (!Number.isInteger(recommendedTip) || split < 1) {
+  if (!Number.isInteger(recommendedTip) || recommendedTip < 1) {
       alert("Please enter a valid number for the tip.");
       return;
   }
@@ -244,8 +239,7 @@ function selectCountry()
   guidanceOutput.innerHTML = `<h3>Tipping Guidance For ${country.country}</h3>`+
                        `<p>${guidance}</p>`;
   getEl('country-guidance').hidden = false;
-  getEl('split').value = 1;
-  getEl('amount').value = 100;
+
 }
 
 function goAgain()
