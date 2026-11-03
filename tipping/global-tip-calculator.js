@@ -175,20 +175,16 @@ function calculateAndDisplayResult()
     results.innerHTML = `<h2>Tip Calculation For ${countryName}</h2>`+
                         `<p><strong>Tip at ${recommendedTip}% is ${formatMoney(tipAmount, currency)}</strong></p>`+
                         `<p>This is ${formatMoney(tipPerPerson, currency)} per person`+
-                        `<p>When the bill (${formatMoney(amount,currency)}) is also split and added to the tip this is a total payment of ${formatMoney(totalPerPerson, currency)} per person</p>`+
-                        `<h3>Additional Guidance</h3>`+
-                        `<p>${guidance}</p>`;
+                        `<p>When the bill (${formatMoney(amount,currency)}) is also split and added to the tip this is a total payment of ${formatMoney(totalPerPerson, currency)} per person</p>`;
   }
   else
   { 
   results.innerHTML = `<h2>Tip Calculation For ${countryName}</h2>`+
                       `<p><strong>Tip at ${recommendedTip}% is ${formatMoney(tipAmount, currency)}</strong> </p>`+
-                      `<p>This makes your total bill ${formatMoney(totalBill,currency)} (${formatMoney(amount,currency)} + ${formatMoney(tipAmount, currency)})</p>`+
-                      `<h3>Additional Guidance</h3>`+
-                      `<p>${guidance}</p>`;
+                      `<p>This makes your total bill ${formatMoney(totalBill,currency)} (${formatMoney(amount,currency)} + ${formatMoney(tipAmount, currency)})</p>`;
   }
   results.hidden = false;
-  getEl('go-again').hidden = false;
+ // getEl('go-again').hidden = false;
 }
 
 //First action by the user, selects a country and is than presented with the guidance
@@ -212,13 +208,11 @@ function selectCountry()
   guidance = country.guidance;
   currency = country.currency;
   countryName = country.country;
-  getEl('select-country').hidden = true;
+  //getEl('select-country').hidden = true;
   const guidanceOutput = getEl('guidance');
   guidanceOutput.innerHTML = `<h3>Tipping Guidance For ${country.country}</h3>`+
                        `<p>${guidance}</p>`+
-                       `<p>Average recommended Tip ${recommendedTip}%</p>`+
-                       `<p>Average Maximum Tip ${maximumTip}%</p>`+
-                       `<p>Average Minimal Tip ${minimalTip}%</p>`;
+                       `<p>Recommended Tip ${recommendedTip}%</p>`;
   getEl('country-guidance').hidden = false;
 
 }
