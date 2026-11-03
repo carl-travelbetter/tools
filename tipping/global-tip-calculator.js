@@ -210,8 +210,7 @@ function selectCountry()
   countryName = country.country;
   //getEl('select-country').hidden = true;
   const guidanceOutput = getEl('guidance');
-  guidanceOutput.innerHTML = `<p>ℹ️ ${guidance}</p>`+
-                       `<p>suggested Tip ${recommendedTip}%</p>`;
+  guidanceOutput.innerHTML = `<p>ℹ️ ${guidance}. Suggested tip ${recommendedTip}%</p>`;
   getEl('country-guidance').hidden = false;
 
 }
