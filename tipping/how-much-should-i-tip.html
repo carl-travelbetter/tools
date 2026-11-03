@@ -48,10 +48,9 @@
         <div id="country-guidance" hidden>
           <div id="guidance"></div>
           <button class="control-btn" id="carry-on-btn">Go To Calculator</button>
-          <p>The calculator will be pre-loaded with the recommended tip.</p>
         </div>
-        <div class="display-card" id="results" aria-live="polite" hidden></div>
-        <div id="calculator" hidden>
+        
+        <div id="calculator">
           <p>Bill amount <span id="currency"></span></p>
           <input class="form-input" type="number" id="amount" name="amount" min="0" step="0.01" inputmode="decimal"/><br>
           <p>Tip Percentage <span id="recommended"></span></p>
@@ -64,6 +63,7 @@
               <button class="calculate-btn" id="calculate-tip">Calculate ▶</button>
             </div>
         </div>
+        <div class="display-card" id="results" aria-live="polite" hidden></div>
       </div>
 
      
