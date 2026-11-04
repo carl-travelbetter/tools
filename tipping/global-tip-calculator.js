@@ -167,22 +167,13 @@ function calculateAndDisplayResult()
   let tipAmount = Math.round((amount*(recommendedTip/100))*100)/100;
   let totalBill = amount + tipAmount;
 
-  if (split > 1)
-  {
     let tipPerPerson = Math.round((tipAmount / split)*100)/100;
     let totalPerPerson = totalBill / split;
    
-    results.innerHTML = `<h2>Tip Calculation For ${countryName}</h2>`+
-                        `<p><strong>Tip at ${recommendedTip}% is ${formatMoney(tipAmount, currency)}</strong></p>`+
-                        `<p>This is ${formatMoney(tipPerPerson, currency)} per person`+
-                        `<p>When the bill (${formatMoney(amount,currency)}) is also split and added to the tip this is a total payment of ${formatMoney(totalPerPerson, currency)} per person</p>`;
-  }
-  else
-  { 
-  results.innerHTML = `<h2>Tip Calculation For ${countryName}</h2>`+
-                      `<p><strong>Tip at ${recommendedTip}% is ${formatMoney(tipAmount, currency)}</strong> </p>`+
-                      `<p>This makes your total bill ${formatMoney(totalBill,currency)} (${formatMoney(amount,currency)} + ${formatMoney(tipAmount, currency)})</p>`;
-  }
+    results.innerHTML = `<p><strong>Tip at ${recommendedTip}% is ${formatMoney(tipAmount, currency)}</strong></p>`+
+                        `<p>Total Bill (amount + tip) is  ${formatMoney(totalBill, currency)}</p>`+
+                        `<p>Price Per Person (when divded equally) is ${formatMoney(totalPerPerson,currency)}</p>`;
+ 
   results.hidden = false;
  // getEl('go-again').hidden = false;
 }
