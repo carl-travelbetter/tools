@@ -35,8 +35,18 @@
         </div>
         <div id="error-message" class="error-text" hidden></div>
         <div id="calculator">
-          <p>Bill amount <span id="currency"></span></p>
-          <input class="form-input" type="number" id="amount" name="amount" min="0" step="0.01" inputmode="decimal"/><br>
+         <div class="form-group">
+              <label for="amount">Bill Amount (£)</label>
+              <input
+                  class="form-input"
+                  type="number"
+                  id="amount"
+                  name="amount"
+                  min="0"
+                  step="0.01"
+                  inputmode="decimal"
+              >
+          </div>
           <p>Tip Percentage <span id="recommended"></span></p>
           <input class="form-input" type="number" id="percentage" name="percentage" min="0" max="100" step="0.5"/><br>
           <button class="tag-btn" id="five-percent-btn" >5%</button> <button class="tag-btn" id="ten-percent-btn" >10%</button> <button class="tag-btn" id="fifteen-percent-btn" value="15">15%</button>
