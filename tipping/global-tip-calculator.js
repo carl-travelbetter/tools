@@ -88,7 +88,7 @@ function setupPercentageButtons()
   const twentyFivePercent = getEl('twenty-five-percent-btn');
   
   fivePercent.addEventListener("click", () => {
-    fivePercent.classList.toggle("active");
+    fivePercent.classList.add("active");
     tenPercent.classList.remove("active");
     fifteenPercent.classList.remove("active");
     twentyPercent.classList.remove("active");
@@ -98,7 +98,7 @@ function setupPercentageButtons()
   });
 
   tenPercent.addEventListener("click", () => {
-    tenPercent.classList.toggle("active");
+    tenPercent.classList.add("active");
     fivePercent.classList.remove("active");
     fifteenPercent.classList.remove("active");
     twentyPercent.classList.remove("active");
@@ -108,7 +108,7 @@ function setupPercentageButtons()
   });
 
   fifteenPercent.addEventListener("click", () => {
-    fifteenPercent.classList.toggle("active");
+    fifteenPercent.classList.add("active");
     fivePercent.classList.remove("active");
     tenPercent.classList.remove("active");
     twentyPercent.classList.remove("active");
@@ -118,7 +118,7 @@ function setupPercentageButtons()
   });
 
   twentyPercent.addEventListener("click", () => {
-    twentyPercent.classList.toggle("active");
+    twentyPercent.classList.add("active");
     fivePercent.classList.remove("active");
     tenPercent.classList.remove("active");
     fifteenPercent.classList.remove("active");
@@ -128,7 +128,7 @@ function setupPercentageButtons()
   });
 
   twentyFivePercent.addEventListener("click", () => {
-    twentyFivePercent.classList.toggle("active");
+    twentyFivePercent.classList.add("active");
     fivePercent.classList.remove("active");
     tenPercent.classList.remove("active");
     fifteenPercent.classList.remove("active");
