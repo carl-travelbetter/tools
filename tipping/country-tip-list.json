@@ -5,8 +5,7 @@
   "currency": "USD",
   "recommendedTip": 20,
   "minimumTip": 15,
-  "maximumTip": 25,
-  "symbol": "$",  
+  "maximumTip": 25, 
   "guidance": "Tipping is customary at sit-down restaurants."
 },
  {
@@ -16,7 +15,6 @@
   "recommendedTip": 10,
   "minimumTip": 5,
   "maximumTip": 25,
-  "symbol": "£",
   "guidance": "Check your bill before paying a tip as service charges may have already been adding to your bill."
 },
   {
@@ -26,7 +24,6 @@
   "recommendedTip": 0,
   "minimumTip": 0,
   "maximumTip": 10,
-  "symbol": "€",
   "guidance": "By French law, a 15% service charge (service compris) is automatically included in the price of every menu item and therefore tipping is not expected. However, you can still award exceptional service with a small tip."
 },
   {
@@ -36,7 +33,6 @@
   "recommendedTip": 10,
   "minimumTip": 5,
   "maximumTip": 10,
-  "symbol": "€",
   "guidance": "Tipping is expected in Germany for good service."
 },
   {
@@ -46,7 +42,6 @@
   "recommendedTip": 0,
   "minimumTip": 0,
   "maximumTip": 0,
-  "symbol": "¥",
   "guidance": "It is not customary to leave a tip in Japan."
 },
 {
@@ -56,7 +51,6 @@
   "recommendedTip": 5,
   "minimumTip": 0,
   "maximumTip": 10,
-  "symbol": "¥",
   "guidance": "Tipping isn't customary or expected in Switzerland and a service charge will be automatically added to your bill. If you do have exceptional service then you can apply the round up rule to your bill or leave a 5% to 10% tip."
 },
    {
@@ -66,7 +60,6 @@
   "recommendedTip": 5,
   "minimumTip": 0,
   "maximumTip": 10,
-  "symbol": "¥",
   "guidance": "Tipping in Greek restaurants is optional and not mandatory, though a small gesture of appreciation is always welcomed for good service."
 }
 ]
