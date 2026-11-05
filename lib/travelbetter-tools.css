@@ -646,6 +646,11 @@ th .three {
    background-color: #34eb92;
 }
 
+.error-text {
+   font-size: small;
+   color: red;
+}
+
 
 
 
