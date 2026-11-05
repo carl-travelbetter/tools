@@ -58,7 +58,7 @@ function loadCountrySelector()
   const countrySelect = document.createElement('select');
   countrySelect.className = 'option-selection';
   countrySelect.addEventListener("change", (event) => {
-    selectCountry();
+    selectCountry(event.target.value);
   });
   const placeholder = document.createElement('option');
   placeholder.value = "NN";
@@ -204,13 +204,13 @@ function calculateAndDisplayResult()
 }
 
 //First action by the user, selects a country and is than presented with the guidance
-function selectCountry()
+function selectCountry(countryCode)
 {
   console.log('Select Country');
   countrySelected = getEl('country').value;
-  console.log('Country Selected '+countrySelected);
+  console.log('Country Selected '+countryCode);
   const country = countryTipData.find(
-    item => item.code === countrySelected
+    item => item.code === countryCode
   );
   
   if (!country) {
