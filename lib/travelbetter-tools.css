@@ -659,12 +659,19 @@ th .three {
 }
 
 .form-group label {
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .form-group input {
     box-sizing: border-box;
     width: 100%;
+    max-width: 300px;
+}
+
+.form-group .form-input {
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
 }
 
 
