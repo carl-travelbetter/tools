@@ -6,7 +6,7 @@
   "recommendedTip": 20,
   "minimumTip": 15,
   "maximumTip": 25, 
-  "guidance": "Tipping is customary at sit-down restaurants."
+  "guidance": "Tipping is customary in the USA at sit-down restaurants."
 },
  {
   "country": "United Kingdom",
@@ -15,7 +15,7 @@
   "recommendedTip": 10,
   "minimumTip": 5,
   "maximumTip": 25,
-  "guidance": "Check your bill before paying a tip as service charges may have already been adding to your bill."
+  "guidance": "Tipping is generally expected in the UK, but make sure to check your bill as sometimes restaurants will automatically add a service charge. However, you can ask for this to be removed."
 },
   {
   "country": "France",
@@ -33,7 +33,7 @@
   "recommendedTip": 10,
   "minimumTip": 5,
   "maximumTip": 10,
-  "guidance": "Tipping is expected in Germany for good service."
+  "guidance": "Tipping is expected in Germany for good service with a range between 5% to 10%."
 },
   {
   "country": "Japan",
