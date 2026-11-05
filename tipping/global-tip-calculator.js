@@ -38,6 +38,7 @@ function bindEvents() {
   getEl('go-again-btn')?.addEventListener("click", goAgain);
   getEl('carry-on-btn')?.addEventListener("click", loadCalculator);
   setupPercentageButtons();
+  loadCountrySelector();
 }
 
 //Ensure html bindings are not applied until the html structure is built
@@ -48,6 +49,30 @@ function formatMoney(value, currency) {
         style: 'currency',
         currency: currency
     }).format(value);
+}
+
+function loadCountrySelector()
+{
+  console.log('Setting Up Country Data');
+  const countrySelectArea = getEl('select-country');
+  const countrySelect = document.createElement('select');
+  countrySelect.className = 'option-selection';
+  countrySelect.addEventListener("change", (event) => {
+    selectCountry();
+  });
+  const placeholder = document.createElement('option');
+  placeholder.value = "NN";
+  placeholder.textContent = "Select Country";
+  countrySelect.appendChild(placeholder);
+  countryData.forEach (country =>
+    {
+      const countryOption = document.createElement('option');
+      countryOption.value = country.code;
+      countryOption.textContent = country.country;
+      countrySelect.appendChild(countryOption);
+    });
+  countrySelectArea.innerHTML = "";
+  countrySelectArea.appendChild(countrySelect);
 }
 
 function setupPercentageButtons()
