@@ -651,6 +651,22 @@ th .three {
    color: red;
 }
 
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: 600;
+}
+
+.form-group input {
+    box-sizing: border-box;
+    width: 100%;
+}
+
 
 
 
