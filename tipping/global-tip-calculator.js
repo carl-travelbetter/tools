@@ -227,6 +227,7 @@ function selectCountry(countryCode)
   const guidanceOutput = getEl('guidance');
   guidanceOutput.innerHTML = `<p>ℹ️ ${guidance} Suggested tip ${recommendedTip}%</p>`;
   getEl('country-guidance').hidden = false;
+  goAgain();
 
 }
 
@@ -234,17 +235,8 @@ function goAgain()
 {
     getEl('amount').value = "";
     getEl('split').value = "1";
-    getEl('percentage').value = "";
-
-    getEl('country').value = "NN";
-
     getEl('results').hidden = true;
-    getEl('go-again').hidden = true;
-    getEl('calculator').hidden = true;
-    getEl('country-guidance').hidden = true;
-
-    getEl('select-country').hidden = false;
-    getEl('intro').hidden = false;
+    
 
     document.querySelectorAll('.tag-btn').forEach(button => {
         button.classList.remove('active');
