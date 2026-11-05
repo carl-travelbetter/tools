@@ -207,7 +207,6 @@ function calculateAndDisplayResult()
 function selectCountry(countryCode)
 {
   console.log('Select Country');
-  countrySelected = getEl('country').value;
   console.log('Country Selected '+countryCode);
   const country = countryTipData.find(
     item => item.code === countryCode
