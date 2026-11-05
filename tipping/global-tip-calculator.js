@@ -22,6 +22,7 @@ fetch('country-tip-list.json')
   .then(data => {
     countryTipData = data;
     console.log("Country Tip Data Loaded:", countryTipData);
+    loadCountrySelector();
     getEl('data-loading').hidden = true;
     getEl('tip-calculator').hidden = false;
   })
@@ -37,8 +38,7 @@ function bindEvents() {
   getEl('calculate-tip')?.addEventListener("click", calculateTip);
   getEl('go-again-btn')?.addEventListener("click", goAgain);
   getEl('carry-on-btn')?.addEventListener("click", loadCalculator);
-  setupPercentageButtons();
-  loadCountrySelector();
+  setupPercentageButtons(); 
 }
 
 //Ensure html bindings are not applied until the html structure is built
@@ -64,7 +64,7 @@ function loadCountrySelector()
   placeholder.value = "NN";
   placeholder.textContent = "Select Country";
   countrySelect.appendChild(placeholder);
-  countryData.forEach (country =>
+  countryTipData.forEach (country =>
     {
       const countryOption = document.createElement('option');
       countryOption.value = country.code;
