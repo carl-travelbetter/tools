@@ -36,8 +36,6 @@ fetch('country-tip-list.json')
 function bindEvents() {
   getEl('country')?.addEventListener("change", selectCountry);
   getEl('calculate-tip')?.addEventListener("click", calculateTip);
-  getEl('go-again-btn')?.addEventListener("click", goAgain);
-  getEl('carry-on-btn')?.addEventListener("click", loadCalculator);
   setupPercentageButtons(); 
 }
 
@@ -143,13 +141,16 @@ function setupPercentageButtons()
 function calculateTip()
 {
   console.log('Calculate Tip');
+  const errorMessage = getEl('error-message');
+  errorMessage.hidden = true;
   const input = getEl('amount');
   amount = Number(input.value);
 
   if (input.value.trim() === "" ||
         !Number.isFinite(amount) ||
         amount <= 0) {
-        alert("Please enter a valid bill amount.");
+        errorMessage.textContent = "Please enter a valid amount";
+        errorMessage.hidden = false;
         return;
   }
 
