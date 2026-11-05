@@ -149,7 +149,7 @@ function calculateTip()
   if (input.value.trim() === "" ||
         !Number.isFinite(amount) ||
         amount <= 0) {
-        errorMessage.textContent = "Please enter a valid amount";
+        errorMessage.textContent = "ℹ️ Please enter a valid amount for the bill";
         errorMessage.hidden = false;
         return;
   }
@@ -159,13 +159,15 @@ function calculateTip()
   if (!Number.isFinite(recommendedTip) ||
     recommendedTip < 0 ||
     recommendedTip > 100) {
-    alert("Please enter a tip between 0% and 100%.");
+    errorMessage.textContent = "ℹ️ Please enter a tip between 0% and 100%";
+    errorMessage.hidden = false;
     return;
 }
   
   split = Number(getEl('split').value) || 1;
   if (!Number.isInteger(split) || split < 1) {
-      alert("Please enter a valid number of people to split the bill with.");
+      errorMessage.textContent = "ℹ️ Please enter a valid number of people to split the bill with.";
+      errorMessage.hidden = false;
       return;
   }
   calculateAndDisplayResult();
@@ -209,6 +211,8 @@ function selectCountry(countryCode)
 {
   console.log('Select Country');
   console.log('Country Selected '+countryCode);
+  const errorMessage = getEl('error-message');
+  errorMessage.hidden = true;
   const country = countryTipData.find(
     item => item.code === countryCode
   );
