@@ -49,7 +49,7 @@
   "symbol": "¥",
   "guidance": "It is not customary to leave a tip in Japan."
 },
-   {
+{
   "country": "Switzerland",
   "code": "CH",
   "currency": "CHF",
@@ -58,6 +58,16 @@
   "maximumTip": 10,
   "symbol": "¥",
   "guidance": "Tipping isn't customary or expected in Switzerland and a service charge will be automatically added to your bill. If you do have exceptional service then you can apply the round up rule to your bill or leave a 5% to 10% tip."
+},
+   {
+  "country": "Greece",
+  "code": "GR",
+  "currency": "EUR",
+  "recommendedTip": 5,
+  "minimumTip": 0,
+  "maximumTip": 10,
+  "symbol": "¥",
+  "guidance": "Tipping in Greek restaurants is optional and not mandatory, though a small gesture of appreciation is always welcomed for good service."
 }
 ]
   
