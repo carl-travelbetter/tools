@@ -36,7 +36,7 @@
         <div id="error-message" class="error-text" hidden></div>
         <div id="calculator">
          <div class="form-group">
-              <label for="amount">Bill Amount (£)</label>
+              <label for="amount">Bill Amount </label>
               <input
                   class="form-input"
                   type="number"
@@ -47,12 +47,32 @@
                   inputmode="decimal"
               >
           </div>
-          <p>Tip Percentage <span id="recommended"></span></p>
-          <input class="form-input" type="number" id="percentage" name="percentage" min="0" max="100" step="0.5"/><br>
+          <div class="form-group">
+              <label for="percentage">Tip (%)</label>
+              <input
+                  class="form-input"
+                  type="number"
+                  id="percentage"
+                  name="percentage"
+                  min="0"
+                  max="100"
+                  step="0.5"
+              >
+          </div>
           <button class="tag-btn" id="five-percent-btn" >5%</button> <button class="tag-btn" id="ten-percent-btn" >10%</button> <button class="tag-btn" id="fifteen-percent-btn" value="15">15%</button>
           <button class="tag-btn" id="twenty-percent-btn" >20%</button> <button class="tag-btn" id="twenty-five-percent-btn" >25%</button>
-          <p>Number of people paying</p>
-          <input class="form-input" type="number" id="split" name="split" min="1" step="1" value="1"/><br>
+          <div class="form-group">
+              <label for="split">Number of people paying</label>
+              <input
+                  class="form-input"
+                  type="number"
+                  id="split"
+                  name="split"
+                  min="1"
+                  value="1"
+                  step="1"
+              >
+          </div>
            <div id="controls">
               <button class="calculate-btn" id="calculate-tip">Calculate ▶</button>
             </div>
