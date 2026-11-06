@@ -680,6 +680,11 @@ th .three {
     box-sizing: border-box;
 }
 
+.spacing-element {
+   gap: 8px;
+   margin-bottom: 20px;
+}
+
 
 
 
