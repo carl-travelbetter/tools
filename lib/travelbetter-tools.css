@@ -668,6 +668,12 @@ th .three {
     max-width: 300px;
 }
 
+.form-group select {
+   box-sizing: border-box;
+    width: 100%;
+    max-width: 300px;
+}
+
 .form-group .form-input {
     width: 100%;
     max-width: 300px;
