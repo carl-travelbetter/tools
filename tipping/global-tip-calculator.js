@@ -54,7 +54,7 @@ function loadCountrySelector()
   console.log('Setting Up Country Data');
   const countrySelectArea = getEl('select-country');
   const countrySelect = document.createElement('select');
-  countrySelect.classNAme = "form-input";
+
   //countrySelect.className = 'option-selection';
   countrySelect.addEventListener("change", (event) => {
     selectCountry(event.target.value);
