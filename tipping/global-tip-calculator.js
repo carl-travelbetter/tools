@@ -209,11 +209,10 @@ function calculateAndDisplayResult()
 {
   console.log('Display Log');
   const results = getEl('results');
-  let tipAmount = Math.round((amount*(recommendedTip/100))*100)/100;
+  //let tipAmount = Math.round((amount*(recommendedTip/100))*100)/100;
+  let tipAmount = amount*(recommmendedTip/100);
   let totalBill = amount + tipAmount;
-
-    let tipPerPerson = Math.round((tipAmount / split)*100)/100;
-    let totalPerPerson = totalBill / split;
+  let totalPerPerson = totalBill / split;
    
     results.innerHTML = `<p><strong>Tip at ${recommendedTip}% is ${formatMoney(tipAmount, currency)}</strong></p>`+
                         `<p>Total Bill (amount + tip) is  ${formatMoney(totalBill, currency)}</p>`+
