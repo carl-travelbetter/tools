@@ -56,7 +56,19 @@ function loadCountrySelector()
 {
   console.log('Setting Up Country Data');
   const countrySelectArea = getEl('select-country');
+  const countrySelectArea = getEl('select-country');
+
+  // Create the label
+  const countryLabel = document.createElement('label');
+  countryLabel.textContent = "Where are you eating?";
+  countryLabel.setAttribute('for', 'country');
+  
+  // Create the select
   const countrySelect = document.createElement('select');
+  countrySelect.id = 'country';
+  countrySelect.name = 'country';
+  countrySelect.className = 'form-input';
+  countrySelect.required = true;
 
   //countrySelect.className = 'option-selection';
   countrySelect.addEventListener("change", (event) => {
@@ -73,8 +85,7 @@ function loadCountrySelector()
       countryOption.textContent = country.country;
       countrySelect.appendChild(countryOption);
     });
-  countrySelectArea.innerHTML = "";
-  countrySelectArea.appendChild(countrySelect);
+  countrySelectArea.replaceChildren(countryLabel, countrySelect);
 }
 
 function setupPercentageButtons()
