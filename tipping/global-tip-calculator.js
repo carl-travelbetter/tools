@@ -36,6 +36,9 @@ fetch('country-tip-list.json')
 function bindEvents() {
   getEl('country')?.addEventListener("change", selectCountry);
   getEl('calculate-tip')?.addEventListener("click", calculateTip);
+  getEl('amount')?.addEventListener("change", hideResult);
+  getEl('split')?.addEventListener("change", hideResult);
+  getEl('percentage')?.addEventListener("change", hideResult);
   setupPercentageButtons(); 
 }
 
@@ -237,6 +240,12 @@ function selectCountry(countryCode)
   getEl('country-guidance').hidden = false;
   goAgain();
 
+}
+
+function hideResult()
+{
+  getEl('results').innerHTML = "";
+  getEl('results').hidden = true;
 }
 
 function goAgain()
