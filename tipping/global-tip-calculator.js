@@ -55,7 +55,6 @@ function loadCountrySelector()
 {
   console.log('Setting Up Country Data');
   const countrySelectArea = getEl('select-country');
-  const countrySelectArea = getEl('select-country');
 
   // Create the label
   const countryLabel = document.createElement('label');
