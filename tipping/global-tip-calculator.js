@@ -1,7 +1,6 @@
 console.log('Gobal Tip Calculator');
 
 //Import Dom utils
-import {getWrittenDate, getDuration, addDays} from "/lib/date-helper.js";
 import { getEl, getText, getDate} from "/lib/dom.js";
 
 //Load Data
