@@ -51,7 +51,7 @@
   "recommendedTip": 5,
   "minimumTip": 0,
   "maximumTip": 10,
-  "guidance": "Tipping isn't customary or expected in Switzerland and a service charge will be automatically added to your bill. If you do have exceptional service then you can apply the round up rule to your bill or leave a 5% to 10% tip."
+  "guidance": "Tipping isn't customary or expected in Switzerland and a service charge will be normally be added to your bill. If you do have exceptional service then you can apply the round up rule to your bill or leave a 5% to 10% tip."
 },
    {
   "country": "Greece",
@@ -60,7 +60,7 @@
   "recommendedTip": 5,
   "minimumTip": 0,
   "maximumTip": 10,
-  "guidance": "Tipping in Greek restaurants is optional and not mandatory, though a small gesture of appreciation is always welcomed for good service."
+  "guidance": "Tipping in Greek restaurants is optional and not mandatory, though a small gesture of appreciation is always welcome for good service."
 }
 ]
   
