@@ -35,9 +35,9 @@ fetch('country-tip-list.json')
 function bindEvents() {
   getEl('country')?.addEventListener("change", selectCountry);
   getEl('calculate-tip')?.addEventListener("click", calculateTip);
-  getEl('amount')?.addEventListener("change", hideResult);
-  getEl('split')?.addEventListener("change", hideResult);
-  getEl('percentage')?.addEventListener("change", hideResult);
+  getEl('amount')?.addEventListener("input", hideResult);
+  getEl('split')?.addEventListener("input", hideResult);
+  getEl('percentage')?.addEventListener("input", hideResult);
   setupPercentageButtons(); 
 }
 
