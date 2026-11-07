@@ -165,12 +165,14 @@ function calculateTip()
     return;
 }
   
-  split = Number(getEl('split').value) || 1;
-  if (!Number.isInteger(split) || split < 1) {
-      errorMessage.textContent = "ℹ️ Please enter a valid number of people to split the bill with.";
+ split = Number(getEl('split').value);
+
+    if (!Number.isInteger(split) || split < 1) {
+      errorMessage.textContent =
+        "Please enter at least one person.";
       errorMessage.hidden = false;
       return;
-  }
+    }
   calculateAndDisplayResult();
 }
 
