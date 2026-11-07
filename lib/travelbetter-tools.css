@@ -685,6 +685,22 @@ th .three {
    margin-bottom: 20px;
 }
 
+.support-us {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;  
+  background-color: white; 
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+  border: 3px solid #131414;
+  border-radius: 12px;
+  box-sizing: border-box;  
+  text-align: left;
+  width: 100%;
+  max-width:800px;
+  padding:10px;
+}
 
 
 
