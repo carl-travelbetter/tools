@@ -15,6 +15,7 @@ let maximumTip = 25;
 let guidance = "Check if a service charge has already been added";
 let countryName = "United Kingdom";
 let currency = "GBP";
+let mode = "percentage";
 
 fetch('country-tip-list.json')
   .then(response => response.json())
@@ -164,8 +165,14 @@ function switchModes()
   // If the checkbox is checked, display the output text
   if (modeSwitch.checked == true){
     console.log('Round Mode Activated');
+    mode = "rounded";
+    getEl('percentage-mode').hidden = true;
+    getEl('round-mode').hidden = false;
   } else {
     console.log('Percentage Tip Mode Activated');
+    mode = "percentage";
+    getEl('round-mode').hidden = true;
+    getEl('percentage-mode').hidden = false;
   }
 }
 
