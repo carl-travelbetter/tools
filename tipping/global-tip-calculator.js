@@ -163,6 +163,7 @@ function switchModes()
 {
   console.log('Switch modes');
   const modeSwitch = getEl('mode-switch');
+  goAgain();
   // If the checkbox is checked, display the output text
   if (modeSwitch.checked == true){
     console.log('Round Mode Activated');
@@ -213,7 +214,7 @@ function calculateTip()
       //assumes roundup mode
       const roundUpAmount = getEl('round-up').value;
       roundUp = Number(roundUpAmount);
-      if (!Number.isFinite(reoundUp) ||
+      if (!Number.isFinite(roundUp) ||
         roundUp < 0 ||
         roundUp < amount) {
         errorMessage.textContent = "ℹ️ Please enter a round up amount greater than the bill amount";
