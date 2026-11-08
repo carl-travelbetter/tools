@@ -187,17 +187,13 @@ function setupAdjustPeopleButtons()
   const subtractButton = getEl('subtract-person-btn');
    
   addButton.addEventListener("click", () => {
-    addButton.classList.toggle("active");
     addPerson();
     hideResult();
-     addButton.classList.toggle("active");
   });
 
   subtractButton.addEventListener("click", () => {
-    subtractButton.classList.toggle("active");
     subtractPerson();
     hideResult();
-    addButton.classList.toggle("active");
   });
 }
 
