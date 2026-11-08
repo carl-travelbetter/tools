@@ -651,6 +651,11 @@ th .three {
    color: red;
 }
 
+.guidance-text {
+   font-size:small;
+   color: black;
+}
+
 .form-group {
     display: flex;
     flex-direction: column;
