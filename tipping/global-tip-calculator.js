@@ -266,7 +266,7 @@ function calculateAndDisplayResult()
   }
   else
   {
-      tipAmount = roundUp - totalBill;
+      tipAmount = roundUp - amount;
       totalBill = roundUp;
   }
   totalPerPerson = totalBill / split;
