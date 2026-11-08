@@ -10,8 +10,6 @@ let countrySelected = "UK";
 let split = 1;
 let amount = 0;
 let recommendedTip = 10;
-let minimalTip = 0;
-let maximumTip = 25;
 let guidance = "Check if a service charge has already been added";
 let countryName = "United Kingdom";
 let currency = "GBP";
@@ -297,8 +295,6 @@ function selectCountry(countryCode)
   
   recommendedTip = Number(country.recommendedTip);
   getEl('percentage').value = recommendedTip;
-  maximumTip = Number(country.maximumTip);
-  minimalTip = Number(country.minimumTip);
   guidance = country.guidance;
   currency = country.currency;
   countryName = country.country;
