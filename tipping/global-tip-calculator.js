@@ -217,10 +217,11 @@ function calculateAndDisplayResult()
   let totalBill = amount + tipAmount;
   let totalPerPerson = totalBill / split;
    
-    results.innerHTML = `<p><strong>Tip at ${recommendedTip}% is ${formatMoney(tipAmount, currency)}</strong></p>`+
-                        `<p>Total Bill (amount + tip) is  ${formatMoney(totalBill, currency)}</p>`+
-                        `<p>Price Per Person (when divded equally) is ${formatMoney(totalPerPerson,currency)}</p>`;
- 
+    results.innerHTML = `<p>Each Person Pays</p>`+
+                        `<p style="font-size:large"> ${formatMoney(totalPerPerson,currency)}</p>`+
+                        `<hr>`+
+                        `<p>Tip           ${formatMoney(tipAmount, currency)}</p>`+
+                        `<p>Total Bill    ${formatMoney(totalBill, currency)}</p>`;
   results.hidden = false;
  // getEl('go-again').hidden = false;
 }
