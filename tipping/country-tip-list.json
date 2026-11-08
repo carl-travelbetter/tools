@@ -1,52 +1,228 @@
 [
   {
-  "country": "United States",
-  "code": "US",
-  "currency": "USD",
-  "recommendedTip": 20,
-  "guidance": "Tipping is customary in the USA at sit-down restaurants."
-},
- {
-  "country": "United Kingdom",
-  "code": "GB",
-  "currency": "GBP",
-  "recommendedTip": 10,
-  "guidance": "Tipping is customary in the UK, but make sure to check your bill as sometimes restaurants will automatically add a service charge. However, you can ask for this to be removed."
-},
+    "country": "Australia",
+    "code": "AU",
+    "currency": "AUD",
+    "recommendedTip": 0,
+    "guidance": "Tipping is not generally expected. At an upmarket restaurant, an optional tip of around 10% is a way to thank staff for excellent service. You can choose no tip on a payment screen. Weekend and public-holiday surcharges are separate from tips."
+  },
   {
-  "country": "France",
-  "code": "FR",
-  "currency": "EUR",
-  "recommendedTip": 0,
-  "guidance": "By French law, a 15% service charge (service compris) is automatically included in the price of every menu item and therefore tipping is not expected. However, you can still award exceptional service with a small tip."
-},
+    "country": "Austria",
+    "code": "AT",
+    "currency": "EUR",
+    "recommendedTip": 5,
+    "guidance": "At restaurants with table service, rounding up or adding 5–10% is customary for good service. Tell the server the total you would like to pay, including the tip, when settling the bill. Check for any separately added service charge before adding more."
+  },
   {
-  "country": "Germany",
-  "code": "DE",
-  "currency": "EUR",
-  "recommendedTip": 10,
-  "guidance": "Tipping is expected in Germany for good service with a range between 5% to 10%."
-},
+    "country": "Belgium",
+    "code": "BE",
+    "currency": "EUR",
+    "recommendedTip": 0,
+    "guidance": "Service is included in restaurant prices, and an extra tip is optional. If you would like to thank staff for good service, round up or leave a few euros; 5–10% is also acceptable. There is no need to add a fixed percentage."
+  },
   {
-  "country": "Japan",
-  "code": "JP",
-  "currency": "JPY",
-  "recommendedTip": 0,
-  "guidance": "It is not customary to leave a tip in Japan."
-},
-{
-  "country": "Switzerland",
-  "code": "CH",
-  "currency": "CHF",
-  "recommendedTip": 5,
-  "guidance": "Tipping isn't customary or expected in Switzerland and a service charge will be normally be added to your bill. If you do have exceptional service then you can apply the round up rule to your bill or leave a 5% to 10% tip."
-},
-{
-  "country": "Greece",
-  "code": "GR",
-  "currency": "EUR",
-  "recommendedTip": 5,
-  "guidance": "Tipping in Greek restaurants is optional and not mandatory, though a small gesture of appreciation is always welcome for good service."
-}
+    "country": "Bulgaria",
+    "code": "BG",
+    "currency": "EUR",
+    "recommendedTip": 10,
+    "guidance": "At restaurants with table service, around 10% is customary for good service, though tipping is voluntary. Check whether service is already included before adding more. Bulgaria now uses the euro, so use euros for cash tips."
+  },
+  {
+    "country": "Canada",
+    "code": "CA",
+    "currency": "CAD",
+    "recommendedTip": 18,
+    "guidance": "At restaurants with table service, 15–20% is customary for good service; 18% is a useful middle option. Calculate it on the amount before sales tax. Check for an included gratuity, especially for groups, so you do not tip twice. Payment-screen suggestions are not compulsory."
+  },
+  {
+    "country": "Cyprus",
+    "code": "CY",
+    "currency": "EUR",
+    "recommendedTip": 0,
+    "guidance": "Tipping is optional. In the Republic of Cyprus, restaurant menu prices should already include service, so an extra percentage is not necessary. Round up or leave a small amount for good service if you wish. This euro-based guidance does not cover Northern Cyprus."
+  },
+  {
+    "country": "Czechia",
+    "code": "CZ",
+    "currency": "CZK",
+    "recommendedTip": 10,
+    "guidance": "At restaurants with table service, around 10% is a common tip for good service. Check for an included service charge first. Tell the server the total you want to pay, including the tip, before handing over cash or using your card."
+  },
+  {
+    "country": "Denmark",
+    "code": "DK",
+    "currency": "DKK",
+    "recommendedTip": 0,
+    "guidance": "Service is included in restaurant bills, and tipping is not expected. You can leave a little extra for excellent service if you wish, but there is no standard percentage to add. Paying the amount on the bill is fine."
+  },
+  {
+    "country": "Egypt",
+    "code": "EG",
+    "currency": "EGP",
+    "recommendedTip": 10,
+    "guidance": "At restaurants with table service, around 10% is a common tip for good service. A service charge may already be on the bill, but it does not necessarily go to the waiter, so a separate small cash tip is often customary. Use Egyptian pounds and check what is included."
+  },
+  {
+    "country": "France",
+    "code": "FR",
+    "currency": "EUR",
+    "recommendedTip": 0,
+    "guidance": "Restaurant prices include service, so no extra tip is needed. If you would like to thank staff for good service, round up or leave a few euros. You do not need to add another percentage just because a card machine offers a tip option."
+  },
+  {
+    "country": "Germany",
+    "code": "DE",
+    "currency": "EUR",
+    "recommendedTip": 5,
+    "guidance": "At restaurants with table service, rounding up or adding 5–10% for good service is common. Tell the server the total you want to pay, including the tip, before paying by cash or card. Check for any service charge already added."
+  },
+  {
+    "country": "Greece",
+    "code": "GR",
+    "currency": "EUR",
+    "recommendedTip": 5,
+    "guidance": "Tipping is optional. After a meal with table service, rounding up or leaving 5–10% is a welcome thank you for good service. Check for any included service charge before adding more. A small cash tip is often convenient."
+  },
+  {
+    "country": "Hungary",
+    "code": "HU",
+    "currency": "HUF",
+    "recommendedTip": 10,
+    "guidance": "At restaurants with table service, 10–15% is customary for good service if no service charge is included. Check for szervizdíj on the bill: if it is there, an extra tip is not needed. Tell the server about any tip before paying by card."
+  },
+  {
+    "country": "India",
+    "code": "IN",
+    "currency": "INR",
+    "recommendedTip": 10,
+    "guidance": "At restaurants with table service, 5–10% is a common thank you for good service. Check the bill for a service charge before adding more; you do not need to tip twice. Tips are not normally expected at street-food stalls or basic counter-service places."
+  },
+  {
+    "country": "Ireland",
+    "code": "IE",
+    "currency": "EUR",
+    "recommendedTip": 10,
+    "guidance": "At restaurants with table service, 10–15% is a common tip for good service, but it is optional. Check for an included service charge, especially for larger groups; there is no need to tip again. Tipping is not usually expected when buying drinks at the bar."
+  },
+  {
+    "country": "Italy",
+    "code": "IT",
+    "currency": "EUR",
+    "recommendedTip": 0,
+    "guidance": "An extra tip is optional. Rounding up or leaving a few euros is a simple thank you for good service. Check for servizio, a service charge, before adding more. A coperto is a per-person cover charge, not a tip, but it does not mean you must leave an extra tip."
+  },
+  {
+    "country": "Japan",
+    "code": "JP",
+    "currency": "JPY",
+    "recommendedTip": 0,
+    "guidance": "Tipping is not customary at restaurants, cafés or bars. Pay the amount shown on the bill; there is no need to round up or leave money on the table. A polite thank you is enough."
+  },
+  {
+    "country": "Malta",
+    "code": "MT",
+    "currency": "EUR",
+    "recommendedTip": 5,
+    "guidance": "At restaurants with table service, a tip of 5–10% is customary for good service, but it is optional. Check for an included service charge first; if it is there, there is no need to add more. Rounding up is also a simple option."
+  },
+  {
+    "country": "Morocco",
+    "code": "MA",
+    "currency": "MAD",
+    "recommendedTip": 10,
+    "guidance": "At restaurants with table service, around 5–10% is a common thank you for good service. Check for an included service charge before adding more. At a simple café, a small amount of change is enough. Cash tips in Moroccan dirhams are convenient."
+  },
+  {
+    "country": "Netherlands",
+    "code": "NL",
+    "currency": "EUR",
+    "recommendedTip": 5,
+    "guidance": "An extra tip is optional. Rounding up or leaving 5–10% after good table service is appreciated. If paying by card, tell the server the total you would like to pay before they enter it. You do not need to match the tip options suggested by a payment screen."
+  },
+  {
+    "country": "Norway",
+    "code": "NO",
+    "currency": "NOK",
+    "recommendedTip": 0,
+    "guidance": "Tipping is optional. At restaurants, some diners round up or leave around 5–15% when pleased with the food or service, but there is no fixed rule. You can simply pay the bill, and you do not need to add a tip because a payment screen suggests one."
+  },
+  {
+    "country": "Pakistan",
+    "code": "PK",
+    "currency": "PKR",
+    "recommendedTip": 10,
+    "guidance": "At restaurants with table service, around 5–10% is a common thank you for good service, but it is optional. Check for an included service charge before adding more. Cash in Pakistani rupees is often the simplest way to leave a tip."
+  },
+  {
+    "country": "Poland",
+    "code": "PL",
+    "currency": "PLN",
+    "recommendedTip": 10,
+    "guidance": "At restaurants with table service, around 10% is a common thank you for good service. Check for an included service charge first. When paying cash, make clear whether you want change: saying thank you as you hand over the money can be understood as keep the change."
+  },
+  {
+    "country": "Portugal",
+    "code": "PT",
+    "currency": "EUR",
+    "recommendedTip": 5,
+    "guidance": "Tipping is optional. At restaurants with table service, rounding up, leaving a few euros or adding 5–10% are all reasonable ways to thank staff for good service. Check the bill for an included service charge before adding more."
+  },
+  {
+    "country": "Romania",
+    "code": "RO",
+    "currency": "RON",
+    "recommendedTip": 10,
+    "guidance": "At restaurants with table service, around 10% is customary for good service, though tipping is voluntary. Check whether a tip or service charge is already on the bill before adding more. If paying by card, ask how to include the tip before completing payment."
+  },
+  {
+    "country": "Spain",
+    "code": "ES",
+    "currency": "EUR",
+    "recommendedTip": 0,
+    "guidance": "Tipping is optional, and there is no fixed percentage to add. At an everyday restaurant, rounding up or leaving a little change is enough if you want to. For especially good service at a more formal restaurant, 5–10% is a generous choice."
+  },
+  {
+    "country": "Switzerland",
+    "code": "CH",
+    "currency": "CHF",
+    "recommendedTip": 0,
+    "guidance": "Service is included in restaurant prices, so an extra tip is optional. For good service, you can round up or leave a small amount if you wish. There is no need to add a fixed percentage."
+  },
+  {
+    "country": "Thailand",
+    "code": "TH",
+    "currency": "THB",
+    "recommendedTip": 0,
+    "guidance": "Tipping is optional. At casual restaurants, rounding up or leaving a small cash amount is enough if you wish. At more formal restaurants, 5–10% is appreciated when no service charge is included. If service is already charged, no extra tip is needed. Street-food stalls do not normally expect tips."
+  },
+  {
+    "country": "Turkey",
+    "code": "TR",
+    "currency": "TRY",
+    "recommendedTip": 10,
+    "guidance": "At restaurants with table service, around 10% is customary for good service; 10–15% is common in tourist areas. Check whether service is already included before adding more. Keep some Turkish lira available, as adding a tip by card may not be possible."
+  },
+  {
+    "country": "United Arab Emirates",
+    "code": "AE",
+    "currency": "AED",
+    "recommendedTip": 10,
+    "guidance": "Tipping is optional. At restaurants with table service, around 10% is a common thank you for good service. Check the bill first, as hotel and higher-end restaurants often add a service charge; any extra tip is your choice. Use UAE dirhams for cash tips."
+  },
+  {
+    "country": "United Kingdom",
+    "code": "GB",
+    "currency": "GBP",
+    "recommendedTip": 10,
+    "guidance": "At restaurants with table service, 10–15% is a common optional tip for good service. Check the bill first: if a service charge is included, there is no need to add more. A charge labelled discretionary or optional can be removed on request. Tips are not usually expected when ordering at a pub bar."
+  },
+  {
+    "country": "United States",
+    "code": "US",
+    "currency": "USD",
+    "recommendedTip": 20,
+    "guidance": "At restaurants with table service, 18–20% is customary; 20% is a straightforward guide for good service. Calculate it on the amount before sales tax. Check for an included gratuity, especially for groups, so you do not tip twice. Counter-service tips are optional."
+  }
 ]
+
   
