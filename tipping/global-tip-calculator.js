@@ -106,6 +106,7 @@ function setupPercentageButtons()
     twentyFivePercent.classList.remove("active");
     recommendedTip = 5;
     getEl('percentage').value = recommendedTip;
+    hideResult();
   });
 
   tenPercent.addEventListener("click", () => {
@@ -116,6 +117,7 @@ function setupPercentageButtons()
     twentyFivePercent.classList.remove("active");
     recommendedTip = 10;
     getEl('percentage').value = recommendedTip;
+    hideResult();
   });
 
   fifteenPercent.addEventListener("click", () => {
@@ -126,6 +128,7 @@ function setupPercentageButtons()
     twentyFivePercent.classList.remove("active");
     recommendedTip = 15;
     getEl('percentage').value = recommendedTip;
+    hideResult();
   });
 
   twentyPercent.addEventListener("click", () => {
@@ -136,6 +139,7 @@ function setupPercentageButtons()
     twentyFivePercent.classList.remove("active");
     recommendedTip = 20;
     getEl('percentage').value = recommendedTip;
+    hideResult();
   });
 
   twentyFivePercent.addEventListener("click", () => {
@@ -146,6 +150,7 @@ function setupPercentageButtons()
     twentyPercent.classList.remove("active");
     recommendedTip = 25;
     getEl('percentage').value = recommendedTip;
+    hideResult();
   });
   
 }
