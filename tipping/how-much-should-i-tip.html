@@ -48,29 +48,31 @@
               >
           </div>
           <div class="space-element" id="mode">
-            <p>Rounded Tip</p>
+            <p>Use Rounded Tip</p>
             <label class="switch">
               <input type="checkbox" id="mode-switch">
               <span class="slider round"></span>
             </label>
           </div>
-          <div class="form-group" id="tip">
-              <label for="percentage">Tip (%)</label>
-              <input
-                  class="form-input"
-                  type="number"
-                  id="percentage"
-                  name="percentage"
-                  min="0"
-                  max="100"
-                  step="0.5"
-              >
+          <div id="percentage-mode">
+            <div class="form-group" id="tip">
+                <label for="percentage">Tip (%)</label>
+                <input
+                    class="form-input"
+                    type="number"
+                    id="percentage"
+                    name="percentage"
+                    min="0"
+                    max="100"
+                    step="0.5"
+                >
+            </div>
           </div>
           <div class="spacing-element" id="percent-buttons">
             <button class="tag-btn" id="five-percent-btn" >5%</button> <button class="tag-btn" id="ten-percent-btn" >10%</button> <button class="tag-btn" id="fifteen-percent-btn" value="15">15%</button>
             <button class="tag-btn" id="twenty-percent-btn" >20%</button> <button class="tag-btn" id="twenty-five-percent-btn" >25%</button>
           </div>
-          <div id="round-option" hidden>
+          <div id="round-mode" hidden>
             <div class="form-group" id="round">
                 <label for="round-up">Round Up</label>
                 <input
