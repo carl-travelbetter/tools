@@ -39,7 +39,8 @@ function bindEvents() {
   getEl('split')?.addEventListener("input", hideResult);
   getEl('percentage')?.addEventListener("input", hideResult);
   getEl('mode-switch')?.addEventListener("click", switchModes);
-  setupPercentageButtons(); 
+  setupPercentageButtons();
+  setupAdjustPeopleButtons();
 }
 
 //Ensure html bindings are not applied until the html structure is built
@@ -176,6 +177,49 @@ function switchModes()
     getEl('percentage-mode').hidden = false;
     getEl('percent-buttons').hidden = false;
   }
+}
+
+//setup the + and - buttons
+function setupAdjustPeopleButtons()
+{
+  console.log('Set Up Adjust People Buttons');
+  const addButton = getEl('add-person-btn');
+  const subtractButton = getEl('subtract-person-btn');
+   
+  addButton.addEventListener("click", () => {
+    addButton.classList.toggle("active");
+    addPerson();
+    hideResult();
+     addButton.classList.toggle("active");
+  });
+
+  subtractButton.addEventListener("click", () => {
+    subtractButton.classList.toggle("active");
+    subtractPerson();
+    hideResult();
+    addButton.classList.toggle("active");
+  });
+}
+
+//add payee to the bill
+function addPerson()
+{
+  console.log('Adding Payeee');
+  let payees = Number(getEl('split').value);
+  payees=+;
+  getEl('split').value = payees;
+}
+
+//subtract payee to the bill
+function subtractPerson()
+{
+  console.log('Adding Payeee');
+  let payees = Number(getEl('split').value);
+  if (payees > 1)
+  {
+    payees=-;
+  }
+  getEl('split').value = payees;
 }
 
 //Grab the variables and calculate the tip - including error handling
