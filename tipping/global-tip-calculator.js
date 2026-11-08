@@ -206,7 +206,7 @@ function addPerson()
 {
   console.log('Adding Payeee');
   let payees = Number(getEl('split').value);
-  payees=+;
+  payees = payees + 1;
   getEl('split').value = payees;
 }
 
@@ -217,7 +217,7 @@ function subtractPerson()
   let payees = Number(getEl('split').value);
   if (payees > 1)
   {
-    payees=-;
+    payees = payees - 1;
   }
   getEl('split').value = payees;
 }
