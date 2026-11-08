@@ -167,12 +167,14 @@ function switchModes()
     console.log('Round Mode Activated');
     mode = "rounded";
     getEl('percentage-mode').hidden = true;
+    getEl('percent-buttons').hidden = true;
     getEl('round-mode').hidden = false;
   } else {
     console.log('Percentage Tip Mode Activated');
     mode = "percentage";
     getEl('round-mode').hidden = true;
     getEl('percentage-mode').hidden = false;
+    getEl('percent-buttons').hidden = false;
   }
 }
 
