@@ -254,10 +254,21 @@ function calculateAndDisplayResult()
 {
   console.log('Display Log');
   const results = getEl('results');
-  //let tipAmount = Math.round((amount*(recommendedTip/100))*100)/100;
-  let tipAmount = amount*(recommendedTip/100);
-  let totalBill = amount + tipAmount;
-  let totalPerPerson = totalBill / split;
+  let tipAmount = 0;
+  let totalBill = 0;
+  let totalPerPerson = 0;
+  
+  if (mode === "percentage")
+  {
+     tipAmount = amount*(recommendedTip/100);
+     totalBill = amount + tipAmount;
+  }
+  else
+  {
+      tipAmount = roundUp - totalBill;
+      totalBill = roundUp;
+  }
+  totalPerPerson = totalBill / split;
    
     results.innerHTML = `<p>Each Person Pays</p>`+
                         `<p style="font-size:1.5em"> ${formatMoney(totalPerPerson,currency)}</p>`+
