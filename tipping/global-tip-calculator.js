@@ -218,7 +218,7 @@ function calculateAndDisplayResult()
   let totalPerPerson = totalBill / split;
    
     results.innerHTML = `<p>Each Person Pays</p>`+
-                        `<p style="font-size:large"> ${formatMoney(totalPerPerson,currency)}</p>`+
+                        `<p style="font-size:1.5em"> ${formatMoney(totalPerPerson,currency)}</p>`+
                         `<hr>`+
                         `<p>Tip           ${formatMoney(tipAmount, currency)}</p>`+
                         `<p>Total Bill    ${formatMoney(totalBill, currency)}</p>`;
