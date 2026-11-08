@@ -38,6 +38,7 @@ function bindEvents() {
   getEl('amount')?.addEventListener("input", hideResult);
   getEl('split')?.addEventListener("input", hideResult);
   getEl('percentage')?.addEventListener("input", hideResult);
+  getEl('mode-switch')?.addEventListener("click", switchModes);
   setupPercentageButtons(); 
 }
 
@@ -153,6 +154,19 @@ function setupPercentageButtons()
     hideResult();
   });
   
+}
+
+//switch between rounded and percentage tip solution
+function switchModes()
+{
+  console.log('Switch modes');
+  const modeSwitch = getEl('mode-switch');
+  // If the checkbox is checked, display the output text
+  if (modeSwitch.checked == true){
+    console.log('Round Mode Activated');
+  } else {
+    console.log('Percentage Tip Mode Activated');
+  }
 }
 
 //Grab the variables and calculate the tip - including error handling
