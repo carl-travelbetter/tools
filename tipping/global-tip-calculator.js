@@ -16,6 +16,7 @@ let guidance = "Check if a service charge has already been added";
 let countryName = "United Kingdom";
 let currency = "GBP";
 let mode = "percentage";
+let roundUp = 0;
 
 fetch('country-tip-list.json')
   .then(response => response.json())
@@ -195,15 +196,33 @@ function calculateTip()
         return;
   }
 
-  const percentageEntered = getEl('percentage').value;
-  recommendedTip = Number(percentageEntered);
-  if (!Number.isFinite(recommendedTip) ||
-    recommendedTip < 0 ||
-    recommendedTip > 100) {
-    errorMessage.textContent = "ℹ️ Please enter a tip between 0% and 100%";
-    errorMessage.hidden = false;
-    return;
-}
+  if (mode === "percentage")
+  {
+    const percentageEntered = getEl('percentage').value;
+    recommendedTip = Number(percentageEntered);
+    if (!Number.isFinite(recommendedTip) ||
+      recommendedTip < 0 ||
+      recommendedTip > 100) {
+      errorMessage.textContent = "ℹ️ Please enter a tip between 0% and 100%";
+      errorMessage.hidden = false;
+      return;
+    }
+  }
+  else
+  {
+      //assumes roundup mode
+      const roundUpAmount = getEl('round-up').value;
+      roundUp = Number(roundUpAmount);
+      if (!Number.isFinite(reoundUp) ||
+        roundUp < 0 ||
+        roundUp < amount) {
+        errorMessage.textContent = "ℹ️ Please enter a round up amount greater than the bill amount";
+        errorMessage.hidden = false;
+        return;
+      }
+    }
+  
+
   
  split = Number(getEl('split').value);
 
