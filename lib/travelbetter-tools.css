@@ -607,6 +607,11 @@ li .span-text {
   text-align: left;
 }
 
+li .span-longtext {
+   flex-basis: 75%;
+   text-align: left;
+}
+
 li .span-value {
   flex-basis: 25%;
   text-align: left;
