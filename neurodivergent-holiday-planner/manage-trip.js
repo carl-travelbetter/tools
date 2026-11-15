@@ -136,7 +136,7 @@ function displayAccommodationList()
         placeCard.appendChild(placeName);
         const editButton = document.createElement('button');
         editButton.className = 'control-btn';
-        editButton.textContent = 'Edit';
+        editButton.textContent = 'More Details';
       
         editButton.addEventListener('click', () => {
           //Get title and add to focus list then change page
