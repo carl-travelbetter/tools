@@ -38,21 +38,13 @@ function addItem()
   getEl('create-item').hidden = false;
 }
 
-function getReferenceID()
-{
-  console.log('Get Reference ID');
-  let pos = prepareData.prepareSet.length || 1;
-  console.log('Position '+pos);
-  return pos++;
-}
-
 //Submit Walk
 function submitItem()
 {
   console.log('Submit Pre Trip To Do Item');
   let item = {};
   item.trip = focusTrip;
-  item.reference = getReferenceID();
+  item.status = "Not Done";
   item.description = getEl('item').value || "Empty";
   prepareData.prepareSet.push(item);
   saveData();
@@ -85,46 +77,55 @@ function displayToDoItems()
   list.appendChild(listHeader);
 
   //Create List Item
-  let idx = 0;
+  let idx = 1;
+  let pos = 0;
   const itemsForThisTrip = prepareData.prepareSet.filter(itemList => 
        itemList.trip.includes(focusTrip)
   );
 
-  itemsForThisTrip.forEach(item =>
+  prepareData.prepareSet.forEach(item =>
   {
-    idx++;
-    let listItem = document.createElement('li');
-    //listItem.textContent = item.description+': '+item.calories;
-    let listID = document.createElement('span');
-    listID.className = 'span-id';
-    listID.textContent = ""+idx;
-    listItem.appendChild(listID);
-    let listDecription = document.createElement('span');
-    listDecription.className = 'span-text';
-    listDecription.textContent = item.description;
-    listItem.appendChild(listDecription);
-    
-    let listComplete = document.createElement('span');
-    listComplete.className = 'span-action';
-    
-    //create a delete button
-    const completeButton = document.createElement("button");
-    completeButton.textContent = "✅";
-    completeButton.setAttribute("data-label", idx-1);
-      //Make the button do something
-       //Make the button do something when clicked
-      completeButton.addEventListener("click", () => {
-      
-      console.log("Complete Button Clicked");
-      console.log("Complete ID = "+completeButton.dataset.label);
-      completeListItem(item.reference);
-      displayToDoItems() 
-      });
-      listComplete.appendChild(completeButton);
-      listItem.appendChild(listComplete);
-      list.appendChild(listItem);
+    if (item.trip === focusTrip)
+    {
+        let listItem = document.createElement('li');
+        //listItem.textContent = item.description+': '+item.calories;
+        let listID = document.createElement('span');
+        listID.className = 'span-id';
+        listID.textContent = ""+idx;
+        listItem.appendChild(listID);
+        let listDecription = document.createElement('span');
+        listDecription.className = 'span-text';
+        listDecription.textContent = item.description;
+        listItem.appendChild(listDecription);
+        
+        let listComplete = document.createElement('span');
+        listComplete.className = 'span-action';
+        
+        //create a delete button
+        const completeButton = document.createElement("button");
+        completeButton.textContent = "✅";
+        completeButton.setAttribute("data-label", pos);
+          //Make the button do something
+           //Make the button do something when clicked
+        completeButton.addEventListener("click", () => {
+          
+          console.log("Complete Button Clicked");
+          console.log("Complete ID = "+completeButton.dataset.label);
+          prepareData.prepareSet.splice(completeButton.dataset.label,1);
+          displayToDoItems() 
+        });
+        listComplete.appendChild(completeButton);
+        listItem.appendChild(listComplete);
+        list.appendChild(listItem);
+        idk++;
+        toDoList.appendChild(list);
+    }
+    else
+    {
+      console.log('Not this trip');
+    }
+    pos++;
   });
-  toDoList.appendChild(list);
   toDoList.hidden = false;
 }
 
