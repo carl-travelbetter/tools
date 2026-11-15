@@ -38,12 +38,21 @@ function addItem()
   getEl('create-item').hidden = false;
 }
 
+function getReferenceID()
+{
+  console.log('Get Reference ID');
+  let pos = prepareData.prepareSet.length || 1;
+  console.log('Position '+pos);
+  return pos++;
+}
+
 //Submit Walk
 function submitItem()
 {
   console.log('Submit Pre Trip To Do Item');
   let item = {};
   item.trip = focusTrip;
+  item.reference = getReferenceOD();
   item.description = getEl('item').value || "Empty";
   prepareData.prepareSet.push(item);
   saveData();
@@ -108,7 +117,7 @@ function displayToDoItems()
       
       console.log("Complete Button Clicked");
       console.log("Complete ID = "+completeButton.dataset.label);
-      completeListItem(item);
+      completeListItem(item.reference);
       displayToDoItems() 
       });
       listComplete.appendChild(completeButton);
@@ -119,11 +128,19 @@ function displayToDoItems()
   toDoList.hidden = false;
 }
 
-function completeListItem(item)
+//Take the item reference, find in the main set and splice out
+function completeListItem(reference)
 {
-   let pos = prepareData.prepareSet.findIndex(item);
-   console.log('Completed Item At Position '+pos);
-   preapreData.prepareSet.splice(pos,1);
+   console.log('Complete List Item '+reference);
+   let pos = 0;
+   prepareData.prepareSet.forEach(item =>
+   { 
+       if (item.reference === reference)
+       {
+          prepareData.prepareSet.splice(pos,1);
+       }
+       pos++
+    });
    saveData(); 
 }
 
