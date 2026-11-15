@@ -20,7 +20,7 @@ let prepareData = JSON.parse(localStorage.getItem(PREPARE_KEY)) || {prepareSet: 
 //Set events for button clicks in document (will be applied to all dom objects (pages) that call this js
 function bindEvents() 
 {
-  getEl("add-item")?.addEventListener("click", addItem);
+  getEl("add-item")?.addEventListener("click", addItems);
   getEl("submit-btn")?.addEventListener("click", submitItem);
 }
 
@@ -33,9 +33,10 @@ if (prepareData.prepareSet.length > 0)
   displayToDoItems();
 }
 
-function addItem()
+function addItems()
 {
   getEl('create-item').hidden = false;
+  getEl('add-control').hidden = true;
 }
 
 //Submit Walk
@@ -46,6 +47,7 @@ function submitItem()
   item.trip = focusTrip;
   item.description = getEl('item').value || "Empty";
   prepareData.prepareSet.push(item);
+  getEl('item').value = "";
   saveData();
   displayToDoItems();
   //updateTracker();
