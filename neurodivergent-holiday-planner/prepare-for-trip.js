@@ -114,7 +114,7 @@ function displayToDoItems()
   toDoList.hidden = false;
 }
 
-function completeListItm(item)
+function completeListItem(item)
 {
    let pos = prepareData.prepareSet.findIndex(trip);
    console.log('Completed Item At Position '+pos);
