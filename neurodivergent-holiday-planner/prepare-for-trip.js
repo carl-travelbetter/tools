@@ -69,15 +69,15 @@ function displayToDoItems()
   const listHeader = document.createElement('li');
   const listHeaderID = document.createElement('span');
   listHeaderID.className = 'span-id';
-  listHeaderID.textContent = 'ID';
+  listHeaderID.textContent = 'Num';
   listHeader.appendChild(listHeaderID);
   const listHeaderItem = document.createElement('span');
   listHeaderItem.className = 'span-longtext';
-  listHeaderItem.textContent = 'Description';
+  listHeaderItem.textContent = 'To-Do Item';
   listHeader.appendChild(listHeaderItem); 
   const listHeaderAction = document.createElement('span');
   listHeaderAction.className = 'span-action';
-  listHeaderAction.textContent = 'Mark Complete';
+  listHeaderAction.textContent = 'Tick off';
   listHeader.appendChild(listHeaderAction);
   list.appendChild(listHeader);
 
