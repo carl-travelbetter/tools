@@ -63,6 +63,7 @@ function saveAccommodation()
   accommodation.arrivalDate = getEl('arrival-date').value;
   accommodation.departureDate = getEl('departure-date').value;
   accommodation.type = getEl('type').value;
+  accommodation.hotelLink = getEl('hotel-website').value;
   accommodation.gmap = getEl('g-map').value;
   accommodations.savedAccommodation.push(accommodation);
   saveAccommodationList()
