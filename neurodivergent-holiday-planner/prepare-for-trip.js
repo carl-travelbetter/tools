@@ -117,7 +117,7 @@ function displayToDoItems()
         listComplete.appendChild(completeButton);
         listItem.appendChild(listComplete);
         list.appendChild(listItem);
-        idk++;
+        idx++;
         toDoList.appendChild(list);
     }
     else
