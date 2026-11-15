@@ -44,7 +44,6 @@ function submitItem()
   console.log('Submit Pre Trip To Do Item');
   let item = {};
   item.trip = focusTrip;
-  item.status = "Not Done";
   item.description = getEl('item').value || "Empty";
   prepareData.prepareSet.push(item);
   saveData();
