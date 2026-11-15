@@ -118,6 +118,7 @@ function displayToDoItems()
           console.log("Complete Button Clicked");
           console.log("Complete ID = "+completeButton.dataset.label);
           prepareData.prepareSet.splice(completeButton.dataset.label,1);
+          saveData();
           displayToDoItems() 
         });
         listComplete.appendChild(completeButton);
