@@ -1,0 +1,57 @@
+<DOCTYPE! html>
+  <html lang="en">
+    <head>
+      <title>Prepare For The Trip | Neurodivergent Travel Planner | Travelbetter</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="Create and manage those pre-trip preparation activities." />
+     <meta charset="UTF-8">
+     <link rel="stylesheet" href="https://tools.travelbetter.co.uk/lib/travelbetter-tools.css">
+     <script type="module" src="prepare-for-trip.js" defer></script>
+    </head>
+    <body>
+       <div class="tb-navbar">
+        <ul>
+          <li><a href="https://travelbetter.co.uk">Travelbetter</a></li>
+          <li><a href="https://tools.travelbetter.co.uk/index.html">Tools</a></li>
+        </ul>
+       </div>
+      <div class="intro" id="intro">
+        <h1>Prepare For This Trip</h1>
+        <p>Create, view, and tick off all those pre-trip checklists and to-do items.</p>
+      </div>
+      <!-- Show Trip Details -->
+      <div class="display-card" id="display-trip" hidden>
+        
+      </div>
+      <div class="controls-card">
+        <button class="control-btn" id="add-item">Add New Item</button>
+      </div>
+      <div class="display-card" id="create-item" hidden>
+        <label for="item">Enter Item</label>
+        <input class="form-input" type="text" id="item" name="item" /><br>       
+        <button class="control-btn" id="submit-btn">Submit</button>
+        <button class="control-btn" id="cancel-btn">Cancel</button>
+      </div>
+      
+      <div class="display-card" id="to-do-list">
+       
+      </div>
+      
+      
+       <div class="display-card" id="exit">
+        <h2>Return to Main Menu</h2>
+        <div class="controls-card">
+          <button class="control-btn" id="exit-btn">Exit</button>
+        </div>
+      </div>
+      <footer class="tb-footer">
+        <h3>About Travelbetter</h3>
+        <div class="tb-footer-inner">
+        <p>Travelbetter is a family travel project created to support quiet, anxious and neurodiverse travellers. We believe travel should feel calm, kind and accessible — not overwhelming. Through simple tools, thoughtful guides and lived experience, we help families plan trips that truly work for them.
+        </p>
+        <p class="tagline">Our mission is to help familes Explore More and Worry Less</p>
+        <p><a href="https://travelbetter.co.uk">Learn More</a></p>
+        </div>
+      </footer>
+    </body>
+  </html>
