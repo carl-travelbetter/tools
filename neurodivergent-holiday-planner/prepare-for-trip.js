@@ -22,6 +22,7 @@ function bindEvents()
 {
   getEl("add-item")?.addEventListener("click", addItems);
   getEl("submit-btn")?.addEventListener("click", submitItem);
+  getEl("exit-btn")?.addEventListener("click", exit);
 }
 
 
@@ -155,4 +156,9 @@ function saveData()
 {
   console.log("Saving Data...");
   localStorage.setItem(PREPARE_KEY, JSON.stringify(prepareData));
+}
+
+function exit()
+{
+  window.location.assign('/neurodivergent-holiday-planner/manage-trip.html');
 }
