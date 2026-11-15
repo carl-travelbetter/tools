@@ -46,6 +46,7 @@ function bindEvents() {
   getEl("departure-date")?.addEventListener("change", calcDuration);
   getEl("arrival-date")?.addEventListener("change", calcDuration);
   getEl("open-g-maps")?.addEventListener("click", openGoogleMaps);
+  getEl("open-hotel-website")?.addEventListener("click", openHotelWebsite);
 }
 
 //Ensure html bindings are not applied until the html structure is built
@@ -144,6 +145,20 @@ function openGoogleMaps()
     window.open(currentURL, "_blank", "noopener");
   }
 }
+
+function openHotelWebsite()
+{
+  const hotelURL = getEl('hotel-website').value;
+  if (!hotelURL)
+  {
+    alert("No Hotel Website Saved");
+  }
+  else
+  {
+    window.open(hotelURL, "_blank", "noopener");
+  }
+}
+
 
 function deleteAccommodation()
 {
