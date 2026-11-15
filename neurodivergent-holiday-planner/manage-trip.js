@@ -28,6 +28,7 @@ function bindEvents()
   getEl('exit-btn')?.addEventListener('click', exitToMain);
   getEl('find-accommodation')?.addEventListener('click', findAccommodation);
   getEl('add-accommodation')?.addEventListener('click', addAccommodation);
+  getEl('prepare-for-trip')?.addEventListener('click', prepareForTrip);
 }
 
 
@@ -186,5 +187,10 @@ function findAccommodation()
 function addAccommodation()
 {
   window.location.assign('/neurodivergent-holiday-planner/add-accommodation.html');
+}
+
+function prepareForTrip()
+{
+  window.location.assign('/neurodivergent-holiday-planner/prepare-for-trip.html');
 }
 
