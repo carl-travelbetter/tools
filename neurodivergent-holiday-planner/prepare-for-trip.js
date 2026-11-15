@@ -110,7 +110,7 @@ function displayToDoItems()
       listItem.appendChild(listComplete);
       list.appendChild(listItem);
   });
-  toDoList.appendchild(list);
+  toDoList.appendChild(list);
   toDoList.hidden = false;
 }
 
