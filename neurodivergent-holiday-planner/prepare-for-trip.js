@@ -72,7 +72,7 @@ function displayToDoItems()
   listHeaderID.textContent = 'ID';
   listHeader.appendChild(listHeaderID);
   const listHeaderItem = document.createElement('span');
-  listHeaderItem.className = 'span-text';
+  listHeaderItem.className = 'span-longtext';
   listHeaderItem.textContent = 'Description';
   listHeader.appendChild(listHeaderItem); 
   const listHeaderAction = document.createElement('span');
