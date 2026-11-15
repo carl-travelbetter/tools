@@ -71,14 +71,14 @@ function displayToDoItems()
   list.appendChild(listHeader);
 
   //Create List Item
-  let idk = 0;
+  let idx = 0;
   const itemsForThisTrip = prepareData.prepareSet.filter(itemList => 
        itemList.trip.includes(focusTrip)
   );
 
   itemsForThisTrip.forEach(item =>
   {
-    idk++;
+    idx++;
     let listItem = document.createElement('li');
     //listItem.textContent = item.description+': '+item.calories;
     let listID = document.createElement('span');
