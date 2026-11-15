@@ -59,6 +59,10 @@ function displayToDoItems()
   console.log('Display To Do Items');
   const toDoList = getEl('to-do-list');
   toDoList.innerHTML = "";
+  const header = document.createElement('h2');
+  heaeder.textContent = "Pre Trip To-Do List";
+  toDoList.appendChild(header);
+  
   const list = document.createElement('ul');
 
   //Create List Header
