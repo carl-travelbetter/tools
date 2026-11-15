@@ -66,6 +66,7 @@ function loadAccommodation()
       getEl('arrival-date').value = place.arrivalDate;
       getEl('departure-date').value = place.departureDate;
       getEl('type').value = place.type;
+      getEl('g-map').value = place.gmap || "Not Set"; 
       calcDuration();
     }
   });
