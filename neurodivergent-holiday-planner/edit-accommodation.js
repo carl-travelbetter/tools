@@ -66,6 +66,7 @@ function loadAccommodation()
       getEl('arrival-date').value = place.arrivalDate;
       getEl('departure-date').value = place.departureDate;
       getEl('type').value = place.type;
+      getEl('hotel-website').value = place.hotelLink || "Not Set";
       getEl('g-map').value = place.gmap || "Not Set"; 
       calcDuration();
     }
@@ -90,6 +91,7 @@ function saveAccommodation()
       place.arrivalDate = getEl('arrival-date').value;
       place.departureDate = getEl('departure-date').value;
       place.type = getEl('type').value;
+      place.hotelLink = getEl('hotel-website').value;
       place.gmap = getEl('g-map').value;
       saveAccommodationList()
     }
