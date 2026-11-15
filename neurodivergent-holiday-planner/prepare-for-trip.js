@@ -74,7 +74,7 @@ function displayToDoItems()
   listHeader.appendChild(listHeaderID);
   const listHeaderItem = document.createElement('span');
   listHeaderItem.className = 'span-longtext';
-  listHeaderItem.textContent = 'To-Do Item';
+  listHeaderItem.textContent = 'To-Do Items';
   listHeader.appendChild(listHeaderItem); 
   const listHeaderAction = document.createElement('span');
   listHeaderAction.className = 'span-action';
@@ -100,7 +100,7 @@ function displayToDoItems()
         listID.textContent = ""+idx;
         listItem.appendChild(listID);
         let listDecription = document.createElement('span');
-        listDecription.className = 'span-text';
+        listDecription.className = 'span-longtext';
         listDecription.textContent = item.description;
         listItem.appendChild(listDecription);
         
