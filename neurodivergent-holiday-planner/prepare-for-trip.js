@@ -28,6 +28,11 @@ function bindEvents()
 //Ensure html bindings are not applied until the html structure is built
 document.addEventListener("DOMContentLoaded", bindEvents);
 
+if (prepareData.prepareSet.length > 0)
+{
+  displayToDoItems();
+}
+
 function addItem()
 {
   getEl('create-item').hidden = false;
