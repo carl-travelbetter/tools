@@ -21,6 +21,7 @@ let prepareData = JSON.parse(localStorage.getItem(PREPARE_KEY)) || {prepareSet: 
 function bindEvents() 
 {
   getEl("add-item")?.addEventListener("click", addItem);
+  getEl("submit-btn")?.addEventListener("click", submitItem);
 }
 
 
