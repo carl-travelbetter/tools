@@ -106,7 +106,7 @@ function displayToDoItems()
       completeListItem(item);
       displayToDoItems() 
       });
-      listComplete.appendChild(deleteButton);
+      listComplete.appendChild(completeButton);
       listItem.appendChild(listComplete);
       list.appendChild(listItem);
   });
